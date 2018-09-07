@@ -18,7 +18,7 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 
 group :development, :test do
   gem 'letter_opener'
