@@ -32,7 +32,6 @@
 # Nginx configuration files
 /config/*.conf
 
-/Gemfile.lock
 /storage/*
 !/storage/.keep
 /vendor/*
