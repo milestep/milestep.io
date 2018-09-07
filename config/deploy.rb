@@ -24,11 +24,9 @@ set :deploy_to, "/home/#{user}/apps/milestep"
 # Default value for :pty is false
 # set :pty, true
 
-set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, '2.3.1'
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
-set :rbenv_roles, :all # default value
+# set :rvm_type, :system               # Defaults to: :auto
+# set :rvm_ruby_version, '2.3.1p112'   # Defaults to: 'default'
+set :rvm_custom_path, '/usr/share/rvm' # only needed if not detected
 
 # Default value for :linked_f iles is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key')
