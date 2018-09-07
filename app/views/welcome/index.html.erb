@@ -1,0 +1,8 @@
+<%= form_tag '/contact', id: 'form', class: 'contact-form' do %>
+  <input type="text" name='contact[name]' placeholder="full name" minlength='2' required="required">
+  <input type="email" name='contact[email]' placeholder="email" required="required">
+  <textarea name='contact[message]' placeholder="message" minlength='10' maxlength='500'
+    required="required"></textarea>
+
+  <button class="btn-submit" type="submit">send</button>
+<% end %>
