@@ -29,7 +29,7 @@ set :deploy_to, "/home/#{user}/apps/milestep"
 set :rvm_custom_path, '/usr/share/rvm' # only needed if not detected
 
 # Default value for :linked_f iles is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key', '.env')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push(

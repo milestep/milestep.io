@@ -36,3 +36,4 @@
 !/storage/.keep
 /vendor/*
 !/vendor/.keep
+.env

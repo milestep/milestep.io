@@ -19,6 +19,7 @@ gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 
 group :development, :test do
   gem 'letter_opener'
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
