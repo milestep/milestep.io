@@ -1,8 +1,31 @@
-<%= form_tag '/contact', id: 'form', class: 'contact-form' do %>
-  <input type="text" name='contact[name]' placeholder="full name" minlength='2' required="required">
-  <input type="email" name='contact[email]' placeholder="email" required="required">
-  <textarea name='contact[message]' placeholder="message" minlength='10' maxlength='500'
-    required="required"></textarea>
+<%= render "header" %>
+<%= render "aboutus" %>
 
-  <button class="btn-submit" type="submit">send</button>
-<% end %>
+<div class="split-side">
+  <a href="#aboutUs"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+</div>
+
+<%= render "skills" %>
+
+<div class="clearfix"></div>
+<div class="split-side">
+  <a href="#skills" align="center"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+</div>
+
+<%= render "services" %>
+
+<div class="split-side" style="background-image: url(/assets/bg-3.png);">
+  <a href="#services"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+</div>
+
+<%= render "portfolio" %>
+
+<div class="split-side" style="background-image: url(/assets/bg-3.png);">
+  <a href="#portfolio"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+</div>
+
+<%= render "team" %>
+
+<div class="split"></div>
+
+<%= render "footer" %>

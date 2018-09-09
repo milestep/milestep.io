@@ -1,0 +1,356 @@
+h1{
+    font-size: 60px;
+    font-family: "BebasRegular";
+    text-align: center;
+}
+
+h2{
+    font-size: 48px;
+    font-family: "BebasRegular";
+    text-align: center;
+}
+
+h3{
+    font-size: 36px;
+    font-family: "BebasRegular";
+}
+
+h4{
+    font-size: 27px;
+    font-family: "BebasRegular";
+}
+
+
+
+p{
+    font-family: "BebasRegular";
+    font-size: 18px;
+}
+
+ul{
+    list-style: none;
+    margin-top: 36px;
+}
+
+li{
+    display: inline-block;
+    font-family: "BebasRegular";
+}
+
+a, a:hover, a:focus{
+    text-decoration: none;
+    font-family: "BebasRegular";
+}
+
+a:focus{
+    color: #ffffff;
+    outline: none;
+}
+
+.logo{
+    float: left;
+}
+
+.logo h3{
+    margin: 0;
+    margin-top: 35px;
+    color: #fefefe;
+}
+.logo span{
+    color: #a11819;
+}
+
+header, .split-side{
+    background-image: url("/assets/header-bg.png");
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.split-side{
+    text-align: center;
+    padding: 130px;
+}
+
+.split-side a{
+    color: #ffffff !important;
+    opacity: 0.3;
+
+}
+
+.split-side a:hover{
+    opacity: 1;
+}
+
+.header-nav{
+    float: right;
+}
+
+.menu-item{
+    font-family: "BebasRegular";
+    color: #fefefe;
+    font-size: 27px;
+    padding: 0 7px 0 7px;
+}
+
+.header-nav a:hover{
+    color: #a11819;
+}
+
+#touch-menu
+{
+  background: url("mobile-nav.png") no-repeat left;
+  color: #fff;
+  display: none;
+  font-family: "BebasRegular";
+  font-size: 18px;
+  line-height: 40px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.header-nav.fixed{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: #383838;
+    z-index: 1;
+    left: 0;
+}
+
+.header-nav.fixed ul{
+    margin-top: 12px;
+}
+
+@media (max-width: 992px)
+{
+  .top_menu
+  {
+    display: none;
+  }
+  .top_menu li
+  {
+    display: block;
+    height: 58px;
+    position: relative;
+    text-align: center;
+  }
+  #touch-menu
+  {
+    display: block;
+    text-align: center;
+  }
+
+  .top_menu{
+    background-color: #383838;
+    opacity: 0.9;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-nav.fixed ul{
+    margin-top: 0;
+  }
+}
+
+.welcome{
+    text-align: center;
+    color: #fefefe;
+    margin-top: 225px;
+}
+
+.welcome h1, .welcome h2{
+    margin: 0;
+}
+
+.button{
+    background-color: #ab1111;
+    text-align: center;
+    padding: 18px 5px 18px 5px;
+}
+
+.btn-about{
+  margin-bottom: 100px;
+}
+
+ .btn-header{
+    margin-bottom: 135px;
+    margin-top: 70px;
+ }
+
+.button a{
+    display: block;
+    color: #fefefe;
+    font-size: 24px;
+}
+
+.about-list li{
+    display: block;
+    font-size: 18px;
+}
+
+.servises-line{
+    margin-top: 125px;
+    background-color: #4a3d63;
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    width: 100%;
+}
+
+.service-card{
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+text-align: center;
+padding: 15px;
+margin-top: -40px;
+margin-bottom: 73px;
+}
+
+.services{
+    background-color: #4a3d63;
+    margin-top: 150px;
+}
+
+.portfolio{
+    background-color: #efeaf0;
+}
+
+.portfolio img{
+    width: 384px;
+    height: 269px;
+}
+
+.btn-portfolio{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.clients{
+    margin-bottom: 86px;
+}
+
+.team{
+    background-color: #4a3d63;
+    margin-top: 150px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.team img{
+    margin-top: -60px;
+    border: 3px solid #4a3d63;
+}
+
+.team h3{
+    margin-bottom: 0;
+    font-family: "BebasRegular";
+}
+
+.team p{
+    margin-top: 0;
+}
+
+footer{
+    background-color: #383838;
+    color: #ffffff;
+}
+
+footer h3{
+    margin: 0;
+    font-size: 30px;
+}
+
+footer span{
+    font-family: "BebasLight";
+}
+
+input{
+    width: 100%;
+    border: 2px solid #ffffff;
+    background-color: #383838;
+    margin-bottom: 12px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+textarea{
+    width: 100%;
+    height: 195px;
+    border: 2px solid #ffffff;
+    background-color: #383838;
+    padding: 12px 20px 12px 20px;
+}
+
+::-webkit-input-placeholder {color:#ffffff; font-family: "BebasLight";}
+::-moz-placeholder          {color:#ffffff; font-family: "BebasLight";}
+:-moz-placeholder           {color:#ffffff; font-family: "BebasLight";}
+:-ms-input-placeholder      {color:#ffffff; font-family: "BebasLight";}
+
+.btn-submit{
+    background-color: #ab1111;
+    border: 0;
+    font-size: 24px;
+    font-family: "BebasRegular";
+    width: 165px;
+    height: 57px;
+    float: right;
+    margin-top: 10px;
+}
+
+form{
+    margin-bottom: 234px;
+}
+
+a.active{
+    color: #a11819;
+}
+
+.skills-wrapper{
+    width: 100%;
+    height: 850px;
+    background-image: url("/assets/bg-2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 992px){
+    .skills-wrapper{
+        background: none;
+    }
+}
+
+@media (min-width: 992px){
+.skills-wrapper img{
+        display: none;
+    }
+}
+
+.mail-to{
+    color: #ffffff;
+}
+
+.mail-to:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.split{
+    background-color: #4a3d63;
+    height: 200px;
+}
+
+.employee{
+    height: 450px;
+}
+
+.btn-top{
+    text-align: center;
+}
+
+.btn-top a{
+    color: #ffffff;
+}
