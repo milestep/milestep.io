@@ -18,3 +18,58 @@
 
 
 .logo { position: absolute; }
+
+.header-container{
+
+    .contact-us{
+        margin-top: 16px;
+        margin-left: 0px;
+        width: 195px;
+        
+        height: 55px;
+        border: transparent 0px solid;
+        border-radius: 25px;
+        background-color: #f50808;
+        background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    a:hover{
+       text-decoration: none;
+    }
+
+    .burger-button{
+        margin-top: 32px;
+        background-color: transparent;
+        border: transparent 0px solid;
+    }
+
+    .menu-container{
+
+        img{
+            position: absolute;
+            margin-top: -56px;
+            margin-right: -90px;
+            width: 100%;
+            height: auto;
+        }
+
+        .nav-links{
+            position: relative;
+            text-align: center;
+            padding-left: 10%;
+            padding-top: 35px;
+            a{
+                font-size: 25px;
+                color: white;
+                font-weight: bold;
+            }
+
+            br{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
