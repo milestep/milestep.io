@@ -3,17 +3,17 @@ footer {
   color: #ffffff;
 
   p {
-    font-family: "normal";
+    font-family: "Roboto-Light";
     font-size: 20px;
   }
 
   a {
-    font-family: "normal";
+    font-family: "Roboto-Light";
     &:hover {
-      font-family: "normal";
+      font-family: "Roboto-Light";
     }
     &:focus {
-      font-family: "normal";
+      font-family: "Roboto-Light";
     }
   }
 
@@ -23,17 +23,21 @@ footer {
 
   .text-top {
     .my-text-left {
+      font-family: "Roboto-Medium";
+
       .vertical-line {
         border-right: thick solid #0075b8;
         width: 400px;
-        margin-bottom: 40px;
       }
       .first-text {
-        font-weight: 600;
-        font-size: 30px;
-        color: #a5a5a5;
+        padding-top: 10px;
+        letter-spacing: 2px;
+        color: rgb(204,204,204);
+        font-weight: 800;
+        font-size: 35px;
       }
       .second-text {
+        letter-spacing: 2px;
         font-weight: 600;
         font-size: 50px;
       }
@@ -41,14 +45,15 @@ footer {
     .my-text-right {
       padding-top: 15px;
       padding-left: 55px;
+      font-family: "Roboto-Regular";
+
       .text-web-and-app {
-        font-weight: 600;
-        font-size: 35px;
+        font-size: 50px;
         .text-web {
-          color: #204968;
+          color: #0075b8;
         }
         .text-and {
-          font-size: 20px;
+          font-size: 25px;
         }
         .text-app {
           color: #f60e0b;
@@ -62,9 +67,13 @@ footer {
 
   .data-company {
     font-weight: 600;
-    line-height: 13px;
+    line-height: 16px;
     color: #e0e0e0;
+    font-size: 20px;
+    font-family: "Roboto-Light";
+
     .address {
+      margin-top: 55px;
     }
     .phone-number {
       margin-top: 20px;
@@ -79,14 +88,19 @@ footer {
 
   .social-network {
     margin-top: 50px;
+    .fa-stack {
+      margin-right: 10px;
+    }
+    .fa-stack:hover {
+      .fa-circle {
+        color: #0075b8;
+      }
+    }
     .inside-icon {
       color: #2d2d2d;
     }
     .fa-circle {
       color: #fff;
-    }
-    .color-blue-icon {
-      color: #0075b8;
     }
   }
 
@@ -140,9 +154,10 @@ footer {
   }
 
   .copyright {
-    margin-top: 100px;
-    color: #8b8b8b;
-    font-weight: 600;
-    font-size: 16px;
+    margin-top: 80px;
+    font-size: 18px;
+    line-height: 40px;
+    color: rgb(139,139,139);
+    font-family: "Roboto-Bold";
   }
 }
