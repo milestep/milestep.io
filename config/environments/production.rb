@@ -90,17 +90,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.perform_caching = true
-  config.action_mailer.default_url_options =  { host: 'milestep.io' }
-  config.action_mailer.asset_host =  'https://milestep.io'
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.mailgun.org',
-    port: 587,
-    domain: 'mg.milestep.io',
-    authentication: :plain,
-    enable_starttls_auto: true,
-    user_name: ENV['MAILGUN_USERNAME'],
-    password: ENV['MAILGUN_PASSWORD']
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV["MAILGUN_API_KEY"] || 'd8326f2c9b79d76280eaef7833448d46-7bbbcb78-092bcb0a',
+    domain: ENV["MAILGUN_DOMAIN"] || 'sandbox57c92643c6a54ee39dca645ac3feba29.mailgun.org'
   }
 end
