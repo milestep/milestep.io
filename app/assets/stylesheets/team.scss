@@ -1,0 +1,208 @@
+#team {
+  .team {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding-bottom: 135px;
+
+    .section-left-text {
+      margin-top: 170px;
+      background-image: asset-url('team/rectangle.jpg');
+      background-repeat: no-repeat;
+      background-size: 75% 58%;
+
+      .title {
+        letter-spacing: 3px;
+        line-height: 50px;
+
+        p {
+          font-size: 60px;
+        }
+
+        .text-our {
+          font-family: 'Roboto-Black';
+        }
+
+        .text-team {
+          font-family: 'Roboto-Medium';
+        }
+      }
+
+      .paragraph {
+        padding-top: 50px;
+        width: 500px;
+        font-size: 24px;
+        line-height: 35px;
+        font-family: 'Roboto-Medium';
+      }
+
+      .horizontal-line {
+        margin-top: 30px;
+        border-top: solid #0075b8;
+        width: 250px;
+      }
+    }
+
+    .faces {
+      margin-top: 100px;
+
+      .flex-container {
+        display: flex;
+      }
+
+      .flex-item {
+        margin: 5px;
+        overflow: hidden;
+        max-height: 260px;
+        flex-basis: 260px;
+        box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
+        display: flex;
+
+        .text {
+          display: none;
+          position: absolute;
+          top: 85px;
+          text-align: center;
+          width: 100%;
+          letter-spacing: 1px;
+          line-height: 30px;
+
+          p {
+            font-family: 'normal';
+          }
+
+          .name {
+            font-size: 20px;
+            font-family: 'Roboto-Black';
+            text-transform: uppercase;
+          }
+
+          .horizontal-line {
+            border-top: 1px solid #fff;
+            width: 65%;
+            margin: 0 auto;
+          }
+
+          .specialization {
+            font-size: 14px;
+            font-family: 'Roboto-Medium';
+          }
+        }
+      }
+
+      .rectangle-and-text-hover {
+        &:hover {
+          background-color: rgba(0, 117, 184, 0.8);
+
+          .text {
+            display: block;
+          }
+        }
+      }
+
+      .img-face {
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: 260px;
+        height: 260px;
+      }
+
+      .img-face-1 {
+        background-image: asset-url('team/faces/face-1.jpg');
+      }
+
+      .img-face-2 {
+        background-image: asset-url('team/faces/face-2.jpg');
+      }
+
+      .img-face-3 {
+        background-image: asset-url('team/faces/face-3.jpg');
+      }
+
+      .img-face-4 {
+        background-image: asset-url('team/faces/face-4.jpg');
+      }
+
+      .img-face-5 {
+        background-image: asset-url('team/faces/face-5.jpg');
+      }
+
+      .img-face-6 {
+        background-image: asset-url('team/faces/face-6.jpg');
+      }
+    }
+
+    @media screen and (max-width:991px) {
+      .section-left-text {
+        background-size: 95% 45%;
+
+        .title {
+          letter-spacing: 0px;
+          line-height: 40px;
+
+          .text-our {
+            font-family: 'Roboto-Bold';
+          }
+
+          .text-team {
+            font-family: 'Roboto-Regular';
+          }
+        }
+
+        .paragraph {
+          padding-top: 20px;
+          line-height: 25px;
+          font-family: 'Roboto-Light';
+          width: 250px;
+          font-size: 20px;
+        }
+      }
+
+      .faces {
+        margin-top: 160px;
+
+        .flex-item {
+          max-height: 200px;
+          flex-basis: 200px;
+
+          .text {
+            top: 55px;
+            letter-spacing: 0px;
+
+            .name {
+              font-family: 'Roboto-Bold';
+            }
+
+            .specialization {
+              font-family: 'Roboto-Medium';
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 992px) and (max-width:1199px) {
+      .section-left-text {
+        background-size: 85% 58%;
+
+        .paragraph {
+          padding-top: 40px;
+          line-height: 25px;
+          font-family: 'Roboto-Regular';
+          width: 300px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1200px) and (max-width:1499px) {
+      .section-left-text {
+        background-size: 85% 58%;
+
+        .paragraph {
+          width: 400px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
