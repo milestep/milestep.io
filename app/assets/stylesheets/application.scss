@@ -25,6 +25,12 @@
 }
 
 .navigation-panel {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 5;
+  margin: 0px;
   .contact-us-button {
     position: fixed;
     left: 84.1vw;
@@ -39,6 +45,8 @@
     font-family: 'Roboto';
     font-size: 1vw;
     font-weight: bold;
+    z-index: 10;
+    display: block;
   }
   .burger-button {
     position: absolute;
