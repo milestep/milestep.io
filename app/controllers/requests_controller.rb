@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   def create
-    Request.notify(attrs).deliver_later
+    Request.notify(attrs).deliver_now
+    render json: {}, status: 200
   end
 
   private
