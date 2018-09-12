@@ -16,5 +16,89 @@
 
 @import "bootstrap";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
-.logo { position: absolute; }
+.logo { 
+  width: 11.6vw;
+  margin-left: 5.6vw;
+  margin-top: 2.67vw;
+}
+
+.navigation-panel {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 5;
+  margin: 0px;
+  .contact-us-button {
+    position: fixed;
+    left: 84.1vw;
+    top: 4.53vw;
+    width: 10.16vw;
+    height: 3vw;
+    border: transparent 0px solid;
+    border-radius: 1.3vw;
+    background-color: #f50808;
+    background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 1vw;
+    font-weight: bold;
+    z-index: 10;
+    display: block;
+  }
+  .burger-button {
+    position: absolute;
+    top: 5.36vw;
+    left: 77.2vw;
+    background-color: transparent;
+    border: transparent 0px solid;
+    img {
+      width: 2vw;
+    }
+  }
+  .menu-container {
+    position: fixed;
+    left: 80.4vw;
+    width: 19.5vw;
+    height: 100vw;
+    padding: 0;
+    a:hover {
+      text-decoration: none;
+    }
+    img {
+      z-index: 11;
+      width: 19.5vw;
+      height: 100vh;
+      object-fit: fill;
+      margin-left: -0.5vw;
+    }
+
+  }
+  .nav-links {
+    z-index: 12;
+    position: absolute;
+    left: 86.3vw;
+    top: 5.36vw;
+    width: 19.5vw;
+    height: 100vw;
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+    a { 
+      padding: 0;
+      z-index: 20;
+      font-size: 1.3vw;
+      color: white;
+      font-weight: bold;
+      font-family: 'Roboto';
+      text-align: left;
+      position: relative;
+      margin-top: -0.4vw;
+    }
+    p {
+      margin-bottom: 2.6vw;
+    }
+  }
+}
