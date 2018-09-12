@@ -1,4 +1,5 @@
 function sendMessage() {
+  $('.btn-contact').attr("disabled", true)
   var dataArray = $('#message-form').serializeArray();
   var data = {}
   dataArray.map((value) => {
@@ -11,10 +12,11 @@ function sendMessage() {
     type: 'POST',
     data: {contact: data},
     success: function(result){
-      toastr('Success')
+      toastr('message was successfully delivered')
     },
     error: function(result){
-        toastr('Error')
+      toastr('unable to deliver your message')
+      $('.btn-contact').attr("disabled", false)
     }
   })
 }
@@ -22,8 +24,10 @@ function sendMessage() {
 function toastr(message) {
   var toastr = $('.toastr')
   toastr.text(message)
-  toastr.fadeIn( "slow", function() {
-    toastr.fadeOut( "slow", function() {
-    });
+  toastr.slideDown( 500, function() {
+    setTimeout(function() {
+      toastr.slideUp( 500, function() {
+      });
+    }, 3000);
   });
 }
