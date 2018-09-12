@@ -8,6 +8,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'dotenv-rails'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
@@ -16,10 +17,10 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 
 gem 'bootsnap', '~> 1.3', '>= 1.3.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 group :development, :test do
   gem 'letter_opener'
-  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
