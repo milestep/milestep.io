@@ -1,0 +1,163 @@
+footer {
+  background-color: #2d2d2d;
+  color: #ffffff;
+
+  p {
+    font-family: "Roboto-Light";
+    font-size: 20px;
+  }
+
+  a {
+    font-family: "Roboto-Light";
+    &:hover {
+      font-family: "Roboto-Light";
+    }
+    &:focus {
+      font-family: "Roboto-Light";
+    }
+  }
+
+  section {
+    padding-top: 100px;
+  }
+
+  .text-top {
+    .my-text-left {
+      font-family: "Roboto-Medium";
+
+      .vertical-line {
+        border-right: thick solid #0075b8;
+        width: 400px;
+      }
+      .first-text {
+        padding-top: 10px;
+        letter-spacing: 2px;
+        color: rgb(204,204,204);
+        font-weight: 800;
+        font-size: 35px;
+      }
+      .second-text {
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 50px;
+      }
+    }
+    .my-text-right {
+      padding-top: 15px;
+      padding-left: 55px;
+      font-family: "Roboto-Regular";
+
+      .text-web-and-app {
+        font-size: 50px;
+        .text-web {
+          color: #0075b8;
+        }
+        .text-and {
+          font-size: 25px;
+        }
+        .text-app {
+          color: #f60e0b;
+        }
+      }
+      .text-development-services {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .data-company {
+    font-weight: 600;
+    line-height: 16px;
+    color: #e0e0e0;
+    font-size: 20px;
+    font-family: "Roboto-Light";
+
+    .address {
+      margin-top: 55px;
+    }
+    .phone-number {
+      margin-top: 20px;
+    }
+    .mail {
+      margin-top: 20px;
+      a {
+        color: #e0e0e0;
+      }
+    }
+  }
+
+  .social-network {
+    margin-top: 50px;
+    .fa-stack {
+      margin-right: 10px;
+    }
+    .fa-stack:hover {
+      .fa-circle {
+        color: #0075b8;
+      }
+    }
+    .inside-icon {
+      color: #2d2d2d;
+    }
+    .fa-circle {
+      color: #fff;
+    }
+  }
+
+  .form {
+    form {
+      margin-bottom: 0px;
+    }
+    .form-control {
+      border-radius:2rem;
+    }
+    input {
+      color: #fff;
+      font-size: 20px;
+      height: 45px;
+      border: 2px solid #fff;
+      background-color: transparent;
+      padding-left: 25px;
+      &:focus {
+        color: #fff;
+        border: 2px solid #0075b8;
+        background-color: #28343b;
+      }
+      &::placeholder {
+        color: #ffffff;
+      }
+      &[name="message"] {
+        margin: 20px 50px 50px 0px;
+      }
+    }
+
+    .btn-contact {
+      font-size: 20px;
+      height: 50px;
+      width: 100%;
+      border: none;
+      border-radius: 2rem;
+      padding: 1.5%;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: inset 0px 5px 0px #f50808,
+                  inset 0px 10px 0px #f50d0a,
+                  inset 0px 15px 0px #f71e14,
+                  inset 0px 20px 0px #f92d1c,
+                  inset 0px 25px 0px #fa3822,
+                  inset 0px 30px 0px #fb4328,
+                  inset 0px 35px 0px #fd4e2e,
+                  inset 0px 40px 0px #fe5833,
+                  inset 0px 45px 0px #ff5f38,
+                  inset 0px 50px 0px #ff6339;
+    }
+  }
+
+  .copyright {
+    margin-top: 80px;
+    font-size: 18px;
+    line-height: 40px;
+    color: rgb(139,139,139);
+    font-family: "Roboto-Bold";
+  }
+}
