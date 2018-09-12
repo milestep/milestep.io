@@ -4,7 +4,7 @@ class Request < ApplicationMailer
     mail(
       from: attrs['email'],
       to: ENV["MAILGUN_RECIPIENT"] || 'eugene@milestep.io',
-      subject: "Contact Us: #{attrs['name']}",
+      subject: "Contact Us"
     )
   end
 end
