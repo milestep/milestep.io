@@ -31,7 +31,6 @@
     top: 4.53vw;
     width: 10.16vw;
     height: 3vw;
-
     border: transparent 0px solid;
     border-radius: 1.3vw;
     background-color: #f50808;
@@ -41,30 +40,25 @@
     font-size: 1vw;
     font-weight: bold;
   }
-  
   .burger-button {
     position: absolute;
     top: 5.36vw;
     left: 77.2vw;
     background-color: transparent;
     border: transparent 0px solid;
-
     img {
       width: 2vw;
     }
   }
-
   .menu-container {
     position: fixed;
     left: 80.4vw;
     width: 19.5vw;
     height: 100vw;
     padding: 0;
-
     a:hover {
       text-decoration: none;
     }
-
     img {
       z-index: 11;
       width: 19.5vw;
@@ -74,7 +68,6 @@
     }
 
   }
-
   .nav-links {
     z-index: 12;
     position: absolute;
@@ -85,7 +78,6 @@
     padding: 0;
     margin: 0;
     word-break: break-all;
-
     a { 
       padding: 0;
       z-index: 20;
@@ -97,7 +89,6 @@
       position: relative;
       margin-top: -0.4vw;
     }
-
     p {
       margin-bottom: 2.6vw;
     }
