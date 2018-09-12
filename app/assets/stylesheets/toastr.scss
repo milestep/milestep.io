@@ -1,14 +1,13 @@
 .toastr {
   position: fixed;
-  top: 45vh;
-  left: 45vw;
+  top: 0;
+  left: 0;
   display: none;
   z-index: 100;
   font-size: 2vw;
-  color: white;
-  width: 10vw;
-  height: 10vh;
+  font-family: "Roboto-Light";
+  font-weight: bold;
+  color: wheat;
   text-align: center;
-  border-radius: 15px;
-  background-color: rgba($color: gray, $alpha: 0.4);
+  background-color: #242020;
 }
