@@ -1,12 +1,12 @@
 <section id="header">
   <div class='navigation-panel'>
-    <img src='/assets/header/logo.png' class='logo'>
+    <%= image_tag("header/logo.png", class: 'logo') %>
     <button class='burger-button' id='header-burger-button container'  onclick='burgerAction()'>
-      <img src='/assets/header/burger.png'>
+      <%= image_tag("header/burger.png") %>
     </button>
     <a href='#contact'><button class='contact-us-button burger-hidable container'> CONTACT US </button></a>
     <div class='menu-container burger-hidable container' style='display: none;'>
-      <img src='/assets/header/menu.png'>
+      <%= image_tag("header/menu.png") %>
     </div>
     <div class='nav-links burger-hidable' style='display: none;'>
       <p><a href='#header'>HOME</a></p>
