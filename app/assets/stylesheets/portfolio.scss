@@ -39,9 +39,10 @@
           display: flex;
 
           .flex-item {
+            margin: 5px;
             overflow: hidden;
-            height: 390px;
-            width: 390px;
+            height: 250px;
+            width: 250px;
           }
 
           .rectangle-and-text-hover {
@@ -61,25 +62,26 @@
                     font-family: "Roboto";
                     text-align: center;
                     color: #fff;
-                    letter-spacing: 1px;
                   }
 
                   .name-project {
+                    letter-spacing: 0px;
                     text-transform: uppercase;
-                    font-size: 22px;
-                    font-weight: 800;
+                    font-size: 18px;
+                    font-weight: 500;
                   }
 
                   .horizontal-line {
                     margin: 0 auto;
-                    margin-top: 30px;
-                    margin-bottom: 25px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
                     border-top: solid #fff;
                     width: 90%;
                   }
 
                   .info-project {
                     font-size: 13px;
+                    line-height: 12px;
                   }
                 }
               }
@@ -144,8 +146,8 @@
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        height: 1170px;
-        width: 260px;
+        height: 775px;
+        width: 150px;
       }
     }
 
@@ -153,8 +155,8 @@
       .wrapper--galleria-rectangle {
         .galleria .flex-container {
           .flex-item {
-            height: 180px;
-            width: 180px;
+            height: 110px;
+            width: 110px;
           }
 
           .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
@@ -163,25 +165,26 @@
             }
 
             .name-project {
-              font-size: 14px;
-              font-weight: 300;
-              line-height: 20px;
+              font-size: 9px;
+              font-weight: 200;
+              line-height: 10px;
             }
 
             .horizontal-line {
               margin-top: 0px;
-              margin-bottom: 10px;
+              margin-bottom: 5px;
             }
 
             .info-project {
-              font-size: 8px;
-              line-height: 8px;
+              font-size: 7px;
+              line-height: 7px;
             }
           }
         }
 
         .rectangle-portfolio {
-          height: 540px;
+          height: 355px;
+          width: 80px;
         }
       }
     }
@@ -190,8 +193,8 @@
       .wrapper--galleria-rectangle {
         .galleria .flex-container {
           .flex-item {
-            height: 220px;
-            width: 220px;
+            height: 150px;
+            width: 150px;
           }
 
           .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
@@ -200,9 +203,9 @@
             }
 
             .name-project {
-              font-size: 15px;
+              font-size: 12px;
               font-weight: 300;
-              line-height: 20px;
+              line-height: 13px;
             }
 
             .horizontal-line {
@@ -211,14 +214,15 @@
             }
 
             .info-project {
-              font-size: 10px;
-              line-height: 8px;
+              font-size: 9px;
+              line-height: 9px;
             }
           }
         }
 
         .rectangle-portfolio {
-          height: 660px;
+          height: 475px;
+          width: 100px;
         }
       }
     }
@@ -227,8 +231,8 @@
       .wrapper--galleria-rectangle {
         .galleria .flex-container {
           .flex-item {
-            height: 270px;
-            width: 270px;
+            height: 200px;
+            width: 200px;
           }
 
           .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
@@ -244,19 +248,19 @@
 
             .horizontal-line {
               margin-top: 10px;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
             }
 
             .info-project {
               font-weight: 100;
-              font-size: 12px;
-              line-height: 12px;
+              font-size: 11px;
             }
           }
         }
 
         .rectangle-portfolio {
-          height: 810px;
+          height: 625px;
+          width: 120px;
         }
       }
     }
