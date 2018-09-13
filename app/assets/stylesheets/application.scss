@@ -105,3 +105,68 @@ a, button { outline: none !important; }
     }
   }
 }
+
+.about-us {
+  margin: 0;
+  padding: 0;
+  height: 42.7vw;
+  padding-right: 0 !important;
+  .background {
+    width: 100%;
+  }
+  .vertical-text-scroll {
+    z-index: 3;
+    transform: rotate(-90deg);
+    color: #686666;
+    font-family: 'Roboto';
+    font-size: 0.74vw;
+    font-weight: 600;
+    letter-spacing: 0.02vw;
+    position: absolute;
+    top: 13.85vw;
+    left: 3.35vw;
+  }
+  .vertical-text-image {
+    z-index: 3;
+    transform: rotate(-90deg);
+    color: #f03838;
+    font-family: 'Roboto-Black';
+    font-size: 1.25vw;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    position: absolute;
+    top: 18.4vw;
+    left: 20.74vw;
+  }
+  .shadow-box {
+    width: 40.9vw;
+    height: 24.9vw;
+    position: absolute;
+    left: 52.8vw;
+    top: 12.9vw;
+    background-color: yellow;
+    border-radius: 2px;
+  }
+  .about-us-title {
+    position: absolute;
+    left: 69.1vw;
+    top: 17.2vw;
+    color: #0075b8;
+    font-family: "Roboto-Black";
+    font-size: 3vw;
+    letter-spacing: 0.15vw;
+  }
+  .milestep-description {
+    position: absolute;
+    left: 69.05vw;
+    top: 21.73vw;
+    p {
+      width: 20.573vw;
+      text-align: justify;
+      color: #545454;
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 1vw;
+    }
+  }
+}
