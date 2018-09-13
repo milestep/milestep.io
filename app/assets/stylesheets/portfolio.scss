@@ -3,6 +3,10 @@
     margin-top: 150px;
     margin-bottom: 230px;
 
+    a {
+      text-decoration: none;
+    }
+
     .title {
       text-transform: uppercase;
 
@@ -165,19 +169,19 @@
             }
 
             .name-project {
-              font-size: 9px;
-              font-weight: 200;
-              line-height: 10px;
+              font-size: 8px;
+              font-weight: 300;
+              line-height: 8px;
             }
 
             .horizontal-line {
               margin-top: 0px;
-              margin-bottom: 5px;
+              margin-bottom: 3px;
             }
 
             .info-project {
-              font-size: 7px;
-              line-height: 7px;
+              font-size: 6px;
+              line-height: 6px;
             }
           }
         }
@@ -203,19 +207,19 @@
             }
 
             .name-project {
-              font-size: 12px;
+              font-size: 11px;
               font-weight: 300;
-              line-height: 13px;
+              line-height: 12px;
             }
 
             .horizontal-line {
               margin-top: 0px;
-              margin-bottom: 10px;
+              margin-bottom: 5px;
             }
 
             .info-project {
-              font-size: 9px;
-              line-height: 9px;
+              font-size: 8px;
+              line-height: 8px;
             }
           }
         }
