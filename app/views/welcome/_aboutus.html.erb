@@ -1,4 +1,8 @@
-<section id="aboutUs">
+<section id="aboutUs" class="with-scrolling">
+  <%= scrolling_button offset_top: '636px', background: "#2d2d2d" do %>
+    <%= image_tag("mouse.png") %>
+  <% end %>
+
   <div class="about-us container-fluid">
     <%= image_tag("header/logo.png", class: 'logo') %>
     <%= image_tag("about-us/about_us_bg.png", class: 'background') %>

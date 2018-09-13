@@ -8,58 +8,65 @@
         </div>
       </div>
     </div>
-  
-    <div class="container">
-      <div class="block-container col-md-6">
-        <div>
-          <%= image_tag("how-we-work/Layer_101.png", :class => "img-responsive") %>          
-          <div class="top-image">
-            <h1 class="caption">Let us hear <br/> from your project</h1>
+
+    <div class="with-scrolling">
+      <%= render 'shared/scrolling/background', template: :how_we_work %>
+      <%= scrolling_button offset_top: '50%', background: "#fff" do %>
+        <span>04<span>
+      <% end %>
+
+      <div class="container">
+        <div class="block-container col-md-6">
+          <div>
+            <%= image_tag("how-we-work/Layer_101.png", :class => "img-responsive") %>
+            <div class="top-image">
+              <h1 class="caption">Let us hear <br/> from your project</h1>
+            </div>
+          </div>
+          <div class="block-front">
+            <hr class="trace">
+            <h1 class="text">Awareness of your specifications, relevant <br /> technologies, scope of work and number of <br /> developers you need helps us to match appropriate <br /> candidates for you</h1>
+            <hr class="trace_bottom">
           </div>
         </div>
-        <div class="block-front">
-          <hr class="trace">
-          <h1 class="text">Awareness of your specifications, relevant <br /> technologies, scope of work and number of <br /> developers you need helps us to match appropriate <br /> candidates for you</h1>
-          <hr class="trace_bottom">
-        </div>
-      </div>  
-      <div class="block-container col-md-6">
-        <div>
-          <%= image_tag("how-we-work/Layer_102.png", :class => "img-responsive") %> 
-          <div class="top-image">
-            <h1 class="caption">Receive CVs</h1>
+        <div class="block-container col-md-6">
+          <div>
+            <%= image_tag("how-we-work/Layer_102.png", :class => "img-responsive") %>
+            <div class="top-image">
+              <h1 class="caption">Receive CVs</h1>
+            </div>
+          </div>
+          <div class="block-front">
+            <hr class="trace">
+            <h1 class="text">As soon as we get wise to your expectations, we provide the resumes of relevant engineers to your consideration. Thereby previous picking of suitable developers, you don't need to waste a lot of effort and time</h1>
+            <hr class="trace_bottom">
           </div>
         </div>
-        <div class="block-front">
-          <hr class="trace">
-          <h1 class="text">As soon as we get wise to your expectations, we provide the resumes of relevant engineers to your consideration. Thereby previous picking of suitable developers, you don't need to waste a lot of effort and time</h1>
-          <hr class="trace_bottom">
-        </div>
-      </div> 
-      <div class="block-container col-md-6">
-        <div>
-          <%= image_tag("how-we-work/Layer_103.png", :class => "img-responsive") %> 
-          <div class="top-image">
-            <h1 class="caption">Conversation with suitable developers</h1>
+        <div class="block-container col-md-6">
+          <div>
+            <%= image_tag("how-we-work/Layer_103.png", :class => "img-responsive") %>
+            <div class="top-image">
+              <h1 class="caption">Conversation with suitable developers</h1>
+            </div>
+          </div>
+          <div class="block-front">
+            <hr class="trace">
+            <h1 class="text">In light of management from your in-house team, we set up the interview with screening employees to ensure the full compliance with your technical and communication expectations</h1>
+            <hr class="trace_bottom">
           </div>
         </div>
-        <div class="block-front">
-          <hr class="trace">
-          <h1 class="text">In light of management from your in-house team, we set up the interview with screening employees to ensure the full compliance with your technical and communication expectations</h1>
-          <hr class="trace_bottom">
-        </div>
-      </div>
-      <div class="block-container col-md-6">
-        <div>
-          <%= image_tag("how-we-work/Layer_100.png", :class => "img-responsive") %> 
-          <div class="top-image">
-            <h1 class="caption">Scale up your current staff</h1>
+        <div class="block-container col-md-6">
+          <div>
+            <%= image_tag("how-we-work/Layer_100.png", :class => "img-responsive") %>
+            <div class="top-image">
+              <h1 class="caption">Scale up your current staff</h1>
+            </div>
           </div>
-        </div>
-        <div class="block-front">
-          <hr class="trace">
-          <h1 class="text">Finally, you’re able to get started working with your remote employees. Huge experience of working in team extension model allow us to be agile and ramp up performing of your ideas as smoothly and quick as it possible</h1>
-          <hr class="trace_bottom">
+          <div class="block-front">
+            <hr class="trace">
+            <h1 class="text">Finally, you’re able to get started working with your remote employees. Huge experience of working in team extension model allow us to be agile and ramp up performing of your ideas as smoothly and quick as it possible</h1>
+            <hr class="trace_bottom">
+          </div>
         </div>
       </div>
     </div>
