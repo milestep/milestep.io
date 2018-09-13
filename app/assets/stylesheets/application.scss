@@ -21,13 +21,6 @@
 
 a, button { outline: none !important; }
 
-.logo {
-  width: 11.6vw;
-  margin-left: 5.6vw;
-  margin-top: 2.67vw;
-  position: absolute;
-}
-
 .navigation-panel {
   position: fixed;
   top: 0px;
@@ -111,47 +104,36 @@ a, button { outline: none !important; }
   margin: 0;
   padding: 0;
   height: 42.7vw;
+  width: 100%;
+  margin-left: 0%;
+  background-color: red;
   padding-right: 0 !important;
+  position: relative;
   .background {
     width: 100%;
   }
-  .vertical-text-scroll {
-    z-index: 3;
-    transform: rotate(-90deg);
-    color: #686666;
-    font-family: 'Roboto';
-    font-size: 0.74vw;
-    font-weight: 600;
-    letter-spacing: 0.02vw;
+  .logo {
+    width: 11.6%;
     position: absolute;
-    top: 13.85vw;
-    left: 3.35vw;
+    left: 5.7%;
+    top: 6.3%;
   }
   .vertical-text-image {
     z-index: 3;
     transform: rotate(-90deg);
     color: #f03838;
     font-family: 'Roboto-Black';
-    font-size: 1.25vw;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: 0.7px;
     position: absolute;
-    top: 18.4vw;
-    left: 20.74vw;
-  }
-  .shadow-box {
-    width: 40.9vw;
-    height: 24.9vw;
-    position: absolute;
-    left: 52.8vw;
-    top: 12.9vw;
-    background-color: yellow;
-    border-radius: 2px;
+    top: 43%;
+    left: 20.9%;
   }
   .about-us-title {
     position: absolute;
-    left: 69.1vw;
-    top: 17.2vw;
+    left: 69.5%;
+    top: 40.4%;
     color: #0075b8;
     font-family: "Roboto-Black";
     font-size: 3vw;
@@ -159,8 +141,8 @@ a, button { outline: none !important; }
   }
   .milestep-description {
     position: absolute;
-    left: 69.05vw;
-    top: 21.73vw;
+    left: 69.4%;
+    top: 50.8%;
     p {
       width: 20.573vw;
       text-align: justify;
@@ -169,5 +151,17 @@ a, button { outline: none !important; }
       font-weight: 700;
       font-size: 1vw;
     }
+  }
+}
+
+.qwe {
+  background-color: red;
+  height: 500px;
+  .logos {
+    position: absolute;
+    margin-left: -25%;
+    margin-top: 25%;
+    width: 20%;
+    scale: 50%;
   }
 }
