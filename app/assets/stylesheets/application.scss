@@ -26,6 +26,7 @@ a, button { outline: none !important; }
   margin-left: 5.6vw;
   margin-top: 2.67vw;
   position: absolute;
+  z-index: 2;
 }
 
 .navigation-panel {
@@ -108,11 +109,14 @@ a, button { outline: none !important; }
 }
 
 .about-us {
+  position: relative;
   margin: 0;
   padding: 0;
   height: 42.7vw;
   padding-right: 0 !important;
   .background {
+    position: absolute;
+    z-index: 1;
     width: 100%;
   }
   .vertical-text-scroll {
@@ -150,6 +154,7 @@ a, button { outline: none !important; }
   }
   .about-us-title {
     position: absolute;
+    z-index: 2;
     left: 69.1vw;
     top: 17.2vw;
     color: #0075b8;
@@ -159,6 +164,7 @@ a, button { outline: none !important; }
   }
   .milestep-description {
     position: absolute;
+    z-index: 2;
     left: 69.05vw;
     top: 21.73vw;
     p {
