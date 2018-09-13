@@ -25,6 +25,7 @@ a, button { outline: none !important; }
   width: 11.6vw;
   margin-left: 5.6vw;
   margin-top: 2.67vw;
+  position: absolute;
 }
 
 .navigation-panel {
@@ -37,7 +38,7 @@ a, button { outline: none !important; }
   .contact-us-button {
     position: fixed;
     left: 83.5vw;
-    top: 4.53vw;
+    top: 3.2vw;
     width: 10.16vw;
     height: 2.9vw;
     border: transparent 0px solid;
@@ -53,7 +54,7 @@ a, button { outline: none !important; }
   }
   .burger-button {
     position: absolute;
-    top: 5.36vw;
+    top: 4vw;
     left: 77.3vw;
     background-color: transparent;
     border: transparent 0px solid;
@@ -83,7 +84,7 @@ a, button { outline: none !important; }
     z-index: 12;
     position: absolute;
     left: 85.7vw;
-    top: 5.1vw;
+    top: 3.7vw;
     width: 19.5vw;
     height: 100vw;
     padding: 0;
