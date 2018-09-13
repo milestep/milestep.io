@@ -12,16 +12,21 @@
  *
  *= require_tree .
  *= require_self
+ *= stub "active_admin"
  */
 
 @import "bootstrap";
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-.logo { 
+a, button { outline: none !important; }
+
+.logo {
   width: 11.6vw;
   margin-left: 5.6vw;
   margin-top: 2.67vw;
+  position: absolute;
+  z-index: 2;
 }
 
 .navigation-panel {
@@ -33,25 +38,25 @@
   margin: 0px;
   .contact-us-button {
     position: fixed;
-    left: 84.1vw;
-    top: 4.53vw;
+    left: 83.5vw;
+    top: 3.2vw;
     width: 10.16vw;
-    height: 3vw;
+    height: 2.9vw;
     border: transparent 0px solid;
-    border-radius: 1.3vw;
+    border-radius: 1.5vw;
     background-color: #f50808;
     background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
     color: #ffffff;
     font-family: 'Roboto';
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-weight: bold;
     z-index: 10;
     display: block;
   }
   .burger-button {
     position: absolute;
-    top: 5.36vw;
-    left: 77.2vw;
+    top: 4vw;
+    left: 77.3vw;
     background-color: transparent;
     border: transparent 0px solid;
     img {
@@ -60,8 +65,8 @@
   }
   .menu-container {
     position: fixed;
-    left: 80.4vw;
-    width: 19.5vw;
+    left: 79.9vw;
+    width: 20.2vw;
     height: 100vw;
     padding: 0;
     a:hover {
@@ -69,7 +74,7 @@
     }
     img {
       z-index: 11;
-      width: 19.5vw;
+      width: 20.2vw;
       height: 100vh;
       object-fit: fill;
       margin-left: -0.5vw;
@@ -79,26 +84,96 @@
   .nav-links {
     z-index: 12;
     position: absolute;
-    left: 86.3vw;
-    top: 5.36vw;
+    left: 85.7vw;
+    top: 3.7vw;
     width: 19.5vw;
     height: 100vw;
     padding: 0;
     margin: 0;
     word-break: break-all;
-    a { 
+    a {
+      letter-spacing: 0.1vw;
       padding: 0;
       z-index: 20;
-      font-size: 1.3vw;
+      font-size: 1.2vw;
       color: white;
-      font-weight: bold;
+      font-weight: 700;
       font-family: 'Roboto';
       text-align: left;
       position: relative;
-      margin-top: -0.4vw;
     }
     p {
-      margin-bottom: 2.6vw;
+      margin-bottom: 2.05vw;
+    }
+  }
+}
+
+.about-us {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 42.7vw;
+  padding-right: 0 !important;
+  .background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  .vertical-text-scroll {
+    z-index: 3;
+    transform: rotate(-90deg);
+    color: #686666;
+    font-family: 'Roboto';
+    font-size: 0.74vw;
+    font-weight: 600;
+    letter-spacing: 0.02vw;
+    position: absolute;
+    top: 13.85vw;
+    left: 3.35vw;
+  }
+  .vertical-text-image {
+    z-index: 3;
+    transform: rotate(-90deg);
+    color: #f03838;
+    font-family: 'Roboto-Black';
+    font-size: 1.25vw;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    position: absolute;
+    top: 18.4vw;
+    left: 20.74vw;
+  }
+  .shadow-box {
+    width: 40.9vw;
+    height: 24.9vw;
+    position: absolute;
+    left: 52.8vw;
+    top: 12.9vw;
+    background-color: yellow;
+    border-radius: 2px;
+  }
+  .about-us-title {
+    position: absolute;
+    z-index: 2;
+    left: 69.1vw;
+    top: 17.2vw;
+    color: #0075b8;
+    font-family: "Roboto-Black";
+    font-size: 3vw;
+    letter-spacing: 0.15vw;
+  }
+  .milestep-description {
+    position: absolute;
+    z-index: 2;
+    left: 69.05vw;
+    top: 21.73vw;
+    p {
+      width: 20.573vw;
+      text-align: justify;
+      color: #545454;
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 1vw;
     }
   }
 }

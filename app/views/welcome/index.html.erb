@@ -1,28 +1,21 @@
+
 <%= render "shared/scrolling/ladder" %>
+
+<div class="container-fluid toastr"></div>
 
 <%= render "header" %>
 <%= render "aboutus" %>
-
-<div class="split-side">
-  <a href="#aboutUs"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
-</div>
-
-<%= render "skills" %>
+<%= render "services" %>
+<%= render "how-we-work" %>
 
 <div class="clearfix"></div>
 <div class="split-side">
-  <a href="#skills" align="center"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
-</div>
-
-<%= render "services" %>
-
-<div class="split-side" style="background-image: url(/assets/bg-3.png);">
-  <a href="#services"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+  <a href="#home" align="center"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
 </div>
 
 <%= render "portfolio" %>
 
-<div class="split-side" style="background-image: url(/assets/bg-3.png);">
+<div class="split-side" style="background-image: <%= image_path('bg-3.png') %>;">
   <a href="#portfolio"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
 </div>
 
