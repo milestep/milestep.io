@@ -101,18 +101,21 @@ a, button { outline: none !important; }
 }
 
 .about-us {
+  position: relative;
   margin: 0;
   padding: 0;
   height: 42.7vw;
   width: 100%;
   margin-left: 0%;
-  background-color: red;
   padding-right: 0 !important;
   position: relative;
   .background {
+    position: absolute;
+    z-index: 1;
     width: 100%;
   }
   .logo {
+    z-index: 2;
     width: 11.6%;
     position: absolute;
     left: 5.7%;
@@ -131,6 +134,7 @@ a, button { outline: none !important; }
     left: 20.9%;
   }
   .about-us-title {
+    z-index: 3;
     position: absolute;
     left: 69.5%;
     top: 40.4%;
@@ -140,6 +144,7 @@ a, button { outline: none !important; }
     letter-spacing: 0.15vw;
   }
   .milestep-description {
+    z-index: 3;
     position: absolute;
     left: 69.4%;
     top: 50.8%;
