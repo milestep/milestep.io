@@ -1,4 +1,9 @@
-<section id='team'>
+<section id='team' class='site-section with-scrolling'>
+  <%= render 'shared/scrolling/background', template: :team %>
+  <%= scrolling_button background: "#2d2d2d" do %>
+    <span>05<span>
+  <% end %>
+
   <div class='team'>
     <div class='container-fluid'>
 
