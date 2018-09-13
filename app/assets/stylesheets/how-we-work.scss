@@ -30,7 +30,7 @@
     margin-top: 15%;
     border: solid 2px white;
     width: 90%;
-    @media (max-width: 600px) { margin-top:150px; }
+   
  }
 
   .serve-block {
@@ -89,31 +89,30 @@
     margin-top: 40%;
     color: #f5f5f5;
     font-family: "Roboto - Black";
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.3px;
   }
 
   .text {
     text-align: center;
     margin: auto; 
-    width: 500px;
-    height: 83px;
+    width: 380px;
+    height: 58px;
     color: #f5f5f5;
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 5%;
   }
 
   .block-container, .block-container div { 
-    @media (min-width: 600px) { width:100%; }
-    @media (max-width: 600px) { width:90%; }
-    height: 555px; 
+    width: 380px;
+    height: 380px; 
   }
 
-  .block-container div, .block-container img { position: absolute; height: 100%; }
+  .block-container div, .block-container img { position: absolute; width: 100%; }
   .block-container img {z-index: 1;}
   .block-front {
     z-index: 2;
