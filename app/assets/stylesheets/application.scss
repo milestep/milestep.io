@@ -19,6 +19,8 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+a, button { outline: none !important; }
+
 .logo {
   width: 11.6vw;
   margin-left: 5.6vw;
@@ -34,17 +36,17 @@
   margin: 0px;
   .contact-us-button {
     position: fixed;
-    left: 84.1vw;
+    left: 83.5vw;
     top: 4.53vw;
     width: 10.16vw;
-    height: 3vw;
+    height: 2.9vw;
     border: transparent 0px solid;
-    border-radius: 1.3vw;
+    border-radius: 1.5vw;
     background-color: #f50808;
     background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
     color: #ffffff;
     font-family: 'Roboto';
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-weight: bold;
     z-index: 10;
     display: block;
@@ -52,7 +54,7 @@
   .burger-button {
     position: absolute;
     top: 5.36vw;
-    left: 77.2vw;
+    left: 77.3vw;
     background-color: transparent;
     border: transparent 0px solid;
     img {
@@ -61,8 +63,8 @@
   }
   .menu-container {
     position: fixed;
-    left: 80.4vw;
-    width: 19.5vw;
+    left: 79.9vw;
+    width: 20.2vw;
     height: 100vw;
     padding: 0;
     a:hover {
@@ -70,7 +72,7 @@
     }
     img {
       z-index: 11;
-      width: 19.5vw;
+      width: 20.2vw;
       height: 100vh;
       object-fit: fill;
       margin-left: -0.5vw;
@@ -80,26 +82,26 @@
   .nav-links {
     z-index: 12;
     position: absolute;
-    left: 86.3vw;
-    top: 5.36vw;
+    left: 85.7vw;
+    top: 5.1vw;
     width: 19.5vw;
     height: 100vw;
     padding: 0;
     margin: 0;
     word-break: break-all;
     a {
+      letter-spacing: 0.1vw;
       padding: 0;
       z-index: 20;
-      font-size: 1.3vw;
+      font-size: 1.2vw;
       color: white;
-      font-weight: bold;
+      font-weight: 700;
       font-family: 'Roboto';
       text-align: left;
       position: relative;
-      margin-top: -0.4vw;
     }
     p {
-      margin-bottom: 2.6vw;
+      margin-bottom: 2.05vw;
     }
   }
 }
