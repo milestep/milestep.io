@@ -26,6 +26,7 @@ function toastr(message) {
   toastr.text(message)
   toastr.slideDown( 500, function() {
     setTimeout(function() {
+      $(this).show();
       toastr.slideUp( 500, function() {
       });
     }, 3000);
