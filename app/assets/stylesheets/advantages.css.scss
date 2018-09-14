@@ -204,6 +204,8 @@
     height: 200px;
     display: flex;
     flex-shrink: 0;
+    position: relative;
+    z-index: 3;
   }
 
   .frameworks-format {
