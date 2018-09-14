@@ -11,10 +11,12 @@
 
     <div class="with-background with-scrolling">
       <div class="section-background-container">
-        <%= render 'shared/background', template: :how_we_work %>
-        <%= scrolling_button offset_top: '50%', background: "#fff" do %>
-          <span>03<span>
-        <% end %>
+        <div class="background-element">
+          <%= render 'shared/background', template: :how_we_work %>
+          <%= scrolling_button offset_top: '50%', background: "#fff" do %>
+            <span>03<span>
+          <% end %>
+        </div>
       </div>
 
       <div class="container">
