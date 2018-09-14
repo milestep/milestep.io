@@ -21,6 +21,11 @@ footer {
     padding-top: 100px;
   }
 
+  #contact {
+    z-index: 2;
+    position: relative;
+  }
+
   .text-top {
     .my-text-left {
       font-family: "Roboto-Medium";
@@ -151,6 +156,10 @@ footer {
                   inset 0px 45px 0px #ff5f38,
                   inset 0px 50px 0px #ff6339;
     }
+  }
+
+  .footer-circle {
+    border-image: image-url('footer/footer_circle.png')
   }
 
   .copyright {

@@ -1,7 +1,9 @@
 #portfolio {
+  z-index: 2;
+
   .portfolio {
     margin-top: 150px;
-    margin-bottom: 230px;
+    padding-bottom: 230px;
 
     a {
       text-decoration: none;

@@ -50,10 +50,20 @@ a {
   }
 }
 
+circle {
+  fill: none;
+}
+
 line, circle {
   &.dark-line {
     stroke: #646464;
     stroke-width: 1px;
+  }
+  &.gray-line {
+    stroke: #efefef;
+  }
+  &.white-line {
+    stroke: #fff;
   }
 }
 
@@ -130,6 +140,10 @@ header {
   ul {
     margin-top: 12px;
   }
+}
+
+body .visible-overflow {
+  overflow: visible;
 }
 
 @media (max-width: 992px) {
