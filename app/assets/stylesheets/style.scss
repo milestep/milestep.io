@@ -50,6 +50,13 @@ a {
   }
 }
 
+line, circle {
+  &.dark-line {
+    stroke: #646464;
+    stroke-width: 1px;
+  }
+}
+
 .logo {
   float: left;
   h3 {

@@ -1,8 +1,10 @@
-<section id="services" class="with-scrolling">
-  <%= render 'shared/scrolling/background', template: :services %>
-  <%= scrolling_button offset_top: '684px', background: "#fff" do %>
-    <span>03<span>
-  <% end %>
+<section id="services" class="with-background with-scrolling">
+  <div class="section-background-container">
+    <%= render 'shared/background', template: :services %>
+    <%= scrolling_button offset_top: '684px', background: "#fff" do %>
+      <span>03<span>
+    <% end %>
+  </div>
 
   <div class="services">
     <div class="container">
