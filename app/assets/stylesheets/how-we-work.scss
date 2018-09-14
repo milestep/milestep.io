@@ -1,6 +1,7 @@
 #how-we-work {
   .container {
     margin-top: 5%;
+    margin-bottom: 7%;
   }
 
   .how-we-work {
@@ -113,8 +114,7 @@
   .text {
     text-align: center;
     margin: 50%; 
-    width: 380px;
-    height: 58px;
+    width: 85%;
     color: #f5f5f5;
     font-family: Roboto;
     font-size: 18px;
@@ -154,5 +154,13 @@
     font-weight: bold;
     text-align: center;
     font-family: Roboto;
+  }
+
+  @media screen and (max-width: 992px) {
+    .caption { 
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    .text {font-size: 12px;}
   }
 }
