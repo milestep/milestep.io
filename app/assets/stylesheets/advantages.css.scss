@@ -5,10 +5,6 @@
   padding-bottom: 37px;
   overflow: hidden;
 
-  .right-vertikal-line {
-    border-right: 1px solid #bfbfbf;
-  }
-
   .z-index-103 {
     z-index: 103;
   }
@@ -89,15 +85,6 @@
   }
 
   .image-why-us { background: url(image_path('advantages/layer_1.png')) no-repeat }
-
-  .circle-format {
-    width: 376px;
-    height: 376px;
-    position: absolute;
-    left: 269px;
-    top: -176px;
-    z-index: 100;
-  }
 
   .advantages-button {
     background-color: #f50808;
@@ -327,17 +314,6 @@
     padding: 6px 0 0px 23px;
   }
 
-  .advantages-line-w {
-    border-bottom: 2px solid #bfbfbf;
-    width: 300px;
-    height: 2px;
-    display: inline-block;
-    position: relative;
-    flex-shrink: 1;
-    top: 211px;
-    left: 1%;
-    top: 246px;
-  }
   // slider
   #slider {
     width: 100%;
@@ -424,14 +400,12 @@
   }
 
   // new style
-
   .statue {
     width: 750px;
     height: auto;
     position: relative;
     top: -210px;
     left: -160px;
-    z-index: 100;
   }
 
   .underline {
