@@ -1,7 +1,7 @@
 $(document).ready(function(){
           var touch = $('#touch-menu');
              var menu = $('.top_menu');
-          
+
              $(touch).on('click', function(e) {
                  e.preventDefault();
                  menu.slideToggle();
@@ -13,7 +13,3 @@ $(document).ready(function(){
                  }
              });
          });
-      
- 
-
- 
