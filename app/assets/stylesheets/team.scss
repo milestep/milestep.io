@@ -2,20 +2,20 @@
   .team {
     background-color: #2d2d2d;
     color: #fff;
-    padding-bottom: 135px;
+    padding-bottom: 7.03125vw;
 
     .section-left-text {
-      margin-top: 170px;
+      margin-top: 8.85417vw;
       background-image: asset-url('team/rectangle.jpg');
       background-repeat: no-repeat;
       background-size: 75% 58%;
 
       .title {
-        letter-spacing: 3px;
-        line-height: 50px;
+        letter-spacing: 0.15625vw;
+        line-height: 2.6042vw;
 
         p {
-          font-size: 60px;
+          font-size: 3.125vw;
         }
 
         .text-our {
@@ -28,62 +28,62 @@
       }
 
       .paragraph {
-        padding-top: 50px;
-        width: 500px;
-        font-size: 24px;
-        line-height: 35px;
+        padding-top: 2.6vw;
+        width: 26.042vw;
+        font-size: 1.25vw;
+        line-height: 1.823vw;
         font-family: 'Roboto-Medium';
       }
 
       .horizontal-line {
-        margin-top: 30px;
+        margin-top: 1.5625vw;
         border-top: solid #0075b8;
-        width: 250px;
+        width: 13.021vw;
       }
     }
 
     .faces {
-      margin-top: 100px;
-
+      margin-top: 5.29vw;
+      margin-left: 20%; 
       .flex-container {
         display: flex;
       }
 
       .flex-item {
-        margin: 5px;
+        margin: 0.26vw;
         overflow: hidden;
-        max-height: 260px;
-        flex-basis: 260px;
-        box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
+        max-height: 13.542vw;
+        flex-basis: 13.542vw;
+        box-shadow: 0% 0.21vw 0.3646vw rgba(0,0,0,0.5);
         display: flex;
 
         .text {
           display: none;
           position: absolute;
-          top: 85px;
+          top: 4.4271vw;
           text-align: center;
           width: 100%;
-          letter-spacing: 1px;
-          line-height: 30px;
+          letter-spacing: 0.052vw;
+          line-height: 1.5625vw;
 
           p {
             font-family: 'normal';
           }
 
           .name {
-            font-size: 20px;
+            font-size: 1.042vw;
             font-family: 'Roboto-Black';
             text-transform: uppercase;
           }
 
           .horizontal-line {
-            border-top: 1px solid #fff;
+            border-top: 0.0521vw solid #fff;
             width: 65%;
             margin: 0 auto;
           }
 
           .specialization {
-            font-size: 14px;
+            font-size: 0.73vw;
             font-family: 'Roboto-Medium';
           }
         }
@@ -102,8 +102,8 @@
       .img-face {
         background-blend-mode: multiply;
         background-repeat: no-repeat;
-        background-size: 260px;
-        height: 260px;
+        background-size: 13.542vw;
+        height: 13.5412vw;
       }
 
     }
@@ -118,28 +118,29 @@
 
           .text-our {
             font-family: 'Roboto-Bold';
+            margin-bottom: 0%;
           }
 
           .text-team {
             font-family: 'Roboto-Regular';
+            margin-top: -10px;
           }
         }
 
         .paragraph {
-          padding-top: 20px;
+          margin-top: 37px;
           line-height: 25px;
           font-family: 'Roboto-Light';
-          width: 250px;
+          width: 350px;
           font-size: 20px;
         }
       }
 
       .faces {
-        margin-top: 160px;
-
+        position: relative;
         .flex-item {
-          max-height: 200px;
-          flex-basis: 200px;
+          max-height: 300px;
+          flex-basis: 300px;
 
           .text {
             top: 55px;
@@ -153,31 +154,6 @@
               font-family: 'Roboto-Medium';
             }
           }
-        }
-      }
-    }
-
-    @media screen and (min-width: 992px) and (max-width:1199px) {
-      .section-left-text {
-        background-size: 85% 58%;
-
-        .paragraph {
-          padding-top: 40px;
-          line-height: 25px;
-          font-family: 'Roboto-Regular';
-          width: 300px;
-          font-size: 18px;
-        }
-      }
-    }
-
-    @media screen and (min-width: 1200px) and (max-width:1499px) {
-      .section-left-text {
-        background-size: 85% 58%;
-
-        .paragraph {
-          width: 400px;
-          font-size: 22px;
         }
       }
     }

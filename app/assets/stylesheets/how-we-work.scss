@@ -5,30 +5,29 @@
   }
 
   .how-we-work {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 0vmax;
+    margin-top: 1.5625vmax;
+    margin-bottom: 1.5625vmax;
   }
 
   .text-container {
     margin-left: 38%;
-    width: 50px; 
-    height: 34px;
+    width: 2.6vmax; 
+    height: 1.8vmax;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 2.1vmax;
     text-align: center;
   }
 
   .trace {
     margin-top: 30%;
-    border: solid 1px white;
+    border: solid 0.05vmax white;
     width: 90%;
   }
 
  .trace_bottom {
     margin-top: 40%;
-    border: solid 2px white;
+    border: solid 0.1vmax white;
     width: 90%;
    
  }
@@ -36,7 +35,7 @@
   .serve-block {
     padding-top: 4%;
     padding-bottom: 4%;
-    margin-bottom: 0px;
+    margin-bottom: 0%;
     background-color: #f5f5f5;
     font-family: Roboto;
     font-weight: 600;
@@ -51,7 +50,7 @@
     display: inline-block;
     width: 100%;
     color: #999999;
-    font-size: 60px;
+    font-size: 3.125vmax;
     text-transform: uppercase;
     margin-bottom: 1.7%;
   }
@@ -59,56 +58,39 @@
   .serve-block-text {
     display: inline-block;
     color: #232323;
-    font-size: 30px;
+    font-size: 1.5625vmax;
     font-weight: 500;
     line-height: 1.2;
     text-align-last: center;
     text-align: justify;
-    margin-bottom: 40px;
-    width: 65%;
-    margin-left: 17.5%;
+    margin-bottom: 2.08vmax;
+    width: 75%;
+    margin-left: 12.5%;
+  }
+
+  .col-md-5 {
+    padding: 0px;
   }
 
   .top-image {
     z-index: 2;
     text-align: center;
     width: 100%;
-    margin: 0px;
-  }
-  
-  // .row::after {
-  //   content: "";
-  //   clear: both;
-  //   display: table;
-  // }
-
-  .circle-number {
-    font-size: 55px; 
-    width: 80px; 
-    height: 80px; 
-    border: 2px solid #bfbfbf; 
-    border-radius: 15px; //
-    text-align: center; 
-    margin: auto; 
-
-    font-family: Roboto;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.37px;
+    margin: 0vmax;
   }
 
   .caption {
     width: 100%;
     color: #f5f5f5;
     font-family: "Roboto-Black";
-    font-size: 30px;//
+    font-size: 1.5625vmax;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.078125vmax;
     position: absolute;
     z-index: 3;
     margin-top: -55%;
-    padding: 0px;
+    padding: 0vmax;
   }
 
   .text {
@@ -117,20 +99,16 @@
     width: 85%;
     color: #f5f5f5;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 0.9375vmax;
     font-weight: 500;
     position: absolute;
     margin-left: 10%;
     margin-top: 5%;
   }
 
-  .block-container, .block-container div { 
-
-  }
-
   .block-container {
-    padding: 0px;
-    margin: 0px;
+    padding: 0vmax;
+    margin: 0vmax;
   }
 
 
@@ -146,7 +124,7 @@
     margin-top: -100%;
     width: 100%;
     height: 100%;
-    padding: 0px;
+    padding: 0vmax;
   }
   .block-front:hover { opacity: 0.8; }
   .block-front h1 {
@@ -156,11 +134,9 @@
     font-family: Roboto;
   }
 
-  @media screen and (max-width: 992px) {
-    .caption { 
-      font-size: 16px;
-      letter-spacing: 1px;
+  @media screen and (max-width:991px) {
+    .text {
+      font-size: 15px;
     }
-    .text {font-size: 12px;}
   }
 }

@@ -4,7 +4,7 @@ footer {
 
   p {
     font-family: "Roboto-Light";
-    font-size: 20px;
+    font-size: 1.042vw;
   }
 
   a {
@@ -18,7 +18,7 @@ footer {
   }
 
   section {
-    padding-top: 100px;
+    padding-top: 5.21vw;
   }
 
   .text-top {
@@ -27,59 +27,59 @@ footer {
 
       .vertical-line {
         border-right: thick solid #0075b8;
-        width: 400px;
+        width: 20.83vw;
       }
       .first-text {
-        padding-top: 10px;
-        letter-spacing: 2px;
+        padding-top: 0.521vw;
+        letter-spacing: 0.1042vw;
         color: rgb(204,204,204);
         font-weight: 800;
-        font-size: 35px;
+        font-size: 1.823vw;
       }
       .second-text {
-        letter-spacing: 2px;
+        letter-spacing: 0.1042vw;
         font-weight: 600;
-        font-size: 50px;
+        font-size: 2.6042vw;
       }
     }
     .my-text-right {
-      padding-top: 15px;
-      padding-left: 55px;
+      padding-top: 0.78125vw;
+      padding-left: 2.86vw;
       font-family: "Roboto-Regular";
 
       .text-web-and-app {
-        font-size: 50px;
+        font-size: 2.6vw;
         .text-web {
           color: #0075b8;
         }
         .text-and {
-          font-size: 25px;
+          font-size: 1.3vw;
         }
         .text-app {
           color: #f60e0b;
         }
       }
       .text-development-services {
-        font-size: 25px;
+        font-size: 1.3vw;
       }
     }
   }
 
   .data-company {
     font-weight: 600;
-    line-height: 16px;
+    line-height: 0.83vw;
     color: #e0e0e0;
-    font-size: 20px;
+    font-size: 1.042vw;
     font-family: "Roboto-Light";
 
     .address {
-      margin-top: 55px;
+      margin-top: 2.8646vw;
     }
     .phone-number {
-      margin-top: 20px;
+      margin-top: 1.042vw;
     }
     .mail {
-      margin-top: 20px;
+      margin-top: 1.042vw;
       a {
         color: #e0e0e0;
       }
@@ -87,9 +87,9 @@ footer {
   }
 
   .social-network {
-    margin-top: 50px;
+    margin-top: 2.604166666666667vw;
     .fa-stack {
-      margin-right: 10px;
+      margin-right: 0.5208333333333334vw;
     }
     .fa-stack:hover {
       .fa-circle {
@@ -106,57 +106,58 @@ footer {
 
   .form {
     form {
-      margin-bottom: 0px;
+      margin-top: 15%;
+      margin-bottom: 0%;
     }
     .form-control {
       border-radius:2rem;
     }
     input {
       color: #fff;
-      font-size: 20px;
-      height: 45px;
-      border: 2px solid #fff;
+      font-size: 1.042vw;
+      height: 2.34375vw;
+      border: 0.104vw solid #fff;
       background-color: transparent;
-      padding-left: 25px;
+      padding-left: 1.3vw;
       &:focus {
         color: #fff;
-        border: 2px solid #0075b8;
+        border: 0.104vw solid #0075b8;
         background-color: #28343b;
       }
       &::placeholder {
         color: #ffffff;
       }
       &[name="message"] {
-        margin: 20px 50px 50px 0px;
+        margin: 1.04vw 2.6vw 2.6vw 0%;
       }
     }
 
     .btn-contact {
-      font-size: 20px;
-      height: 50px;
+      font-size: 1.042vw;
+      height: 2.6042vw;
       width: 100%;
       border: none;
       border-radius: 2rem;
       padding: 1.5%;
       font-weight: 600;
       color: #fff;
-      box-shadow: inset 0px 5px 0px #f50808,
-                  inset 0px 10px 0px #f50d0a,
-                  inset 0px 15px 0px #f71e14,
-                  inset 0px 20px 0px #f92d1c,
-                  inset 0px 25px 0px #fa3822,
-                  inset 0px 30px 0px #fb4328,
-                  inset 0px 35px 0px #fd4e2e,
-                  inset 0px 40px 0px #fe5833,
-                  inset 0px 45px 0px #ff5f38,
-                  inset 0px 50px 0px #ff6339;
+      box-shadow: inset 0 0.2604166666666667vw 0 #f50808,
+                  inset 0 0.5208333333333334vw 0 #f50d0a,
+                  inset 0 0.78125vw 0 #f71e14,
+                  inset 0 1.0416666666666667vw 0 #f92d1c,
+                  inset 0 1.3020833333333335vw 0 #fa3822,
+                  inset 0 1.5625vw 0 #fb4328,
+                  inset 0 1.8229166666666667vw 0 #fd4e2e,
+                  inset 0 2.0833333333333335vw 0 #fe5833,
+                  inset 0 2.34375vw 0 #ff5f38,
+                  inset 0 2.604166666666667vw 0 #ff6339;
     }
   }
 
   .copyright {
-    margin-top: 80px;
-    font-size: 18px;
-    line-height: 40px;
+    margin-top: 4.2vw;
+    font-size: 0.9375vw;
+    line-height: 2.1vw;
     color: rgb(139,139,139);
     font-family: "Roboto-Bold";
   }

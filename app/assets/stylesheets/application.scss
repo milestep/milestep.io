@@ -126,7 +126,7 @@ a, button { outline: none !important; }
     transform: rotate(-90deg);
     color: #f03838;
     font-family: 'Roboto-Black';
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 400;
     letter-spacing: 0.7px;
     position: absolute;
@@ -157,4 +157,17 @@ a, button { outline: none !important; }
       font-size: 1vw;
     }
   }
+}
+
+.content-block {
+  width: 60%;
+  max-width: 60%;
+  padding: 0px !important;
+}
+
+.content-block-right {
+  width: 80%;
+  max-width: 80%;
+  margin-left: 20%;
+  padding: 0px !important;
 }

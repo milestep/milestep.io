@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+  applyFontSize()
   zoomBlock()
 })
 
@@ -17,4 +18,11 @@ function zoomBlock() {
     $('.milestep-description > p').css('font-size', window.devicePixelRatio + 'vw')
     $('.milestep-description > p').css('width', (window.devicePixelRatio * 21) + 'vw')
   } 
+}
+
+function applyFontSize() {
+  // window.fontMultiplyer = window.devicePixelRatio * (screen.width / 1920);
+  // $('*').map((_, el) => {
+  //   $(el).css('font-size', (parseInt($(el).css('font-size')) * window.fontMultiplyer) + 'px')
+  // })
 }
