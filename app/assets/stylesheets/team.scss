@@ -3,7 +3,7 @@
     background-color: #2d2d2d;
     color: #fff;
     padding-bottom: 135px;
-
+    
     .section-left-text {
       margin-top: 170px;
       background-image: asset-url('team/rectangle.jpg');
@@ -47,6 +47,11 @@
 
       .flex-container {
         display: flex;
+      }
+
+      .col-xs-4 {
+        padding: 1px; 
+        margin: 0px;
       }
 
       .flex-item {
@@ -106,29 +111,6 @@
         height: 260px;
       }
 
-      .img-face-1 {
-        background-image: asset-url('team/faces/face-1.jpg');
-      }
-
-      .img-face-2 {
-        background-image: asset-url('team/faces/face-2.jpg');
-      }
-
-      .img-face-3 {
-        background-image: asset-url('team/faces/face-3.jpg');
-      }
-
-      .img-face-4 {
-        background-image: asset-url('team/faces/face-4.jpg');
-      }
-
-      .img-face-5 {
-        background-image: asset-url('team/faces/face-5.jpg');
-      }
-
-      .img-face-6 {
-        background-image: asset-url('team/faces/face-6.jpg');
-      }
     }
 
     @media screen and (max-width:991px) {
