@@ -21,8 +21,7 @@
         <div class='faces'>
           <% @development.each do |developer| %>
           <div class='col-xs-4'>
-            <div class='flex-item animated fadeInDown rectangle-and-text-hover img-face'
-               style="background-image: url(<%= image_path(developer.image_url) %>); background-size: 100%;" >
+            <div class='flex-item animated fadeInDown rectangle-and-text-hover img-face', style="background-image: url(<%= image_path(developer.image_url) %>); background-size: 100%;" >
               <div class="section-left-text">
                 <div class='text'>
                   <p class='name'><%= developer.first_name %></p>
