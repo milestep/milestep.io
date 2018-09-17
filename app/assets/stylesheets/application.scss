@@ -85,7 +85,7 @@ a, button { outline: none !important; }
     padding: 0;
     margin: 0;
     word-break: break-all;
-    a {
+    p {
       letter-spacing: 0.1vw;
       padding: 0;
       z-index: 20;
@@ -95,9 +95,10 @@ a, button { outline: none !important; }
       font-family: 'Roboto';
       text-align: left;
       position: relative;
-    }
-    p {
       margin-bottom: 2.05vw;
+    }
+    p:hover {
+      cursor: pointer;
     }
   }
 }
