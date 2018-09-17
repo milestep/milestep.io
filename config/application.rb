@@ -21,5 +21,9 @@ module MilestepWebsite
       g.view_specs      false
       g.helper_specs    false
     end
+
   end
 end
+
+
+Dotenv.load "config/env/#{ENV['RAILS_ENV']}.env"

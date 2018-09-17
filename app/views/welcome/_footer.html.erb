@@ -27,13 +27,12 @@
         <div class="col-md-5">
           <div class="data-company">
             <div class="address">
-              <p>62, European Street, Uman,</p>
-              <p>Cherkasy Region, Ukraine</p>
+              <p>42/1, Priportova St., Cherkasy, Ukraine</p>
+              <p>62, European St., Uman, Ukraine</p>
             </div>
 
             <div class="phone-number">
-              <p>+38 (097) 000 00 00</p>
-              <p>+1 (214) 000 00 00</p>
+              <p>+38 (097) 753 57 31</p>
             </div>
 
             <div class="mail">
@@ -42,36 +41,46 @@
           </div>
 
           <div class="social-network">
-            <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x inside-icon"></i>
-            </span>
+            <a href='https://www.facebook.com/MileStepOutsoucing' target='_blank'>
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x inside-icon"></i>
+              </span>
+            </a>
 
-            <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-github fa-stack-1x inside-icon"></i>
-            </span>
+            <a href='https://github.com/milestep' target='_blank'>
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x inside-icon"></i>
+              </span>
+            </a>
 
-            <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x inside-icon"></i>
-            </span>
+            <a href='https://www.linkedin.com/company/milestep' target='_blank'>
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x inside-icon"></i>
+              </span>
+            </a>
 
-            <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-instagram fa-stack-1x inside-icon"></i>
-            </span>
+            <a href='https://www.instagram.com/milestep.io' target='_blank'>
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-instagram fa-stack-1x inside-icon"></i>
+              </span>
+            </a>
 
-            <span class="fa-stack fa-3x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x inside-icon"></i>
-            </span>
+            <a href='https://twitter.com/milestepcompany' target='_blank'>
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x inside-icon"></i>
+              </span>
+            </a>
           </div>
         </div>
 
         <div class="col-md-4 offset-3">
           <div class="form">
-            <form method="post">
+            <form id='message-form'>
               <div class="form-group">
                 <input type="text" name="email" class="form-control" placeholder="Your Email" required />
               </div>
@@ -79,7 +88,7 @@
                 <input type="text" name="message" class="form-control" placeholder="Your message" />
               </div>
               <div class="form-group">
-                <button class="btn-contact" type="submit">SEND MESSAGE</button>
+                <button class="btn-contact" type="button" onclick='sendMessage()'>SEND MESSAGE</button>
               </div>
             </form>
           </div>

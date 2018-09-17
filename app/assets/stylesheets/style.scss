@@ -185,44 +185,6 @@ header {
   font-size: 18px;
 }
 
-.servises-line {
-  margin-top: 125px;
-  background-color: #4a3d63;
-  width: 100%;
-  position: absolute;
-  height: 40px;
-  width: 100%;
-}
-
-.service-card {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  text-align: center;
-  padding: 15px;
-  margin-top: -40px;
-  margin-bottom: 73px;
-}
-
-.services {
-  background-color: #4a3d63;
-  margin-top: 150px;
-}
-
-.portfolio {
-  background-color: #efeaf0;
-  img {
-    width: 384px;
-    height: 269px;
-  }
-}
-
-.btn-portfolio {
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-
 .clients {
   margin-bottom: 86px;
 }
@@ -266,26 +228,6 @@ form {
 
 a.active {
   color: #a11819;
-}
-
-.skills-wrapper {
-  width: 100%;
-  height: 850px;
-  background-image: asset-url("bg-2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media (max-width: 992px) {
-  .skills-wrapper {
-    background: none;
-  }
-}
-
-@media (min-width: 992px) {
-  .skills-wrapper img {
-    display: none;
-  }
 }
 
 .mail-to {
