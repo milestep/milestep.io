@@ -3,7 +3,7 @@
     background-color: #2d2d2d;
     color: #fff;
     padding-bottom: 135px;
-
+    
     .section-left-text {
       margin-top: 170px;
       background-image: asset-url('team/rectangle.jpg');
@@ -43,10 +43,15 @@
     }
 
     .faces {
-      margin-top: 100px;
+      margin-top: 160px;
 
       .flex-container {
         display: flex;
+      }
+
+      .col-xs-4 {
+        padding: 1px; 
+        margin: 0px;
       }
 
       .flex-item {
@@ -102,8 +107,8 @@
       .img-face {
         background-blend-mode: multiply;
         background-repeat: no-repeat;
-        background-size: 260px;
-        height: 260px;
+        background-size: 210px;
+        height: 210px;
       }
 
     }
