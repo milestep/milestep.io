@@ -15,4 +15,5 @@
 //= require jquery
 //= require turbolinks
 //= require popper
+//= require jquery.slick
 //= require_tree .
