@@ -2,12 +2,7 @@
   .services {
     .container {
       padding: 0px;
-      margin-bottom: 7%;
-      max-width: 120em;
-    }
-
-    .col-md-4 {
-      padding: 1%;
+      padding-bottom: 3%;
     }
 
     .service-card {
@@ -29,7 +24,7 @@
       }
 
       .info {
-        padding-top: 90%;
+        padding-top: 100%;
         margin-top: 15%;
         margin-left: 10%;
         margin-right: 10%;
@@ -47,13 +42,13 @@
 
         .title {
           margin-top: 16%;
-          width: 120%;
-          margin-left: -10%;
+          width: 125%;
+          margin-left: -12%;
           text-align: center;
           text-transform: uppercase;
-          font-size: 28px;
+          font-size: calc(28px * var(--font-size-offset));
           letter-spacing: 1px;
-          line-height: 48px;
+          line-height: calc(48px * var(--font-size-offset));
           font-weight: bold;
         }
 
@@ -64,17 +59,16 @@
           .text {
             margin-top: 15%;
             text-align: justify;
-            height: 25%;;
-            font-size: 16px;
+            font-size: calc(16px * var(--font-size-offset));
             line-height: 150%;
             font-weight: bold;
           }
 
           .read-more {
             margin-top: 8%;
-            font-size: 16px;
+            font-size: calc(16px * var(--font-size-offset));
             letter-spacing: 0px;
-            line-height: 24px;
+            line-height:  calc(24px * var(--font-size-offset));
             font-weight: bold;
             text-align: left;
             text-decoration: underline;
@@ -85,11 +79,11 @@
             color: #fff;
             margin-top: 30px;
             margin-bottom: 40px;
-            font-size: 18px;
+            font-size: calc(18px * var(--font-size-offset));
             font-family: "Roboto-Medium";
             text-transform: uppercase;
-            width: 195px;
-            height: 55px;
+            width:  calc(195px * var(--font-size-offset));
+            height:  calc(55px * var(--font-size-offset));
             border-radius: 28px;
             background-image: linear-gradient(0deg, #046396 0%, #0075b7 100%);
             border: 2px solid #ffffff;
@@ -99,9 +93,9 @@
     }
 
     .service-card-center {
-      margin-top: -28%;
+
       .info {
-        margin-top: 53%;
+        padding-top: calc(141% + 25px * (1 - var(--font-size-offset)));
       }
     }
 
@@ -140,38 +134,6 @@
           .body {
             .text {
               height: 265px;
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 992px) and (max-width:1199px) {
-      .service-card {
-        .info {
-          .body {
-            .btn-contact {
-              margin-top: 20px;
-              margin-bottom: 30px;
-              font-size: 16px;
-              width: 140px;
-              height: 40px;
-            }
-          }
-        }
-      }
-
-      .service-card-center {
-        .info {
-          .title {
-            font-size: 23px;
-            letter-spacing: 0px;
-            line-height: 38px;
-          }
-
-          .body {
-            .text {
-              height: 200px;
             }
           }
         }
