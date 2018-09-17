@@ -2,20 +2,20 @@
   .team {
     background-color: #2d2d2d;
     color: #fff;
-    padding-bottom: 135px;
+    padding-bottom: calc(135px * var(--font-size-offset));
 
     .section-left-text {
-      margin-top: 170px;
+      margin-top: calc(170px * var(--font-size-offset));
       background-image: asset-url('team/rectangle.jpg');
       background-repeat: no-repeat;
       background-size: 75% 58%;
 
       .title {
-        letter-spacing: 3px;
-        line-height: 50px;
+        letter-spacing: calc(30px * var(--font-size-offset));
+        line-height: calc(50px * var(--font-size-offset));
 
         p {
-          font-size: 60px;
+          font-size: calc(60px * var(--font-size-offset));
         }
 
         .text-our {
@@ -28,17 +28,17 @@
       }
 
       .paragraph {
-        padding-top: 50px;
-        width: 500px;
-        font-size: 24px;
-        line-height: 35px;
+        padding-top: calc(62px * var(--font-size-offset));
+        max-width: calc(550px * var(--font-size-offset)) !important;
+        font-size: calc(24px * var(--font-size-offset));
+        line-height: calc(35px * var(--font-size-offset));
         font-family: 'Roboto-Medium';
       }
 
       .horizontal-line {
-        margin-top: 30px;
+        margin-top: calc(30px * var(--font-size-offset));
         border-top: solid #0075b8;
-        width: 250px;
+        width: calc(250px * var(--font-size-offset));
       }
     }
 
@@ -52,8 +52,8 @@
       .flex-item {
         margin: 5px;
         overflow: hidden;
-        max-height: 260px;
-        flex-basis: 260px;
+        max-height: calc(260px * var(--font-size-offset));
+        flex-basis: calc(260px * var(--font-size-offset));
         box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
         display: flex;
 
@@ -64,14 +64,14 @@
           text-align: center;
           width: 100%;
           letter-spacing: 1px;
-          line-height: 30px;
+          line-height: calc(30px * var(--font-size-offset));
 
           p {
             font-family: 'normal';
           }
 
           .name {
-            font-size: 20px;
+            font-size: calc(20px * var(--font-size-offset));
             font-family: 'Roboto-Black';
             text-transform: uppercase;
           }
@@ -83,7 +83,7 @@
           }
 
           .specialization {
-            font-size: 14px;
+            font-size: calc(14px * var(--font-size-offset));
             font-family: 'Roboto-Medium';
           }
         }
@@ -102,8 +102,8 @@
       .img-face {
         background-blend-mode: multiply;
         background-repeat: no-repeat;
-        background-size: 260px;
-        height: 260px;
+        background-size: calc(260px * var(--font-size-offset));
+        height: calc(260px * var(--font-size-offset));
       }
 
     }

@@ -2,7 +2,7 @@
   padding-left: 0;
   padding-right: 0;
   background-color: #f5f5f5;
-  padding-bottom: 37px;
+  padding-bottom: calc(37px * var(--font-size-offset));
   overflow: hidden;
 
   .right-vertikal-line {
@@ -22,38 +22,38 @@
   }
 
   .margin-right-30 {
-    margin-right: 30px;
+    margin-right: calc(30px * var(--font-size-offset));
   }
 
   .height-500 {
-    height: 500px;
+    height: calc(500px * var(--font-size-offset));
   }
 
   .top-16 {
-    top: 16px;
+    top: calc(16px * var(--font-size-offset));
   }
 
   .why-us-number {
-    width: 312px;
-    height: 210px;
-    margin-bottom: 100px;
+    width: calc(312px * var(--font-size-offset));
+    height: calc(210px * var(--font-size-offset));
+    margin-bottom: calc(100px * var(--font-size-offset));
     text-shadow: 5px 6px 15px rgba(0, 0, 0, 0.15);
     color: #ffffff;
     font-family: Roboto;
-    font-size: 315px;
+    font-size: calc(315px * var(--font-size-offset));
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: calc(30px * var(--font-size-offset));
     position: relative;
     top: 90px;
-    margin-left: -31px;
-    margin-right: -158px;
+    margin-left: calc(-31px * var(--font-size-offset));
+    margin-right: calc(-158px * var(--font-size-offset));
   }
 
-  .tech-title { margin-bottom: 54px; }
+  .tech-title { margin-bottom: calc(54px * var(--font-size-offset)); }
 
   .tech-title {
-    font-size: 40px;
+    font-size: calc(40px * var(--font-size-offset));
     text-transform: uppercase;
     text-align: left;
     color: #585858;
@@ -61,12 +61,12 @@
   }
 
   h2.why-us {
-    font-size: 44px;
+    font-size: calc(44px * var(--font-size-offset));
     text-transform: uppercase;
     text-align: left;
     color: #585858;
     font-family: 'Roboto';
-    height: 120px;
+    height: calc(120px * var(--font-size-offset));
     width: 70%;
 
   }
@@ -76,26 +76,26 @@
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Roboto-Bold';
-    font-size: 30px;
-    padding-top: 22px;
+    font-size: calc(30px * var(--font-size-offset));
+    padding-top: calc(22px * var(--font-size-offset));
   }
 
   .advantages-item p {
     font-family: 'Roboto-Bold';
     color: #6c7a89;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-size-offset));
     letter-spacing: 0.44px;
-    padding-top: 6px;
+    padding-top: calc(6px * var(--font-size-offset));
   }
 
   .image-why-us { background: url(image_path('advantages/layer_1.png')) no-repeat }
 
   .circle-format {
-    width: 376px;
-    height: 376px;
+    width: calc(367px * var(--font-size-offset));
+    height: calc(367px * var(--font-size-offset));
     position: absolute;
-    left: 269px;
-    top: -176px;
+    left: calc(269px * var(--font-size-offset));
+    top: calc(-176px * var(--font-size-offset));
     z-index: 1;
   }
 
@@ -103,15 +103,15 @@
     background-color: #f50808;
     border-radius: 28px;
     border: none;
-    width: 195px;
-    height: 55px;
-    font-size: 18px;
+    width: calc(195px * var(--font-size-offset));
+    height: calc(55px * var(--font-size-offset));
+    font-size: calc(18px * var(--font-size-offset));
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     left: 50%;
-    top: -28px;
+    top: calc(-28px * var(--font-size-offset));
     z-index: 104;
     font-family: "Roboto-Bold";
     outline: none !important;
@@ -126,14 +126,14 @@
   .button-advantages-left {
     background-color: #f5f5f5;
     border-radius: 50%;
-    width: 88px;
-    height: 70px;
+    width: calc(88px * var(--font-size-offset));
+    height: calc(70px * var(--font-size-offset));
     position: relative;
     top: 4px;
     z-index: 104;
     outline: none !important;
-    font-size: 35px;
-    padding: 8px;
+    font-size: calc(35px * var(--font-size-offset));
+    padding: calc(8px * var(--font-size-offset));
     border: 2px solid #0075b8;
     color: #0075b8;
   }
@@ -150,11 +150,11 @@
   }
 
   .advantages-body {
-    padding-top: 46px;
-    padding-left: 24px;
+    padding-top: calc(46px * var(--font-size-offset));
+    padding-left: calc(24px * var(--font-size-offset));
 
     .advantage-item {
-      margin-bottom: 60px;
+      margin-bottom: calc(60px * var(--font-size-offset));
 
       .img-and-title {
         display: inline-block;
@@ -163,37 +163,42 @@
           color: #106a9f;
           text-transform: uppercase;
           font-weight: bold;
-          font-size: 30px;
+          font-size: calc(28px * var(--font-size-offset));
+        }
+        
+        img {
+          width: calc(111px * var(--font-size-offset));
         }
 
         .img-mb {
-          margin-right: 12px;
+          margin-right: calc(12px * var(--font-size-offset));
+          width: calc(90px * var(--font-size-offset));
         }
       }
 
       .text {
         font-family: 'Roboto-Bold';
         color: #6c7a89;
-        font-size: 20px;
+        font-size: calc(20px * var(--font-size-offset));
         letter-spacing: 0.44px;
       }
 
       .indent {
-        text-indent: 98px;
+        text-indent: calc(98px * var(--font-size-offset));
         position: relative;
-        top: -25px;
+        top: calc(-25px * var(--font-size-offset));
       }
 
       .indent2 {
-        text-indent: 124px;
+        text-indent: calc(124px * var(--font-size-offset));
         position: relative;
-        top: -25px;
+        top: calc(-25px * var(--font-size-offset));
       }
 
       .indent3 {
-        text-indent: 110px;
+        text-indent: calc(110px * var(--font-size-offset));
         position: relative;
-        top: -25px;
+        top: calc(-25px * var(--font-size-offset));
       }
     }
   }
@@ -201,28 +206,29 @@
   .advantages-title {
     position: relative;
     display: inline;
-    top: 205px;
-    left: -8px;
-    line-height: 48px;
+    top: calc(205px * var(--font-size-offset));
+    left: calc(-8px * var(--font-size-offset));
+    line-height: calc(48px * var(--font-size-offset));
   }
 
   .advantages-item.img1 {margin-right: 72px;}
   .advantages-item.img3 {
-    margin-right: 64px;
+    margin-right: calc(64px * var(--font-size-offset));
+    width: calc(90px * var(--font-size-offset));
   }
 
   .frameworks {
     background-color: #fff;
     width: 100%;
-    height: 200px;
+    height: calc(200px * var(--font-size-offset));
     display: flex;
     flex-shrink: 0;
   }
 
   .frameworks-format {
-    margin-right: 153px;
+    margin-right: calc(153px * var(--font-size-offset));
     flex-shrink: 1;
-    padding-top: 72px;
+    padding-top: calc(72px * var(--font-size-offset));
   }
   .react {
     width: 199px;
@@ -426,11 +432,11 @@
   // new style
 
   .statue {
-    width: 750px;
+    width: calc(750px * var(--font-size-offset));
     height: auto;
     position: relative;
-    top: -210px;
-    left: -160px;
+    top: calc(-210px * var(--font-size-offset));
+    left: calc(-160px * var(--font-size-offset));
     z-index: 100;
   }
 
@@ -444,110 +450,5 @@
     flex-shrink: 1;
     transform: rotate(90deg);
     left: 29%;
-  }
-
-  @media screen and (max-width: 1223px) {
-    span.title {
-      font-size: 20px;
-    }
-    .go {position: relative; top: 17px}
-    p.text {
-      font-family: 'Roboto-Bold';
-      color: #6c7a89;
-      font-size: 15px;
-      letter-spacing: 0.44px;
-    }
-  }
-
-  @media screen and (max-width: 1201px) {
-    .statue {
-      width: 700px;
-    }
-  }
-
-  @media screen and (max-width: 1199px) {
-    .underline {
-      border-bottom: 2px solid #bfbfbf;
-      width: 28%;
-      height: 2px;
-      display: inline-block;
-      position: relative;
-      top: 107px;
-      flex-shrink: 1;
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      left: 25%;
-    }
-  }
-
-  @media screen and (max-width: 1111px) {
-    .statue {
-      width: 650px;
-    }
-  }
-
-  @media screen and (max-width: 992px) {
-    .statue {
-      width: 600px;
-      top: -300px;
-    }
-  }
-
-  @media screen and (max-width: 991px) {
-    .underline {
-      border-bottom: 2px solid #bfbfbf;
-      width: 37%;
-      height: 2px;
-      display: inline-block;
-      position: relative;
-      top: 108px;
-      flex-shrink: 1;
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      left: 7%
-    }
-    .advantages-button {
-      background-color: #f50808;
-      border-radius: 28px;
-      border: none;
-      width: 195px;
-      height: 55px;
-      font-size: 18px;
-      color: #fff;
-      font-weight: bold;
-      text-transform: uppercase;
-      position: relative;
-      left: 41%;
-      top: -28px;
-      z-index: 104;
-      font-family: "Roboto-Bold";
-      outline: none !important;
-    }
-
-  }
-
-  @media screen and (max-width: 538px) {
-    .line_1 {
-      position: absolute;
-      z-index: 102;
-      right: 10%;
-      height: 1954px;
-    }
-  }
-
-  @media screen and (max-width: 533px) {
-    .line_1 {
-      position: absolute;
-      z-index: 102;
-      right: 11%;
-      height: 1954px;
-    }
-  }
-
-  .line_1 {
-    position: absolute;
-    z-index: 102;
-    right: 17%;
-    height: 1954px;
   }
 }
