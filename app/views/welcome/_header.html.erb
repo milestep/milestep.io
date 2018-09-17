@@ -3,18 +3,18 @@
     <button class='burger-button' id='header-burger-button container'  onclick='burgerAction()'>
       <%= image_tag("header/burger.png") %>
     </button>
-    <a href='#contact'><button class='contact-us-button burger-hidable container'> CONTACT US </button></a>
+    <button class='contact-us-button burger-hidable container' onclick='scroller("contact")'> CONTACT US </button>
     <div class='menu-container burger-hidable container' style='display: none;'>
       <%= image_tag("header/menu.png") %>
     </div>
     <div class='nav-links burger-hidable' style='display: none;'>
-      <p><a href='#header'>Home</a></p>
-      <p><a href='#services'>Services</a></p> 
-      <p><a href='#how-we-work'>How We Work</a></p>
-      <p><a href='#team'>Team</a></p>
-      <p><a href='#why-us'>Why Us</a></p>
-      <p><a href='#portfolio'>Portfolio</a></p>
-      <p><a href='#contact'>Contact Us</a></p>
+      <p onclick='scroller("header")'>Home</p>
+      <p onclick='scroller("services")'>Services</p>
+      <p onclick='scroller("how-we-work")'>How We Work</p>
+      <p onclick='scroller("team")'>Team</p>
+      <p onclick='scroller("why-us")'>Why Us</p>
+      <p onclick='scroller("portfolio")'>Portfolio</p>
+      <p onclick='scroller("contact")'>Contact Us</p>
     </div>
   </div>
 </section>
