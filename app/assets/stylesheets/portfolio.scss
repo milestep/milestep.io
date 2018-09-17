@@ -1,7 +1,7 @@
 #portfolio {
   .portfolio {
-    margin-top: 150px;
-    margin-bottom: 230px;
+    margin-top: calc(150px * var(--font-size-offset));
+    margin-bottom: calc(230px * var(--font-size-offset));
 
     a {
       text-decoration: none;
@@ -11,8 +11,8 @@
       text-transform: uppercase;
 
       p {
-        font-size: 41px;
-        letter-spacing: 3px;
+        font-size: calc(41px * var(--font-size-offset));
+        letter-spacing: calc(3px * var(--font-size-offset));
         font-family: "Roboto";
         font-weight: 800;
         line-height: 40px;
@@ -28,7 +28,7 @@
     }
 
     .wrapper--galleria-rectangle {
-      margin-top: 50px;
+      margin-top: calc(50px * var(--font-size-offset));
 
       .flex-container--galleria-and-rectangle {
         display: flex;
@@ -43,10 +43,10 @@
           display: flex;
 
           .flex-item {
-            margin: 5px;
+            margin: calc(5px * var(--font-size-offset));
             overflow: hidden;
-            height: 250px;
-            width: 250px;
+            height: calc(250px * var(--font-size-offset));
+            width: calc(250px * var(--font-size-offset));
           }
 
           .rectangle-and-text-hover {
@@ -71,21 +71,21 @@
                   .name-project {
                     letter-spacing: 0px;
                     text-transform: uppercase;
-                    font-size: 18px;
+                    font-size: calc(18px * var(--font-size-offset));
                     font-weight: 500;
                   }
 
                   .horizontal-line {
                     margin: 0 auto;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
+                    margin-top: calc(20px * var(--font-size-offset));
+                    margin-bottom: calc(10px * var(--font-size-offset));
                     border-top: solid #fff;
                     width: 90%;
                   }
 
                   .info-project {
-                    font-size: 13px;
-                    line-height: 12px;
+                    font-size: calc(13px * var(--font-size-offset));
+                    line-height: calc(12px * var(--font-size-offset));
                   }
                 }
               }
@@ -115,8 +115,8 @@
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        height: 516px;
-        width: 150px;
+        height: calc(516px * var(--font-size-offset));
+        width: calc(150px * var(--font-size-offset));
       }
     }
 
@@ -154,82 +154,6 @@
         .rectangle-portfolio {
           height: 355px;
           width: 80px;
-        }
-      }
-    }
-
-    @media screen and (min-width: 992px) and (max-width:1199px) {
-      .wrapper--galleria-rectangle {
-        .galleria .flex-container {
-          .flex-item {
-            height: 150px;
-            width: 150px;
-          }
-
-          .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
-            p {
-              letter-spacing: 0px;
-            }
-
-            .name-project {
-              font-size: 11px;
-              font-weight: 300;
-              line-height: 12px;
-            }
-
-            .horizontal-line {
-              margin-top: 0px;
-              margin-bottom: 5px;
-            }
-
-            .info-project {
-              font-size: 8px;
-              line-height: 8px;
-            }
-          }
-        }
-
-        .rectangle-portfolio {
-          height: 475px;
-          width: 100px;
-        }
-      }
-    }
-
-    @media screen and (min-width: 1200px) and (max-width:1399px) {
-      .wrapper--galleria-rectangle {
-        .galleria .flex-container {
-          .flex-item {
-            height: 200px;
-            width: 200px;
-          }
-
-          .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
-            p {
-              letter-spacing: 0px;
-            }
-
-            .name-project {
-              font-size: 16px;
-              font-weight: 300;
-              line-height: 25px;
-            }
-
-            .horizontal-line {
-              margin-top: 10px;
-              margin-bottom: 10px;
-            }
-
-            .info-project {
-              font-weight: 100;
-              font-size: 11px;
-            }
-          }
-        }
-
-        .rectangle-portfolio {
-          height: 625px;
-          width: 120px;
         }
       }
     }
