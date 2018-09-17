@@ -81,7 +81,7 @@
           color: #106a9f;
           text-transform: uppercase;
           font-weight: bold;
-          font-size: calc(30px * var(--font-size-offset));
+          font-size: calc(26px * var(--font-size-offset));
         }
 
         .title-2 {
@@ -126,7 +126,7 @@
         position: relative;
         top: calc(-210px * var(--font-size-offset));
         left: calc(-160px * var(--font-size-offset));
-        z-index: 3;
+        z-index: 2;
       }
     }
 
@@ -298,77 +298,6 @@
         transform: rotate(90deg);
         left: 9%
       }
-    }
-
-    .container-with-img-statue {
-      height: 400px;
-    }
-
-    .technologies {
-      height: 110px;
-
-      img {
-        margin-top: 30px;
-        height: 50px;
-      }
-    }
-  }
-
-  @media screen and (min-width: 992px) and (max-width:1199px) {
-    .advantages-header {
-      h2 {
-        font-size: 25px;
-        height: 100px;
-        line-height: 43px;
-      }
-    }
-
-   .advantages-body {
-     .advantage-item {
-       .img-and-title {
-         .title {
-           font-size: 25px;
-         }
-
-         .title-2 {
-           line-height: 27px;
-         }
-
-         .img-mb {
-           width: 70px;
-         }
-       }
-
-        .text {
-          font-size: 17px;
-        }
-
-        .text-3 {
-          text-indent: 83px;
-          top: -15px;
-        }
-
-        .text-1-4-5 {
-          text-indent: 85px;
-           top: -20px;
-        }
-
-        .statue {
-          width: 700px;
-        }
-      }
-
-      .underline {
-        width: 40%;
-        top: 52px;
-        transform: rotate(90deg);
-        left: 21%
-      }
-    }
-
-    .tech .tech-title {
-      font-size: 25px;
-      top: 15px;
     }
 
     .container-with-img-statue {
