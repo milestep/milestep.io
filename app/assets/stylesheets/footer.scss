@@ -4,7 +4,7 @@ footer {
 
   p {
     font-family: "Roboto-Light";
-    font-size: 20px;
+    font-size: calc(20px * var(--font-size-offset));
   }
 
   a {
@@ -18,7 +18,7 @@ footer {
   }
 
   section {
-    padding-top: 100px;
+    padding-top: calc(100px * var(--font-size-offset));
   }
 
   .text-top {
@@ -27,59 +27,59 @@ footer {
 
       .vertical-line {
         border-right: thick solid #0075b8;
-        width: 400px;
+        width: calc(400px * var(--font-size-offset));
       }
       .first-text {
-        padding-top: 10px;
-        letter-spacing: 2px;
+        padding-top: calc(10px * var(--font-size-offset));
+        letter-spacing: calc(2px * var(--font-size-offset));
         color: rgb(204,204,204);
         font-weight: 800;
-        font-size: 35px;
+        font-size: calc(35px * var(--font-size-offset));
       }
       .second-text {
-        letter-spacing: 2px;
+        letter-spacing: calc(2px * var(--font-size-offset));
         font-weight: 600;
-        font-size: 50px;
+        font-size: calc(50px * var(--font-size-offset));
       }
     }
     .my-text-right {
-      padding-top: 15px;
-      padding-left: 55px;
+      padding-top: calc(15px * var(--font-size-offset));
+      padding-left: calc(55px * var(--font-size-offset));
       font-family: "Roboto-Regular";
 
       .text-web-and-app {
-        font-size: 50px;
+        font-size: calc(55px * var(--font-size-offset));
         .text-web {
           color: #0075b8;
         }
         .text-and {
-          font-size: 25px;
+          font-size: calc(25px * var(--font-size-offset));
         }
         .text-app {
           color: #f60e0b;
         }
       }
       .text-development-services {
-        font-size: 25px;
+        font-size: calc(25px * var(--font-size-offset));
       }
     }
   }
 
   .data-company {
     font-weight: 600;
-    line-height: 16px;
+    line-height: calc(16px * var(--font-size-offset));
     color: #e0e0e0;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-size-offset));
     font-family: "Roboto-Light";
 
     .address {
-      margin-top: 55px;
+      margin-top: calc(55px * var(--font-size-offset));
     }
     .phone-number {
-      margin-top: 20px;
+      margin-top: calc(20px * var(--font-size-offset));
     }
     .mail {
-      margin-top: 20px;
+      margin-top: calc(20px * var(--font-size-offset));
       a {
         color: #e0e0e0;
       }
@@ -87,9 +87,9 @@ footer {
   }
 
   .social-network {
-    margin-top: 50px;
+    margin-top: calc(50px * var(--font-size-offset));
     .fa-stack {
-      margin-right: 10px;
+      margin-right: calc(10px * var(--font-size-offset));
     }
     .fa-stack:hover {
       .fa-circle {
@@ -113,11 +113,11 @@ footer {
     }
     input {
       color: #fff;
-      font-size: 20px;
-      height: 45px;
+      font-size: calc(20px * var(--font-size-offset));
+      height: calc(45px * var(--font-size-offset));
       border: 2px solid #fff;
       background-color: transparent;
-      padding-left: 25px;
+      padding-left: calc(25px * var(--font-size-offset));
       &:focus {
         color: #fff;
         border: 2px solid #0075b8;
@@ -132,8 +132,8 @@ footer {
     }
 
     .btn-contact {
-      font-size: 20px;
-      height: 50px;
+      font-size: calc(20px * var(--font-size-offset));
+      height: calc(50px * var(--font-size-offset));
       width: 100%;
       border: none;
       border-radius: 2rem;
@@ -154,9 +154,9 @@ footer {
   }
 
   .copyright {
-    margin-top: 80px;
-    font-size: 18px;
-    line-height: 40px;
+    margin-top: calc(80px * var(--font-size-offset));
+    font-size: calc(18px * var(--font-size-offset));
+    line-height: calc(40px * var(--font-size-offset));
     color: rgb(139,139,139);
     font-family: "Roboto-Bold";
   }
