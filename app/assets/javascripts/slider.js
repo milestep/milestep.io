@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.slider-nav').slick({
+  $('.slider-technologies-slick-js').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
     autoplay: true,
