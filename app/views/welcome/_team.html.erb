@@ -18,16 +18,16 @@
       </div>
 
       <div class='col-xs-6'>
-        <div class='faces'>
+        <div class='faces slider-team-slick-js'>
           <% @development.each do |developer| %>
             <div class='col-xs-4'>
-              <div class='flex-item animated fadeInDown rectangle-and-text-hover img-face section-left-text', style="background-image: url(<%= image_path(developer.image_url) %>);" >
+              <div class='flex-item animated fadeInDown rectangle-and-text-hover img-face', style="background-image: url(<%= image_path(developer.image_url) %>);" >
                 <div class='text'>
                   <p class='name'><%= developer.name %></p>
                   <div class='horizontal-line'></div>
                   <p class='specialization'><%= developer.title %></p>
                 </div>
-              </div>     
+              </div>
             </div>
           <% end %>
         </div>
