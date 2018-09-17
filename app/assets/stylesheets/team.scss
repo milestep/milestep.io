@@ -11,7 +11,7 @@
       background-size: 75% 58%;
 
       .title {
-        letter-spacing: calc(30px * var(--font-size-offset));
+        letter-spacing: calc(10px * var(--font-size-offset));
         line-height: calc(50px * var(--font-size-offset));
 
         p {
@@ -43,10 +43,15 @@
     }
 
     .faces {
-      margin-top: 100px;
+      margin-top: 160px;
 
       .flex-container {
         display: flex;
+      }
+
+      .col-xs-4 {
+        padding: 1px; 
+        margin: 0px;
       }
 
       .flex-item {

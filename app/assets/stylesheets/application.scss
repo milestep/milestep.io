@@ -10,6 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require slick
+ *= require slick-theme
  *= require_tree .
  *= require_self
  *= stub "active_admin"
@@ -21,6 +23,9 @@
 
 a, button { outline: none !important; }
 
+.link:hover {
+  cursor: pointer;
+}
 
 body {
   --origin-width: 1920px;
@@ -31,7 +36,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    z-index: 5;
+    z-index: 50;
     margin: 0px;
     .contact-us-button {
       position: fixed;
@@ -88,7 +93,7 @@ body {
       padding: 0;
       margin: 0;
       word-break: break-all;
-      a {
+      p {
         letter-spacing: 0.1vw;
         padding: 0;
         z-index: 20;
@@ -98,9 +103,10 @@ body {
         font-family: 'Roboto';
         text-align: left;
         position: relative;
-      }
-      p {
         margin-bottom: 2.05vw;
+      }
+      p:hover {
+        cursor: pointer;
       }
     }
   }
