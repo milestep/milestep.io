@@ -2,7 +2,7 @@
   padding-left: 0;
   padding-right: 0;
   background-color: #f5f5f5;
-  padding-bottom: 37px;
+  padding-bottom: calc(32px * var(--font-size-offset));
   overflow: hidden;
 
   .right-vertikal-line {
@@ -14,57 +14,59 @@
     flex-shrink: 0;
 
     h2 {
-      font-size: 40px;
+      font-size: calc(40px * var(--font-size-offset));
       text-transform: uppercase;
       text-align: left;
       color: #585858;
       font-family: 'Roboto';
-      height: 120px;
       position: relative;
       display: inline;
-      top: 205px;
-      right: 8px;
-      line-height: 48px;
+      top: calc(205px * var(--font-size-offset));
+      right: calc(8px * var(--font-size-offset));
+      line-height: calc(48px * var(--font-size-offset));
     }
 
     .why-us-number {
-      width: 312px;
-      height: 210px;
-      margin-bottom: 100px;
+      width: calc(312px * var(--font-size-offset));
+      height: calc(210px * var(--font-size-offset));
+      margin-bottom: calc(100px * var(--font-size-offset));
       text-shadow: 5px 6px 15px rgba(0, 0, 0, 0.15);
       color: #ffffff;
       font-family: Roboto;
-      font-size: 315px;
+      font-size: calc(315px * var(--font-size-offset));
       font-weight: bold;
       text-transform: uppercase;
-      margin-top: 30px;
+      margin-top: calc(30px * var(--font-size-offset));
       position: relative;
-      top: 90px;
-      margin-left: -31px;
-      margin-right: -158px;
+      top: calc(90px * var(--font-size-offset));
+      margin-left: calc(-31px * var(--font-size-offset));
+      margin-right: calc(-158px * var(--font-size-offset));
     }
 
-    .image-why-us { background: url(image_path('why-us/layer_1.png')) no-repeat }
+    .image-why-us { 
+      background: url(image_path('why-us/layer_1.png')) no-repeat;
+      width: calc(158px * var(--font-size-offset));
+      background-size: calc(158px * var(--font-size-offset));
+    }
 
     .advantages-line-w {
       border-bottom: 2px solid #bfbfbf;
-      width: 300px;
+      width:calc(300px * var(--font-size-offset));
       height: 2px;
       display: inline-block;
       position: relative;
       flex-shrink: 1;
-      top: 211px;
       left: 0%;
-      top: 246px;
+      top: calc(246px * var(--font-size-offset));
     }
   }
 
   .advantages-body {
-    padding-top: 46px;
-    padding-left: 24px;
+    padding-top: calc(46px * var(--font-size-offset));
+    padding-left: calc(24px * var(--font-size-offset));
 
     .advantage-item {
-      margin-bottom: 60px;
+      margin-bottom: calc(60px * var(--font-size-offset));
 
       span, p {
         position: relative;
@@ -75,56 +77,56 @@
         display: inline-block;
 
         .title {
-          top: 10px;
+          top: calc(10px * var(--font-size-offset));
           color: #106a9f;
           text-transform: uppercase;
           font-weight: bold;
-          font-size: 30px;
+          font-size: calc(26px * var(--font-size-offset));
         }
 
         .title-2 {
-          line-height: 35px;
+          line-height: calc(35px * var(--font-size-offset));
         }
 
         .img-mb {
-          margin-right: 12px;
-          width: 90px;
+          margin-right: calc(12px * var(--font-size-offset));
+          width: calc(90px * var(--font-size-offset));
         }
       }
 
       .text {
         font-family: 'Roboto-Bold';
         color: #6c7a89;
-        font-size: 20px;
+        font-size: calc(20px * var(--font-size-offset));
         letter-spacing: 0.44px;
       }
 
       .text-3 {
-        text-indent: 103px;
-        top: -22px;
+        text-indent: calc(103px * var(--font-size-offset));
+        top: calc(-22px * var(--font-size-offset));
       }
 
       .text-1-4-5 {
-        text-indent: 105px;
-         top: -25px;
+        text-indent: calc(105px * var(--font-size-offset));
+         top: calc(-25px * var(--font-size-offset));
       }
 
       .circle-format {
-        width: 376px;
-        height: 376px;
+        width: calc(376px * var(--font-size-offset));
+        height: calc(376px * var(--font-size-offset));
         position: absolute;
-        left: 269px;
-        top: -176px;
+        left: calc(269px * var(--font-size-offset));
+        top: calc(-176px * var(--font-size-offset));
         z-index: 1;
       }
 
       .statue {
-        width: 750px;
+        width: calc(750px * var(--font-size-offset));
         height: auto;
         position: relative;
-        top: -210px;
-        left: -160px;
-        z-index: 100;
+        top: calc(-210px * var(--font-size-offset));
+        left: calc(-160px * var(--font-size-offset));
+        z-index: 2;
       }
     }
 
@@ -132,16 +134,16 @@
       background-color: #f50808;
       border-radius: 28px;
       border: none;
-      width: 195px;
-      height: 55px;
-      font-size: 18px;
+      width: calc(195px * var(--font-size-offset));
+      height: calc(55px * var(--font-size-offset));
+      font-size: calc(18px * var(--font-size-offset));
       color: #fff;
       font-weight: bold;
       text-transform: uppercase;
       position: relative;
       left: 52%;
-      bottom: 150px;
-      z-index: 104;
+      bottom: calc(150px * var(--font-size-offset));
+      z-index: 5;
       font-family: "Roboto-Bold";
       outline: none !important;
     }
@@ -157,7 +159,7 @@
       height: 2px;
       display: inline-block;
       position: relative;
-      top: 45px;
+      top: calc(45px * var(--font-size-offset));
       flex-shrink: 1;
       transform: rotate(90deg);
       left: 25%;
@@ -165,18 +167,18 @@
   }
 
   .container-with-img-statue {
-    height: 500px;
+    height: calc(500px * var(--font-size-offset));
   }
 
   .tech {
-    padding-top: 170px;
+    padding-top: calc(170px * var(--font-size-offset));
     width: 100%;
     display: flex;
 
     .tech-title {
       position: relative;
-      margin-bottom: 54px;
-      font-size: 35px;
+      margin-bottom: calc(54px * var(--font-size-offset));
+      font-size: calc(35px * var(--font-size-offset));
       text-transform: uppercase;
       text-align: left;
       color: #585858;
@@ -186,12 +188,12 @@
     button {
       background-color: #f5f5f5;
       border-radius: 50%;
-      width: 88px;
-      height: 88px;
-      z-index: 104;
+      width: calc(88px * var(--font-size-offset));
+      height: calc(88px * var(--font-size-offset));
+      z-index: 4;
       outline: none !important;
-      font-size: 35px;
-      padding: 8px;
+      font-size: calc(35px * var(--font-size-offset));
+      padding: calc(8px * var(--font-size-offset));
       border: 2px solid #0075b8;
       color: #0075b8;
     }
@@ -207,8 +209,8 @@
       height: 2px;
       display: inline-block;
       position: relative;
-      top: 41px;
-      left: 19px;
+      top: calc(41px * var(--font-size-offset));
+      left: calc(19px * var(--font-size-offset));
       flex-shrink: 1;
     }
 
@@ -218,7 +220,7 @@
       height: 2px;
       display: inline-block;
       position: relative;
-      top: 41px;
+      top: calc(41px * var(--font-size-offset));
       flex-shrink: 1;
     }
 
@@ -229,14 +231,14 @@
 
   .technologies {
     width: 100%;
-    height: 200px;
+    height: calc(200px * var(--font-size-offset));
     background-color: #fff;
 
     img {
       margin:0 auto;
-      margin-top: 60px;
+      margin-top: calc(60px * var(--font-size-offset));
       width: auto;
-      height: 70px;
+      height: calc(70px * var(--font-size-offset));
     }
   }
 
@@ -296,77 +298,6 @@
         transform: rotate(90deg);
         left: 9%
       }
-    }
-
-    .container-with-img-statue {
-      height: 400px;
-    }
-
-    .technologies {
-      height: 110px;
-
-      img {
-        margin-top: 30px;
-        height: 50px;
-      }
-    }
-  }
-
-  @media screen and (min-width: 992px) and (max-width:1199px) {
-    .advantages-header {
-      h2 {
-        font-size: 25px;
-        height: 100px;
-        line-height: 43px;
-      }
-    }
-
-   .advantages-body {
-     .advantage-item {
-       .img-and-title {
-         .title {
-           font-size: 25px;
-         }
-
-         .title-2 {
-           line-height: 27px;
-         }
-
-         .img-mb {
-           width: 70px;
-         }
-       }
-
-        .text {
-          font-size: 17px;
-        }
-
-        .text-3 {
-          text-indent: 83px;
-          top: -15px;
-        }
-
-        .text-1-4-5 {
-          text-indent: 85px;
-           top: -20px;
-        }
-
-        .statue {
-          width: 700px;
-        }
-      }
-
-      .underline {
-        width: 40%;
-        top: 52px;
-        transform: rotate(90deg);
-        left: 21%
-      }
-    }
-
-    .tech .tech-title {
-      font-size: 25px;
-      top: 15px;
     }
 
     .container-with-img-statue {
