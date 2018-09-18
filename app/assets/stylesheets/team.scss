@@ -1,8 +1,13 @@
 #team {
   .team {
+
     background-color: #2d2d2d;
     color: #fff;
     padding-bottom: 135px;
+
+    .slick-dots li button:before {
+      color: white;
+    }
 
     .section-left-text {
       margin-top: 170px;
