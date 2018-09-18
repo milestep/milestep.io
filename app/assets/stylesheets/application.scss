@@ -118,7 +118,7 @@ body {
     height: calc(0.43px * var(--origin-width));
     width: 100%;
     margin-left: 0%;
-    padding-right: 0 !important;
+    // padding-right: 0 !important;
     .background {
       position: absolute;
       top: 0;
@@ -173,6 +173,7 @@ body {
 
   .main-container {
     //fires display: block from zoom.js when dom is builded
+    //padding-right: 15px !important;
     display: none;
     //sets max and current width from zoom.js
     margin-left: auto;
@@ -188,7 +189,7 @@ body {
   }
 
   .content-right {
-    padding-right: 0px !important;
+    // padding-right: 0px !important;
     width: calc(0.75px * var(--origin-width));
     max-width: calc(0.75px * var(--origin-width));
     margin-left: 20%;
