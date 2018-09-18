@@ -169,6 +169,9 @@ body {
         font-size: calc(19px * var(--font-size-offset));
       }
     }
+    p:hover {
+      cursor: pointer;
+    }
   }
 
   .main-container {
