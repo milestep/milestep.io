@@ -1,8 +1,13 @@
 #team {
   .team {
+
     background-color: #2d2d2d;
     color: #fff;
     padding-bottom: calc(135px * var(--font-size-offset));
+
+    .slick-dots li button:before {
+      color: white;
+    }
 
     .section-left-text {
       margin-top: calc(170px * var(--font-size-offset));
@@ -40,6 +45,17 @@
         border-top: solid #0075b8;
         width: calc(250px * var(--font-size-offset));
       }
+
+      .slider-info-number-page {
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 40px;
+        font-family: 'Roboto-Medium';
+
+        span {
+          color: rgb(0,117,184);
+        }
+      }
     }
 
     .faces {
@@ -50,7 +66,7 @@
       }
 
       .col-xs-4 {
-        padding: 1px; 
+        padding: 1px;
         margin: 0px;
       }
 
