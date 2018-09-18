@@ -60,6 +60,7 @@ footer {
         }
       }
       .text-development-services {
+
         font-size: calc(25px * var(--font-size-offset));
       }
     }
@@ -107,6 +108,7 @@ footer {
   .form {
     form {
       margin-bottom: 0px;
+      margin-top: calc(55px * var(--font-size-offset));
     }
     .form-control {
       border-radius:2rem;
@@ -140,16 +142,7 @@ footer {
       padding: 1.5%;
       font-weight: 600;
       color: #fff;
-      box-shadow: inset 0px 5px 0px #f50808,
-                  inset 0px 10px 0px #f50d0a,
-                  inset 0px 15px 0px #f71e14,
-                  inset 0px 20px 0px #f92d1c,
-                  inset 0px 25px 0px #fa3822,
-                  inset 0px 30px 0px #fb4328,
-                  inset 0px 35px 0px #fd4e2e,
-                  inset 0px 40px 0px #fe5833,
-                  inset 0px 45px 0px #ff5f38,
-                  inset 0px 50px 0px #ff6339;
+      background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
     }
   }
 

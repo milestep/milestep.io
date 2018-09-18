@@ -172,6 +172,8 @@ body {
   }
 
   .main-container {
+    //fires display: block from zoom.js when dom is builded
+    display: none;
     //sets max and current width from zoom.js
     margin-left: auto;
     margin-right: auto;
