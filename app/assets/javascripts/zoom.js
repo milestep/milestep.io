@@ -1,12 +1,11 @@
 jQuery(document).ready(function() {
-  var scrollWidth = getScrollbarWidth()
   applyZoom()
   $('.main-container').css('display', 'block')
 })
 
 function applyZoom() {
-  document.querySelector('body').style.setProperty('--origin-width', window.devicePixelRatio * (window.screen.width - getScrollbarWidth()))
-  document.querySelector('body').style.setProperty('--font-size-offset', ((window.devicePixelRatio * window.screen.width) / 1920))
+  document.querySelector('body').style.setProperty('--origin-width', (window.screen.width - getScrollbarWidth()))
+  document.querySelector('body').style.setProperty('--font-size-offset', (( window.screen.width) / 1920))
 }
 
 $(window).bind('hashchange', function (e) { 
