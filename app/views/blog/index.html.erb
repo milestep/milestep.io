@@ -1,0 +1,28 @@
+<%= render "welcome/header" %>
+<div class="blog_image_container">
+  <div class="container">
+
+    <div class="row">
+      <%= image_tag "blog/logo", class: "blog_logo" %>
+      <div class="blog_search_container">
+        <label for="blog_search_input">
+          <%= image_tag "blog/search", class: "search_icon" %>
+        </label>
+        <input type="text" class="blog_search" id="blog_search_input" placeholder="SEARCH" />
+      </div>
+    </div>
+
+    <% if @posts.any? %>
+      <div class="blog_posts_container row">
+        <%= render partial: "post", collection: @posts, as: :post %>
+      </div>
+      <%= will_paginate @posts, custom_pagination_options() %>
+    <% else %>
+      <div class="no_posts_text">
+        There are no posts here.
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "welcome/footer" %>
+

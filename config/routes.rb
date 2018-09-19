@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index', to: 'welcome#index'
   post :contact, to: 'requests#create', as: :contact
+
+  get '/blog', to: 'blog#index'
+  resources :posts, only: [:show], path: "/blog"
 end

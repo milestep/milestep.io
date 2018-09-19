@@ -1,0 +1,17 @@
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="blog_post">
+    <span class="blog_post_created_text"><%= blog_created_date post.created_at%><br/>by <%= post.author.name %></span>
+    <div class="image_wrapper">
+      <%= image_tag post.image_link %>
+    </div>
+    <div class="blog_post_text_block">
+      <div class="blog_post_title">
+        <%= cut_text(post.title, 45) %>
+      </div>
+      <div class="blog_post_body">
+        <%= cut_text(post.body, 140) %>
+      </div>
+      <a href="#" class="blog_post_link">Read more</a>
+    </div>
+  </div>
+</div>
