@@ -9,6 +9,13 @@
       color: white;
     }
 
+<<<<<<< HEAD
+=======
+    .slick-slide {
+      outline: none;
+    }
+
+>>>>>>> 468bde07796755f62d09c58c551d12729b1aaf20
     .section-left-text {
       margin-top: calc(170px * var(--font-size-offset));
       background-image: asset-url('team/rectangle.jpg');
@@ -123,8 +130,13 @@
       .img-face {
         background-blend-mode: multiply;
         background-repeat: no-repeat;
+<<<<<<< HEAD
         background-size: calc(260px * var(--font-size-offset));
         height: calc(260px * var(--font-size-offset));
+=======
+        background-size: calc(225px * var(--font-size-offset));
+        height: calc(225px * var(--font-size-offset));
+>>>>>>> 468bde07796755f62d09c58c551d12729b1aaf20
       }
 
     }
