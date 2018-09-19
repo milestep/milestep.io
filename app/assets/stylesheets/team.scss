@@ -9,6 +9,10 @@
       color: white;
     }
 
+    .slick-slide {
+      outline: none;
+    }
+
     .section-left-text {
       margin-top: calc(170px * var(--font-size-offset));
       background-image: asset-url('team/rectangle.jpg');
