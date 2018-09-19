@@ -1,0 +1,14 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post_photo {
+  background: image_url("blog/post/main_post_image");
+  margin-top: 53px;
+  width: 100%;
+  min-height: 600px;
+}
+
+.post_main_container {
+  margin-top: 45px;
+}
