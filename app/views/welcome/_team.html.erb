@@ -20,7 +20,7 @@
         <div class='faces slider-team-slick-js'>
           <% @development.each do |developer| %>
             <div class='col-xs-4'>
-              <div class='flex-item animated fadeInDown rectangle-and-text-hover img-face', style="background-image: url(<%= image_path(developer.image_url) %>);" >
+              <div class='flex-item rectangle-and-text-hover img-face', style="background-image: url(<%= image_path(developer.image_url) %>);" >
                 <div class='text'>
                   <p class='name'><%= developer.name %></p>
                   <div class='horizontal-line'></div>

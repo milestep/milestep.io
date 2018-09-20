@@ -53,6 +53,7 @@
     font-size: calc(60px * var(--font-size-offset));
     text-transform: uppercase;
     margin-bottom: 1.7%;
+    text-align: center;
   }
 
   .serve-block-text {
@@ -101,10 +102,6 @@
     margin-bottom: 5%;
   }
 
-  .block-container, .block-container div { 
-
-  }
-
   .block-container {
     padding: 0px;
     margin: 0px;
@@ -131,13 +128,5 @@
     font-weight: bold;
     text-align: center;
     font-family: Roboto;
-  }
-
-  @media screen and (max-width: 992px) {
-    .caption { 
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-    .text {font-size: 12px;}
   }
 }

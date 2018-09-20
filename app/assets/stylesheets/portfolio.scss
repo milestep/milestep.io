@@ -119,43 +119,5 @@
         width: calc(150px * var(--font-size-offset));
       }
     }
-
-    @media screen and (max-width:991px) {
-      .wrapper--galleria-rectangle {
-        .galleria .flex-container {
-          .flex-item {
-            height: 110px;
-            width: 110px;
-          }
-
-          .rectangle-and-text-hover .flex-container-info .flex-item-info .info {
-            p {
-              letter-spacing: 0px;
-            }
-
-            .name-project {
-              font-size: 8px;
-              font-weight: 300;
-              line-height: 8px;
-            }
-
-            .horizontal-line {
-              margin-top: 0px;
-              margin-bottom: 3px;
-            }
-
-            .info-project {
-              font-size: 6px;
-              line-height: 6px;
-            }
-          }
-        }
-
-        .rectangle-portfolio {
-          height: 355px;
-          width: 80px;
-        }
-      }
-    }
   }
 }
