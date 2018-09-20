@@ -6,12 +6,12 @@
     </div>
     <div class="blog_post_text_block">
       <div class="blog_post_title">
-        <%= cut_text(post.title, 45) %>
+        <%= link_to cut_text(post.title, 45), post_path(post.id) %>
       </div>
       <div class="blog_post_body">
         <%= cut_text(post.body, 140) %>
       </div>
-      <a href="#" class="blog_post_link">Read more</a>
+      <%= link_to "Read More", post_path(post.id), class: "blog_post_link" %>
     </div>
   </div>
 </div>
