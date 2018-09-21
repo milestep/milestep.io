@@ -23,9 +23,6 @@
 
 a, button { outline: none !important; }
 
-.link:hover {
-  cursor: pointer;
-}
 
 body {
   --origin-width: 1920px;
@@ -36,7 +33,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    z-index: 50;
+    z-index: 5;
     margin: 0px;
     .contact-us-button {
       position: fixed;
@@ -93,7 +90,7 @@ body {
       padding: 0;
       margin: 0;
       word-break: break-all;
-      p {
+      a {
         letter-spacing: 0.1vw;
         padding: 0;
         z-index: 20;
@@ -103,10 +100,9 @@ body {
         font-family: 'Roboto';
         text-align: left;
         position: relative;
-        margin-bottom: 2.05vw;
       }
-      p:hover {
-        cursor: pointer;
+      p {
+        margin-bottom: 2.05vw;
       }
     }
   }
@@ -118,7 +114,7 @@ body {
     height: calc(0.43px * var(--origin-width));
     width: 100%;
     margin-left: 0%;
-    // padding-right: 0 !important;
+    padding-right: 0 !important;
     .background {
       position: absolute;
       top: 0;
@@ -175,9 +171,6 @@ body {
   }
 
   .main-container {
-    //fires display: block from zoom.js when dom is builded
-    //padding-right: 15px !important;
-    display: none;
     //sets max and current width from zoom.js
     margin-left: auto;
     margin-right: auto;
@@ -192,7 +185,7 @@ body {
   }
 
   .content-right {
-    // padding-right: 0px !important;
+    padding-right: 0px !important;
     width: calc(0.75px * var(--origin-width));
     max-width: calc(0.75px * var(--origin-width));
     margin-left: 20%;
@@ -206,7 +199,7 @@ body {
 
   .right-content-block {
     float: right;
-    width: calc(740px * var(--font-size-offset));
-    max-width: calc(740px * var(--font-size-offset));
+    width: calc(840px * var(--font-size-offset));
+    max-width: calc(840px * var(--font-size-offset));
   }
 }
