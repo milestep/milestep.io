@@ -166,7 +166,6 @@ a, button { outline: none !important; }
 }
 
 .main-container {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   width: calc(1px * var(--origin-width));
@@ -188,7 +187,7 @@ a, button { outline: none !important; }
 .left-content-block {
   float: left;
   width: 40%;
-  max-width: calc(550px * var(--statc-font-size-offset))
+  max-width: calc(550px * var(--statc-font-size-offset));
 }
 
 .right-content-block {
