@@ -1,15 +1,13 @@
 <%= render "welcome/header" %>
 <div class="blog_image_container">
   <div class="container">
-
+  
     <div class="row">
       <%= image_tag "blog/logo", class: "blog_logo" %>
-      <div class="blog_search_container">
-        <label for="blog_search_input">
-          <%= image_tag "blog/search", class: "search_icon" %>
-        </label>
-        <input type="text" class="blog_search" id="blog_search_input" placeholder="SEARCH" />
-      </div>
+      <%= form_tag(root_url(subdomain: "blog"), method: :get, class: "blog_search_container")  do %>
+        <%= image_submit_tag "blog/search", class: "search_icon_image" %>
+        <%= text_field_tag :query, params[:query], class: "blog_search", placeholder: "SEARCH" %>
+      <% end %>
     </div>
 
     <% if @posts.any? %>
