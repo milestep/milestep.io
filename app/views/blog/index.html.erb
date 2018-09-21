@@ -1,15 +1,15 @@
 <%= render "welcome/header" %>
 <div class="blog_image_container">
   <div class="container">
-  
+
     <div class="row">
       <%= image_tag "blog/logo", class: "blog_logo" %>
       <%= form_tag(root_url(subdomain: "blog"), method: :get, class: "blog_search_container")  do %>
-        <%= image_submit_tag "blog/search", class: "search_icon_image" %>
+        <%= submit_tag "", name: nil, class: "search_icon_image" %>
         <%= text_field_tag :query, params[:query], class: "blog_search", placeholder: "SEARCH" %>
       <% end %>
     </div>
-
+  
     <% if @posts.any? %>
       <div class="blog_posts_container row">
         <%= render partial: "post", collection: @posts, as: :post %>
