@@ -1,10 +1,9 @@
 jQuery(document).ready(function() {
-  applyZoom()
-  $('.main-container').css('display', 'block')
+  //applyZoom()
 })
 
 function applyZoom() {
-  document.querySelector('body').style.setProperty('--origin-width', ($(document).width() - getScrollbarWidth()))
+  document.querySelector('body').style.setProperty('--origin-width', ($(document).width()))
   document.querySelector('body').style.setProperty('--font-size-offset', ($(document).width() / 1920))
 }
 
