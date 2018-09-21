@@ -113,6 +113,8 @@
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        float: left; 
+        transform: translateX(-37px);
         height: calc(516px * var(--font-size-offset));
         width: calc(150px * var(--font-size-offset));
       }
