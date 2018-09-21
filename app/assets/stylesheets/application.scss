@@ -16,8 +16,8 @@
  *= require_self
  *= stub "active_admin"
  */
-
-@import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
