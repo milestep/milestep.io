@@ -19,7 +19,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 a, button { outline: none !important; }
 
@@ -103,7 +102,6 @@ a, button { outline: none !important; }
     }
   }
 }
-
 .about-us {
   position: relative;
   margin: 0;
@@ -160,38 +158,44 @@ a, button { outline: none !important; }
       font-size: calc(19px * var(--statc-font-size-offset));
     }
   }
-  p:hover {
-    cursor: pointer;
-  }
+  p:hover { cursor: pointer; }
 }
-
 .main-container {
   margin-left: auto;
   margin-right: auto;
   width: calc(1px * var(--origin-width));
   max-width: calc(1px * var(--origin-width));
 }
-
 .content {
   margin: auto;
   width: calc(0.6px * var(--origin-width));
   max-width: calc(0.6px * var(--origin-width));
 }
-
 .content-right {
   width: calc(0.75px * var(--origin-width));
   max-width: calc(0.75px * var(--origin-width));
   margin-left: 20%;
 }
-
 .left-content-block {
   float: left;
   width: 40%;
   max-width: calc(550px * var(--statc-font-size-offset));
 }
-
 .right-content-block {
   float: right;
   width: calc(740px * var(--statc-font-size-offset));
   max-width: calc(740px * var(--statc-font-size-offset));
+}
+.toastr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+  font-size: 3vh;
+  font-family: "Roboto-Light";
+  font-weight: bold;
+  color: wheat;
+  text-align: center;
+  background-color: #242020;
 }

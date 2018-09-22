@@ -62,11 +62,11 @@
   }
 
   .advantages-body {
-    padding-top: calc(46px * var(--font-size-offset));
+    padding-top: calc(46px * var(--static-font-size-offset));
     padding-left: calc(24px * var(--font-size-offset));
 
     .advantage-item {
-      margin-bottom: calc(60px * var(--font-size-offset));
+      margin-bottom: calc(60px * var(--static-font-size-offset));
 
       span, p {
         position: relative;
@@ -142,7 +142,6 @@
       text-transform: uppercase;
       position: relative;
       left: 52%;
-      bottom: calc(150px * var(--font-size-offset));
       z-index: 5;
       font-family: "Roboto-Bold";
       outline: none !important;
@@ -171,13 +170,13 @@
   }
 
   .tech {
-    padding-top: calc(170px * var(--font-size-offset));
+    padding-top: calc(170px * var(--static-font-size-offset));
     width: 100%;
     display: flex;
 
     .tech-title {
       position: relative;
-      margin-bottom: calc(54px * var(--font-size-offset));
+      margin-bottom: calc(54px * var(--static-font-size-offset));
       font-size: calc(35px * var(--font-size-offset));
       text-transform: uppercase;
       text-align: left;

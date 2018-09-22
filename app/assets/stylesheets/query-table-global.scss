@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) {
 	:root {
 		--origin-width: 320;
-		--font-size-offset: 0.5;
+		--font-size-offset: 1;
 		--statc-font-size-offset: 0.15;
   }
   body {
@@ -37,6 +37,7 @@
     #team {
       .team {
         .faces {
+          margin-top: 0px;
           .img-face {
             width: 25vw;
             height: 25vw;
@@ -57,6 +58,7 @@
           top: 10vw;
           margin-bottom:  0px;
           left: 35%;
+          font-size: 2em;
         }
       }
       .advantages-body {
@@ -65,106 +67,92 @@
             margin-top: 15%;       
           }
           .statue {
-            width: calc(300px * var(--font-size-offset));
+            display: none;
           }
         }
         .advantages-button {
-          bottom: 0px;
-          left: -10vw;
+          top: 0px;
+          left: 0px;
         }
+      }
+      .right-vertical-line { display: none; }
+      .tech {
+        button { display: none !important; }
+        .advantages-line { display: none; }
+        .advantages-line-right { display: none; }
       }
       .technologies {
         img {
           width: 20vw;
-          height: 5.5vw;
+          height: auto;
         }
       }
     }
-    // footer {
-    //   #contact {
-    //     .container {
-    //       .text-top {
-    //         margin-left: 0px;
-    //         margin-right: 0px;
-    //         .my-text-left {
-    //           padding-left: 0px;
-    //           .vertical-line {
-    //             width: auto;
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    #portfolio {
+      .portfolio {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 @media screen and (min-width: 360px) {
 	:root {
 		--origin-width: 360;
-		--font-size-offset: 0.5;
 		--statc-font-size-offset: 0.17;
   }
 }
 @media screen and (min-width: 375px) {
 	:root {
 		--origin-width: 375;
-		--font-size-offset: 0.5;
 		--static-font-size-offset: 0.185;
   }
 }
 @media screen and (min-width: 411px) {
 	:root {
 		--origin-width: 411;
-		--font-size-offset: 1;
 		--statc-font-size-offset: 0.19;
   }
 }
 @media screen and (min-width: 480px) {
 	:root {
 		--origin-width: 480;
-		--font-size-offset: 0.7;
 		--statc-font-size-offset: 0.25;
   }
 }
 @media screen and (min-width: 540px) {
 	:root {
 		--origin-width: 540;
-		--font-size-offset: 0.28;
 		--statc-font-size-offset: 0.28;
   }
 }
 @media screen and (min-width: 600px) {
 	:root {
 		--origin-width: 600;
-		--font-size-offset: 0.3;
 		--statc-font-size-offset: 0.3;
   }
 }
 @media screen and (min-width: 640px) {
 	:root {
 		--origin-width: 640;
-		--font-size-offset: 0.33;
 		--statc-font-size-offset: 0.33;
   }
 }
 @media screen and (min-width: 720px) {
 	:root {
 		--origin-width: 720;
-		--font-size-offset: 0.375;
-		--statc-font-size-offset: 1.3;
+		--statc-font-size-offset: 0.375;
   }
 }
 @media screen and (min-width: 768px) {
 	:root {
 		--origin-width: 768;
-		--font-size-offset: 0.395;
 		--statc-font-size-offset: 0.395;
   }
 }
 @media screen and (min-width: 800px) {
 	:root {
 		--origin-width: 800;
-		--font-size-offset: 0.41;
 		--statc-font-size-offset: 0.41;
   }
 }
@@ -198,6 +186,7 @@
     #team {
       .team {
         .faces {
+          margin-top: calc(160px * var(--font-size-offset));
           .img-face {
             background-size: calc(225px * var(--font-size-offset));
             width: calc(225px * var(--font-size-offset));
@@ -234,6 +223,7 @@
           margin-bottom:  0px;
           right: calc(8px * var(--font-size-offset));
           left: 0;
+          font-size: calc(40px * var(--font-size-offset));
         }
       }
       .advantages-body {
@@ -242,13 +232,21 @@
             margin-top: 0px;       
           }
           .statue {
-            width: calc(750px * var(--font-size-offset));
+            display: block;
           }
         }
         .advantages-button {
-          bottom: calc(150px * var(--font-size-offset));
           left: 52%;
+          top: calc(-300px * var(--font-size-offset))
         }
+      }
+      .right-vertical-line { display: block; }
+      .tech {
+        button {
+          display: block !important; 
+        }
+        .advantages-line { display: block; }
+        .advantages-line-right { display: block; }
       }
       .technologies {
         img {
@@ -257,22 +255,12 @@
         }
       }
     }
-    // footer {
-    //   #contact {
-    //     .container {
-    //       .text-top {
-    //         margin-left: 15px;
-    //         margin-right: 15px;
-    //         .my-text-left {
-    //           padding-left: 15px;
-    //           .vertical-line {
-    //             width: calc(400px * var(--font-size-offset));
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    #portfolio {
+      .portfolio {
+        margin-top: calc(150px * var(--font-size-offset));
+        margin-bottom: calc(230px * var(--font-size-offset));
+      }
+    }
   }
 }
 @media screen and (min-width: 1024px) {
