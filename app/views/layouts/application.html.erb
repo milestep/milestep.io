@@ -57,8 +57,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload', async: Rails.env != 'development' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env != 'development' %>
+    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload', async: Rails.env == 'production' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env == 'production' %>
 
   </head>
 
