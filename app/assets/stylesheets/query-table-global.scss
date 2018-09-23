@@ -88,13 +88,11 @@
         }
       }
     }
-    #portfolio {
-      .portfolio {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        .wrapper--galleria-rectangle .flex-container--galleria-and-rectangle .flex-item--galleria-and-rectangle {
-          overflow: inherit;
-        }
+    .portfolio {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .wrapper--galleria-rectangle .flex-container--galleria-and-rectangle .flex-item--galleria-and-rectangle {
+        overflow: inherit;
       }
       .flex-container {
         display: block !important;
@@ -261,11 +259,9 @@
         }
       }
     }
-    #portfolio {
-      .portfolio {
-        margin-top: calc(150px * var(--font-size-offset));
-        margin-bottom: calc(230px * var(--font-size-offset));
-      }
+    .portfolio {
+      margin-top: calc(150px * var(--font-size-offset));
+      margin-bottom: calc(230px * var(--font-size-offset));
       .flex-container {
         display: flex !important;
       }

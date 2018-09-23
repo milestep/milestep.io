@@ -12,13 +12,13 @@
  *
  *= require slick
  *= require slick-theme
+ *= require font-awesome
  *= require_tree .
  *= require_self
  *= stub "active_admin"
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
 
 a, button { outline: none !important; }
 
@@ -55,10 +55,8 @@ a, button { outline: none !important; }
     left: 77.3vw;
     background-color: transparent;
     border: transparent 0px solid;
-    img {
-      width: 2vw;
-    }
   }
+  img { width: 2vw; }
   .menu-container {
     position: fixed;
     left: 79.9vw;

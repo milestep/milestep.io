@@ -19,8 +19,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type" : "Organization", 
       "name":"MileStep",
       "url": "https://milestep.io/",
-       "logo": "https://milestep.io/assets/header/logo-cc15d7eb906133504f47215fe3b232acd4256fb01ec52c58960227bf9ba1c604.png",
-        "description": "MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals",
+      "logo": "https://milestep.io/assets/header/logo-cc15d7eb906133504f47215fe3b232acd4256fb01ec52c58960227bf9ba1c604.png",
+      "description": "MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals",
       "founder" : "MileStep",
       "foundingDate" : "27092016",
       "sameAs": [
@@ -57,15 +57,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload', async: Rails.env == 'production' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env == 'production' %>
-
+    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload', media: 'all', async: Rails.env.production? %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
   </head>
 
   <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <%= yield %>
   </body>
 </html>
