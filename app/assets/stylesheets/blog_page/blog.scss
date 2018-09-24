@@ -1,0 +1,196 @@
+// Place all the styles related to the Blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.fixed-height .navigation-panel {
+  .burger-button {
+    top: 103px;
+  }
+  .contact-us-button {
+    top: 87px;
+  }
+}
+
+.blog {
+  &-image-container {
+    background: image_url('blog/background_image');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+
+    .no-posts-text {
+      text-align: center;
+      font-size: 24px;
+      margin: 50px auto;
+    }
+  }
+
+  &-logo {
+    float: left;
+    position: absolute;
+    top: 53px;
+    padding-left: 15px;
+  }
+
+  &-search-container {
+    position: relative;
+    margin-top: 87px;
+    margin-left: calc(50% + 15px);
+    margin-bottom: 0;
+    width: 390px;
+    height: 55px;
+  
+    button {
+      position: absolute;
+      height: 100%;
+      opacity: 0;
+    }
+  
+    label, .hidden-button {
+      width: 0;
+      display: inline;
+    }
+  }
+
+  &-search {
+    width: 100%;
+    height: 100%; 
+    box-shadow: 2px 2px 10px rgba(179, 179, 179, 0.69);
+    border-radius: 28px;
+    background-color: #f4f4f6;
+    outline: none;
+    color: #636363;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.17px;
+    text-indent: 56px;
+
+    &-icon-image {
+      background: image_url("blog/search") no-repeat;
+      float: left;
+      position: absolute;
+      top: 15px;
+      left: 22px;
+      margin: 0;
+      padding: 0;
+      height: 26px;
+      width: 26px;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}
+
+// Post section
+
+.blog-posts {
+  &-container {
+    margin-top: 76px;
+  }
+
+  &-pagination {
+    margin-top: 11px;
+    margin-bottom: 36px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 500;
+  
+    .previous {
+      margin-right: 30px;
+    }
+  
+    .next {
+      margin-left: 30px;
+    }
+  
+    .current {
+      border: 2px solid black;
+      border-radius: 100%;
+    }
+    
+    .page {
+      display: inline-block;
+      box-sizing: content-box;
+      width: 52px;
+      height: 52px;
+      text-align: center;
+      line-height: 52px;
+      a {
+        color: #000000;
+        font-family: inherit;
+      }
+    }
+  }
+}
+
+.blog-post {
+  position: relative;
+  margin-bottom: 42px;
+  box-shadow: 3px 4px 10px rgba(150, 164, 179, 0.69);
+
+  .image-wrapper {
+    width: 100%;
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-created-text {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    color: #141414;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  &-text-block {
+    padding: 40px 35px;
+    background-color: #ffffff;
+  }
+
+  &-title {
+    color: #141414;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+  }
+
+  &-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #141414;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.12px;
+    text-align: justify;
+  }
+  
+  &-link {
+    height: 15px;
+    color: #f03838;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  
+    &:hover {
+      font-family: inherit;
+    }
+  }
+}

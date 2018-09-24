@@ -1,2 +1,6 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
+
+div#cke_post_body {
+  margin-left: 20%;
+}
