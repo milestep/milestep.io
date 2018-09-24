@@ -113,8 +113,7 @@
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        float: left; 
-        transform: translateX(-37px);
+        transform: translateX(-15%);
         height: calc(516px * var(--font-size-offset));
         width: calc(150px * var(--font-size-offset));
       }
@@ -152,8 +151,9 @@
         }
 
         .rectangle-portfolio {
-          height: 355px;
+          height: 240px;
           width: 80px;
+          transform: translateX(-250px);
         }
       }
     }
