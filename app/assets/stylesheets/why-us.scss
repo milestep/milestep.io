@@ -5,10 +5,6 @@
   padding-bottom: calc(32px * var(--font-size-offset));
   overflow: hidden;
 
-  .right-vertikal-line {
-    border-right: 1px solid #bfbfbf;
-  }
-
   .advantages-header {
     display: flex;
     flex-shrink: 0;
@@ -21,7 +17,6 @@
       font-family: 'Roboto';
       position: relative;
       display: inline;
-      top: calc(205px * var(--font-size-offset));
       right: calc(8px * var(--font-size-offset));
       line-height: calc(48px * var(--font-size-offset));
     }
@@ -36,7 +31,6 @@
       font-size: calc(315px * var(--font-size-offset));
       font-weight: bold;
       text-transform: uppercase;
-      margin-top: calc(30px * var(--font-size-offset));
       position: relative;
       top: calc(90px * var(--font-size-offset));
       margin-left: calc(-31px * var(--font-size-offset));
