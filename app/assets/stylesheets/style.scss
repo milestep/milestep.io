@@ -70,23 +70,6 @@ header {
   background-size: cover;
 }
 
-.split-side {
-  background-image: asset-url("header-bg.png");
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-attachment: fixed;
-  background-size: cover;
-  text-align: center;
-  padding: 130px;
-  a {
-    color: #ffffff !important;
-    opacity: 0.3;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
 .header-nav {
   float: right;
 }

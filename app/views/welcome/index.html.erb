@@ -1,23 +1,11 @@
 <div class='main-container'>
   <div class="container-fluid toastr"></div>
-
   <%= render "header" %>
   <%= render "aboutus" %>
   <%= render "services" %>
   <%= render "how-we-work" %>
-
-  <div class="clearfix"></div>
-  <div class="split-side">
-    <i class="fa fa-chevron-up fa-4x link" aria-hidden="true" onclick='scroller("header")'></i>
-  </div>
-
   <%= render "team" %>
   <%= render "why-us" %>
   <%= render "portfolio" %>
-
-  <div class="split-side" style="background-image: <%= image_path('bg-3.png') %>;">
-    <i class="fa fa-chevron-up fa-4x link" aria-hidden="true" onclick='scroller("portfolio")'></i>
-  </div>
-
   <%= render "footer" %>
 </div>
