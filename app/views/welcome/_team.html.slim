@@ -1,0 +1,25 @@
+section#team
+  .team
+    .container-fluid.content-right
+      .left-content-block
+        .section-left-text
+          .title
+            p.text-our OUR
+            p.text-team TEAM
+          p.paragraph
+            | Each of us might be as a ninja, unicorn or cat fancier deep inside.
+            | What unites us, nevertheless, are our abiding commitment to code writing
+            | and desire to transform the world through making of high-tech dreams come true
+          .horizontal-line
+          span.slider-info-number-page.slider-info-number-page-js
+            span 01
+            | \/ 02
+      .col-xs-12.right-content-block
+        .faces.slider-team-slick-js
+          - @development.each do |developer|
+            .col-xs-4
+              .flex-item.animated.fadeInDown.rectangle-and-text-hover.img-face style="background-image: url(#{image_path(developer.image_url)})" 
+                .text 
+                  p.name = developer.name
+                  .horizontal-line
+                  p.specialization= developer.title

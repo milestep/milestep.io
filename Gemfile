@@ -22,6 +22,9 @@ gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem "jquery-slick-rails"
 
+gem 'html2slim', '~> 0.2.0'
+gem 'slim'
+
 gem 'paperclip', '~> 5.0'
 
 group :development, :test do

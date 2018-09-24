@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title
+      | MileStep | Web & Mobile App Development Company
+    meta[name="description" content="MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals"]
+    meta[name="google-site-verification" content="E1FhQ3UjOG3S-GkITf7a5hbPYt0j7q0wfurFIfVVqhQ"]
+    script
+      | (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-KDZM8HX');
+    script[type="application/ld+json"]
+      |  { "@context" : "http://schema.org", "@type" : "Organization", "name":"MileStep", "url": "https://milestep.io/", "logo": "https://milestep.io/assets/header/logo-cc15d7eb906133504f47215fe3b232acd4256fb01ec52c58960227bf9ba1c604.png", "description": "MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals", "founder" : "MileStep", "foundingDate" : "27092016", "sameAs": [ "https://www.facebook.com/MileStepOutsoucing/", "https://www.linkedin.com/company/milestep/", "https://twitter.com/milestepcompany", "https://www.instagram.com/milestep.io/" ], "contactPoint" : { "@type" : "ContactPoint", "contactType" : "Customer Service", "telephone" : "+380977535731", "contactOption" : "TollFree", "areaServed" : ["US","CA","AU"], "availableLanguage" : "English", "email" : "eugene@milestep.io" } } 
+    meta[name="twitter:card" content="summary"]
+    meta[name="twitter:description" content="MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals"]
+    meta[name="twitter:tittle" content="MileStep | Web & Mobile App Development Company"]
+    meta[name="twitter:image" content="https://i.imgur.com/hDuPtvj.jpg"]
+    meta[property="og:locale" content="en_US"]
+    meta[property="og:tittle" content="MileStep | Web & Mobile App Development Company"]
+    meta[property="og:type" content="website"]
+    meta[property="og:description" content="MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals"]
+    meta[property="og:url" content="https://milestep.io/"]
+    meta[property="og:site_name" content=""]
+    meta[property="og:image" content="https://i.imgur.com/yERJpYN.png"]
+    link[rel="icon" href="favicon.png" type="image/png"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    noscript
+      iframe[src="https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX" height="0" width="0" style="display:none;visibility:hidden"]
+    = yield
+    script[type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"]

@@ -1,0 +1,16 @@
+section#header
+  .navigation-panel
+    button.burger-button id=('header-burger-button container') onclick="burgerAction()" 
+      = image_tag("header/burger.png")
+    button.contact-us-button.burger-hidable.container onclick="scroller('contact')"  CONTACT US
+    .menu-container.burger-hidable.container style=('display: none;') 
+      = image_tag('header/menu.png')
+    .nav-links.burger-hidable style=('display: none;') 
+      p onclick="scroller('header')"  Home
+      p onclick="scroller('services')"  Services
+      p onclick="scroller('how-we-work')"  How We Work
+      p onclick="scroller('team')"  Team
+      p onclick="scroller('why-us')"  Why Us
+      p onclick="scroller('portfolio')"  Portfolio
+      p onclick="scroller('contact')"  Contact Us
+ 
