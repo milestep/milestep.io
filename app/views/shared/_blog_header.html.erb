@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
-    <%= image_tag 'blog/logo', class: 'blog-logo' %>
+    <a href='https://milestep.io'>
+      <%= image_tag 'blog/logo.png', class: 'blog-logo' %>
+    </a>
     <%= form_tag(root_url(subdomain: 'blog'), method: :get, class: 'blog-search-container')  do %>
       <%= submit_tag '', name: nil, class: 'blog-search-icon-image' %>
       <%= text_field_tag :query, params[:query], class: 'blog-search', placeholder: 'SEARCH' %>
