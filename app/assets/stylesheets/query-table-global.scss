@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-device-width: 320px) {
   :root {
     --origin-width: 320;
     --font-size-offset: 1;
@@ -100,70 +100,70 @@
     }
   }
 }
-@media screen and (min-width: 360px) {
+@media screen and (min-device-width: 360px) {
 :root {
     --origin-width: 360;
     --statc-font-size-offset: 0.17;
   }
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-device-width: 375px) {
   :root {
     --origin-width: 375;
     --static-font-size-offset: 0.185;
   }
 }
-@media screen and (min-width: 411px) {
+@media screen and (min-device-width: 411px) {
   :root {
     --origin-width: 411;
     --statc-font-size-offset: 0.19;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-width: 480px) {
   :root {
     --origin-width: 480;
     --statc-font-size-offset: 0.25;
   }
 }
-@media screen and (min-width: 540px) {
+@media screen and (min-device-width: 540px) {
   :root {
     --origin-width: 540;
     --statc-font-size-offset: 0.28;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-device-width: 600px) {
   :root {
     --origin-width: 600;
     --statc-font-size-offset: 0.3;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-device-width: 640px) {
   :root {
     --origin-width: 640;
     --statc-font-size-offset: 0.33;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-device-width: 720px) {
   :root {
     --origin-width: 720;
     --statc-font-size-offset: 0.375;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-device-width: 768px) {
   :root {
     --origin-width: 768;
     --statc-font-size-offset: 0.395;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-device-width: 800px) {
   :root {
     --origin-width: 800;
     --statc-font-size-offset: 0.41;
   }
 }
 //desktop section
-@media screen and (min-width: 960px) {
+@media screen and (min-device-width: 960px) {
   :root {
-    --origin-width: 960;
+    --origin-width: 950;
     --font-size-offset: 0.49;
     --statc-font-size-offset: 0.49;
   }
@@ -270,77 +270,77 @@
     }
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-device-width: 1024px) {
   :root {
-    --origin-width: 1024;
+    --origin-width: 1014;
     --font-size-offset: 0.52;
     --statc-font-size-offset: 0.52;
   }
 }
-@media screen and (min-width: 1152px) {
+@media screen and (min-device-width: 1152px) {
   :root {
-    --origin-width: 1152;
+    --origin-width: 1142;
     --font-size-offset: 0.6;
     --statc-font-size-offset: 0.6;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-device-width: 1280px) {
   :root {
-    --origin-width: 1280;
+    --origin-width: 1270;
     --font-size-offset: 0.66;
     --statc-font-size-offset: 0.66;
   }
 }
-@media screen and (min-width: 1360px) {
+@media screen and (min-device-width: 1360px) {
   :root {
-    --origin-width: 1360;
+    --origin-width: 1350;
     --font-size-offset: 0.71;
     --statc-font-size-offset: 0.71;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-device-width: 1366px) {
   :root {
-    --origin-width: 1366;
+    --origin-width: 1356;
     --font-size-offset: 0.71;
     --statc-font-size-offset: 0.71;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-device-width: 1440px) {
   :root {
-    --origin-width: 1440;
+    --origin-width: 1430;
     --font-size-offset: 0.75;
     --statc-font-size-offset: 0.75;
   }
 }
-@media screen and (min-width: 1536px) {
+@media screen and (min-device-width: 1536px) {
   :root {
-    --origin-width: 1526;
+    --origin-width: 1516;
     --font-size-offset: 0.8;
     --statc-font-size-offset: 0.8;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-device-width: 1600px) {
   :root {
-    --origin-width: 1600;
+    --origin-width: 1590;
     --font-size-offset: 0.83;
     --statc-font-size-offset: 0.83;
   }
 }
-@media screen and (min-width: 1680px) {
+@media screen and (min-device-width: 1680px) {
   :root {
-    --origin-width: 1680;
+    --origin-width: 1670;
     --font-size-offset: 0.875;
     --statc-font-size-offset: 0.875;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-device-width: 1920px) {
   :root {
-    --origin-width: 1920;
+    --origin-width: 1910;
     --font-size-offset: 1;
     --statc-font-size-offset: 1;
   }
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-device-width: 2560px) {
   :root {
     --origin-width: 2550;
     --font-size-offset: 1.3;
