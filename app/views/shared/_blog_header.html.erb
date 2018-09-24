@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <%= image_tag "blog/logo", class: "blog_logo" %>
-    <%= form_tag(root_url(subdomain: "blog"), method: :get, class: "blog_search_container")  do %>
-      <%= submit_tag "", name: nil, class: "search_icon_image" %>
-      <%= text_field_tag :query, params[:query], class: "blog_search", placeholder: "SEARCH" %>
+    <%= image_tag 'blog/logo', class: 'blog-logo' %>
+    <%= form_tag(root_url(subdomain: 'blog'), method: :get, class: 'blog-search-container')  do %>
+      <%= submit_tag '', name: nil, class: 'blog-search-icon-image' %>
+      <%= text_field_tag :query, params[:query], class: 'blog-search', placeholder: 'SEARCH' %>
     <% end %>
   </div>
 </div>

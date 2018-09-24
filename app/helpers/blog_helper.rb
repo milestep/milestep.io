@@ -19,7 +19,7 @@ module BlogHelper
   def custom_renderer
     Class.new(WillPaginate::ActionView::LinkRenderer) do
       def container_attributes 
-        { class: 'blog_posts_pagination' }
+        { class: 'blog-posts-pagination' }
       end
 
       def page_number(page)
