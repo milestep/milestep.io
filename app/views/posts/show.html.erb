@@ -3,7 +3,7 @@
 </div>
 <div class="blog-post-image-container">
   <%= render 'shared/blog_header' %>
-  <div class="post-photo"></div>
+  <div class="post-photo" style="background-image: url(<%= image_url @post.main_post_image %>)"></div>
   <div class="container post-main-container">
     <div class="row">
       <%= @post.formatted_created_date %>
@@ -21,7 +21,7 @@
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
     
     var disqus_config = function () {
-      let PAGE_URL = "http://localhost.com" + "<%= request.original_fullpath %>"
+      let PAGE_URL = "<%= request.base_url %>" + "<%= request.original_fullpath %>"
       let PAGE_IDENTIFIER = "<%= @post.id %>"
       this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
       this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
