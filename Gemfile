@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem "jquery-slick-rails"
+gem 'will_paginate', '~> 3.1.0'
 
 gem 'html2slim', '~> 0.2.0'
 gem 'slim'
