@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  menu parent: 'Blog'
   permit_params :title, :body, :author_id, :image_link
 
   index do

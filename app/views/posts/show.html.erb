@@ -1,13 +1,15 @@
 <div class="fixed_height">
-  <%= render "welcome/header" %>
+  <%= render 'welcome/header' %>
 </div>
 <div class="blog_post_image_container">
-  <%= render "shared/blog_header" %>
+  <%= render 'shared/blog_header' %>
   <div class="post_photo"></div>
   <div class="container post_main_container">
     <div class="row">
+      <%= @post.formatted_created_date %>
+      <br/>
       <%= @post.title %>
-
+      <br/>>
       <%= @post.body %>
     </div>  
     <div id="disqus_thread"></div>
@@ -36,4 +38,4 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                             
 </div>
-<%= render "welcome/footer" %>
+<%= render 'welcome/footer' %>

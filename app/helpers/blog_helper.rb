@@ -5,16 +5,12 @@ module BlogHelper
     end
     return text
   end
-
-  def blog_created_date(date)
-    date.strftime("Created %B %d, %Y")
-  end
   
   def custom_pagination_options
     options = { 
       renderer: custom_renderer, 
-      previous_label: image_tag("blog/previous_label"), 
-      next_label: image_tag("blog/next_label"),
+      previous_label: image_tag('blog/previous_label'), 
+      next_label: image_tag('blog/next_label'),
       inner_window: 1,
       outer_window: 0
     } 
@@ -23,14 +19,14 @@ module BlogHelper
   def custom_renderer
     Class.new(WillPaginate::ActionView::LinkRenderer) do
       def container_attributes 
-        { class: "blog_posts_pagination" }
+        { class: 'blog_posts_pagination' }
       end
 
       def page_number(page)
         if page == current_page
-          tag(:div, tag(:span, page), class: "current page" )
+          tag(:div, tag(:span, page), class: 'current page' )
         else
-          tag(:div, link(page, page, rel: rel_value(page)), class: "page" )
+          tag(:div, link(page, page, rel: rel_value(page)), class: 'page' )
         end
       end
     

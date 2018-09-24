@@ -1,13 +1,13 @@
 <div class="fixed_height">
-  <%= render "welcome/header" %>
+  <%= render 'welcome/header' %>
 </div>
 <div class="blog_image_container">
-  <%= render "shared/blog_header" %>
+  <%= render 'shared/blog_header' %>
   <div class="container">
   
     <% if @posts.any? %>
       <div class="blog_posts_container row">
-        <%= render partial: "post", collection: @posts, as: :post %>
+        <%= render partial: 'post', collection: @posts, as: :post %>
       </div>
       <%= will_paginate @posts, custom_pagination_options() %>
     <% else %>
@@ -17,5 +17,5 @@
     <% end %>
   </div>
 </div>
-<%= render "welcome/footer" %>
+<%= render 'welcome/footer' %>
 

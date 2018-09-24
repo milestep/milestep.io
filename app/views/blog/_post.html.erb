@@ -1,17 +1,17 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
   <div class="blog_post">
-    <span class="blog_post_created_text"><%= blog_created_date post.created_at%><br/>by <%= post.author.name %></span>
+    <span class="blog_post_created_text"><%= post.formatted_created_date %><br/>by <%= post.author.name %></span>
     <div class="image_wrapper">
       <%= image_tag post.image_link %>
     </div>
     <div class="blog_post_text_block">
       <div class="blog_post_title">
-        <%= link_to cut_text(post.title, 45), post_path(post.id) %>
+        <%= link_to cut_text(post.title, 45), post_path(post) %>
       </div>
       <div class="blog_post_body">
         <%= cut_text(post.body, 140) %>
       </div>
-      <%= link_to "Read More", post_path(post.id), class: "blog_post_link" %>
+      <%= link_to 'Read More', post_path(post.id), class: 'blog_post_link' %>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 ActiveAdmin.register Author do
+  menu parent: 'Blog'
   permit_params :name, :position
 
   index do
