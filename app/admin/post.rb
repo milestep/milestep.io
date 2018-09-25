@@ -18,8 +18,8 @@ ActiveAdmin.register Post do
       f.input :title
       f.input :body, as: :ckeditor
       f.input :author 
-      f.input :image_link, hint: f.post.image_link? ? image_tag(post.image_link, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
-      f.input :main_post_image, hint: f.post.main_post_image? ? image_tag(post.main_post_image, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
+      f.input :image_link, as: :file, hint: f.post.image_link? ? image_tag(post.image_link, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
+      f.input :main_post_image, as: :file, hint: f.post.main_post_image? ? image_tag(post.main_post_image, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
     f.actions
   end
