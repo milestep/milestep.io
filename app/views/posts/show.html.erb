@@ -6,10 +6,14 @@
   <div class="post-photo" style="background-image: url(<%= image_url @post.main_image.url %>)"></div>
   <div class="container post-main-container">
     <div class="row">
-      <%= @post.formatted_created_date %>
-      <br/>
-      <%= @post.title %>
-      <br/>>
+      <div class="created-date">
+        <%= @post.formatted_created_date %>
+      </div>
+      <div class="title">
+        <%= @post.title %>
+      </div>
+    </div>
+    <div class="row post-body">
       <%= raw(@post.body) %>
     </div>  
     <div id="disqus_thread"></div>
