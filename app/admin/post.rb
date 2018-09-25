@@ -8,8 +8,8 @@ ActiveAdmin.register Post do
     column :title
     column :body
     column :author_id
-    column :image_link
-    column :main_post_image
+    column :image_link, as: :file
+    column :main_post_image, as: :file
     actions
   end
 
