@@ -2,7 +2,7 @@
   <div class="blog-post">
     <span class="blog-post-created-text"><%= post.formatted_created_date %><br/>by <%= post.author.name %></span>
     <div class="image-wrapper">
-      <%= image_tag post.image_link %>
+      <%= image_tag post.thumbnail_image.url %>
     </div>
     <div class="blog-post-text-block">
       <div class="blog-post-title">

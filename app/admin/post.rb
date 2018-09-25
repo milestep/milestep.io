@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
   menu parent: 'Blog'
-  permit_params :title, :body, :author_id, :image_link, :main_post_image
+  permit_params :title, :body, :author_id, :thumbnail_image, :main_image
 
   index do
     selectable_column
@@ -8,8 +8,8 @@ ActiveAdmin.register Post do
     column :title
     column :body
     column :author_id
-    column :image_link, as: :file
-    column :main_post_image, as: :file
+    column :thumbnail_image, as: :file
+    column :main_image, as: :file
     actions
   end
 
@@ -18,8 +18,8 @@ ActiveAdmin.register Post do
       f.input :title
       f.input :body, as: :ckeditor
       f.input :author 
-      f.input :image_link, as: :file, hint: f.post.image_link? ? image_tag(post.image_link, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
-      f.input :main_post_image, as: :file, hint: f.post.main_post_image? ? image_tag(post.main_post_image, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
+      f.input :thumbnail_image, as: :file, hint: f.post.thumbnail_image? ? image_tag(post.thumbnail_image.url, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
+      f.input :main_image, as: :file, hint: f.post.main_image? ? image_tag(post.main_image.url, height: '300') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
     f.actions
   end

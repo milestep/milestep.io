@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_113823) do
+ActiveRecord::Schema.define(version: 2018_09_25_115846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,18 +53,6 @@ ActiveRecord::Schema.define(version: 2018_09_19_113823) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "portfolio_items", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "web_address"
-    t.string "image_url_file_name"
-    t.string "image_url_content_type"
-    t.integer "image_url_file_size"
-    t.datetime "image_url_updated_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
@@ -78,14 +66,32 @@ ActiveRecord::Schema.define(version: 2018_09_19_113823) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
+  create_table "portfolio_items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "web_address"
+    t.string "image_url_file_name"
+    t.string "image_url_content_type"
+    t.integer "image_url_file_size"
+    t.datetime "image_url_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.string "image_link"
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "main_post_image"
+    t.string "thumbnail_image_file_name"
+    t.string "thumbnail_image_content_type"
+    t.integer "thumbnail_image_file_size"
+    t.datetime "thumbnail_image_updated_at"
+    t.string "main_image_file_name"
+    t.string "main_image_content_type"
+    t.integer "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "team_members", force: :cascade do |t|
