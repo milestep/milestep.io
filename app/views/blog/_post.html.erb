@@ -9,7 +9,7 @@
         <%= link_to cut_text(post.title, 45), post_path(post) %>
       </div>
       <div class="blog-post-body">
-        <%= cut_text(post.body, 140) %>
+        <%= cut_text(strip_tags(post.body), 140) %>
       </div>
       <%= link_to 'Read More', post_path(post.id), class: 'blog-post-link' %>
     </div>
