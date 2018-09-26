@@ -129,56 +129,6 @@
         background-size: calc(225px * var(--font-size-offset));
         height: calc(225px * var(--font-size-offset));
       }
-
-    }
-
-    @media screen and (max-width:991px) {
-      .section-left-text {
-        background-size: 95% 45%;
-
-        .title {
-          letter-spacing: 0px;
-          line-height: 40px;
-
-          .text-our {
-            font-family: 'Roboto-Bold';
-          }
-
-          .text-team {
-            font-family: 'Roboto-Regular';
-          }
-        }
-
-        .paragraph {
-          padding-top: 20px;
-          line-height: 25px;
-          font-family: 'Roboto-Light';
-          width: 250px;
-          font-size: 20px;
-        }
-      }
-
-      .faces {
-        margin-top: 160px;
-
-        .flex-item {
-          max-height: 200px;
-          flex-basis: 200px;
-
-          .text {
-            top: 55px;
-            letter-spacing: 0px;
-
-            .name {
-              font-family: 'Roboto-Bold';
-            }
-
-            .specialization {
-              font-family: 'Roboto-Medium';
-            }
-          }
-        }
-      }
     }
   }
 }

@@ -25,13 +25,11 @@
     width: 90%;
   }
 
- .trace_bottom {
+  .trace_bottom {
     margin-top: 5%;
     border: solid 2px white;
     width: 90%;
-   
- }
-
+  }
   .serve-block {
     padding-top: 4%;
     padding-bottom: 4%;
@@ -53,6 +51,7 @@
     font-size: calc(60px * var(--font-size-offset));
     text-transform: uppercase;
     margin-bottom: 1.7%;
+    text-align: center;
   }
 
   .serve-block-text {
@@ -101,15 +100,10 @@
     margin-bottom: 5%;
   }
 
-  .block-container, .block-container div { 
-
-  }
-
   .block-container {
     padding: 0px;
     margin: 0px;
   }
-
 
   .block-container img {z-index: 1; position: relative; width: 100%;}
   .block-front {
@@ -131,13 +125,5 @@
     font-weight: bold;
     text-align: center;
     font-family: Roboto;
-  }
-
-  @media screen and (max-width: 992px) {
-    .caption { 
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-    .text {font-size: 12px;}
   }
 }

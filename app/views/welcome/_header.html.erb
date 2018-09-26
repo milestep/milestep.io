@@ -1,11 +1,11 @@
 <section id="header">
   <div class='navigation-panel'>
-    <button class='burger-button' id='header-burger-button container'  onclick='burgerAction()'>
-      <%= image_tag("header/burger.png") %>
+    <button class='burger-button' id='header-burger-button container' name='menu-button' onclick='burgerAction()' aria-label='show menu'>
+      <%= image_tag("header/burger.png", alt: '') %>
     </button>
     <button class='contact-us-button burger-hidable container' onclick='scroller("contact")'> CONTACT US </button>
     <div class='menu-container burger-hidable container' style='display: none;'>
-      <%= image_tag("header/menu.png") %>
+      <%= image_tag("header/menu.png", alt: '') %>
     </div>
     <div class='nav-links burger-hidable' style='display: none;'>
       <p onclick='scroller("header")'>Home</p>

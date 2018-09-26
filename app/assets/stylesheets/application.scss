@@ -2,211 +2,199 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * Any CSS  SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * You're free to add application-wide styles to this file  they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
  *= require slick
  *= require slick-theme
+ *= require font-awesome
  *= require_tree .
  *= require_self
  *= stub "active_admin"
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
- @import "bootstrap";
- @import "font-awesome";
- @import url(https://fonts.googleapis.com/css?family=Roboto);
- 
- a, button { outline: none !important; }
- 
- .link:hover {
-   cursor: pointer;
- }
- 
- body {
-   --origin-width: 1920px;
-   --font-size-offset: 1;
- 
-   .navigation-panel {
-     position: fixed;
-     top: 0px;
-     left: 0px;
-     width: 100%;
-     z-index: 50;
-     margin: 0px;
-     .contact-us-button {
-       position: fixed;
-       left: 83.5vw;
-       top: 3.2vw;
-       width: 10.16vw;
-       height: 2.9vw;
-       border: transparent 0px solid;
-       border-radius: 1.5vw;
-       background-color: #f50808;
-       background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
-       color: #ffffff;
-       font-family: 'Roboto';
-       font-size: 0.9vw;
-       font-weight: bold;
-       z-index: 10;
-       display: block;
-     }
-     .burger-button {
-       position: absolute;
-       top: 4vw;
-       left: 77.3vw;
-       background-color: transparent;
-       border: transparent 0px solid;
-       img {
-         width: 2vw;
-       }
-     }
-     .menu-container {
-       position: fixed;
-       left: 79.9vw;
-       width: 20.2vw;
-       height: 100vw;
-       padding: 0;
-       a:hover {
-         text-decoration: none;
-       }
-       img {
-         z-index: 11;
-         width: 20.2vw;
-         height: 100vh;
-         object-fit: fill;
-         margin-left: -0.5vw;
-       }
- 
-     }
-     .nav-links {
-       z-index: 12;
-       position: absolute;
-       left: 85.7vw;
-       top: 3.7vw;
-       width: 19.5vw;
-       height: 100vw;
-       padding: 0;
-       margin: 0;
-       word-break: break-all;
-       p {
-         letter-spacing: 0.1vw;
-         padding: 0;
-         z-index: 20;
-         font-size: 1.2vw;
-         color: white;
-         font-weight: 700;
-         font-family: 'Roboto';
-         text-align: left;
-         position: relative;
-         margin-bottom: 2.05vw;
-       }
-       p:hover {
-         cursor: pointer;
-       }
-     }
-   }
- 
-   .about-us {
-     position: relative;
-     margin: 0;
-     padding: 0;
-     height: calc(0.43px * var(--origin-width));
-     width: 100%;
-     margin-left: 0%;
-     // padding-right: 0 !important;
-     .background {
-       position: absolute;
-       top: 0;
-       left: 0;
-       z-index: 1;
-       width: 100%;
-     }
-     .logo {
-       z-index: 2;
-       width: 11.6%;
-       position: absolute;
-       left: 5.7%;
-       top: 6.3%;
-     }
-     .vertical-text-image {
-       z-index: 3;
-       transform: rotate(-90deg);
-       color: #f03838;
-       font-family: 'Roboto-Black';
-       font-size: calc(24px * var(--font-size-offset));
-       font-weight: 400;
-       letter-spacing: 0.7px;
-       position: absolute;
-       top: 43%;
-       left: 20.9%;
-     }
-     .about-us-title {
-       z-index: 3;
-       position: absolute;
-       left: 69.5%;
-       top: 40.4%;
-       color: #0075b8;
-       font-family: "Roboto-Black";
-       font-size: calc(58px * var(--font-size-offset));
-       letter-spacing: 0.15vw;
-     }
-     .milestep-description {
-       z-index: 3;
-       position: absolute;
-       left: 69.4%;
-       top: 50.8%;
-       p {
-         width: calc(400px * var(--font-size-offset));
-         text-align: justify;
-         color: #545454;
-         font-family: "Roboto";
-         font-weight: 700;
-         font-size: calc(19px * var(--font-size-offset));
-       }
-     }
-     p:hover {
-       cursor: pointer;
-     }
-   }
- 
-   .main-container {
-     //fires display: block from zoom.js when dom is builded
-     //padding-right: 15px !important;
-     display: none;
-     //sets max and current width from zoom.js
-     margin-left: auto;
-     margin-right: auto;
-     width: calc(1px * var(--origin-width));
-     max-width: calc(1px * var(--origin-width));
-   }
- 
-   .content {
-     margin: auto;
-     width: calc(0.6px * var(--origin-width));
-     max-width: calc(0.6px * var(--origin-width));
-   }
- 
-   .content-right {
-     // padding-right: 0px !important;
-     width: calc(0.75px * var(--origin-width));
-     max-width: calc(0.75px * var(--origin-width));
-     margin-left: 20%;
-   }
-   
-   .left-content-block {
-     float: left;
-     width: 40%;
-     max-width: calc(550px * var(--font-size-offset))
-   }
- 
-   .right-content-block {
-     float: right;
-     width: calc(740px * var(--font-size-offset));
-     max-width: calc(740px * var(--font-size-offset));
-   }
- }
+a, button { outline: none !important; }
+
+.link:hover {
+  cursor: pointer;
+}
+
+.navigation-panel {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 50;
+  margin: 0px;
+  .contact-us-button {
+    position: fixed;
+    left: 83.5vw;
+    top: 3.2vw;
+    width: 10.16vw;
+    height: 2.9vw;
+    border: transparent 0px solid;
+    border-radius: 1.5vw;
+    background-color: #f50808;
+    background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 0.9vw;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .burger-button {
+    position: absolute;
+    top: 4vw;
+    left: 77.3vw;
+    background-color: transparent;
+    border: transparent 0px solid;
+  }
+  img { width: 2vw; }
+  .menu-container {
+    position: fixed;
+    left: 79.9vw;
+    width: 20.2vw;
+    height: 100vw;
+    padding: 0;
+    a:hover {
+      text-decoration: none;
+    }
+    img {
+      z-index: 11;
+      width: 20.2vw;
+      height: 100vh;
+      margin-left: -0.5vw;
+    }
+  }
+  .nav-links {
+    z-index: 12;
+    position: absolute;
+    left: 85.7vw;
+    top: 3.7vw;
+    width: 19.5vw;
+    height: 100vw;
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+    p {
+      letter-spacing: 0.1vw;
+      padding: 0;
+      z-index: 20;
+      font-size: 1.2vw;
+      color: white;
+      font-weight: 700;
+      font-family: 'Roboto';
+      text-align: left;
+      position: relative;
+      margin-bottom: 2.05vw;
+    }
+    p:hover {
+      cursor: pointer;
+    }
+  }
+}
+.about-us {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: calc(0.43px * var(--origin-width));
+  width: 100%;
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .logo {
+    z-index: 2;
+    width: 11.6%;
+    position: absolute;
+    left: 5.7%;
+    top: 6.3%;
+  }
+  .vertical-text-image {
+    z-index: 3;
+    transform: rotate(-90deg);
+    color: #f03838;
+    font-family: 'Roboto-Black';
+    font-size: calc(24px * var(--statc-font-size-offset));
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    position: absolute;
+    top: 43%;
+    left: 20.9%;
+  }
+  .about-us-title {
+    z-index: 3;
+    position: absolute;
+    left: 69.5%;
+    top: 40.4%;
+    color: #0075b8;
+    font-family: "Roboto-Black";
+    font-size: calc(58px * var(--statc-font-size-offset));
+    letter-spacing: 0.15vw;
+  }
+  .milestep-description {
+    z-index: 3;
+    position: absolute;
+    left: 69.4%;
+    top: 50.8%;
+    p {
+      width: calc(400px * var(--statc-font-size-offset));
+      text-align: justify;
+      color: #545454;
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: calc(19px * var(--statc-font-size-offset));
+    }
+  }
+  p:hover { cursor: pointer; }
+}
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: calc(1px * var(--origin-width));
+}
+.content {
+  margin: auto;
+  width: calc(0.6px * var(--origin-width));
+  max-width: calc(0.6px * var(--origin-width));
+}
+.content-right {
+  width: calc(0.75px * var(--origin-width));
+  max-width: calc(0.75px * var(--origin-width));
+  margin-left: 20%;
+}
+.left-content-block {
+  float: left;
+  width: 40%;
+  max-width: calc(550px * var(--statc-font-size-offset));
+}
+.right-content-block {
+  float: right;
+  width: calc(740px * var(--statc-font-size-offset));
+  max-width: calc(740px * var(--statc-font-size-offset));
+  padding-left: 0px !important;
+}
+.toastr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+  font-size: 3vh;
+  font-family: "Roboto-Light";
+  font-weight: bold;
+  color: wheat;
+  text-align: center;
+  background-color: #242020;
+}

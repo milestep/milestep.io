@@ -21,94 +21,10 @@ footer {
     padding-top: calc(100px * var(--font-size-offset));
   }
 
-  .text-top {
-    .my-text-left {
-      font-family: "Roboto-Medium";
-
-      .vertical-line {
-        border-right: thick solid #0075b8;
-        width: calc(400px * var(--font-size-offset));
-      }
-      .first-text {
-        padding-top: calc(10px * var(--font-size-offset));
-        letter-spacing: calc(2px * var(--font-size-offset));
-        color: rgb(204,204,204);
-        font-weight: 800;
-        font-size: calc(35px * var(--font-size-offset));
-      }
-      .second-text {
-        letter-spacing: calc(2px * var(--font-size-offset));
-        font-weight: 600;
-        font-size: calc(50px * var(--font-size-offset));
-      }
-    }
-    .my-text-right {
-      padding-top: calc(15px * var(--font-size-offset));
-      padding-left: calc(55px * var(--font-size-offset));
-      font-family: "Roboto-Regular";
-
-      .text-web-and-app {
-        font-size: calc(55px * var(--font-size-offset));
-        .text-web {
-          color: #0075b8;
-        }
-        .text-and {
-          font-size: calc(25px * var(--font-size-offset));
-        }
-        .text-app {
-          color: #f60e0b;
-        }
-      }
-      .text-development-services {
-
-        font-size: calc(25px * var(--font-size-offset));
-      }
-    }
-  }
-
-  .data-company {
-    font-weight: 600;
-    line-height: calc(16px * var(--font-size-offset));
-    color: #e0e0e0;
-    font-size: calc(20px * var(--font-size-offset));
-    font-family: "Roboto-Light";
-
-    .address {
-      margin-top: calc(55px * var(--font-size-offset));
-    }
-    .phone-number {
-      margin-top: calc(20px * var(--font-size-offset));
-    }
-    .mail {
-      margin-top: calc(20px * var(--font-size-offset));
-      a {
-        color: #e0e0e0;
-      }
-    }
-  }
-
-  .social-network {
-    margin-top: calc(50px * var(--font-size-offset));
-    .fa-stack {
-      margin-right: calc(10px * var(--font-size-offset));
-    }
-    .fa-stack:hover {
-      .fa-circle {
-        color: #0075b8;
-      }
-    }
-    .inside-icon {
-      color: #2d2d2d;
-    }
-    .fa-circle {
-      color: #fff;
-    }
-  }
-
   .form {
     form {
       margin-bottom: 0px;
-      margin-top: calc(55px * var(--font-size-offset));
+      margin-top: calc(65px * var(--font-size-offset));
     }
     .form-control {
       border-radius:2rem;
@@ -145,12 +61,73 @@ footer {
       background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
     }
   }
-
+  .text-striped {
+    border-right: thick solid #0075b8;
+    font-family: "Roboto-Medium";
+    .first-text {
+      color: rgb(204,204,204);
+      font-weight: 800;
+      font-size: calc(35px * var(--font-size-offset));
+      letter-spacing: calc(2px * var(--font-size-offset));
+    }
+    .second-text {
+      letter-spacing: calc(2px * var(--font-size-offset));
+      font-weight: 600;
+      font-size: calc(50px * var(--font-size-offset));
+    }
+  }
+  .credentials {
+    color: #e0e0e0;
+    font-size: calc(20px * var(--font-size-offset));
+    font-family: "Roboto-Light";
+    font-weight: 600;
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+    .group {
+      margin-bottom: 3%;
+    }
+  }
   .copyright {
-    margin-top: calc(80px * var(--font-size-offset));
+    margin-top: 6%;
+    margin-bottom: 4%;
     font-size: calc(18px * var(--font-size-offset));
-    line-height: calc(40px * var(--font-size-offset));
     color: rgb(139,139,139);
     font-family: "Roboto-Bold";
+  }
+
+  .social-network {
+    font-size: 1rem;
+    margin-top: calc(50px * var(--font-size-offset));
+    .fa-stack {
+      margin-right: calc(10px * var(--font-size-offset));
+    }
+    .fa-stack:hover {
+      .fa-circle {
+        color: #0075b8;
+      }
+    }
+    .inside-icon {
+      color: #2d2d2d;
+    }
+    .fa-circle {
+      color: #fff;
+    }
+  }
+  .right-block {
+    margin-left: 5%;
+    font-family: "Roboto-Regular";
+    .normal {
+      font-size: calc(25px * var(--font-size-offset));
+    }
+    .big-blue {
+      font-size: calc(55px * var(--font-size-offset));
+      color: #0075b8;
+    }
+    .big-red {
+      font-size: calc(55px * var(--font-size-offset));
+      color: #f60e0b;
+    }
   }
 }

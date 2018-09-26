@@ -7,8 +7,8 @@
 
     .service-card {
       margin-top: -28%;
-      border-radius:3rem;
-      box-shadow: 0px 4px 7px rgba(0,62,92,0.69);
+      border-radius:calc(3rem * var(--font-size-offset));
+      box-shadow: 0px 4px 4px rgba(0,62,92,0.69);
       background-image: linear-gradient(#4c9ecd, #0075b8);
 
       &:hover {
@@ -93,50 +93,8 @@
     }
 
     .service-card-center {
-
       .info {
         padding-top: calc(141% + 25px * (1 - var(--font-size-offset)));
-      }
-    }
-
-    @media screen and (max-width:991px) {
-      .service-card {
-        .info {
-          .title {
-            font-size: 23px;
-            letter-spacing: 0px;
-            line-height: 38px;
-          }
-
-          .body {
-            .text {
-              height: 240px;
-            }
-
-            .read-more {
-              margin-top: 60px;
-            }
-
-            .btn-contact {
-              margin-top: 15px;
-              margin-bottom: 30px;
-              font-size: 14px;
-              font-family: "Roboto-Regular";
-              width: 140px;
-              height: 30px;
-            }
-          }
-        }
-      }
-
-      .service-card-center {
-        .info {
-          .body {
-            .text {
-              height: 265px;
-            }
-          }
-        }
       }
     }
   }
