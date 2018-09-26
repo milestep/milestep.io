@@ -1,6 +1,6 @@
-<% content_for :head do %>
-  <meta name="turbolinks-cache-control" content="no-cache">
-<% end %>
+  <% content_for(:body_attributes) do %>
+    data-turbolinks="false"
+  <% end %>
 <div class='main-container'>
   <div class="container-fluid toastr"></div>
   <%= render "header" %>

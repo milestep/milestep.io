@@ -63,7 +63,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': true, async: Rails.env.production? %>
   </head>
 
-  <body>
+  <body  <%= yield(:body_attributes) if content_for?(:body_attributes) %> >
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <%= yield %>
