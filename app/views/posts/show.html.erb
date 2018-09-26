@@ -24,6 +24,12 @@
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
     
+    clearDisqusDiv();
+    function clearDisqusDiv(){
+      const div = document.querySelector("#disqus_thread");
+      div.innerHTML = "";
+    }
+
     var disqus_config = function () {
       let PAGE_URL = "<%= request.base_url %>" + "<%= request.original_fullpath %>"
       let PAGE_IDENTIFIER = "<%= @post.id %>"
