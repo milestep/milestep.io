@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_115846) do
+ActiveRecord::Schema.define(version: 2018_09_27_111238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 2018_09_25_115846) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
+  create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
   create_table "portfolio_items", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -92,6 +104,7 @@ ActiveRecord::Schema.define(version: 2018_09_25_115846) do
     t.string "main_image_content_type"
     t.integer "main_image_file_size"
     t.datetime "main_image_updated_at"
+    t.string "slug"
   end
 
   create_table "team_members", force: :cascade do |t|
