@@ -16,6 +16,10 @@ class Post < ApplicationRecord
     ]
   end
 
+  def should_generate_new_friendly_id?
+    title_changed?
+  end
+
   def formatted_created_date
     created_at.strftime("Created %B %d, %Y") 
   end
