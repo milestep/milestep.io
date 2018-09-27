@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def set_post
     @post = Post.friendly.find(params[:id])
   end
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def generate_meta_tag_from_post(post)
-    { 
+    {
       twitter_description: helpers.cut_text(ActionController::Base.helpers.strip_tags(get_html_text_for_meta_tag(post.body)), 300),
       twitter_title: post.title,
       twitter_image: ActionController::Base.helpers.image_url(post.main_image),
