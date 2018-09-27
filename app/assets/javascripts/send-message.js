@@ -1,11 +1,9 @@
 function sendMessage() {
-  var form = $('#message-form');
-  var error = null;
+  var formElement = document.querySelector("#message-form");
+  var form = $(formElement);
   var data = getData();
 
-  validateData(data);
-  if (error) {
-    toastr({ type: "warning", message: error })
+  if (!formElement.checkValidity()) {
     return
   }
 
@@ -30,18 +28,6 @@ function sendMessage() {
       transformedData[value.name] = value.value;
     })
     return transformedData;
-  }
-
-  function validateData(data) {
-    var emailRegex = /^.+@.+\..+$/;
-    if (!emailRegex.test(data.email)) {
-      error = "Invalid email!"
-      return
-    }
-    if (data.message.trim().length === 0) {
-      error = "Message can't be blank!"
-      return
-    }
   }
 }
 
