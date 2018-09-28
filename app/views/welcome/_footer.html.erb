@@ -62,15 +62,15 @@
             <div class='normal'>Development Services</div>
           </div>
           <div class="form">
-            <form id='message-form'>
+            <form id='message-form' onsubmit='return false'>
               <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Your Email" aria-label='Your Email' required />
+                <input type="email" name="email" class="form-control" placeholder="Your Email" aria-label='Your Email' required />
               </div>
               <div class="form-group">
-                <input type="text" name="message" class="form-control" placeholder="Your message" aria-label='Your Message'/>
+                <input type="text" name="message" class="form-control" placeholder="Your message" aria-label='Your Message'required />
               </div>
               <div class="form-group">
-                <button class="btn-contact" type="button" onclick='sendMessage()'>SEND MESSAGE</button>
+              <input class="btn-contact" type="submit" value="SEND MESSAGE" onclick="sendMessage()">
               </div>
             </form>
           </div>
