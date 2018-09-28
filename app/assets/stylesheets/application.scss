@@ -12,11 +12,12 @@
  *
  *= require slick
  *= require slick-theme
- *= require font-awesome
  *= require_tree .
  *= require_self
  *= stub "active_admin"
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
