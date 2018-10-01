@@ -1,0 +1,122 @@
+
+.portfolio {
+  margin-top: calc(150px * var(--font-size-offset));
+  margin-bottom: calc(230px * var(--font-size-offset));
+
+  a {
+    text-decoration: none;
+  }
+
+  .title {
+    text-transform: uppercase;
+
+    p {
+      font-size: calc(41px * var(--font-size-offset));
+      letter-spacing: calc(3px * var(--font-size-offset));
+      font-family: "Roboto";
+      font-weight: 800;
+      line-height: 40px;
+    }
+
+    .last {
+      color: #000;
+    }
+
+    .projects {
+      color: #585858;
+    }
+  }
+
+  .wrapper--galleria-rectangle {
+    margin-top: calc(50px * var(--font-size-offset));
+
+    .flex-container--galleria-and-rectangle {
+      display: flex;
+
+      .flex-item--galleria-and-rectangle {
+        overflow: hidden;
+      }
+    }
+
+    .galleria {
+      .flex-container {
+        display: flex;
+
+        .flex-item {
+          margin: calc(5px * var(--font-size-offset));
+          overflow: hidden;
+          height: calc(250px * var(--font-size-offset));
+          width: calc(250px * var(--font-size-offset));
+        }
+
+        .rectangle-and-text-hover {
+          .flex-container-info {
+            height: 100%;
+
+            .flex-item-info {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .info {
+                display: none;
+
+                p {
+                  font-family: "Roboto";
+                  text-align: center;
+                  color: #fff;
+                }
+
+                .name-project {
+                  letter-spacing: 0px;
+                  text-transform: uppercase;
+                  font-size: calc(18px * var(--font-size-offset));
+                  font-weight: 500;
+                }
+
+                .horizontal-line {
+                  margin: 0 auto;
+                  margin-top: calc(20px * var(--font-size-offset));
+                  margin-bottom: calc(10px * var(--font-size-offset));
+                  border-top: solid #fff;
+                  width: 90%;
+                }
+
+                .info-project {
+                  font-size: calc(13px * var(--font-size-offset));
+                  line-height: calc(12px * var(--font-size-offset));
+                }
+              }
+            }
+
+          }
+
+          &:hover {
+            background-color: rgba(198, 52, 56, 0.8);
+
+            .flex-container-info .flex-item-info .info {
+              display: block;
+            }
+          }
+        }
+
+        .img-project {
+          background-blend-mode: multiply;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+
+      }
+    }
+
+    .rectangle-portfolio {
+      background-image: asset-url('portfolio/rectangle.png');
+      background-blend-mode: multiply;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: calc(516px * var(--font-size-offset));
+      width: calc(150px * var(--font-size-offset));
+    }
+  }
+}

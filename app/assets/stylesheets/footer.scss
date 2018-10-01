@@ -150,12 +150,45 @@ footer {
       background-image: linear-gradient(to top, #ff643a 0%, #f50808 100%);
     }
   }
-
   .copyright {
     margin-top: calc(80px * var(--font-size-offset));
     font-size: calc(18px * var(--font-size-offset));
     line-height: calc(40px * var(--font-size-offset));
     color: rgb(139,139,139);
     font-family: "Roboto-Bold";
+  }
+
+  .social-network {
+    font-size: 1rem;
+    margin-top: calc(50px * var(--font-size-offset));
+    .fa-stack {
+      margin-right: calc(10px * var(--font-size-offset));
+    }
+    .fa-stack:hover {
+      .fa-circle {
+        color: #0075b8;
+      }
+    }
+    .inside-icon {
+      color: #2d2d2d;
+    }
+    .fa-circle {
+      color: #fff;
+    }
+  }
+  .right-block {
+    margin-left: 5%;
+    font-family: "Roboto-Regular";
+    .normal {
+      font-size: calc(25px * var(--font-size-offset));
+    }
+    .big-blue {
+      font-size: calc(55px * var(--font-size-offset));
+      color: #0075b8;
+    }
+    .big-red {
+      font-size: calc(55px * var(--font-size-offset));
+      color: #f60e0b;
+    }
   }
 }

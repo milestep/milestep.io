@@ -2,10 +2,10 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * Any CSS  SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * You're free to add application-wide styles to this file  they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
@@ -20,17 +20,17 @@
  @import "bootstrap";
  @import "font-awesome";
  @import url(https://fonts.googleapis.com/css?family=Roboto);
- 
+
  a, button { outline: none !important; }
- 
+
  .link:hover {
    cursor: pointer;
  }
- 
+
  body {
    --origin-width: 1920px;
    --font-size-offset: 1;
- 
+
    .navigation-panel {
      position: fixed;
      top: 0px;
@@ -81,7 +81,7 @@
          object-fit: fill;
          margin-left: -0.5vw;
        }
- 
+
      }
      .nav-links {
        z-index: 12;
@@ -110,7 +110,7 @@
        }
      }
    }
- 
+
    .about-us {
      position: relative;
      margin: 0;
@@ -173,7 +173,7 @@
        cursor: pointer;
      }
    }
- 
+
    .main-container {
      //fires display: block from zoom.js when dom is builded
      //padding-right: 15px !important;
@@ -184,26 +184,26 @@
      width: calc(1px * var(--origin-width));
      max-width: calc(1px * var(--origin-width));
    }
- 
+
    .content {
      margin: auto;
      width: calc(0.6px * var(--origin-width));
      max-width: calc(0.6px * var(--origin-width));
    }
- 
+
    .content-right {
      // padding-right: 0px !important;
      width: calc(0.75px * var(--origin-width));
      max-width: calc(0.75px * var(--origin-width));
      margin-left: 20%;
    }
-   
+
    .left-content-block {
      float: left;
      width: 40%;
      max-width: calc(550px * var(--font-size-offset))
    }
- 
+
    .right-content-block {
      float: right;
      width: calc(740px * var(--font-size-offset));

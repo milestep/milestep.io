@@ -4,7 +4,7 @@
 <div class="blog-image-container">
   <%= render 'shared/blog_header' %>
   <div class="container">
-  
+
     <% if @posts.any? %>
       <div class="blog-posts-container row">
         <%= render partial: 'post', collection: @posts, as: :post %>
