@@ -1,4 +1,7 @@
-<% provide(:meta, "MileStep | Web & Mobile App Development Company")%>
+<% content_for :open_graph_tags do %>
+  <%= render partial: 'shared/open_graph_tags' %>
+<% end %>
+
 <div class="blog-header">
   <%= render 'welcome/header' %>
 </div>
