@@ -1,11 +1,11 @@
 <% content_for :open_graph_tags do %>
   <% locals = { %>
-  <%  twitter_description: cut_text(strip_tags(@post.body), 300), %>
+  <%  twitter_description: cut_text(strip_tags(getHtmlTextForMetaTag(@post.body)), 300), %>
   <%  twitter_title: @post.title, %>
   <%  twitter_image: image_url(@post.main_image), %>
   <%  og_title: @post.title, %>
   <%  og_type: "article", %>
-  <%  og_description: cut_text(strip_tags(@post.body), 300), %>
+  <%  og_description: cut_text(strip_tags(getHtmlTextForMetaTag(@post.body)), 300), %>
   <%  og_url: post_url(@post), %>
   <%  og_site_name: "MileStep | Web &amp; Mobile App Development Company", %>
   <%  og_image: image_url(@post.main_image) %>
