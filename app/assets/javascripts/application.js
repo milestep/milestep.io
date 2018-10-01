@@ -15,4 +15,6 @@
 //= require jquery
 //= require turbolinks
 //= require popper
+//= require jquery.slick
+//= require ckeditor/init
 //= require_tree .

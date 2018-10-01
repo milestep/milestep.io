@@ -1,21 +1,29 @@
 #team {
   .team {
+
     background-color: #2d2d2d;
     color: #fff;
-    padding-bottom: 135px;
+    padding-bottom: calc(135px * var(--font-size-offset));
+
+    .slick-dots li button:before {
+      color: white;
+    }
+    .slick-slide {
+      outline: none;
+    }
 
     .section-left-text {
-      margin-top: 170px;
+      margin-top: calc(170px * var(--font-size-offset));
       background-image: asset-url('team/rectangle.jpg');
       background-repeat: no-repeat;
       background-size: 75% 58%;
 
       .title {
-        letter-spacing: 3px;
-        line-height: 50px;
+        letter-spacing: calc(10px * var(--font-size-offset));
+        line-height: calc(50px * var(--font-size-offset));
 
         p {
-          font-size: 60px;
+          font-size: calc(60px * var(--font-size-offset));
         }
 
         .text-our {
@@ -28,50 +36,66 @@
       }
 
       .paragraph {
-        padding-top: 50px;
-        width: 500px;
-        font-size: 24px;
-        line-height: 35px;
+        padding-top: calc(62px * var(--font-size-offset));
+        max-width: calc(550px * var(--font-size-offset)) !important;
+        font-size: calc(24px * var(--font-size-offset));
+        line-height: calc(35px * var(--font-size-offset));
         font-family: 'Roboto-Medium';
       }
 
       .horizontal-line {
-        margin-top: 30px;
+        margin-top: calc(30px * var(--font-size-offset));
         border-top: solid #0075b8;
-        width: 250px;
+        width: calc(250px * var(--font-size-offset));
+      }
+
+      .slider-info-number-page {
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 40px;
+        font-family: 'Roboto-Medium';
+
+        span {
+          color: rgb(0,117,184);
+        }
       }
     }
 
     .faces {
-      margin-top: 100px;
+      margin-top: calc(160px * var(--font-size-offset));
 
       .flex-container {
         display: flex;
       }
 
+      .col-xs-4 {
+        padding: 1px;
+        margin: 0px;
+      }
+
       .flex-item {
-        margin: 5px;
+        margin: calc(5px * var(--font-size-offset));
         overflow: hidden;
-        max-height: 260px;
-        flex-basis: 260px;
-        box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
+        height:   calc(250px * var(--font-size-offset));
+        flex-basis: calc(250px * var(--font-size-offset));
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.5);
         display: flex;
 
         .text {
           display: none;
           position: absolute;
-          top: 85px;
+          top: calc(85px * var(--font-size-offset));
           text-align: center;
           width: 100%;
           letter-spacing: 1px;
-          line-height: 30px;
+          line-height: calc(30px * var(--font-size-offset));
 
           p {
             font-family: 'normal';
           }
 
           .name {
-            font-size: 20px;
+            font-size: calc(20px * var(--font-size-offset));
             font-family: 'Roboto-Black';
             text-transform: uppercase;
           }
@@ -83,7 +107,7 @@
           }
 
           .specialization {
-            font-size: 14px;
+            font-size: calc(14px * var(--font-size-offset));
             font-family: 'Roboto-Medium';
           }
         }
@@ -102,8 +126,8 @@
       .img-face {
         background-blend-mode: multiply;
         background-repeat: no-repeat;
-        background-size: 260px;
-        height: 260px;
+        background-size: calc(225px * var(--font-size-offset));
+        height: calc(225px * var(--font-size-offset));
       }
 
     }
@@ -153,31 +177,6 @@
               font-family: 'Roboto-Medium';
             }
           }
-        }
-      }
-    }
-
-    @media screen and (min-width: 992px) and (max-width:1199px) {
-      .section-left-text {
-        background-size: 85% 58%;
-
-        .paragraph {
-          padding-top: 40px;
-          line-height: 25px;
-          font-family: 'Roboto-Regular';
-          width: 300px;
-          font-size: 18px;
-        }
-      }
-    }
-
-    @media screen and (min-width: 1200px) and (max-width:1499px) {
-      .section-left-text {
-        background-size: 85% 58%;
-
-        .paragraph {
-          width: 400px;
-          font-size: 22px;
         }
       }
     }

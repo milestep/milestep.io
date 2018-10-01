@@ -9,7 +9,7 @@
   </div>
 
   <div class="portfolio">
-    <div class="container">
+    <div class="container content">
       <div class='col-xs-12'>
         <div class='row'>
           <div class='col-xs-10 col-xs-offset-1'>
@@ -19,22 +19,26 @@
             </div>
           </div>
         </div>
-
         <div class='row'>
-          <div class='col-xs-10 col-xs-offset-1'>
+
             <div class="wrapper--galleria-rectangle">
               <div class='flex-container--galleria-and-rectangle'>
                 <div class='galleria flex-item--galleria-and-rectangle'>
-                  <div class="flex-container">
-                      <div class='flex-item img-project img-project-1 rectangle-and-text-hover'>
-                        <a href='https://www.landlordsny.com' target="_blank">
+                <div class='col-xs-9 col-xs-offset-1'>
+                  <% @project.each do |portfolio| %>
+                    <div class="flex-container" style="float:left">
+                      <div class='flex-item img-project rectangle-and-text-hover'
+                        style="background-image: url(<%= image_path(portfolio.image_url) %>)" >
+                        <a href='<%= portfolio.web_address %>' target="_blank">
                           <div class='flex-container-info'>
                             <div class='flex-item-info'>
                               <div class="info">
-                                <p class='name-project'>web site «landlordsny»</p>
+                                <p class='name-project'>
+                                  <%= portfolio.name %>
+                                </p>
                                 <div class='horizontal-line'></div>
                                 <p class='info-project'>
-                                  At LandlordsNY.com, landlords and property managers across New York have an exclusive social network for the first time ever. Confer with complete confidentiality on any issue with a private community of your peers. And no matter what product or service you’re looking for, you’ll find qualified vendors and trusted referrals from your fellow landlords.
+                                  <%= portfolio.description %>
                                 </p>
                                 <div class='horizontal-line'></div>
                               </div>
@@ -42,155 +46,17 @@
                           </div>
                         </a>
                       </div>
-
-                    <div class='flex-item img-project img-project-2 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «gold avenue»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Gold Avenue is a Swiss independent company of an industrial and trading services group specialized in all aspects of the precious metals busines
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
                     </div>
-
-                    <div class='flex-item img-project img-project-3 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «crowdpouch»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                "An international crowdfunding ecosystem democratizing the way crowdfunding functions. More power to people. One stop crowdfunding solution for all. Bringing Methodology and technology in one place. "
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="flex-container">
-                    <div class='flex-item img-project img-project-4 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «up stack»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                UpStack is the web platform for colocation and network procurement. It's new standard in hybrid IT procurement, aimed at empowering IT professionals and their consultants across the globe with data and tools historically only available to large, hyperscale companies.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class='flex-item img-project img-project-5 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «everseat»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Everseat is the revolutionary app that is disrupting the current supply & demand equation for scheduling appointments. Service providers including physicians, dentists, vets, hair-stylists, massage therapists and more can seamlessly fill schedule gaps with interested and available users. It’s faster, easier, and more fun than time-consuming, often unsuccessful phone calls or wait lists.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class='flex-item img-project img-project-6 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «classlyapp»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Classly is a brand new chat app that helps you to learn together with your classmates and teachers.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="flex-container">
-                    <div class='flex-item img-project img-project-7 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «Tom Rensed»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Classly is a brand new chat app that helps you to learn together with your classmates and teachers.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class='flex-item img-project img-project-8 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «Lancer Jack»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Classly is a brand new chat app that helps you to learn together with your classmates and teachers.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class='flex-item img-project img-project-9 rectangle-and-text-hover'>
-                      <a href='https://www.landlordsny.com' target="_blank">
-                        <div class='flex-container-info'>
-                          <div class='flex-item-info'>
-                            <div class="info">
-                              <p class='name-project'>web site «Nathan White»</p>
-                              <div class='horizontal-line'></div>
-                              <p class='info-project'>
-                                Classly is a brand new chat app that helps you to learn together with your classmates and teachers.
-                              </p>
-                              <div class='horizontal-line'></div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+                  <% end %> 
+                  </div>  
+                  <div class='rectangle-portfolio flex-item--galleria-and-rectangle'></div>             
                 </div>
-
-                <div class='rectangle-portfolio flex-item--galleria-and-rectangle'></div>
+                
               </div>
             </div>
-          </div>
+         
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 </section>
