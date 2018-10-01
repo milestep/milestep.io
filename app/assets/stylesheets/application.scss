@@ -12,11 +12,12 @@
  *
  *= require slick
  *= require slick-theme
- *= require font-awesome
  *= require_tree .
  *= require_self
  *= stub "active_admin"
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -186,15 +187,30 @@ a, button { outline: none !important; }
   padding-left: 0px !important;
 }
 .toastr {
+  width: 100%;
+  display: none;
+  padding: 10px 50px;
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
   z-index: 100;
+  background-color: transparent; 
+
+  text-align: center;
   font-size: 3vh;
   font-family: "Roboto-Light";
   font-weight: bold;
   color: wheat;
-  text-align: center;
-  background-color: #242020;
+
+  &.success {
+    background-color: green;
+  }
+
+  &.error {
+    background-color: red;
+  }
+
+  &.warning {
+    background-color: orange;
+  }
 }
