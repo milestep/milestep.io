@@ -1,17 +1,41 @@
-<footer>
+<footer class="with-background with-scrolling">
+  <div class="section-background-container">
+    <div class="background-element">
+     <%= render 'shared/background', template: :footer %>
+      <%= scrolling_button background: "#2d2d2d" do %>
+        <span>07<span>
+      <% end %>
+    </div>
+  </div>
+
   <section id="contact">
     <div class="container content">
-      <div class='row'>
-        <div class='col-md-5 col-xs-12'>
-          <div class='text-striped'>
+      <div class="row text-top">
+        <div class="col-md-5 my-text-left">
+          <div class="vertical-line">
             <div class="first-text">GET TO KNOW</div>
             <div class="second-text">US BETTER</div>
           </div>
-          <div class='credentials'>
-            <br/><br/>
-            <div class="group">
-              42/1, Priportova St., Cherkasy, Ukraine <br/>
-              62, European St., Uman, Ukraine
+        </div>
+        <div class="col-md-4 offset-3 my-text-right">
+          <div class="top">
+            <div class="text-web-and-app">
+              <span class="text-web">Web</span>
+              <span class="text-and">and</span>
+              <span class="text-app">App</span>
+            </div>
+            <div class="text-development-services">
+              Development Services
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="data-company">
+            <div class="address">
+              <p>42/1, Priportova St., Cherkasy, Ukraine</p>
+              <p>62, European St., Uman, Ukraine</p>
             </div>
             <div class="group">
               +38 (097) 753 57 31

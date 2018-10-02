@@ -1,8 +1,15 @@
-<section id="aboutUs">
+<section id="aboutUs" class="with-background with-scrolling">
+  <div class="section-background-container">
+    <div class="background-element">
+      <%= scrolling_button offset_top: '636px', background: "#2d2d2d" do %>
+        <%= image_tag("mouse.png") %>
+      <% end %>
+    </div>
+  </div>
+
   <div class="about-us container-fluid">
-    <%= image_tag("header/logo.png", class: 'logo', alt: 'MileStep') %>
-    <%= image_tag("about-us/about_us_bg.png", class: 'background', alt: '') %>
-    <div class='vertical-text-image'>IT COMPANY</div>
+    <%= image_tag("header/logo.png", class: 'logo') %>
+    <%= image_tag("about-us/about_us_bg.png", class: 'background') %>
     <div class='about-us-title'>
       ABOUT US
     </div>

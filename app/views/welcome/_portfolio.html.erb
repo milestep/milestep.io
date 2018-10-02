@@ -1,4 +1,13 @@
-<section id="portfolio">
+<section id="portfolio" class="with-background with-scrolling">
+  <div class="section-background-container">
+    <div class="background-element">
+      <%= render 'shared/background', template: :portfolio %>
+      <%= scrolling_button offset_top: '47%', background: "#fff" do %>
+        <span>06<span>
+      <% end %>
+    </div>
+  </div>
+
   <div class="portfolio">
     <div class="container content">
       <div class='col-xs-12'>
@@ -11,10 +20,11 @@
           </div>
         </div>
         <div class='row'>
+
             <div class="wrapper--galleria-rectangle">
               <div class='flex-container--galleria-and-rectangle'>
                 <div class='galleria flex-item--galleria-and-rectangle'>
-                <div class='col-md-9 col-md-offset-1 col-xs-10 col-xs-offset-1'>
+                <div class='col-xs-9 col-xs-offset-1'>
                   <% @project.each do |portfolio| %>
                     <div class="flex-container" style="float:left">
                       <div class='flex-item img-project rectangle-and-text-hover'
@@ -37,16 +47,16 @@
                         </a>
                       </div>
                     </div>
-                  <% end %> 
-                  </div>  
-                  <div class='rectangle-portfolio flex-item--galleria-and-rectangle'></div>             
+                  <% end %>
+                  </div>
+                  <div class='rectangle-portfolio flex-item--galleria-and-rectangle'></div>
                 </div>
-                
+
               </div>
             </div>
-         
+
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </section>

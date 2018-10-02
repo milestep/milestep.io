@@ -1,6 +1,6 @@
 <section id='why-us'>
   <div class='container-fluid content' >
-    <div class='right-vertikal-line'>
+    <div class='container right-vertikal-line'>
       <div class='advantages-header'>
         <span class='why-us-number image-why-us'></span>
         <h2><b>advantages</b> of our approch <br/> to development</h2>
@@ -9,10 +9,10 @@
 
       <div class='advantages-body'>
         <div class='row'>
-          <div class='col-md-6 col-xs-12'>
+          <div class='col-xs-6'>
             <div class='advantage-item'>
               <div class='img-and-title'>
-                <%= image_tag('why-us/1.png', class: 'img-mb pull-left', align: 'left', alt: '') %>
+                <%= image_tag('why-us/1.png', class: 'img-mb pull-left', align: 'left') %>
                 <span class='title'>Two weeks free trial</span>
               </div>
               <p class='text text-1 text-1-4-5'>
@@ -22,23 +22,23 @@
             </div>
           </div>
 
-          <div class='col-md-5 col-xs-12'>
+          <div class='col-xs-6'>
             <div class='advantage-item'>
               <div class='img-and-title'>
-                <%= image_tag('why-us/2.png', class: 'img-mb pull-left', align: 'left', alt: '') %>
+                <%= image_tag('why-us/2.png', class: 'img-mb pull-left', align: 'left') %>
                 <span class='title title-2'>Full-stack Web and <br /> App developers</span>
               </div>
               <p class='text text-2'>
                 Each of developers is good at both front-end and back-end development. Hence, we’ll provide you with engineers who have wider view on your product from the implementation of design on web-page till deploying code on server
               </p>
-              <%= image_tag('why-us/circle2x.png', class: 'circle-format', alt: '') %>
+              <%= image_tag('why-us/circle2x.png', class: 'circle-format') %>
             </div>
           </div>
 
-          <div class='col-md-6 col-xs-12'>
+          <div class='col-xs-6 advantage-item'>
             <div class='advantage-item'>
               <div class='img-and-title'>
-                <%= image_tag('why-us/3.png', class: 'img-mb pull-left', align: 'left', alt: '') %>
+                <%= image_tag('why-us/3.png', class: 'img-mb pull-left', align: 'left') %>
                 <span class='title'>Agile</span>
               </div>
               <p class='text text-3'>
@@ -47,10 +47,10 @@
             </div>
           </div>
 
-          <div class='col-md-6 col-xs-12'>
+          <div class='col-xs-6'>
             <div class='advantage-item'>
               <div class='img-and-title'>
-                <%= image_tag('why-us/4.png', class: 'img-mb pull-left', align: 'left', alt: '') %>
+                <%= image_tag('why-us/4.png', class: 'img-mb pull-left', align: 'left') %>
                 <span class='title'>Maintenance & Support</span>
               </div>
               <p class='text text-4 text-1-4-5'>
@@ -60,12 +60,12 @@
           </div>
 
           <div class='row container-with-img-statue'>
-            <div class='col-md-6 col-xs-12 advantage-item'>
-              <%= image_tag('why-us/statue.png', class: 'statue', alt: '') %>
+            <div class='col-xs-6 advantage-item'>
+              <%= image_tag('why-us/statue.png', class: 'statue') %>
             </div>
-            <div class='col-md-6 col-xs-12 advantage-item'>
+            <div class='col-xs-6 advantage-item'>
               <div class='img-and-title'>
-                <%= image_tag('why-us/5.png', class: 'img-mb pull-left', align: 'left', alt: '') %>
+                <%= image_tag('why-us/5.png', class: 'img-mb pull-left', align: 'left') %>
                 <span class='title'>Free code audit</span>
               </div>
               <p class='text text-5 text-1-4-5'>
@@ -74,7 +74,9 @@
             </div>
           </div>
         </div>
+
         <button name='button' type='submit' class='advantages-button' onclick='scroller("contact")'>Contact us</button>
+        <span class='underline'></span>
       </div>
     </div>
 
@@ -89,22 +91,22 @@
 
   <div class='technologies'>
     <div class='slider-technologies-slick-js'>
-      <div><%= image_tag('why-us/technologies/react.jpg', alt: 'React') %></div>
-      <div><%= image_tag('why-us/technologies/rails.png', alt: 'Rails') %></div>
-      <div><%= image_tag('why-us/technologies/postgresql.png', alt: 'postgresql') %></div>
-      <div><%= image_tag('why-us/technologies/ionic.png', alt: 'ionic') %></div>
-      <div><%= image_tag('why-us/technologies/redux.png', alt: 'redux') %></div>
-      <div><%= image_tag('why-us/technologies/node.png', alt: 'nodeJs') %></div>
-      <div><%= image_tag('why-us/technologies/angular.png', alt: 'angular') %></div>
-      <div><%= image_tag('why-us/technologies/typescript.png', alt: 'typescript') %></div>
-      <div><%= image_tag('why-us/technologies/ember.png', alt: 'ember') %></div>
-      <div><%= image_tag('why-us/technologies/mongodb.png', alt: 'mongodb') %></div>
-      <div><%= image_tag('why-us/technologies/coffe.png', alt: 'coffee') %></div>
-      <div><%= image_tag('why-us/technologies/sass.png', alt: 'sass') %></div>
-      <div><%= image_tag('why-us/technologies/jquery.png', alt: 'jquery') %></div>
-      <div><%= image_tag('why-us/technologies/less.png', alt: 'less') %></div>
-      <div><%= image_tag('why-us/technologies/my-sql.png', alt: 'my-sql') %></div>
-      <div><%= image_tag('why-us/technologies/vue.png', alt: 'vueJs') %></div>
+      <div><%= image_tag('why-us/technologies/react.jpg') %></div>
+      <div><%= image_tag('why-us/technologies/rails.png') %></div>
+      <div><%= image_tag('why-us/technologies/postgresql.png') %></div>
+      <div><%= image_tag('why-us/technologies/ionic.png') %></div>
+      <div><%= image_tag('why-us/technologies/redux.png') %></div>
+      <div><%= image_tag('why-us/technologies/node.png') %></div>
+      <div><%= image_tag('why-us/technologies/angular.png') %></div>
+      <div><%= image_tag('why-us/technologies/typescript.png') %></div>
+      <div><%= image_tag('why-us/technologies/ember.png') %></div>
+      <div><%= image_tag('why-us/technologies/mongodb.png') %></div>
+      <div><%= image_tag('why-us/technologies/coffe.png') %></div>
+      <div><%= image_tag('why-us/technologies/sass.png') %></div>
+      <div><%= image_tag('why-us/technologies/jquery.png') %></div>
+      <div><%= image_tag('why-us/technologies/less.png') %></div>
+      <div><%= image_tag('why-us/technologies/my-sql.png') %></div>
+      <div><%= image_tag('why-us/technologies/vue.png') %></div>
     </div>
   </div>
 </section>
