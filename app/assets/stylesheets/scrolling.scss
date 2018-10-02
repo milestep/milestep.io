@@ -1,0 +1,41 @@
+.with-scrolling {
+  position: relative;
+}
+
+.scrolling-background {
+  overflow: visible !important;
+  width: 90px;
+  z-index: 2;
+}
+
+.scrolling-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #2d2d2d;
+  border: 1px solid #646464;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+
+  & > .text-wrapper {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.81px;
+    line-height: 1;
+    color: #0075b8;
+  }
+}
+
+.ladder-text {
+  fill: #646464;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}

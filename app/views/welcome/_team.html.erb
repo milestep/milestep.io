@@ -1,4 +1,14 @@
-<section id='team'>
+<section id='team' class='with-background with-scrollin'>
+  <div class="section-background-container">
+    <div class="background-element">
+      <%= render 'shared/background', template: :team %>
+    </div>
+  </div>
+
+  <%= scrolling_button background: "#2d2d2d" do %>
+    <span>04<span>
+  <% end %>
+
   <div class='team'>
     <div class='container-fluid content-right'>
       <div class='left-content-block'>
@@ -30,7 +40,7 @@
             </div>
           <% end %>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </section>
