@@ -42,7 +42,7 @@
     </script>
 
     <!-- Open Graph tags -->
-    <%= yield :open_graph_tags %>
+    <%= render partial: 'shared/open_graph_tags', object: @meta_tags %>
 
     <link rel="icon" href="favicon.png" type="image/png">
     <%= csrf_meta_tags %>

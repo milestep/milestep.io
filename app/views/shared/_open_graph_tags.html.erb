@@ -1,24 +1,11 @@
-  <% twitter_card ||= "summary" %>
-  <% twitter_description ||= "MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals" %>
-  <% twitter_title ||= "MileStep | Web & Mobile App Development Company" %>
-  <% twitter_image ||= "https://i.imgur.com/hDuPtvj.jpg" %>
-  <% og_locale ||= "en_US" %>
-  <% og_title ||= "MileStep | Web & Mobile App Development Company" %>
-  <% og_type ||= "website" %>
-  <% og_description ||= "MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals" %>
-  <% og_url ||= "https://milestep.io/" %>
-  <% og_site_name ||= "" %>
-  <% og_image ||= "https://i.imgur.com/yERJpYN.png" %>
-  
-  
-  <%= tag :meta, property: "twitter:card", content: twitter_card %>
-  <%= tag :meta, property: "twitter:description", content: twitter_description %>
-  <%= tag :meta, property: "twitter:title", content: twitter_title %>
-  <%= tag :meta, property: "twitter:image", content: twitter_image %>
-  <%= tag :meta, property: "og:locale", content: og_locale %>
-  <%= tag :meta, property: "og:title", content: og_title %>
-  <%= tag :meta, property: "og:type", content: og_type %>
-  <%= tag :meta, property: "og:description", content: og_description %>
-  <%= tag :meta, property: "og:url", content: og_url %>
-  <%= tag :meta, property: "og:site_name", content: og_site_name %>
-  <%= tag :meta, property: "og:image", content: og_image %>
+  <%= tag :meta, property: "twitter:card", content: @meta_tags[:twitter_card] %>
+  <%= tag :meta, property: "twitter:description", content: @meta_tags[:twitter_description] %>
+  <%= tag :meta, property: "twitter:title", content: @meta_tags[:twitter_title] %>
+  <%= tag :meta, property: "twitter:image", content: @meta_tags[:twitter_image] %>
+  <%= tag :meta, property: "og:locale", content: @meta_tags[:og_locale] %>
+  <%= tag :meta, property: "og:title", content: @meta_tags[:og_title] %>
+  <%= tag :meta, property: "og:type", content: @meta_tags[:og_type] %>
+  <%= tag :meta, property: "og:description", content: @meta_tags[:og_description] %>
+  <%= tag :meta, property: "og:url", content: @meta_tags[:og_url] %>
+  <%= tag :meta, property: "og:site_name", content: @meta_tags[:og_site_name] %>
+  <%= tag :meta, property: "og:image", content: @meta_tags[:og_image] %>
