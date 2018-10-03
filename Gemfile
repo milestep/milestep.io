@@ -22,6 +22,8 @@ gem 'font-awesome-sass', '~> 5.3.1'
 gem "jquery-slick-rails"
 gem 'will_paginate', '~> 3.1.0'
 
+gem 'nokogiri'
+gem 'friendly_id', '~> 5.2.0'
 gem 'ckeditor'
 gem 'paperclip', '~> 5.0'
 
