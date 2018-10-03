@@ -39,3 +39,9 @@
   text-transform: uppercase;
   writing-mode: vertical-rl;
 }
+
+@media screen and (max-width: 1216px) {
+  .site-scrolling, .scroller-btn-container {
+    display: none;
+  }
+}

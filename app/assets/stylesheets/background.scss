@@ -53,3 +53,15 @@ svg.ugly {
     overflow: visible;
   }
 }
+
+@media screen and (max-width: 1216px) {
+  .section-background-container {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-background-container {
+    display: none;
+  }
+}
