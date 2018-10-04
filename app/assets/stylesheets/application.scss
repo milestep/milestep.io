@@ -226,8 +226,13 @@ circle {
 }
 
 line, circle {
+  &.darkest-line {
+    stroke: #606060;
+    stroke-width: 1px;
+  }
+
   &.dark-line {
-    stroke: #646464;
+    stroke: #cbcbcb;
     stroke-width: 1px;
   }
   &.gray-line {

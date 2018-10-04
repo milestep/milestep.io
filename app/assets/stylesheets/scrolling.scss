@@ -18,7 +18,7 @@
   left: 0;
   transform: translate(-50%, -50%);
   background-color: #2d2d2d;
-  border: 1px solid #646464;
+  border: 1px solid;
   border-radius: 50%;
   z-index: 2;
   cursor: pointer;
@@ -33,7 +33,7 @@
 }
 
 .ladder-text {
-  fill: #646464;
+  fill: #606060;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
