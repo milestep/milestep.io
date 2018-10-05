@@ -135,6 +135,11 @@ GEM
       railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.1)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     font-awesome-sass (5.3.1)
       sassc (>= 1.11)
@@ -356,8 +361,9 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
-  friendly_id (~> 5.2.0)
+  factory_bot_rails
   font-awesome-sass (~> 5.3.1)
+  friendly_id (~> 5.2.0)
   jbuilder (~> 2.5)
   jquery-rails
   jquery-slick-rails
