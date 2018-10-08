@@ -17,6 +17,22 @@ RSpec.describe BlogController, type: :controller do
       get :index
       expect(assigns(:posts).length).to eq(6)
     end
+
+    describe "filter posts" do
+      it "should return posts filtered by title" do
+        3.times do
+          create(:post, title: "hello")
+        end
+        get :index, params: { query: "hello" }
+        expect(assigns(:posts).length).to eq(3)
+      end
+      
+      it "should be case insensitive" do
+        create(:post, title: "new title")
+        get :index, params: { query: "NeW" }
+        expect(assigns(:posts).length).to eq(1)
+      end
+    end
   end
 
 end
