@@ -1,0 +1,67 @@
+.with-background {
+  position: relative;
+}
+
+.background-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.section-background-container {
+  @extend .background-container;
+  padding-left: 90px;
+  overflow: hidden;
+}
+
+.background-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+
+  line {
+    transform: scale3d(1, 1.01, 2);
+  }
+
+  circle {
+    transform: scale3d(1.01, 1.01, 2);
+  }
+}
+
+svg.ugly {
+  transform: scale3d(1, 1, 2);
+}
+
+.reverse-background {
+  transform: rotate(180deg)
+}
+
+.scroller-btn-container {
+  position: absolute;
+  margin-left: 90px;
+  height: 100%;
+  z-index: 3;
+}
+
+.serve-block, .prefooter-bg-container {
+  overflow: visible;
+
+  .background-element, .background-container {
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .section-background-container {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-background-container {
+    display: none;
+  }
+}

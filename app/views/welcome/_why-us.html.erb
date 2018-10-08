@@ -1,10 +1,19 @@
-<section id='why-us'>
+<section id='why-us' class='with-background with-scrolling'>
+  <div class="section-background-container">
+    <div class="background-element">
+      <%= render 'shared/background', template: :why_us %>
+    </div>
+  </div>
+
+  <%= scrolling_button offset_top: '32%', background: "#f5f5f5" do %>
+    <span>05</span>
+  <% end %>
+
   <div class='container-fluid content' >
     <div class='right-vertikal-line'>
       <div class='advantages-header'>
         <span class='why-us-number image-why-us'></span>
         <h2><b>advantages</b> of our approch <br/> to development</h2>
-        <span class='advantages-line-w'></span>
       </div>
 
       <div class='advantages-body'>
@@ -31,7 +40,6 @@
               <p class='text text-2'>
                 Each of developers is good at both front-end and back-end development. Hence, we’ll provide you with engineers who have wider view on your product from the implementation of design on web-page till deploying code on server
               </p>
-              <%= image_tag('why-us/circle2x.png', class: 'circle-format', alt: '') %>
             </div>
           </div>
 
@@ -77,13 +85,21 @@
         <button name='button' type='submit' class='advantages-button' onclick='scroller("contact")'>Contact us</button>
       </div>
     </div>
+  </div>
 
-    <div class='tech container right-vertikal-line'>
+  <div class='tech container right-vertikal-line with-background'>
+    <div class="section-background-container">
+      <div class="background-element">
+        <%= render 'shared/background', template: :why_us_arrowline %>
+      </div>
+    </div>
+
+    <div class='tech-container'>
       <h2 class='tech-title'><b>Technologies</b><br/> our team covers</h2>
-      <span class='advantages-line'></span>
-      <button class='arrow-prev-js'> < </button>
-      <button class='arrow-next-js'> > </button>
-      <span class='advantages-line-right'></span>
+      <div class='arrow-js-wrapper'>
+        <button class='arrow-prev-js'> < </button>
+        <button class='arrow-next-js'> > </button>
+      </div>
     </div>
   </div>
 

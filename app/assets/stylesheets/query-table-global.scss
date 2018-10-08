@@ -64,7 +64,7 @@
       .advantages-body {
         .advantage-item {
           .text {
-            margin-top: 15%;       
+            margin-top: 15%;
           }
           .statue {
             display: none;
@@ -89,8 +89,6 @@
       }
     }
     .portfolio {
-      margin-top: 10px;
-      margin-bottom: 10px;
       .wrapper--galleria-rectangle .rectangle-portfolio {
         display: none;
       }
@@ -232,7 +230,7 @@
       .advantages-body {
         .advantage-item {
           .text {
-            margin-top: 0px;       
+            margin-top: 0px;
           }
           .statue {
             display: block;
@@ -246,7 +244,7 @@
       .right-vertical-line { display: block; }
       .tech {
         button {
-          display: block !important; 
+          display: block !important;
         }
         .advantages-line { display: block; }
         .advantages-line-right { display: block; }
@@ -259,8 +257,8 @@
       }
     }
     .portfolio {
-      margin-top: calc(150px * var(--font-size-offset));
-      margin-bottom: calc(230px * var(--font-size-offset));
+      padding-top: calc(150px * var(--font-size-offset));
+      padding-bottom: calc(230px * var(--font-size-offset));
       .wrapper--galleria-rectangle .rectangle-portfolio {
         display: block;
       }

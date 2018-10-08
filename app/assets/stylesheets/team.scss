@@ -1,6 +1,7 @@
 #team {
-  .team {
+  z-index: 5;
 
+  .team {
     background-color: #2d2d2d;
     color: #fff;
     padding-bottom: calc(135px * var(--font-size-offset));
