@@ -1,10 +1,16 @@
 <div class="container-fluid toastr"></div>
 <footer class="with-background with-scrolling">
-  <div class="section-background-container prefooter-bg-container">
-    <div class="background-element">
-      <%= render 'shared/background', template: :footer %>
+  <% unless request.subdomain.eql?('blog') %>
+    <div class="section-background-container prefooter-bg-container">
+      <div class="background-element">
+        <%= render 'shared/background', template: :footer %>
+      </div>
     </div>
-  </div>
+
+    <%= scrolling_button background: "#2d2d2d", border_color: '#606060' do %>
+      <span>07<span>
+    <% end %>
+  <% end %>
 
   <section id="contact">
     <div class="container content">
