@@ -85,8 +85,16 @@
         <button name='button' type='submit' class='advantages-button' onclick='scroller("contact")'>Contact us</button>
       </div>
     </div>
+  </div>
 
-    <div class='tech container right-vertikal-line'>
+  <div class='tech container right-vertikal-line with-background'>
+    <div class="section-background-container">
+      <div class="background-element">
+        <%= render 'shared/background', template: :why_us_arrowline %>
+      </div>
+    </div>
+
+    <div class='tech-container'>
       <h2 class='tech-title'><b>Technologies</b><br/> our team covers</h2>
       <div class='arrow-js-wrapper'>
         <button class='arrow-prev-js'> < </button>

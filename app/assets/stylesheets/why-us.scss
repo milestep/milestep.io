@@ -164,12 +164,19 @@
   }
 
   .tech {
+    padding-left: 90px;
+    padding-right: 100px;
     padding-top: calc(170px * var(--static-font-size-offset));
     width: 100%;
-    display: flex;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    padding-bottom: 40px;
+
+    .tech-container {
+      display: flex;
+      justify-content: space-between;
+      width: calc(0.6px * var(--origin-width));
+      max-width: calc(0.6px * var(--origin-width));
+      margin: auto;
+    }
 
     .tech-title {
       position: relative;
