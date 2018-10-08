@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
 
   before(:each) do
-    author = create(:author)
     @post = create(:post)
   end
 
