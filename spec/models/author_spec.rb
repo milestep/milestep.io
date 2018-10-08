@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Author, type: :model do
   before(:each) do
-    @author = described_class.new(name: "Lidia", position: "Manager")
+    @author = build(:author)
   end
 
   it "should be valid" do
