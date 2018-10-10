@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
-  constraints subdomain: "blog" do
+  constraints subdomain: 'blog' do
     get '/', to: 'blog#index'
     resources :posts, only: [:show]
   end
