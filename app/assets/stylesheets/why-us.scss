@@ -86,6 +86,36 @@
           margin-right: calc(12px * var(--font-size-offset));
           width: calc(90px * var(--font-size-offset));
         }
+
+        .why-us-img-1 {
+          width: 90px;
+          height: 91px;
+          background: image_url('why-us/css_sprites.png') -10px -10px;
+      }
+
+        .why-us-img-2 {
+          width: 90px;
+          height: 90px;
+          background:image_url('why-us/css_sprites.png') -120px -10px;
+        }
+        
+        .why-us-img-3 {
+          width: 90px;
+          height: 69px;
+          background:image_url('why-us/css_sprites.png') -120px -121px;
+      }
+
+        .why-us-img-4 {
+          width: 90px;
+          height: 90px;
+          background:image_url('why-us/css_sprites.png') -230px -10px;
+        }
+
+        .why-us-img-5 {
+          width: 90px;
+          height: 83px;
+          background:image_url('why-us/css_sprites.png') -10px -121px;
+        }
       }
 
       .text {
