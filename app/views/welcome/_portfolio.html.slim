@@ -1,0 +1,33 @@
+section#portfolio.with-background.with-scrolling
+  .section-background-container.prefooter-bg-container
+    .background-element
+      = render 'shared/background', template: :portfolio
+  = scrolling_button offset_top: '50%', background: "#fff" do
+    span 06
+  .portfolio
+    .container.content
+      .col-xs-12
+        .row
+          .col-xs-10.col-xs-offset-1
+            .title
+              p.last last
+              p.projects projects
+        .row
+          .wrapper--galleria-rectangle
+            .flex-container--galleria-and-rectangle
+              .galleria.flex-item--galleria-and-rectangle
+                .col-md-9.col-md-offset-1.col-xs-10.col-xs-offset-1
+                  - @project.each do |portfolio|
+                    .flex-container style="float:left" 
+                      .flex-item.img-project.rectangle-and-text-hover style=("background-image: url(#{image_path(portfolio.image_url)})") 
+                        a href="#{portfolio.web_address}" target="_blank" 
+                          .flex-container-info
+                            .flex-item-info
+                              .info
+                                p.name-project
+                                  = portfolio.name
+                                .horizontal-line
+                                p.info-project
+                                  = portfolio.description
+                                .horizontal-line
+                .rectangle-portfolio.flex-item--galleria-and-rectangle
