@@ -1,3 +1,10 @@
+@mixin technology-image-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #why-us {
   padding-left: 0;
   padding-right: 0;
@@ -275,16 +282,132 @@
 
   .technologies {
     width: 100%;
-    height: calc(200px * var(--font-size-offset));
     background-color: #fff;
     position: relative;
     z-index: 4;
 
-    img {
-      margin:0 auto;
-      margin-top: calc(60px * var(--font-size-offset));
-      width: auto;
-      height: calc(70px * var(--font-size-offset));
+    .technologies-image-wrapper {
+      position: relative;
+      height: 200px;
+
+      .bg-angular {
+        @include technology-image-wrapper;
+        width: 275px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -116px;
+      }
+
+      .bg-coffee {
+        @include technology-image-wrapper;
+        width: 300px;
+        height: 51px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -371px;
+      }
+
+      .bg-ember {
+        @include technology-image-wrapper;
+        width: 275px;
+        height: 86px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -10px;
+      }
+
+      .bg-ionic {
+        @include technology-image-wrapper;
+        width: 205px;
+        height: 69px;
+        background: url('why-us/technologies/technologies_sprites.png') -245px -442px;
+      }
+
+      .bg-jquery {
+        @include technology-image-wrapper;
+        width: 275px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -305px -116px;
+      }
+
+      .bg-less {
+        @include technology-image-wrapper;
+        width: 150px;
+        height: 71px;
+        background: url('why-us/technologies/technologies_sprites.png') -625px -334px;
+      }
+
+      .bg-mongodb {
+        @include technology-image-wrapper;
+        width: 250px;
+        height: 71px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -206px;
+      }
+
+      .bg-my_sql {
+        @include technology-image-wrapper;
+        width: 150px;
+        height: 78px;
+        background: url('why-us/technologies/technologies_sprites.png') -625px -122px;
+      }
+
+      .bg-node {
+        @include technology-image-wrapper;
+        width: 150px;
+        height: 92px;
+        background: url('why-us/technologies/technologies_sprites.png') -625px -10px;
+      }
+
+      .bg-postgresql {
+        @include technology-image-wrapper;
+        width: 300px;
+        height: 54px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -297px;
+      }
+
+      .bg-rails {
+        @include technology-image-wrapper;
+        width: 200px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -532px;
+      }
+
+      .bg-react {
+        @include technology-image-wrapper;
+        width: 250px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -280px -206px;
+      }
+
+      .bg-redux {
+        @include technology-image-wrapper;
+        width: 215px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -10px -442px;
+      }
+
+      .bg-sass {
+        @include technology-image-wrapper;
+        width: 125px;
+        height: 94px;
+        background: url('why-us/technologies/technologies_sprites.png') -625px -220px;
+      }
+
+      .bg-typescript {
+        @include technology-image-wrapper;
+        width: 300px;
+        height: 72px;
+        background: url('why-us/technologies/technologies_sprites.png') -305px -10px;
+      }
+
+      .bg-vue {
+        @include technology-image-wrapper;
+        width: 200px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -230px -532px;
+      }
+
+      .bg-react {
+        @include technology-image-wrapper;
+        width: 250px;
+        height: 70px;
+        background: url('why-us/technologies/technologies_sprites.png') -280px -206px;
+      }
     }
   }
 }
