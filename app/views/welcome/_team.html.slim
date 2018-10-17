@@ -2,7 +2,7 @@ section#team.with-background.with-scrollin
   .section-background-container
     .background-element
       = render 'shared/background', template: :team
-  = scrolling_button background: '#2d2d2d', border_color: '#606060' do
+  = scrolling_button background: "#2d2d2d", border_color: '#606060' do
     span 04
   .team
     .container-fluid.content-right
@@ -18,13 +18,13 @@ section#team.with-background.with-scrollin
           .horizontal-line
           span.slider-info-number-page.slider-info-number-page-js
             span 01
-            | / 02
+            | \/ 02
       .col-xs-12.right-content-block
         .faces.slider-team-slick-js
           - @development.each do |developer|
             .col-xs-4
-              .flex-item.rectangle-and-text-hover.img-face style='background-image: url("#{image_path(developer.image_url)}");' &gt;
-              .text
-                p.name= developer.name
-                .horizontal-line
-                p.specialization= developer.title
+              .flex-item.rectangle-and-text-hover.img-face style="background-image: url(#{image_path(developer.image_url)});"
+                .text
+                  p.name= developer.name
+                  .horizontal-line
+                  p.specialization= developer.title
