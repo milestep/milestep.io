@@ -74,7 +74,7 @@
       text-align: justify;
       letter-spacing: 0.05em;
       color: #999999;
-      width: 75%;
+      width: 85%;
       margin-left: 15%;
     }
   }
@@ -138,14 +138,16 @@
 
   .serve-block-text {
     display: inline-block;
-    color: #232323;
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.2;
     text-align-last: center;
-    text-align: justify;
-    width: 51%;
+    width: 72%;
     margin: 0 auto;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 25px;
+    text-align: center;
+    color: #2D2D2D;
   }
 
   .top-image {

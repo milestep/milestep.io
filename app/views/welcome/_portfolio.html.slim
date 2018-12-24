@@ -12,9 +12,6 @@ section#portfolio.with-background.with-scrolling.last-project-color
             .title
               p.last last
               p.projects projects
-            .js-wrapper
-              button.but.arrow-prev-js &gt;
-              button.but.arrow-next-js &lt;
         .row
           .wrapper--galleria-rectangle
             .flex-container--galleria-and-rectangle
@@ -22,15 +19,12 @@ section#portfolio.with-background.with-scrolling.last-project-color
                 .galleria-block.slider-project-slick-js
                   - @project.each do |portfolio|
                     .flex-container
-                      .flex-item.img-project.rectangle-and-text-hover style=("background-image: url(#{image_path(portfolio.image_url)})")
-                        a href="#{portfolio.web_address}" target="_blank" 
-                          .flex-container-info
-                            .flex-item-info
-                              .info
-                                p.name-project
-                                  = portfolio.name
-                                .horizontal-line
-                                p.info-project
-                                  = portfolio.description
-                                .horizontal-line
-                //.rectangle-portfolio.flex-item--galleria-and-rectangle
+                      .flex-item.img-project.rectangle-and-text-hover
+                        img src='#{image_path(portfolio.image_url)}'
+                        .overlay onclick="window.open('#{portfolio.web_address}', '_blank');"
+                          p.name-project
+                            = portfolio.name
+                          .horizontal-line
+                          p.info-project
+                            = portfolio.description
+                          .horizontal-line

@@ -53,12 +53,6 @@ $(document).ready(function() {
         }
       ]
     });
-    $(".arrow-next-js").on("click", function(){
-      $('.slider-project-slick-js').slick("slickNext");
-    });
-    $(".arrow-prev-js").on("click", function(){
-      $('.slider-project-slick-js').slick("slickPrev");
-    });
   } else if (320 <= sizeWindow && sizeWindow <= 768) {
 
     $('.slider-team-slick-js').slick({
@@ -121,9 +115,7 @@ $(document).ready(function() {
             slidesToShow: 1
           }
         }
-      ],
-      prevArrow: $('.arrow-prev-js'),
-      nextArrow: $('.arrow-next-js')
+      ]
     });
   }
 });
