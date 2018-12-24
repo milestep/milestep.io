@@ -2,6 +2,90 @@
   .container {
     padding-top: 5%;
     padding-bottom: 7%;
+    width: 67%;
+  }
+
+  .content-block {
+    display: flex;
+    justify-content: center;
+
+    .content {
+      width: 33%;
+      margin: 0 2%;
+    }
+
+    .content-foot {
+      margin: 0 5%;
+      width: 30%;
+    }
+
+    .title-block {
+      display: flex;
+    }
+
+    .number {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 41px;
+      font-size: 50px;
+      text-align: right;
+      letter-spacing: 0.05em;
+      margin-right: 5%;
+    }
+
+    .one {
+      color: #00FAE4;
+    }
+
+    .two {
+      color: #00B4AB;
+    }
+
+    .three {
+      color: #0097AE;
+    }
+
+    .four {
+      color: #00709F;
+    }
+
+    .five {
+      color: #004E9A;
+    }
+
+    .title-content {
+      font-size: 18px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 19px;
+      letter-spacing: 0.05em;
+      color: #000000;
+      width: 70%;
+    }
+
+    .text-content {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 14px;
+      text-align: justify;
+      letter-spacing: 0.05em;
+      color: #999999;
+      width: 75%;
+      margin-left: 15%;
+    }
+  }
+
+  .img-block {
+    width: 90%;
+    margin: 2% auto;
+  }
+
+  .img-work {
+    width: 100%;
   }
 
   .how-we-work {
@@ -46,7 +130,7 @@
     display: inline-block;
     width: 100%;
     color: #999999;
-    font-size: calc(60px * var(--font-size-offset));
+    font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 1.7%;
     text-align: center;
@@ -55,13 +139,13 @@
   .serve-block-text {
     display: inline-block;
     color: #232323;
-    font-size: calc(30px * var(--font-size-offset));
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.2;
     text-align-last: center;
     text-align: justify;
-    width: 90%;
-    margin-left: 5%;
+    width: 51%;
+    margin: 0 auto;
   }
 
   .top-image {
@@ -123,5 +207,30 @@
     font-weight: bold;
     text-align: center;
     font-family: Roboto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #how-we-work {
+    .serve-block-text {
+      width: 75%;
+    }
+    .container {
+      width: 95%;
+    }
+    .content-block {
+      .text-content {
+        width: 80%;
+      }
+      .content {
+        margin: 0 1%;
+      }
+      .number {
+        font-size: 40px;
+      }
+      .title-content {
+        font-size: 16px;
+      }
+    }
   }
 }

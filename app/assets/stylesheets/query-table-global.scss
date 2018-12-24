@@ -9,39 +9,39 @@
       width: 100%;
       max-width: 100%;
     }
-    #services {
-      .services {
-        .service-card{
-          margin-top: 20px;
-          .info {
-            padding-top: 20px;
-          }
-        }
-      }
+    .tablet-style-center {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .center-block {
+      padding: 0;
     }
     .content-right {
+      padding: 0;
       width: 100%;
       max-width: 100%;
       margin-left: 0px;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .left-content-block {
-      width: 100%;
+      width: 42%;
       max-width: 100%;
     }
 
     .right-content-block {
-      width: 100%;
+      padding: 0;
+      width: 48%;
       max-width: 100%;
+    }
+    .draggable {
+      width: 100%;
     }
     #team {
       .team {
         .faces {
-          margin-top: 0px;
           .img-face {
-            width: 25vw;
-            height: 25vw;
-            background-size: 25vw;
           }
           .flex-item {
             .text {
@@ -55,24 +55,14 @@
     #why-us {
       .advantages-header{
         h2{
-          top: 8vw;
           margin-bottom:  0px;
-          left: 35%;
-          font-size: 2em;
         }
       }
       .advantages-body {
         .advantage-item {
           .text {
-            margin-top: 15%;
+            margin-top: 5%;
           }
-          .statue {
-            display: none;
-          }
-        }
-        .advantages-button {
-          top: 0px;
-          left: 0px;
         }
       }
       .right-vertical-line { display: none; }
@@ -91,9 +81,6 @@
     .portfolio {
       .wrapper--galleria-rectangle .rectangle-portfolio {
         display: none;
-      }
-      .flex-container {
-        display: block !important;
       }
     }
   }
@@ -170,25 +157,10 @@
       width: calc(0.6px * var(--origin-width));
       max-width: calc(0.6px * var(--origin-width));
     }
-    #services {
-      .services {
-        .service-card{
-          margin-top: -28%;
-          .info {
-            padding-top: 100%;
-          }
-        }
-        .service-card-center {
-          .info {
-            padding-top: calc(141% + 25px * (1 - var(--font-size-offset)));
-          }
-        }
-      }
-    }
     #team {
       .team {
         .faces {
-          margin-top: calc(160px * var(--font-size-offset));
+          margin-top: calc(90px * var(--font-size-offset));
           .img-face {
             background-size: calc(225px * var(--font-size-offset));
             width: calc(225px * var(--font-size-offset));
@@ -204,16 +176,17 @@
       }
     }
     .content-right {
-      width: calc(0.75px * var(--origin-width));
-      max-width: calc(0.75px * var(--origin-width));
-      margin-left: 20%;
+      width: 100%;
+      padding: 0;
     }
     .left-content-block {
       float: left;
       width: 40%;
       max-width: calc(550px * var(--statc-font-size-offset));
+      margin: 0 11%;
     }
     .right-content-block {
+      padding: 0;
       float: right;
       width: calc(740px * var(--statc-font-size-offset));
       max-width: calc(740px * var(--statc-font-size-offset));
@@ -231,14 +204,15 @@
         .advantage-item {
           .text {
             margin-top: 0px;
+            width: 98%;
           }
           .statue {
             display: block;
           }
         }
         .advantages-button {
-          left: 52%;
-          top: calc(-300px * var(--font-size-offset))
+          left: 55%;
+          top: calc(-285px * var(--font-size-offset))
         }
       }
       .right-vertical-line { display: block; }
@@ -257,17 +231,15 @@
       }
     }
     .portfolio {
-      padding-top: calc(150px * var(--font-size-offset));
+      padding-top: calc(70px * var(--font-size-offset));
       padding-bottom: calc(230px * var(--font-size-offset));
       .wrapper--galleria-rectangle .rectangle-portfolio {
         display: block;
       }
-      .flex-container {
-        display: flex !important;
-      }
     }
   }
 }
+
 @media screen and (min-device-width: 1024px) {
   :root {
     --origin-width: 1014;
@@ -345,3 +317,4 @@
     --statc-font-size-offset: 1.3;
   }
 }
+

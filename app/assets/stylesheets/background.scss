@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.last-project-color {
+  background-image: asset-url('footer/Ellipse.png');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
 .background-container {
   width: 100%;
   height: 100%;

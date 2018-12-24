@@ -2,106 +2,207 @@ section#why-us.with-background.with-scrolling
   .section-background-container
     .background-element
       = render 'shared/background', template: :why_us
-  = scrolling_button offset_top: '32%', background: "#f5f5f5" do
+  = scrolling_button offset_top: '32%', background: "white" do
     span 05
   .container-fluid.content
     .right-vertikal-line
-      .advantages-header
-        span.why-us-number.image-why-us
+      .advantages-header.image-why-us
         h2
           b advantages
-          | of our approch
-          br
-          | to development
+          |  of our approch to development
       .advantages-body
         .row
-          .col-md-6.col-xs-12
-            .advantage-item
-              .img-and-title
-                .img-mb.pull-left.why-us-img-1
-                span.title Two weeks free trial
-              p.text.text-1.text-1-4-5
-                | From here, twofold benefits are achieved. 
-                | Firstly, developers have enough time to give an impression about their skills. Secondly, this means
-                br
-                | you can evaluate their collaboration with the other employees
-          .col-md-5.col-xs-12
-            .advantage-item
-              .img-and-title
-                .img-mb.pull-left.why-us-img-2
-                span.title.title-2
-                  | Full-stack Web and
-                  br
-                  | App developers
-              p.text.text-2
-                | Each of developers is good at both front-end and back-end development. Hence, we&#x2019;ll provide you with engineers who have wider view on your product from the implementation of design on web-page till deploying code on server
-          .col-md-6.col-xs-12
-            .advantage-item
-              .img-and-title
-                .img-mb.pull-left.why-us-img-3
-                span.title Agile
-              p.text.text-3
-                | Your business is in permanent progress. We either. Using code refactoring and BDD, we carry on with effectual development
-          .col-md-6.col-xs-12
-            .advantage-item
-              .img-and-title
-                .img-mb.pull-left.why-us-img-4
-                span.title Maintenance Support
-              p.text.text-4.text-1-4-5
-                | We become responsible, forever, for what we have written. Upon implementing of the project, we are providing you with maintenance, support and realization of new features that might be carried out.
-          .row.container-with-img-statue
-            .col-md-6.col-xs-12.advantage-item
+          .advantages-content-block
+            .advantages-content
+              .advantage-item
+                .img-and-title
+                  .img-mb.pull-left.why-us-img-1
+                  span.title Two weeks free trial
+                p.text.text-width.text-1.text-1-4-5
+                  | From here, twofold benefits are achieved.
+                  |  Firstly, developers have enough time to give an impression about their skills. Secondly, this means
+                  | you can evaluate their collaboration with the other employees
+            .advantages-content
+              .advantage-item
+                .img-and-title
+                  .img-mb.pull-left.why-us-img-2
+                  span.title.title-2
+                    | Full-stack Web and
+                    br
+                    | App developers
+                p.text.text-2
+                  | Each of developers is good at both front-end and back-end development. Hence, we&#x2019;ll provide you with engineers who have wider view on your product from the implementation of design on web-page till deploying code on server
+          .advantages-content-block
+            .advantages-content
+              .advantage-item
+                .img-and-title
+                  .img-mb.pull-left.why-us-img-3
+                  span.title Agile
+                p.text.text-width.text-3
+                  | Your business is in permanent progress. We either. Using code refactoring and BDD, we carry on with effectual development
+            .advantages-content
+              .advantage-item
+                .img-and-title
+                  .img-mb.pull-left.why-us-img-4
+                  span.title Maintenance Support
+                p.text.text-4.text-1-4-5
+                  | We become responsible, forever, for what we have written. Upon implementing of the project, we are providing you with maintenance, support and realization of new features that might be carried out.
+          .advantages-content-block.block-height
+            .advantages-content.advantage-item.mobile-img
               = image_tag('why-us/statue.png', class: 'statue', alt: '')
-            .col-md-6.col-xs-12.advantage-item
+            .advantages-content.advantage-item
               .img-and-title
                 .img-mb.pull-left.why-us-img-5
                 span.title Free code audit
               p.text.text-5.text-1-4-5
                 | Like so many efficient code evangelists, we believe that clear code, which was written based on guides and official documentation, is equal to high speed response of your website. Following this procedure we use code analyzers to find out problems we&#x2019;re going to handle with
         button.advantages-button name='button' onclick="scroller('contact')" type='submit' Contact us
-  .tech.container.right-vertikal-line.with-background
-    .section-background-container
-      .background-element
-        = render 'shared/background', template: :why_us_arrowline
-    .tech-container
-      h2.tech-title
-        b Technologies
-        br
-        | our team covers
-      .arrow-js-wrapper
-        button.arrow-prev-js &lt;
-        button.arrow-next-js &gt;
-  .technologies
-    .slider-technologies-slick-js
-      .technologies-image-wrapper
-        .bg-react alt="React"
-      .technologies-image-wrapper
-        .bg-rails alt="Rails"
-      .technologies-image-wrapper
-        .bg-postgresql alt="PostgreSQL"
-      .technologies-image-wrapper
-        .bg-ionic alt="Ionic"
-      .technologies-image-wrapper
-        .bg-redux alt="Redux"
-      .technologies-image-wrapper
-        .bg-node alt="NodeJs"
-      .technologies-image-wrapper
-        .bg-angular alt="Angular"
-      .technologies-image-wrapper
-        .bg-typescript alt="Typescript"
-      .technologies-image-wrapper
-        .bg-ember alt="Ember"
-      .technologies-image-wrapper
-        .bg-mongodb alt="MongoDB"
-      .technologies-image-wrapper
-        .bg-coffee alt="CoffeeScript"
-      .technologies-image-wrapper
-        .bg-sass alt="Sass"
-      .technologies-image-wrapper
-        .bg-jquery alt="Jquery"
-      .technologies-image-wrapper
-        .bg-less alt="Less"
-      .technologies-image-wrapper
-        .bg-my_sql alt="MySQL"
-      .technologies-image-wrapper
-        .bg-vue alt="VueJs"
+  .tech.container.right-vertikal-line.with-background id='tech'
+    .main
+      .tech-container
+        h2.tech-title
+          b Technologies
+          br
+          | our team covers
+      .blocks
+        .part-block
+          .part.active id='beckend' onclick="changeBag()"
+            .img-block
+              svg width="55" height="47" viewBox="0 0 53 45" fill="none" xmlns="http://www.w3.org/2000/svg"
+                rect x="1.84814" y="1.72559" width="49.4125" height="29.6573" rx="5" stroke-width="2"
+                rect x="1.84717" y="39.6558" width="49.4125" height="3.58042" rx="1.79021" stroke-width="2"
+                mask id="path-3-outside-1" maskUnits="userSpaceOnUse" x="15.1416" y="5.82361" width="21" height="22" fill="black"
+                  rect fill="white" x="15.1416" y="5.82361" width="21" height="22"
+                  path d="M32.2618 16.4267C32.2618 19.9277 29.4042 22.7658 25.8793 22.7658C22.3543 22.7658 19.4967 19.9277 19.4967 16.4267C19.4967 12.9257 22.3543 10.0876 25.8793 10.0876C29.4042 10.0876 32.2618 12.9257 32.2618 16.4267Z"
+                  path d="M24.5116 8.7292C24.5116 8.22905 24.9198 7.82361 25.4234 7.82361H26.791C27.2946 7.82361 27.7028 8.22905 27.7028 8.7292V10.0876C27.7028 10.5877 27.2946 10.9932 26.791 10.9932H25.4234C24.9198 10.9932 24.5116 10.5877 24.5116 10.0876V8.7292Z"
+                  path d="M24.5116 22.7658C24.5116 22.2657 24.9198 21.8602 25.4234 21.8602H26.791C27.2946 21.8602 27.7028 22.2657 27.7028 22.7658V24.1242C27.7028 24.6243 27.2946 25.0298 26.791 25.0298H25.4234C24.9198 25.0298 24.5116 24.6243 24.5116 24.1242V22.7658Z"
+                  path d="M18.5977 13.9504C18.1615 13.7003 18.0121 13.1465 18.2639 12.7133L18.9478 11.537C19.1995 11.1038 19.7572 10.9554 20.1933 11.2055L21.3777 11.8847C21.8138 12.1347 21.9633 12.6886 21.7115 13.1217L21.0276 14.2981C20.7759 14.7313 20.2182 14.8797 19.7821 14.6296L18.5977 13.9504Z"
+                  path d="M30.837 20.9687C30.4009 20.7186 30.2515 20.1648 30.5033 19.7317L31.1871 18.5553C31.4389 18.1221 31.9965 17.9737 32.4326 18.2238L33.6171 18.903C34.0532 19.1531 34.2026 19.7069 33.9508 20.14L33.267 21.3164C33.0152 21.7496 32.4576 21.898 32.0215 21.6479L30.837 20.9687Z"
+                  path d="M32.0216 11.2055C32.4577 10.9554 33.0153 11.1038 33.2671 11.537L33.9509 12.7133C34.2027 13.1465 34.0533 13.7003 33.6172 13.9504L32.4327 14.6296C31.9966 14.8797 31.439 14.7313 31.1872 14.2981L30.5034 13.1217C30.2516 12.6886 30.401 12.1347 30.8371 11.8847L32.0216 11.2055Z"
+                  path d="M19.7822 18.2238C20.2183 17.9737 20.7759 18.1221 21.0277 18.5553L21.7116 19.7317C21.9634 20.1648 21.8139 20.7186 21.3778 20.9687L20.1934 21.6479C19.7573 21.898 19.1996 21.7496 18.9479 21.3164L18.264 20.14C18.0122 19.7069 18.1616 19.1531 18.5977 18.903L19.7822 18.2238Z"
+                path d="M18.5977 13.9504L19.5925 12.2154L19.5925 12.2154L18.5977 13.9504ZM18.2639 12.7133L19.993 13.7185L18.2639 12.7133ZM18.9478 11.537L20.6768 12.5421V12.5421L18.9478 11.537ZM20.1933 11.2055L21.1882 9.47049L20.1933 11.2055ZM21.3777 11.8847L20.3829 13.6197L20.3829 13.6197L21.3777 11.8847ZM21.7115 13.1217L19.9824 12.1166L19.9824 12.1166L21.7115 13.1217ZM21.0276 14.2981L22.7567 15.3032H22.7567L21.0276 14.2981ZM19.7821 14.6296L18.7872 16.3646L18.7872 16.3646L19.7821 14.6296ZM30.837 20.9687L31.8319 19.2337L30.837 20.9687ZM30.5033 19.7317L32.2323 20.7368L30.5033 19.7317ZM31.1871 18.5553L29.458 17.5501L31.1871 18.5553ZM32.4326 18.2238L31.4378 19.9588L32.4326 18.2238ZM33.6171 18.903L34.612 17.168L33.6171 18.903ZM33.9508 20.14L32.2218 19.1349L33.9508 20.14ZM33.267 21.3164L34.9961 22.3216L33.267 21.3164ZM32.0215 21.6479L31.0266 23.3829L32.0215 21.6479ZM32.0216 11.2055L31.0267 9.47049V9.47049L32.0216 11.2055ZM33.2671 11.537L31.538 12.5421V12.5421L33.2671 11.537ZM33.9509 12.7133L35.68 11.7082V11.7082L33.9509 12.7133ZM33.6172 13.9504L32.6223 12.2154H32.6223L33.6172 13.9504ZM32.4327 14.6296L33.4276 16.3646L32.4327 14.6296ZM31.1872 14.2981L32.9163 13.293V13.293L31.1872 14.2981ZM30.5034 13.1217L28.7743 14.1269L28.7743 14.1269L30.5034 13.1217ZM30.8371 11.8847L31.832 13.6197V13.6197L30.8371 11.8847ZM19.7822 18.2238L18.7873 16.4888L18.7873 16.4888L19.7822 18.2238ZM21.0277 18.5553L22.7568 17.5501L21.0277 18.5553ZM21.7116 19.7317L19.9825 20.7368L19.9825 20.7368L21.7116 19.7317ZM21.3778 20.9687L22.3727 22.7037L21.3778 20.9687ZM20.1934 21.6479L19.1985 19.9129H19.1985L20.1934 21.6479ZM18.9479 21.3164L17.2188 22.3216L17.2188 22.3216L18.9479 21.3164ZM18.264 20.14L19.9931 19.1349H19.9931L18.264 20.14ZM18.5977 18.903L19.5926 20.638H19.5926L18.5977 18.903ZM30.2618 16.4267C30.2618 18.8103 28.3126 20.7658 25.8793 20.7658V24.7658C30.4959 24.7658 34.2618 21.0451 34.2618 16.4267H30.2618ZM25.8793 20.7658C23.4459 20.7658 21.4967 18.8103 21.4967 16.4267H17.4967C17.4967 21.0451 21.2626 24.7658 25.8793 24.7658V20.7658ZM21.4967 16.4267C21.4967 14.0431 23.4459 12.0876 25.8793 12.0876V8.08758C21.2626 8.08758 17.4967 11.8083 17.4967 16.4267H21.4967ZM25.8793 12.0876C28.3126 12.0876 30.2618 14.0431 30.2618 16.4267H34.2618C34.2618 11.8083 30.4959 8.08758 25.8793 8.08758V12.0876ZM26.5116 8.7292C26.5116 9.34648 26.0115 9.82361 25.4234 9.82361V5.82361C23.8281 5.82361 22.5116 7.11163 22.5116 8.7292H26.5116ZM25.4234 9.82361H26.791V5.82361H25.4234V9.82361ZM26.791 9.82361C26.2029 9.82361 25.7028 9.34648 25.7028 8.7292H29.7028C29.7028 7.11163 28.3863 5.82361 26.791 5.82361V9.82361ZM25.7028 8.7292V10.0876H29.7028V8.7292H25.7028ZM25.7028 10.0876C25.7028 9.4703 26.2029 8.99317 26.791 8.99317V12.9932C28.3863 12.9932 29.7028 11.7051 29.7028 10.0876H25.7028ZM26.791 8.99317H25.4234V12.9932H26.791V8.99317ZM25.4234 8.99317C26.0115 8.99317 26.5116 9.4703 26.5116 10.0876H22.5116C22.5116 11.7051 23.8281 12.9932 25.4234 12.9932V8.99317ZM26.5116 10.0876V8.7292H22.5116V10.0876H26.5116ZM26.5116 22.7658C26.5116 23.3831 26.0115 23.8602 25.4234 23.8602V19.8602C23.8281 19.8602 22.5116 21.1482 22.5116 22.7658H26.5116ZM25.4234 23.8602H26.791V19.8602H25.4234V23.8602ZM26.791 23.8602C26.2029 23.8602 25.7028 23.3831 25.7028 22.7658H29.7028C29.7028 21.1482 28.3863 19.8602 26.791 19.8602V23.8602ZM25.7028 22.7658V24.1242H29.7028V22.7658H25.7028ZM25.7028 24.1242C25.7028 23.5069 26.2029 23.0298 26.791 23.0298V27.0298C28.3863 27.0298 29.7028 25.7418 29.7028 24.1242H25.7028ZM26.791 23.0298H25.4234V27.0298H26.791V23.0298ZM25.4234 23.0298C26.0115 23.0298 26.5116 23.5069 26.5116 24.1242H22.5116C22.5116 25.7418 23.8281 27.0298 25.4234 27.0298V23.0298ZM26.5116 24.1242V22.7658H22.5116V24.1242H26.5116ZM19.5925 12.2154C20.113 12.5139 20.3019 13.1871 19.993 13.7185L16.5348 11.7082C15.7223 13.1059 16.2101 14.8868 17.6028 15.6854L19.5925 12.2154ZM19.993 13.7185L20.6768 12.5421L17.2187 10.5318L16.5348 11.7082L19.993 13.7185ZM20.6768 12.5421C20.3726 13.0654 19.711 13.2344 19.1984 12.9405L21.1882 9.47049C19.8034 8.67643 18.0265 9.14222 17.2187 10.5318L20.6768 12.5421ZM19.1984 12.9405L20.3829 13.6197L22.3726 10.1497L21.1882 9.47049L19.1984 12.9405ZM20.3829 13.6197C19.8624 13.3212 19.6735 12.648 19.9824 12.1166L23.4406 14.1269C24.253 12.7292 23.7653 10.9483 22.3726 10.1497L20.3829 13.6197ZM19.9824 12.1166L19.2986 13.293L22.7567 15.3032L23.4406 14.1269L19.9824 12.1166ZM19.2986 13.293C19.6028 12.7697 20.2644 12.6007 20.777 12.8946L18.7872 16.3646C20.172 17.1586 21.9489 16.6929 22.7567 15.3032L19.2986 13.293ZM20.777 12.8946L19.5925 12.2154L17.6028 15.6854L18.7872 16.3646L20.777 12.8946ZM31.8319 19.2337C32.3524 19.5322 32.5413 20.2054 32.2323 20.7368L28.7742 18.7265C27.9617 20.1242 28.4494 21.9051 29.8421 22.7037L31.8319 19.2337ZM32.2323 20.7368L32.9162 19.5604L29.458 17.5501L28.7742 18.7265L32.2323 20.7368ZM32.9162 19.5604C32.612 20.0837 31.9503 20.2527 31.4378 19.9588L33.4275 16.4888C32.0428 15.6947 30.2658 16.1605 29.458 17.5501L32.9162 19.5604ZM31.4378 19.9588L32.6222 20.638L34.612 17.168L33.4275 16.4888L31.4378 19.9588ZM32.6222 20.638C32.1017 20.3395 31.9128 19.6663 32.2218 19.1349L35.6799 21.1452C36.4924 19.7475 36.0047 17.9666 34.612 17.168L32.6222 20.638ZM32.2218 19.1349L31.5379 20.3113L34.9961 22.3216L35.6799 21.1452L32.2218 19.1349ZM31.5379 20.3113C31.8421 19.788 32.5038 19.619 33.0163 19.9129L31.0266 23.3829C32.4113 24.1769 34.1883 23.7112 34.9961 22.3216L31.5379 20.3113ZM33.0163 19.9129L31.8319 19.2337L29.8421 22.7037L31.0266 23.3829L33.0163 19.9129ZM33.0164 12.9405C32.5039 13.2344 31.8422 13.0654 31.538 12.5421L34.9962 10.5318C34.1884 9.14222 32.4114 8.67643 31.0267 9.47049L33.0164 12.9405ZM31.538 12.5421L32.2219 13.7185L35.68 11.7082L34.9962 10.5318L31.538 12.5421ZM32.2219 13.7185C31.9129 13.1871 32.1018 12.5139 32.6223 12.2154L34.6121 15.6854C36.0048 14.8868 36.4925 13.1059 35.68 11.7082L32.2219 13.7185ZM32.6223 12.2154L31.4379 12.8946L33.4276 16.3646L34.6121 15.6854L32.6223 12.2154ZM31.4379 12.8946C31.9504 12.6007 32.6121 12.7697 32.9163 13.293L29.4581 15.3032C30.2659 16.6929 32.0429 17.1586 33.4276 16.3646L31.4379 12.8946ZM32.9163 13.293L32.2324 12.1166L28.7743 14.1269L29.4581 15.3032L32.9163 13.293ZM32.2324 12.1166C32.5414 12.648 32.3525 13.3212 31.832 13.6197L29.8422 10.1497C28.4495 10.9483 27.9618 12.7292 28.7743 14.1269L32.2324 12.1166ZM31.832 13.6197L33.0164 12.9405L31.0267 9.47049L29.8422 10.1497L31.832 13.6197ZM20.7771 19.9588C20.2645 20.2527 19.6029 20.0837 19.2987 19.5604L22.7568 17.5501C21.949 16.1605 20.1721 15.6947 18.7873 16.4888L20.7771 19.9588ZM19.2987 19.5604L19.9825 20.7368L23.4407 18.7265L22.7568 17.5501L19.2987 19.5604ZM19.9825 20.7368C19.6736 20.2054 19.8625 19.5322 20.383 19.2337L22.3727 22.7037C23.7654 21.9051 24.2531 20.1242 23.4407 18.7265L19.9825 20.7368ZM20.383 19.2337L19.1985 19.9129L21.1883 23.3829L22.3727 22.7037L20.383 19.2337ZM19.1985 19.9129C19.7111 19.619 20.3727 19.788 20.6769 20.3113L17.2188 22.3216C18.0266 23.7112 19.8035 24.1769 21.1883 23.3829L19.1985 19.9129ZM20.6769 20.3113L19.9931 19.1349L16.5349 21.1452L17.2188 22.3216L20.6769 20.3113ZM19.9931 19.1349C20.302 19.6663 20.1131 20.3395 19.5926 20.638L17.6029 17.168C16.2102 17.9666 15.7224 19.7475 16.5349 21.1452L19.9931 19.1349ZM19.5926 20.638L20.7771 19.9588L18.7873 16.4888L17.6029 17.168L19.5926 20.638Z" fill="white" mask="url(#path-3-outside-1)"
+                circle cx="26.1073" cy="16.427" r="1.9559" stroke-width="2"
+            p.text
+              |
+                Back-end
+          .part id='frontend' onclick="changeBag()"
+            .img-block
+              svg width="55" height="47" viewBox="0 0 53 47" fill="none" xmlns="http://www.w3.org/2000/svg"
+                path d="M34.1289 29.4928H17.1797H6.00098C3.23956 29.4928 1.00098 27.2542 1.00098 24.4928V6C1.00098 3.23857 3.23955 1 6.00098 1H44.2804C47.0418 1 49.2804 3.23858 49.2804 6V23.3591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M33.8185 38.1989H17.1531H2.97915C1.88637 38.1989 1.00049 39.0847 1.00049 40.1775V40.1775C1.00049 41.2703 1.88637 42.1562 2.97916 42.1562H37.0121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M10.498 18.8777C11.2675 18.1948 13.4221 16.8292 15.8844 16.8292C18.9623 16.8292 22.0403 19.9019 24.8617 19.9019C27.6831 19.9019 31.274 16.8292 33.839 16.8292C35.8909 16.8292 37.6009 18.1948 38.1994 18.8777M19.4753 23.2307C20.5868 23.9989 23.2201 25.5353 24.8617 25.5353C26.5033 25.5353 28.7946 23.9989 29.7351 23.2307" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                rect x="36.8252" y="24.9524" width="14.6208" height="20.9525" rx="7.31039" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M44.1353 29.295V32.8566" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M34.2418 16.8292C34.2418 12.021 30.344 8.12311 25.5357 8.12311C20.7275 8.12311 16.8296 12.021 16.8296 16.8292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            p.text
+              |
+                Front-end
+        .pert-block
+          .part id='mobile' onclick="changeBag()"
+            .img-block
+              svg width="55" height="47" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                rect x="1.70166" y="1.28711" width="20.3925" height="41.6007" rx="3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                circle cx="12.3057" cy="39.6249" r="1" stroke-width="1.2628" stroke-linecap="round" stroke-linejoin="round"
+            p.text
+              |
+                Mobile
+          .part id='blockchain' onclick="changeBag()"
+            .img-block
+              svg width="55" height="47" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                rect x="1.97314" y="1.81348" width="44.5204" height="40.51" rx="3" stroke-width="2"
+                path d="M41.0771 16.8551L41.0772 36.1049" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M41.0771 7.23016L41.0771 13.6468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                path d="M1.37402 26.0792H6.58752L10.1969 29.6885" stroke-width="2" stroke-linejoin="round"
+                path d="M0.973145 21.6675H26.6396" stroke-width="2" stroke-linejoin="round"
+                path d="M1.77539 17.2558H16.6138L19.8221 14.0475" stroke-width="2" stroke-linejoin="round"
+                circle cx="27.4414" cy="21.6675" r="1.40623" stroke-width="2" stroke-linejoin="round"
+                circle cx="11.3999" cy="30.4902" r="1.40623" stroke-width="2" stroke-linejoin="round"
+                circle cx="21.0249" cy="12.8446" r="1.40623" stroke-width="2" stroke-linejoin="round"
+            p.text
+              |
+                Blockchain
+    .technologies
+      .technologies-block.beck-end
+        .technologies-image-wrapper
+          .bg-rails alt="Rails"
+          p.technologies-text
+            |
+              Ruby on Rails
+        .technologies-image-wrapper
+          .bg-mongodb alt="MongoDB"
+          p.technologies-text
+            |
+              MongoDB
+        .technologies-image-wrapper
+          .bg-node alt="NodeJs"
+          p.technologies-text
+            |
+              Node.js
+        .technologies-image-wrapper
+          .bg-postgresql alt="PostgreSQL"
+          p.technologies-text
+            |
+              PostgresSQL
+        .technologies-image-wrapper
+          .bg-amazon alt="Amazon"
+          p.technologies-text
+            |
+              Amazon AWS
+        .technologies-image-wrapper
+          .bg-docker alt="Docker"
+          p.technologies-text
+            |
+              Docker
+      .technologies-block.front-end
+        .technologies-image-wrapper
+          .bg-react-redux alt="React"
+          p.technologies-text
+            |
+              React/Redux
+        .technologies-image-wrapper
+          .bg-angular alt="Angular"
+          p.technologies-text
+            |
+              AngularJS
+        .technologies-image-wrapper
+          .bg-bootstrap alt="Bootstrap"
+          p.technologies-text
+            |
+              Bootstrap
+        .technologies-image-wrapper
+          .bg-graphql alt="GraphQl"
+          p.technologies-text
+            |
+              GraphQL
+        .technologies-image-wrapper
+          .bg-webpack alt="Webpack"
+          p.technologies-text
+            |
+              Webpack
+      .technologies-block.mobile
+        .technologies-image-wrapper
+          .bg-react-native alt="ReactNative"
+          p.technologies-text
+            |
+              React-Native
+        .technologies-image-wrapper
+          .bg-flutter alt="Flutter"
+          p.technologies-text
+            |
+              Flutter
+        .technologies-image-wrapper
+          .bg-ionic alt="Ionic"
+          p.technologies-text
+            |
+              Ionic
+      .technologies-block.blockchain
+        .technologies-image-wrapper
+          .bg-hyperledger alt="Hyperledger"
+          p.technologies-text
+            |
+              hyperledger
+        .technologies-image-wrapper
+          .bg-ethereum alt="Ethereum"
+          p.technologies-text
+            |
+              ethereum

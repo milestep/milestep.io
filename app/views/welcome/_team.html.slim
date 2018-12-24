@@ -18,11 +18,11 @@ section#team.with-background.with-scrollin
           .horizontal-line
           span.slider-info-number-page.slider-info-number-page-js
             span 01
-            | \/ 02
+            | / 02
       .col-xs-12.right-content-block
         .faces.slider-team-slick-js
           - @development.each do |developer|
-            .col-xs-4
+            .col-xs-4.block-img-face
               .flex-item.rectangle-and-text-hover.img-face style="background-image: url(#{image_path(developer.image_url)});"
                 .text
                   p.name= developer.name
