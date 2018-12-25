@@ -146,24 +146,24 @@ footer {
   }
 
   .man {
-    width: 45%;
-    height: 78%;
+    width: 43%;
+    height: 75%;
     background-image: asset-url('about-us/man.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     z-index: 3;
     position: absolute;
   }
 
   .right-content{
-    width: 58%;
+    width: 65%;
     height: 500px;
   }
 
   .block-text {
-    margin-top: 4.5%;
+    margin-top: 4%;
     width: 32%;
-    height: 63%;
+    height: 59%;
     position: absolute;
     z-index: 2;
     background: #F5F5F5;
@@ -363,8 +363,12 @@ line, circle {
 @media (max-width: 1440px) {
   .about-us {
     .content {
-      width: 40%;
-      margin: 10% 0 0 30%;
+      width: 50%;
+      margin: 17% 0 0 35%;
+    }
+    .block-text {
+      margin-top: 4%;
+      height: 61%;
     }
   }
 }

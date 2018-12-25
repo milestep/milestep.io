@@ -178,12 +178,14 @@
     .content-right {
       width: 100%;
       padding: 0;
+      display: flex;
+      justify-content: space-around;
     }
     .left-content-block {
       float: left;
-      width: 40%;
+      width: 35%;
       max-width: calc(550px * var(--statc-font-size-offset));
-      margin: 0 11%;
+      margin: 0 0 0 15%;
     }
     .right-content-block {
       padding: 0;
@@ -232,7 +234,7 @@
     }
     .portfolio {
       padding-top: calc(70px * var(--font-size-offset));
-      padding-bottom: calc(230px * var(--font-size-offset));
+      padding-bottom: 5%;
       .wrapper--galleria-rectangle .rectangle-portfolio {
         display: block;
       }
