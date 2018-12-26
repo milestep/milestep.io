@@ -8,7 +8,6 @@ $(document).ready(function() {
     var i = (currentSlide ? currentSlide : 0) + 1;
     $status.text(i + ' / ' + slick.slideCount);
   });
-
   if (sizeWindow >= 1024) {
     $('.slider-team-slick-js').slick({
       rows: 2,
@@ -86,9 +85,12 @@ $(document).ready(function() {
         }
       ]
     });
+
     $('.slider-project-slick-js').slick({
       centerMode: true,
-      centerPadding: '60px',
+      swipe: true,
+      touchThreshold: 1,
+      centerPadding: '100px',
       rows: 1,
       slidesPerRow: 1,
       autoplay: true,
@@ -96,6 +98,7 @@ $(document).ready(function() {
       autoplaySpeed: 2000,
       arrows: false,
       swipeToSlide: true,
+      touchMove: true,
       responsive: [
         {
           breakpoint: 768,

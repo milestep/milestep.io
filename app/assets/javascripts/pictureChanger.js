@@ -1,4 +1,4 @@
-function changeBag() {
+function changeBackgroundForTechnologies() {
   let block = $('#tech')[0]
   let arr = [$('#beckend')[0], $('#frontend')[0], $('#mobile')[0], $('#blockchain')[0]]
   for (let i = 0; i < arr.length; i++) {
