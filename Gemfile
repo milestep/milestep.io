@@ -27,6 +27,8 @@ gem 'nokogiri'
 gem 'friendly_id', '~> 5.2.0'
 gem 'ckeditor'
 gem 'paperclip', '~> 5.0'
+gem 'serviceworker-rails'
+gem 'jquery_mobile_rails', '1.4.2'
 
 group :development, :test do
   gem 'letter_opener'
