@@ -4,66 +4,80 @@ section#how-we-work
       .section-background-container
         .background-element
           = render 'shared/background', template: :serve_block
-      .content
+      .content(style="text-align: center;" )
         h1.serve-block-header Whereby we serve you
         .serve-block-text
           | We tend to solve your challenges in transparent and simple way. Your involving on screening process helps us to reduce risks and match the more appropriate ready-to-go engineers at the outset
     .with-background.with-scrolling
-      .section-background-container
-        .background-element
-          = render 'shared/background', template: :how_we_work
       = scrolling_button offset_top: '48%', background: '#fff' do
         span 03
       .container
-        .row
-          .col-md-2
-          .block-container.col-md-4
-            div
-              = image_tag('how-we-work/Layer_101.jpg', :class => 'img-responsive', alt: 'Let us hear from your project')
-              .top-image
-                h1.caption
-                  | Let us hear
-                  br
-                  | from your project
-            .block-front
-              hr.trace
-              h1.text
-                | Awareness of your specifications, relevant
-                br
-                | technologies, scope of work and number of
-                br
-                | developers you need helps us to match appropriate
-                br
-                | candidates for you
-              hr.trace_bottom
-          .block-container.col-md-4
-            div
-              = image_tag('how-we-work/Layer_102.jpg', :class => 'img-responsive', alt: 'Receive CVS')
-              .top-image
-                h1.caption Receive CVs
-            .block-front
-              hr.trace
-              h1.text As soon as we get wise to your expectations, we provide the resumes of relevant engineers to your consideration. Thereby previous picking of suitable developers, you don't need to waste a lot of effort and time
-              hr.trace_bottom
-          .col-md-2
-        .row
-          .col-md-2
-          .block-container.col-md-4
-            div
-              = image_tag('how-we-work/Layer_103.jpg', :class => 'img-responsive', alt: 'Conversation with suitable developers')
-              .top-image
-                h1.caption Conversation with suitable developers
-            .block-front
-              hr.trace
-              h1.text In light of management from your in-house team, we set up the interview with screening employees to ensure the full compliance with your technical and communication expectations
-              hr.trace_bottom
-          .block-container.col-md-4
-            div
-              = image_tag('how-we-work/Layer_100.jpg', :class => 'img-responsive', alt: 'Scale up your current staff')
-              .top-image
-                h1.caption Scale up your current staff
-            .block-front
-              hr.trace
-              h1.text Finally, you’re able to get started working with your remote employees. Huge experience of working in team extension model allow us to be agile and ramp up performing of your ideas as smoothly and quick as it possible
-              hr.trace_bottom
-          .col-md-2
+        .content-block
+          .content
+            .title-block
+              h1.number.one
+                |
+                  1
+              h1.title-content
+                |
+                  Let us hear from your project
+            p.text-content
+              | Awareness of your specifications, relevant
+              | technologies, scope of work and number of
+              | developers you need helps us to match appropriate
+              | candidates for you
+
+          .content
+            .title-block
+              h1.number.three
+                |
+                  3
+              h1.title-content
+                |
+                  Conversation with suitable developers
+            p.text-content
+              |
+                In light of management from your in-house team,
+                we set up the interview with screening employees to ensure the full compliance with your technical
+                and communication expectations
+          .content
+            .title-block
+              h1.number.five
+                |
+                  5
+              h1.title-content
+                |
+                  Forge a partnership
+            p.text-content
+              |
+                When all is said and done, we keep cooperating in respect of the services we fulfill.
+                Whether you need to extend the team by few engineers, or you plan to expand the functionality,
+                we get ready to implement your concepts
+        div.img-block
+          = image_tag('how-we-work/how-we-work.svg', class: 'img-work', alt: 'Let us hear from your project')
+        .content-block
+          .content-foot
+            .title-block
+              h1.number.two
+                |
+                  2
+              h1.title-content
+                |
+                  Receive CVs
+            p.text-content
+              |
+                As soon as we get wise to your expectations, we provide the resumes of relevant engineers to your consideration.
+                Thereby previous picking of suitable developers, you don't need to waste a lot of effort and time
+          .content-foot
+            .title-block
+              h1.number.four
+                |
+                  4
+              h1.title-content
+                |
+                  Scale up your current staff
+            p.text-content
+              |
+                Finally, you’re able to get started working with your remote employees.
+                Huge experience of working in team extension model allow us to be agile and ramp up performing of your ideas
+                as smoothly and quick as it possible

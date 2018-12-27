@@ -35,3 +35,4 @@
 /vendor/*
 !/vendor/.keep
 .env
+.idea/

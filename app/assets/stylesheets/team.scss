@@ -4,7 +4,7 @@
   .team {
     background-color: #2d2d2d;
     color: #fff;
-    padding-bottom: calc(135px * var(--font-size-offset));
+    padding-bottom: calc(90px * var(--font-size-offset));
 
     .slick-dots li button:before {
       color: white;
@@ -14,14 +14,20 @@
     }
 
     .section-left-text {
-      margin-top: calc(170px * var(--font-size-offset));
-      background-image: asset-url('team/rectangle.jpg');
-      background-repeat: no-repeat;
-      background-size: 75% 58%;
+      margin-top: calc(135px * var(--font-size-offset));
 
       .title {
-        letter-spacing: calc(10px * var(--font-size-offset));
-        line-height: calc(50px * var(--font-size-offset));
+        font-size: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-image: asset-url('team/rectangle.jpg');
+        background-repeat: no-repeat;
+        background-size: 70% 100%;
 
         p {
           font-size: calc(60px * var(--font-size-offset));
@@ -37,11 +43,18 @@
       }
 
       .paragraph {
+        width: 85%;
         padding-top: calc(62px * var(--font-size-offset));
         max-width: calc(550px * var(--font-size-offset)) !important;
-        font-size: calc(24px * var(--font-size-offset));
-        line-height: calc(35px * var(--font-size-offset));
-        font-family: 'Roboto-Medium';
+        font-size: 18px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: justify;
+
+        color: #FFFFFF;
+
       }
 
       .horizontal-line {
@@ -129,6 +142,29 @@
         background-repeat: no-repeat;
         background-size: calc(225px * var(--font-size-offset));
         height: calc(225px * var(--font-size-offset));
+        background-size: calc(225px * var(--font-size-offset));
+        width: calc(225px * var(--font-size-offset));
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #team {
+    .team {
+      .faces {
+        margin-top: 25%;
+        .img-face {
+          width: 165px;
+          height: 165px;
+          background-size: contain;
+        }
+      }
+      .section-left-text {
+        margin-top: calc(70px * var(--font-size-offset));
+        .slider-info-number-page {
+
+        }
       }
     }
   }
