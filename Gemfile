@@ -20,13 +20,15 @@ gem 'slim-rails'
 
 gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 gem 'font-awesome-sass', '~> 5.3.1'
-gem "jquery-slick-rails"
+gem 'jquery-slick-rails', '1.8.0'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'nokogiri'
 gem 'friendly_id', '~> 5.2.0'
 gem 'ckeditor'
 gem 'paperclip', '~> 5.0'
+gem 'serviceworker-rails'
+gem 'jquery_mobile_rails', '1.4.2'
 
 group :development, :test do
   gem 'letter_opener'

@@ -12,6 +12,7 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require jquery.slick
 //= require activestorage
 //= require ckeditor/init
 //= require_tree .
