@@ -20,7 +20,7 @@ gem 'slim-rails'
 
 gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 gem 'font-awesome-sass', '~> 5.3.1'
-gem "jquery-slick-rails"
+gem 'jquery-slick-rails'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'nokogiri'
