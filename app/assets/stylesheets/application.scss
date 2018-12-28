@@ -78,7 +78,7 @@ footer {
     position: fixed;
     left: 79.9vw;
     width: 20.2vw;
-    height: 115vw;
+    height: 100vh;
     padding: 0;
     background-color: #0075B8;
     a:hover {
@@ -363,8 +363,8 @@ line, circle {
 @media (max-width: 1440px) {
   .about-us {
     .content {
-      width: 50%;
-      margin: 17% 0 0 35%;
+      width: 53%;
+      margin: 14% 0 0 35%;
     }
     .block-text {
       margin-top: 4%;
@@ -389,6 +389,9 @@ line, circle {
     .nav-links {
       margin: 40% 15%;
       width: 90%;
+      p {
+        margin-bottom: 15%;
+      }
     }
     .burger-button {
       margin: 3% 3%;
@@ -665,6 +668,9 @@ line, circle {
     .nav-links {
       margin: 20% 10%;
       width: 60%;
+      p {
+        margin-bottom: 15%;
+      }
     }
     .contact-us-button {
       width: 137px;

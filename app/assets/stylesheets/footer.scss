@@ -69,7 +69,11 @@ footer {
       background: linear-gradient(180deg, #FF643A 0%, #F50808 100%);
       font-size: 14px;
       height: 41px;
+    }
 
+    .btn-contact:focus{
+      outline: 0;
+      border: none;
     }
   }
   .text-striped {
