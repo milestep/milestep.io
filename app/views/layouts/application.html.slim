@@ -3,6 +3,7 @@ html lang='en'
   head
     meta content='width=device-width, initial-scale=1, maximum-scale=5' name='viewport'
     title MileStep | Web & Mobile App Development Company
+    meta name="theme-color" content="#000000"
     meta name='description' content='MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals'
     meta name='google-site-verification' content='E1FhQ3UjOG3S-GkITf7a5hbPYt0j7q0wfurFIfVVqhQ'
 
@@ -45,6 +46,7 @@ html lang='en'
     /! Open Graph tags
     = render partial: 'shared/open_graph_tags', object: @meta_tags
 
+    link rel="manifest" href=("#{asset_path 'manifest.json'}")
     link rel='icon' href='favicon.png' type='image/png'
     = csrf_meta_tags
     = csp_meta_tag
