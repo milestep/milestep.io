@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def create
-    Request.notify(attrs).deliver_now
+    Request.notify(attrs).deliver_later
     head 200
   end
 
