@@ -53,3 +53,38 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blog-post-image-container {
+    .post {
+      &-photo {
+        min-height: 328px;
+        background-repeat: no-repeat;
+      }
+      &-main-container {
+        width: 90%;
+      }
+    }
+  }
+}@media (min-width: 320px) and (max-width: 767px) {
+  .blog-post-image-container {
+    .post {
+      &-photo {
+        min-height: 119px;
+        background-repeat: no-repeat;
+        margin-top: 20px;
+      }
+      &-main-container {
+        width: 90%;
+        .blog-mobile {
+          width: 95%;
+          margin: 0 auto;
+        }
+        .post-body {
+          width: 95%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
