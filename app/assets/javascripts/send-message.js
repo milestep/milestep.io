@@ -2,7 +2,6 @@ function sendMessage() {
   var formElement = document.querySelector("#message-form");
   var form = $(formElement);
   var data = getData();
-  gtag_report_conversion();
 
   if (!formElement.checkValidity()) {
     return
@@ -30,21 +29,6 @@ function sendMessage() {
     })
     return transformedData;
   }
-}
-
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-    'send_to': 'AW-766088469/hiq-CO_vn5QBEJWqpu0C',
-    'value': 1.0,
-    'currency': 'USD',
-    'event_callback': callback
-  });
-  return false;
 }
 
 function toastr(params) {
