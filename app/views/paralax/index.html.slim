@@ -1,0 +1,6 @@
+div.paralax-status empty
+div.keys-status 0
+div.scroll-default
+  - for item in 1..11
+    .[class="scroll-#{item} scroll"]
+      img alt="" src=image_path("paralax/#{item}.png")

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+  get 'paralax', to: 'paralax#index'
 
   get 'welcome/index', to: 'welcome#index'
   post :contact, to: 'requests#create', as: :contact

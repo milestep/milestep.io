@@ -1,0 +1,29 @@
+.paralax-status {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  text-color: white !important;
+  z-index: 99;
+}
+.keys-status {
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  text-color: white !important;
+  z-index: 99;
+}
+
+.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@for $i from 1 through 11 {
+  .scroll-#{$i} {
+    z-index: $i;
+    width: #{($i * 1000) + 2000}px;
+    @if $i != 1 {top: #{5 + $i * 3}vh};
+    @if $i != 1 {margin-left: 500px};
+  }
+}
