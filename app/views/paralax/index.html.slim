@@ -1,6 +1,25 @@
-div.paralax-status empty
-div.keys-status 0
-div.scroll-default
-  - for item in 1..11
-    .[class="scroll-#{item} scroll"]
-      img alt="" src=image_path("paralax/#{item}.png")
+#paralax
+  div.statusbar
+    div.paralax
+    div.keys
+    div.wheel
+
+  navbar
+
+
+  div.sprites
+    - for item in 1..11
+      .[class="layer-#{item} scroll"]
+        img alt="" src=image_path("paralax/#{item}.png")
+
+  div.content-container.scroll
+    div.content-page-1
+      div.number 1
+    div.content-page-2
+      div.number 2
+    div.content-page-3
+      div.number 3
+    div.content-page-4
+      div.number 4
+    div.content-page-5
+      div.number 5

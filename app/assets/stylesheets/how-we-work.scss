@@ -1,237 +1,239 @@
-#how-we-work {
-  .container {
-    padding-top: 5%;
-    padding-bottom: 7%;
-    width: 67%;
-  }
-
-  .content-block {
-    display: flex;
-    justify-content: center;
-
-    .content {
-      width: 33%;
-      margin: 0 2%;
-    }
-
-    .content-foot {
-      margin: 0 5%;
-      width: 30%;
-    }
-
-    .title-block {
-      display: flex;
-    }
-
-    .number {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 41px;
-      font-size: 50px;
-      text-align: right;
-      letter-spacing: 0.05em;
-      margin-right: 5%;
-    }
-
-    .one {
-      color: #00FAE4;
-    }
-
-    .two {
-      color: #00B4AB;
-    }
-
-    .three {
-      color: #0097AE;
-    }
-
-    .four {
-      color: #00709F;
-    }
-
-    .five {
-      color: #004E9A;
-    }
-
-    .title-content {
-      font-size: 18px;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 19px;
-      letter-spacing: 0.05em;
-      color: #000000;
-      width: 70%;
-    }
-
-    .text-content {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      line-height: normal;
-      font-size: 14px;
-      text-align: justify;
-      letter-spacing: 0.05em;
-      color: #999999;
-      width: 85%;
-      margin-left: 15%;
-    }
-  }
-
-  .img-block {
-    width: 90%;
-    margin: 2% auto;
-  }
-
-  .img-work {
-    width: 100%;
-  }
-
-  .how-we-work {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .text-container {
-    margin-left: 38%;
-    height: calc(34px * var(--font-size-offset));
-    color: #ffffff;
-    font-size: calc(40px * var(--font-size-offset));
-    text-align: center;
-  }
-
-  .trace {
-    margin-top: 30%;
-    border: solid 1px white;
-    width: 90%;
-  }
-
-  .trace_bottom {
-    margin-top: 5%;
-    border: solid 2px white;
-    width: 90%;
-  }
-  .serve-block {
-    padding-top: 4%;
-    padding-bottom: 4%;
-    margin-bottom: 0px;
-    background-color: #f5f5f5;
-    font-family: Roboto;
-    font-weight: 600;
-  }
-
-  .wrraper {
-    margin: 0 auto;
-    max-width: 80%;
-  }
-
-  .serve-block-header {
-    display: inline-block;
-    width: 100%;
-    color: #999999;
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-bottom: 1.7%;
-    text-align: center;
-  }
-
-  .serve-block-text {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 500;
-    text-align-last: center;
-    width: 72%;
-    margin: 0 auto;
-    font-family: Roboto;
-    font-style: normal;
-    line-height: 25px;
-    text-align: center;
-    color: #2D2D2D;
-  }
-
-  .top-image {
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    margin: 0px;
-  }
-
-  .caption {
-    width: 100%;
-    color: #f5f5f5;
-    font-family: "Roboto-Black";
-    font-size: calc(30px * var(--font-size-offset));
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: calc(1.5px * var(--font-size-offset));
-    position: absolute;
-    z-index: 3;
-    margin-top: -55%;
-    padding: 0px;
-  }
-
-  .text {
-    text-align: center;
-    margin: 50%;
-    width: 95%;
-    color: #f5f5f5;
-    font-family: Roboto;
-    font-size: calc(18px * var(--font-size-offset));
-    font-weight: 500;
-    margin-left: 2.5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  .block-container {
-    padding: 0px;
-    margin: 0px;
-  }
-
-  .block-container img {z-index: 1; position: relative; width: 100%;}
-  .block-front {
-    z-index: 4;
-    background-color: #0075b8;
-    transition: all 0.4s ease-in-out 0s;
-    opacity: 0;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    margin-top: -100%;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-  }
-  .block-front:hover { opacity: 0.8; }
-  .block-front h1 {
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    font-family: Roboto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+#blog{
   #how-we-work {
-    .serve-block-text {
-      width: 75%;
-    }
     .container {
-      width: 95%;
+      padding-top: 5%;
+      padding-bottom: 7%;
+      width: 67%;
     }
+
     .content-block {
-      .text-content {
-        width: 80%;
-      }
+      display: flex;
+      justify-content: center;
+
       .content {
-        margin: 0 1%;
+        width: 33%;
+        margin: 0 2%;
       }
+
+      .content-foot {
+        margin: 0 5%;
+        width: 30%;
+      }
+
+      .title-block {
+        display: flex;
+      }
+
       .number {
-        font-size: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 41px;
+        font-size: 50px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        margin-right: 5%;
       }
+
+      .one {
+        color: #00FAE4;
+      }
+
+      .two {
+        color: #00B4AB;
+      }
+
+      .three {
+        color: #0097AE;
+      }
+
+      .four {
+        color: #00709F;
+      }
+
+      .five {
+        color: #004E9A;
+      }
+
       .title-content {
-        font-size: 16px;
+        font-size: 18px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        width: 70%;
+      }
+
+      .text-content {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 14px;
+        text-align: justify;
+        letter-spacing: 0.05em;
+        color: #999999;
+        width: 85%;
+        margin-left: 15%;
+      }
+    }
+
+    .img-block {
+      width: 90%;
+      margin: 2% auto;
+    }
+
+    .img-work {
+      width: 100%;
+    }
+
+    .how-we-work {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .text-container {
+      margin-left: 38%;
+      height: calc(34px * var(--font-size-offset));
+      color: #ffffff;
+      font-size: calc(40px * var(--font-size-offset));
+      text-align: center;
+    }
+
+    .trace {
+      margin-top: 30%;
+      border: solid 1px white;
+      width: 90%;
+    }
+
+    .trace_bottom {
+      margin-top: 5%;
+      border: solid 2px white;
+      width: 90%;
+    }
+    .serve-block {
+      padding-top: 4%;
+      padding-bottom: 4%;
+      margin-bottom: 0px;
+      background-color: #f5f5f5;
+      font-family: Roboto;
+      font-weight: 600;
+    }
+
+    .wrraper {
+      margin: 0 auto;
+      max-width: 80%;
+    }
+
+    .serve-block-header {
+      display: inline-block;
+      width: 100%;
+      color: #999999;
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-bottom: 1.7%;
+      text-align: center;
+    }
+
+    .serve-block-text {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      text-align-last: center;
+      width: 72%;
+      margin: 0 auto;
+      font-family: Roboto;
+      font-style: normal;
+      line-height: 25px;
+      text-align: center;
+      color: #2D2D2D;
+    }
+
+    .top-image {
+      z-index: 2;
+      text-align: center;
+      width: 100%;
+      margin: 0px;
+    }
+
+    .caption {
+      width: 100%;
+      color: #f5f5f5;
+      font-family: "Roboto-Black";
+      font-size: calc(30px * var(--font-size-offset));
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: calc(1.5px * var(--font-size-offset));
+      position: absolute;
+      z-index: 3;
+      margin-top: -55%;
+      padding: 0px;
+    }
+
+    .text {
+      text-align: center;
+      margin: 50%;
+      width: 95%;
+      color: #f5f5f5;
+      font-family: Roboto;
+      font-size: calc(18px * var(--font-size-offset));
+      font-weight: 500;
+      margin-left: 2.5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .block-container {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .block-container img {z-index: 1; position: relative; width: 100%;}
+    .block-front {
+      z-index: 4;
+      background-color: #0075b8;
+      transition: all 0.4s ease-in-out 0s;
+      opacity: 0;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      margin-top: -100%;
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+    }
+    .block-front:hover { opacity: 0.8; }
+    .block-front h1 {
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      font-family: Roboto;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #how-we-work {
+      .serve-block-text {
+        width: 75%;
+      }
+      .container {
+        width: 95%;
+      }
+      .content-block {
+        .text-content {
+          width: 80%;
+        }
+        .content {
+          margin: 0 1%;
+        }
+        .number {
+          font-size: 40px;
+        }
+        .title-content {
+          font-size: 16px;
+        }
       }
     }
   }

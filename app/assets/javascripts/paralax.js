@@ -1,5 +1,16 @@
 jQuery(document).ready(function () {
-  // document.onkeydown = document.onkeyup = document.onkeypress = handle;
+  //state
+  const DEV = 1 //false = prod, true = dev
+  const DisableWheel = false
+
+  //initial params
+  if (DEV) {
+    $('.statusbar .paralax').text('paralax %')
+    $('.statusbar .keys').text('key')
+    $('.statusbar .wheel').text('wheel px')    
+  }
+
+  //listeners
   document.onkeydown = function(e) {
     switch (e.keyCode) {
       case 38: arrowUp(); break;
@@ -10,38 +21,59 @@ jQuery(document).ready(function () {
     }
   }
 
-  function keysStatus(st) {
-    $('.keys-status').text(st)
-  }
-
-  function arrowUp(){
-    console.log('up')
-    keysStatus('up')
-  }
-
-  function arrowDown(){
-    console.log('down')
-    keysStatus('down')
-  }
-
-  function arrowLeft(){
-    console.log('left')
-    keysStatus('left')
-  }
-
-  function arrowRight(){
-    console.log('right')
-    keysStatus('right')
+  if (document.addEventListener) {
+    document.addEventListener(function(){
+      if ('onwheel' in document) return "wheel" // IE9+, FF17+, Ch31+
+      else if ('onmousewheel' in document) return "mousewheel" // устаревший вариант события
+      else return 'MozMousePixelScroll' // Firefox < 17 
+    }(), onWheel)
+  } else { // IE8-
+    document.attachEvent("onmousewheel", onWheel);
   }
 
   $.jInvertScroll(['.scroll'],
     {
     onScroll: function(percent) {
-      $('.paralax-status').text(Math.round(percent * 3840) + 'px')
+      if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
     }
   });
 
-  // console.log($('.scroll-4').css('left'))
+  //functions
+  function onWheel(e) {
+    let statusElem = $('.statusbar .wheel')
+    e = e || window.event; //IE
+
+    //wheelDelta всегда 120/-120
+    var delta = e.deltaY || e.detail || e.wheelDelta;
+
+    if (DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
+
+    //отменяет прокрутку колесиком мыши
+    if (DisableWheel) e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+  }
+
+  function keysStatus(st) {
+    if (DEV) $('.statusbar .keys').text(st)
+  }
+
+  function arrowUp(){
+    keysStatus('up')
+  }
+
+  function arrowDown(){
+    keysStatus('down')
+  }
+
+  function arrowLeft(){
+    keysStatus('left')
+  }
+
+  function arrowRight(){
+    keysStatus('right')
+  }
+
+
+
+
+
 })
-
-
