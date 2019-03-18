@@ -3,23 +3,46 @@
     div.paralax
     div.keys
     div.wheel
+    div.cursor
 
-  navbar
+  div.navbar-btn x
+  nav.hiden
+    ul
+      li
+        a Home
+      li
+        a About us
+      li
+        a Services
+      li 
+        a Portfolio
+      li
+        a Team
+      li
+        a Approach
+      li
+        a Contact us
 
+  header
+    img.main-logo alt="" src=image_path("paralax/main-logo.svg")
+    button.contact-us-btn contact us
 
   div.sprites
+    div#backlight
     - for item in 1..11
       .[class="layer-#{item} scroll"]
-        img alt="" src=image_path("paralax/#{item}.png")
+        img alt="" src=image_path("paralax/sprites/#{item}.png")
+
+  div.perfect-circle
 
   div.content-container.scroll
     div.content-page-1
-      div.number 1
+      = render 'page1'
     div.content-page-2
-      div.number 2
+      = render 'page2'
     div.content-page-3
-      div.number 3
+      = render 'page3'
     div.content-page-4
-      div.number 4
+      = render 'page4'
     div.content-page-5
-      div.number 5
+      = render 'page5'

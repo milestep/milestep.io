@@ -2,6 +2,8 @@ jQuery(document).ready(function () {
   //state
   const DEV = 1 //false = prod, true = dev
   const DisableWheel = false
+  const displWidth = window.innerWidth
+  const numberOfPages = 5
 
   //initial params
   if (DEV) {
@@ -13,10 +15,11 @@ jQuery(document).ready(function () {
   //listeners
   document.onkeydown = function(e) {
     switch (e.keyCode) {
-      case 38: arrowUp(); break;
-      case 40: arrowDown(); break;
-      case 37: arrowLeft(); break;
-      case 39: arrowRight(); break;
+      case 38: keyArrowUp(); break;
+      case 40: keyArrowDown(); break;
+      case 37: keyArrowLeft(); break;
+      case 39: keyArrowRight(); break;
+      case 32: keySpace(); break;
       default: keysStatus(e.keyCode)
     }
   }
@@ -31,49 +34,107 @@ jQuery(document).ready(function () {
     document.attachEvent("onmousewheel", onWheel);
   }
 
+  const perfectCircle = $('.perfect-circle')
   $.jInvertScroll(['.scroll'],
     {
-    onScroll: function(percent) {
-      if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
+      onScroll: function(percent) {
+        perfectCircle.circleProgress({
+          value: percent,
+          animation: false,
+          fill: '#ff1e41',
+          emptyFill: 'rgba(0, 0, 0, .8)',
+          startAngle: Math.PI * 1.7,
+          thickness: 4,
+          lineCap: 'round'
+        });
+
+        if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
+      }
     }
+  );
+
+  $('#paralax').mousemove(function(e) {
+    let x = e.clientX, y = e.clientY;
+
+    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
+
+    $('#backlight').css({top: y, left: x});
   });
+
+  $('.navbar-btn').on('click', function(){
+    $('nav').toggleClass('hiden')
+  })
+
+  $('nav').on('click', function(){
+    $(this).toggleClass('hiden')
+  })
 
   //functions
   function onWheel(e) {
     let statusElem = $('.statusbar .wheel')
     e = e || window.event; //IE
-
-    //wheelDelta всегда 120/-120
-    var delta = e.deltaY || e.detail || e.wheelDelta;
+    var delta = e.deltaY || e.detail || e.wheelDelta; //wheelDelta всегда 120/-120
 
     if (DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
+    if (DisableWheel) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши
+  }
 
-    //отменяет прокрутку колесиком мыши
-    if (DisableWheel) e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+  function scrollPage(direction) {
+    function getPos() {
+      let curScroll = $(window).scrollTop() + 1
+      let curScrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+
+      for (let i = 0; i < numberOfPages; i++) {
+        if (Math.ceil(displWidth * i) <= curScroll && curScroll < Math.ceil(displWidth * (i + 1))) {
+          // let scrollPercent = ($(document).height() - $(window).height());     
+          let curPos = $(window).scrollTop()
+          let offset = -$('.content-container').position().left
+          // return direction == '>' ?
+          //   displWidth * (i + 1) :
+          //   displWidth * (i - 1)
+          // console.log(curPos)
+          // console.log(offset)
+          console.log((curPos - offset))
+          // return $(document).height() * 0.25
+          return $(document).height() * 0.25 + (curPos - offset)
+        }
+      }
+    }
+
+    // getPos()
+
+    $("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: getPos()
+    }, 500);
+    return false;
   }
 
   function keysStatus(st) {
     if (DEV) $('.statusbar .keys').text(st)
   }
 
-  function arrowUp(){
+  function keyArrowUp(){    
+    scrollPage('<')
     keysStatus('up')
   }
 
-  function arrowDown(){
+  function keyArrowDown(){
+    scrollPage('>')
     keysStatus('down')
   }
 
-  function arrowLeft(){
+  function keyArrowLeft(){
+    scrollPage('<')
     keysStatus('left')
   }
 
-  function arrowRight(){
+  function keyArrowRight(){
+    scrollPage('>')
     keysStatus('right')
   }
 
-
-
-
-
+  function keySpace(){    
+    scrollPage('>')
+    keyStatus('space')
+  }
 })
