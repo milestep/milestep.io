@@ -29,9 +29,31 @@
 
   div.sprites
     div#backlight
-    - for item in 1..11
-      .[class="layer-#{item} scroll"]
-        img alt="" src=image_path("paralax/sprites/#{item}.png")
+
+    div.layer-0.scroll
+      img alt="" src=image_path("paralax/sprites/bg.png")
+    div.layer-1.scroll
+      img alt="" src=image_path("paralax/sprites/small-rocks-1.png")
+    div.layer-2.scroll
+      img alt="" src=image_path("paralax/sprites/small-rocks-2.png")
+    div.layer-3.scroll
+      img alt="" src=image_path("paralax/sprites/small-rocks-3.png")
+    div.layer-4.scroll
+      img alt="" src=image_path("paralax/sprites/cat.png")
+    div.layer-5.scroll
+      img alt="" src=image_path("paralax/sprites/text.png")
+    div.layer-6.scroll
+      img alt="" src=image_path("paralax/sprites/small-rocks-4.png")
+    div.layer-7.scroll
+      img alt="" src=image_path("paralax/sprites/big-rocks-1.png")
+    div.layer-8.scroll
+      img alt="" src=image_path("paralax/sprites/big-rocks-3.png")
+    div.layer-9.scroll
+      img alt="" src=image_path("paralax/sprites/big-rocks-4.png")
+
+    / - for item in 1..11
+    /   .[class="layer-#{item} scroll"]
+    /     img alt="" src=image_path("paralax/sprites/#{item}.png")
 
   div.perfect-circle
 

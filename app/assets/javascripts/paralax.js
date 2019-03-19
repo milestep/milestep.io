@@ -2,7 +2,7 @@ jQuery(document).ready(function () {
   //state
   const DEV = 1 //false = prod, true = dev
   const DisableWheel = false
-  const displWidth = window.innerWidth
+  const displWidth = $(window).width()
   const numberOfPages = 5
 
   //initial params
@@ -61,12 +61,9 @@ jQuery(document).ready(function () {
     $('#backlight').css({top: y, left: x});
   });
 
-  $('.navbar-btn').on('click', function(){
+  $('.navbar-btn, nav').on('click', function(){
     $('nav').toggleClass('hiden')
-  })
-
-  $('nav').on('click', function(){
-    $(this).toggleClass('hiden')
+    $('.contact-us-btn').toggleClass('blur')
   })
 
   //functions
@@ -79,29 +76,26 @@ jQuery(document).ready(function () {
     if (DisableWheel) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши
   }
 
+  //!!!!!!!!!!!!!!!!!! доделать!!!!!!!!!!!!!!!!!!!!!!!
   function scrollPage(direction) {
     function getPos() {
       let curScroll = $(window).scrollTop() + 1
       let curScrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 
-      for (let i = 0; i < numberOfPages; i++) {
-        if (Math.ceil(displWidth * i) <= curScroll && curScroll < Math.ceil(displWidth * (i + 1))) {
-          // let scrollPercent = ($(document).height() - $(window).height());     
-          let curPos = $(window).scrollTop()
-          let offset = -$('.content-container').position().left
-          // return direction == '>' ?
-          //   displWidth * (i + 1) :
-          //   displWidth * (i - 1)
-          // console.log(curPos)
-          // console.log(offset)
-          console.log((curPos - offset))
-          // return $(document).height() * 0.25
-          return $(document).height() * 0.25 + (curPos - offset)
-        }
-      }
+      // for (let i = 0; i < numberOfPages; i++) {
+      //   if (Math.ceil(displWidth * i) <= curScroll && curScroll < Math.ceil(displWidth * (i + 1))) {
+      //     return direction == '>' ?
+      //       displWidth * (i + 1) :
+      //       displWidth * (i - 1)
+      //   }
+      // }
+
+      return direction == '>' ?
+        $(window).scrollTop() + displWidth :
+        $(window).scrollTop() - displWidth
     }
 
-    // getPos()
+
 
     $("html:not(:animated),body:not(:animated)").animate({
       scrollTop: getPos()
@@ -135,6 +129,6 @@ jQuery(document).ready(function () {
 
   function keySpace(){    
     scrollPage('>')
-    keyStatus('space')
+    keysStatus('space')
   }
 })
