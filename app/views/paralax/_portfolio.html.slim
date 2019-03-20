@@ -1,0 +1,30 @@
+/ section#portfolio.with-background.with-scrolling.last-project-color
+/   .section-background-container.prefooter-bg-container
+/     .background-element
+/       = render 'shared/background', template: :portfolio
+/   = scrolling_button offset_top: '50%', background: "#f5f5f5;" do
+/     span 06
+/   .portfolio
+/     .container.content
+/       .col-xs-12
+/         .row
+/           div.portfolio-header
+/             .title
+/               p.last last
+/               p.projects projects
+/         .row
+/           .wrapper--galleria-rectangle
+/             .flex-container--galleria-and-rectangle
+/               .galleria.flex-item--galleria-and-rectangle
+/                 .galleria-block.slider-project-slick-js
+/                   - @project.each do |portfolio|
+/                     .flex-container
+/                       .flex-item.img-project.rectangle-and-text-hover
+/                         img src='#{image_path(portfolio.image_url)}'
+/                         .overlay onclick="window.open('#{portfolio.web_address}', '_blank');"
+/                           p.name-project
+/                             = portfolio.name
+/                           .horizontal-line
+/                           p.info-project
+/                             = portfolio.description
+/                           .horizontal-line

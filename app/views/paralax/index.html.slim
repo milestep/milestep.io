@@ -1,11 +1,13 @@
 #paralax
   div.statusbar
+    div.time
     div.paralax
     div.keys
     div.wheel
     div.cursor
 
-  div.navbar-btn x
+  div.navbar-btn
+    span
   nav.hiden
     ul
       li
@@ -40,8 +42,6 @@
       img alt="" src=image_path("paralax/sprites/small-rocks-3.png")
     div.layer-4.scroll
       img alt="" src=image_path("paralax/sprites/cat.png")
-    div.layer-5.scroll
-      img alt="" src=image_path("paralax/sprites/text.png")
     div.layer-6.scroll
       img alt="" src=image_path("paralax/sprites/small-rocks-4.png")
     div.layer-7.scroll
@@ -59,12 +59,13 @@
 
   div.content-container.scroll
     div.content-page-1
-      = render 'page1'
+      img alt="" src=image_path("paralax/sprites/text.png")
+      div.text
+        | Software company, provides full-cyrcle development services
+      button.lets-chat-btn let's chat
     div.content-page-2
-      = render 'page2'
     div.content-page-3
-      = render 'page3'
     div.content-page-4
-      = render 'page4'
+      = render 'portfolio'
     div.content-page-5
-      = render 'page5'
+      = render 'team'

@@ -44,8 +44,9 @@ jQuery(document).ready(function () {
           fill: '#ff1e41',
           emptyFill: 'rgba(0, 0, 0, .8)',
           startAngle: Math.PI * 1.7,
-          thickness: 4,
-          lineCap: 'round'
+          thickness: 2,
+          lineCap: 'round',
+          size: 77
         });
 
         if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
@@ -62,8 +63,13 @@ jQuery(document).ready(function () {
   });
 
   $('.navbar-btn, nav').on('click', function(){
+    $('.navbar-btn').toggleClass('active')
     $('nav').toggleClass('hiden')
     $('.contact-us-btn').toggleClass('blur')
+  })
+
+  $('button').on('click', function(){
+    console.log('btn click')
   })
 
   //functions
@@ -95,13 +101,19 @@ jQuery(document).ready(function () {
         $(window).scrollTop() - displWidth
     }
 
-
-
     $("html:not(:animated),body:not(:animated)").animate({
       scrollTop: getPos()
     }, 500);
     return false;
   }
+
+  if (DEV) {setInterval(function(){
+    let d = new Date();
+    let curTime = [cz(d.getHours()), cz(d.getMinutes()), cz(d.getSeconds())].join(':')
+
+    function cz(i) {return i < 10 ? '0' + i : i}
+    $('.time').text(curTime)
+  }, 500)}
 
   function keysStatus(st) {
     if (DEV) $('.statusbar .keys').text(st)
@@ -131,4 +143,43 @@ jQuery(document).ready(function () {
     scrollPage('>')
     keysStatus('space')
   }
+
+
+
+
+
+
+
+
+
+        var carousel = $("#carousel").featureCarousel({
+          // include options like this:
+          // (use quotes only for string values, and no trailing comma after last option)
+          // option: value,
+          // option: value
+        });
+
+        $("#but_prev").click(function () {
+          carousel.prev();
+        });
+        $("#but_pause").click(function () {
+          carousel.pause();
+        });
+        $("#but_start").click(function () {
+          carousel.start();
+        });
+        $("#but_next").click(function () {
+          carousel.next();
+        });
+
+
+
+
+
+
+
+
+
+
+
 })

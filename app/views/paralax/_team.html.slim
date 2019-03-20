@@ -1,0 +1,15 @@
+.carousel-container
+  #carousel
+    - @development.each do |developer|
+      .carousel-feature
+        a
+          img.carousel-image alt=developer.name src=image_path(developer.image_url)
+        .carousel-caption
+          p.name = developer.name
+          p.specialization = developer.title
+
+
+  #carousel-left
+    img src=image_path("paralax/carousel-team/arrow-left.png")
+  #carousel-right
+    img src=image_path("paralax/carousel-team/arrow-right.png")
