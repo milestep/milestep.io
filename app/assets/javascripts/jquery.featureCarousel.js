@@ -261,8 +261,8 @@
      {
       if (options.trackerIndividual) {
         // construct the tracker list
-        var $list = $("<ul></ul>");
-        $list.addClass("tracker-individual-container");
+        // var $list = $("<div></div>");
+        // $list.addClass("tracker-individual-container");
         for (var i = 0; i < pluginData.totalFeatureCount; i++) {
           // item position one plus the index
           var counter = i+1;
@@ -271,16 +271,14 @@
           var $trackerBlip = $("<div>"+counter+"</div>");
           $trackerBlip.addClass("tracker-individual-blip");
           $trackerBlip.css("cursor","pointer");
+          $trackerBlip.css("float","left");
           $trackerBlip.attr("id","tracker-"+(i+1));
-          var $listEntry = $("<li></li>");
-          $listEntry.append($trackerBlip);
-          $listEntry.css("float","left");
-          $listEntry.css("list-style-type","none");
-          $list.append($listEntry);
+          $trackerBlip.append($trackerBlip);
+          // $list.append($trackerBlip);
+          $('.tracker-individual-container').append($trackerBlip);
         }
         // add the blip list and then make sure it's visible
-        $(pluginData.containerIDTag).append($list);
-        $list.hide().show();
+        // $(pluginData.containerIDTag).append($list);
       }
       
       if (options.trackerSummation) {
@@ -302,7 +300,8 @@
     var updateTracker = function(oldCenter, newCenter) {
       if (options.trackerIndividual) {
         // get selectors for the two trackers
-        var $trackerContainer = pluginData.featuresContainer.find(".tracker-individual-container");
+        // var $trackerContainer = pluginData.featuresContainer.find(".tracker-individual-container");
+        var $trackerContainer = $(".tracker-individual-container");
         var $oldCenter = $trackerContainer.find("#tracker-"+oldCenter);
         var $newCenter = $trackerContainer.find("#tracker-"+newCenter);
 
@@ -635,7 +634,7 @@
 
     // Did someone click one of the individual trackers?
     function bl() {
-      $(".tracker-individual-blip",  pluginData.containerIDTag).on("click", function(){
+      $(".tracker-individual-blip").on("click", function(){
         // grab the position # that was clicked
         var goTo = $(this).attr("id").substring(8);
         // find out where that feature # actually is in the carousel right now

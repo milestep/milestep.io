@@ -7,9 +7,7 @@ jQuery(document).ready(function () {
     numberOfPages = 5,
     _ = '#paralax ',
     displWidth = $(window).width(),
-    displHeight = $(window).height(),
-    docWidth = $(document).width(),
-    docHeight = $(document).height();
+    displHeight = $(window).height();
 
   //initial params
   if (DEV) {
@@ -43,6 +41,7 @@ jQuery(document).ready(function () {
   const perfectCircle = $(_+'.perfect-circle')
   $.jInvertScroll(['.scroll'],
     {
+      height: $(window).width() * numberOfPages,
       onScroll: function(percent) {
         perfectCircle.circleProgress({
           value: percent,
@@ -75,16 +74,16 @@ jQuery(document).ready(function () {
   })
 
   $("#carousel").featureCarousel({    
-    largeFeatureWidth : docHeight / 1.65,
-    largeFeatureHeight: docHeight / 1.65,
-    smallFeatureWidth: docHeight / 3.3,
-    smallFeatureHeight: docHeight / 3.3,
+    largeFeatureWidth : $(window).height() / 1.65,
+    largeFeatureHeight: $(window).height() / 1.65,
+    smallFeatureWidth: $(window).height() / 3.3,
+    smallFeatureHeight: $(window).height() / 3.3,
     topPadding: 0,
-    smallFeatureOffset: docHeight / 8,
+    smallFeatureOffset: $(window).height() / 8,
     carouselSpeed: 1000,
     autoPlay: 3000,
     stopOnHover: false,
-    sidePadding: docWidth / 20,
+    sidePadding: $(window).width() / 20,
   });
 
   //functions
@@ -100,20 +99,32 @@ jQuery(document).ready(function () {
   //!!!!!!!!!!!!!!!!!! доделать!!!!!!!!!!!!!!!!!!!!!!!
   function scrollPage(direction) {
     function getPos() {
-      let curScroll = $(window).scrollTop() + 1
-      let curScrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+      // let curScroll = $(window).scrollTop() + 1
+      // let curScrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+
+      console.log(
+        displWidth,
+        displHeight,
+        $(document).width(),
+        $(document).height(),
+        $(window).scrollTop(),
+        $(document).scrollTop(),
+        ($(document).height() - $(window).height())
+      )
+
+      return 1920
 
       // for (let i = 0; i < numberOfPages; i++) {
       //   if (Math.ceil(displWidth * i) <= curScroll && curScroll < Math.ceil(displWidth * (i + 1))) {
-      //     return direction == '>' ?
+      //     return (direction == '>' ?
       //       displWidth * (i + 1) :
-      //       displWidth * (i - 1)
+      //       displWidth * (i - 1)) * 1.159165751920966
       //   }
       // }
 
-      return direction == '>' ?
-        $(window).scrollTop() + displWidth :
-        $(window).scrollTop() - displWidth
+      // return direction == '>' ?
+      //   $(window).scrollTop() + displWidth :
+      //   $(window).scrollTop() - displWidth
     }
 
     $("html:not(:animated),body:not(:animated)").animate({

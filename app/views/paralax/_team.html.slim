@@ -1,23 +1,20 @@
 .carousel-container
+  div.our-team
+    p 
+      | Our 
+      br
+      | team
   #carousel
     - @development.each do |developer|
       .carousel-feature
         a
           img.carousel-image alt=developer.name src=image_path(developer.image_url)
         .carousel-caption
-          p.name = developer.name
-          p.specialization = developer.title
-          p Any text
-
-    / .carousel-feature
-    /   a href="#" 
-    /     img.carousel-image alt=("Image Caption") src=image_path("paralax/carousel-team/sample5.jpg") /
-    /   .carousel-caption
-    /     p
-    /       | This area is typically used to display captions associa
-
-
-  #carousel-left
-    img src=image_path("paralax/carousel-team/arrow-left.png")
-  #carousel-right
-    img src=image_path("paralax/carousel-team/arrow-right.png")
+          p.name = developer.title
+          p.specialization = developer.name
+  .carousel-nav
+    #carousel-left
+      img src=image_path("paralax/carousel-team/arrow-left.png")
+    div.tracker-individual-container
+    #carousel-right
+      img src=image_path("paralax/carousel-team/arrow-right.png")

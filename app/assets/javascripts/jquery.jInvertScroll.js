@@ -42,6 +42,7 @@ jQuery(document).ready(function () {
     }
     
     $('body').css('height', config.height+'px');
+    console.log(config.height)
     
     // Listen for the actual scroll event
     $(window).on('scroll resize', function(e) {

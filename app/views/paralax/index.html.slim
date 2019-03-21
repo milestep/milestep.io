@@ -58,14 +58,16 @@
   div.perfect-circle
 
   div.content-container.scroll
-    div#content-page-1
+    div#content-page-1 name="home"
       img alt="" src=image_path("paralax/sprites/text.png")
       div.text
         | Software company, provides full-cyrcle development services
       button.lets-chat-btn let's chat
-    div#content-page-2
-    div#content-page-3
-    div#content-page-4
+    div#content-page-2 name="about-us"
+      div.number 2
+    div#content-page-3 name="services"
+      = render 'services'
+    div#content-page-4 name="portfolio"
       = render 'portfolio'
     div#content-page-5 name="team"
       = render 'team'
