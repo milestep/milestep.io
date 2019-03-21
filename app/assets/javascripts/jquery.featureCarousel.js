@@ -651,10 +651,10 @@
             initiateMove(false,(shortest*-1));
           } else {
             initiateMove(true,shortest);
-          }
-        }
+          };
+        };
       });
-    }
+    };
     
     /****************
      PUBLIC FUNCTIONS 

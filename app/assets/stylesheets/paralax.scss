@@ -118,15 +118,15 @@ body {overflow-x: hidden;}
 
   //scroll content pages
   @for $i from 0 through $number-of-pages {
-    .content-page-#{$i} {
+    #content-page-#{$i} {
       z-index: $content-layer;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(($i - 1) * 50, 0, 0, .1);
+      // background-color: rgba(($i - 1) * 50, 0, 0, .1);
     }
   }
 
-  .content-page-1 {
+  #content-page-1 {
     img {
       margin-left: 25.7vw;
       margin-top: 39vh;
@@ -166,18 +166,22 @@ body {overflow-x: hidden;}
     }
   }
 
-  .content-page-2 {
+  #content-page-2 {
     // background-color: purple;
   }
 
-  .content-page-5 {
+  #content-page-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .carousel-container {
       position:relative;
-      width:960px;
+      width:80vw;
     }
     #carousel {
-      height:280px;
-      width:960px;
+      height:61vh;
+      width:80vw;
       position:relative;
       margin-bottom:0.5em;
       font-size:12px;
@@ -188,18 +192,14 @@ body {overflow-x: hidden;}
     }
     .carousel-feature {
       position:absolute;
-      top:-1000px;
-      left:-1000px;
-      border:2px solid #5d5d5d;
       cursor:pointer;
     }
     .carousel-feature .carousel-caption {
-      position:relative;
+      position:inherit;
       bottom:0;
+      left: 0;
       width:100%;
-      background-color:#000;
-      margin-top: -65px;
-      margin-left: -60px;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     .carousel-feature .carousel-caption p {
       margin:0;
@@ -210,8 +210,6 @@ body {overflow-x: hidden;}
     .tracker-summation-container {
       position:absolute;
       color:white;
-      right:48px;
-      top:230px;
       padding:3px;
       margin:3px;
       background-color:#000;
@@ -228,11 +226,9 @@ body {overflow-x: hidden;}
       list-style:none;
     }
     .tracker-individual-container .tracker-individual-blip {
-      margin:0 3px;
-      padding:0 3px;
+      padding:0 6px;
       color:white;
       text-align:center;
-      background-color:#DDD;
     }
     .tracker-individual-container .tracker-individual-blip-selected {
       color:white;
@@ -423,8 +419,6 @@ body {overflow-x: hidden;}
     bottom: 5px;
     left: 5px;
     z-index: 99;
-    color: #565;
-    opacity: 0.5;
   }
 
   .number {

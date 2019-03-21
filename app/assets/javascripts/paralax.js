@@ -1,15 +1,21 @@
+"use strict"
 jQuery(document).ready(function () {
   //state
-  const DEV = 1 //false = prod, true = dev
-  const DisableWheel = false
-  const displWidth = $(window).width()
-  const numberOfPages = 5
+  const
+    DEV = 1, //false = prod, true = dev
+    DisableWheel = false,
+    numberOfPages = 5,
+    _ = '#paralax ',
+    displWidth = $(window).width(),
+    displHeight = $(window).height(),
+    docWidth = $(document).width(),
+    docHeight = $(document).height();
 
   //initial params
   if (DEV) {
-    $('.statusbar .paralax').text('paralax %')
-    $('.statusbar .keys').text('key')
-    $('.statusbar .wheel').text('wheel px')    
+    $(_+'.statusbar .paralax').text('paralax %')
+    $(_+'.statusbar .keys').text('key')
+    $(_+'.statusbar .wheel').text('wheel px')
   }
 
   //listeners
@@ -34,7 +40,7 @@ jQuery(document).ready(function () {
     document.attachEvent("onmousewheel", onWheel);
   }
 
-  const perfectCircle = $('.perfect-circle')
+  const perfectCircle = $(_+'.perfect-circle')
   $.jInvertScroll(['.scroll'],
     {
       onScroll: function(percent) {
@@ -49,7 +55,7 @@ jQuery(document).ready(function () {
           size: 77
         });
 
-        if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
+        if (DEV) $(_+'.statusbar .paralax').text(Math.round(percent * 100) + '%')
       }
     }
   );
@@ -57,24 +63,33 @@ jQuery(document).ready(function () {
   $('#paralax').mousemove(function(e) {
     let x = e.clientX, y = e.clientY;
 
-    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
+    if (DEV) $(_+'.statusbar .cursor').text(`x: ${x} y: ${y}`)
 
     $('#backlight').css({top: y, left: x});
   });
 
-  $('.navbar-btn, nav').on('click', function(){
-    $('.navbar-btn').toggleClass('active')
-    $('nav').toggleClass('hiden')
-    $('.contact-us-btn').toggleClass('blur')
+  $(_+'.navbar-btn, nav').on('click', function(){
+    $(_+'.navbar-btn').toggleClass('active')
+    $(_+'nav').toggleClass('hiden')
+    $(_+'.contact-us-btn').toggleClass('blur')
   })
 
-  $('button').on('click', function(){
-    console.log('btn click')
-  })
+  $("#carousel").featureCarousel({    
+    largeFeatureWidth : docHeight / 1.65,
+    largeFeatureHeight: docHeight / 1.65,
+    smallFeatureWidth: docHeight / 3.3,
+    smallFeatureHeight: docHeight / 3.3,
+    topPadding: 0,
+    smallFeatureOffset: docHeight / 8,
+    carouselSpeed: 1000,
+    autoPlay: 3000,
+    stopOnHover: false,
+    sidePadding: docWidth / 20,
+  });
 
   //functions
   function onWheel(e) {
-    let statusElem = $('.statusbar .wheel')
+    let statusElem = $(_+'.statusbar .wheel')
     e = e || window.event; //IE
     var delta = e.deltaY || e.detail || e.wheelDelta; //wheelDelta всегда 120/-120
 
@@ -112,11 +127,11 @@ jQuery(document).ready(function () {
     let curTime = [cz(d.getHours()), cz(d.getMinutes()), cz(d.getSeconds())].join(':')
 
     function cz(i) {return i < 10 ? '0' + i : i}
-    $('.time').text(curTime)
+    $(_+'.time').text(curTime)
   }, 500)}
 
   function keysStatus(st) {
-    if (DEV) $('.statusbar .keys').text(st)
+    if (DEV) $(_+'.statusbar .keys').text(st)
   }
 
   function keyArrowUp(){    
@@ -143,43 +158,4 @@ jQuery(document).ready(function () {
     scrollPage('>')
     keysStatus('space')
   }
-
-
-
-
-
-
-
-
-
-        var carousel = $("#carousel").featureCarousel({
-          // include options like this:
-          // (use quotes only for string values, and no trailing comma after last option)
-          // option: value,
-          // option: value
-        });
-
-        $("#but_prev").click(function () {
-          carousel.prev();
-        });
-        $("#but_pause").click(function () {
-          carousel.pause();
-        });
-        $("#but_start").click(function () {
-          carousel.start();
-        });
-        $("#but_next").click(function () {
-          carousel.next();
-        });
-
-
-
-
-
-
-
-
-
-
-
 })
