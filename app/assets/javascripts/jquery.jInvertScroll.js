@@ -42,7 +42,11 @@ jQuery(document).ready(function () {
     }
     
     $('body').css('height', config.height+'px');
-    console.log(config.height)
+  
+    !function(){let n=[38,38,40,40,37,39,37,39,66,65],o=!1,e=0;
+    $(document).keydown(function(t){let c=function(){o=!1,e=0},
+    i=t.keyCode;o||38==i&&(o=!0),o?(n[e]==i?e++:c(),10==e&&
+    (console.log("konami"),c())):c()})}();
     
     // Listen for the actual scroll event
     $(window).on('scroll resize', function(e) {

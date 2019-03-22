@@ -6,32 +6,35 @@
     div.wheel
     div.cursor
 
+  div.perfect-circle
+  div.arrow-right
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
   div.navbar-btn
     span
+
   nav.hiden
     ul
       li
-        a Home
+        a href="#an-1" Home
       li
-        a About us
+        a href="#an-2" About us
       li
-        a Services
+        a href="#an-3" Services
       li 
-        a href="#" Portfolio
+        a href="#an-4" Portfolio
       li
-        a href="#team" Team
+        a href="#an-5" Team
       li
-        a Approach
+        a href="#an-6" Approach
       li
-        a Contact us
+        a href="#an-7" Contact us
 
   header
-    img.main-logo alt="" src=image_path("paralax/main-logo.svg")
+    img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
     button.contact-us-btn contact us
 
   div.sprites
     div#backlight
-
     div.layer-0.scroll
       img alt="" src=image_path("paralax/sprites/bg.png")
     div.layer-1.scroll
@@ -51,23 +54,21 @@
     div.layer-9.scroll
       img alt="" src=image_path("paralax/sprites/big-rocks-4.png")
 
-    / - for item in 1..11
-    /   .[class="layer-#{item} scroll"]
-    /     img alt="" src=image_path("paralax/sprites/#{item}.png")
-
-  div.perfect-circle
-
   div.content-container.scroll
-    div#content-page-1 name="home"
+    div.content-page-1#an-1 name="home"
       img alt="" src=image_path("paralax/sprites/text.png")
       div.text
         | Software company, provides full-cyrcle development services
       button.lets-chat-btn let's chat
-    div#content-page-2 name="about-us"
+    div.content-page-2#an-2 name="about-us"
       div.number 2
-    div#content-page-3 name="services"
+    div.content-page-3#an-3 name="services"
       = render 'services'
-    div#content-page-4 name="portfolio"
+    div.content-page-4#an-4 name="portfolio"
       = render 'portfolio'
-    div#content-page-5 name="team"
+    div.content-page-5#an-5 name="team"
       = render 'team'
+    div.content-page-6#an-6 name="approach"
+      div.number 6
+    div.content-page-7#an-7 name="contact-us"
+      div.number 7

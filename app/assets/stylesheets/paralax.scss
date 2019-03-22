@@ -3,7 +3,7 @@ body {overflow-x: hidden;}
 #paralax{
   //state
   $number-of-layers: 11;
-  $number-of-pages: 5;
+  $number-of-pages: 7;
   $content-layer: 12;
   $nav-layer: 99;
   $backlight-radius: 20vw;
@@ -103,7 +103,7 @@ body {overflow-x: hidden;}
   }
 
   .layer-9 {
-    width: ($number-of-pages * 100%) * 1.1;
+    width: ($number-of-pages * 100%) * 1;
     img {
       position: inherit;      
       height: 16vh;
@@ -113,21 +113,22 @@ body {overflow-x: hidden;}
   }
 
   .content-container {
+    height: 100vh;
+    width: ($number-of-pages * 100%) * 1;
     z-index: $content-layer;
     display: flex;
   }
 
   //scroll content pages
   @for $i from 0 through $number-of-pages {
-    #content-page-#{$i} {
+    .content-page-#{$i} {
       z-index: $content-layer;
       width: 100vw;
       height: 100vh;
-      // background-color: rgba(($i - 1) * 50, 0, 0, .1);
     }
   }
 
-  #content-page-1 {
+  .content-page-1 {
     img {
       margin-left: 25.7vw;
       margin-top: 39vh;
@@ -167,15 +168,14 @@ body {overflow-x: hidden;}
     }
   }
 
-  #content-page-2 {
-    background-color: purple;
+  .content-page-2 {
+    // background-color: purple;
   }
 
-  #content-page-3 {
+  .content-page-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     .content {
       display: flex;
@@ -200,18 +200,18 @@ body {overflow-x: hidden;}
     }
   }
 
-  #content-page-4 {
-    background-color: purple;
+  .content-page-4 {
+    // background-color: purple;
   }
 
-  #content-page-5 {
+  .content-page-5 {
     display: flex;
     justify-content: center;
     align-items: center;
 
     .our-team {
       position: absolute;
-      top: -8vh;
+      top: -10vh;
       left: 26vw;
       width: 18vw;
       height: 12vh;
@@ -222,11 +222,11 @@ body {overflow-x: hidden;}
 
       p {
         position: absolute;
-        margin: -10px 0 0 -10px;
-        font-family: Roboto;
+        margin: -14px 0 0 -14px;
+        font-family: "Roboto-bold";
         font-style: normal;
         font-weight: 900;
-        font-size: 55px;
+        font-size: 50px;
         line-height: 52px;
         letter-spacing: 0.07em;
         text-transform: uppercase;
@@ -262,20 +262,23 @@ body {overflow-x: hidden;}
       background-color: rgba(0, 0, 0, 0);
     }
     .carousel-feature .carousel-caption {
-      font-family: Avenir Next Cyr;
+      font-family: "Roboto";
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+      font-style: normal;
 
       p:first-child {
         font-size: 14px;
         line-height: 19px;
-        color: rgba(255, 255, 255, 0.4);        
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 500;
       }
       p:last-child {
         font-size: 22px;
         line-height: 30px;
         color: #FFFFFF;
+        font-weight: bold;
       }
     }
     //carousel navigation
@@ -337,6 +340,14 @@ body {overflow-x: hidden;}
     }
   }
 
+  .content-page-6 {
+    // background-color: purple;
+  }
+
+  .content-page-7 {
+    // background-color: purple;
+  }
+
   //header
   header {
     position: fixed;
@@ -362,7 +373,8 @@ body {overflow-x: hidden;}
     border-radius: 35px;
     text-transform: uppercase;    
     cursor: pointer;
-    transition: filter .5s;
+    filter: blur(0px);
+    transition: filter 1s;
     transition: background-color .3s;
   }
 
@@ -372,40 +384,6 @@ body {overflow-x: hidden;}
   }
 
   //navbar
-  nav {
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    width: 362px;
-    background-color: rgba(50, 50, 50, 0.5);
-    z-index: $nav-layer;
-    transition: 1s;
-
-    ul {
-      list-style-type: none;
-      text-transform: uppercase;
-      margin-top: 25vh;
-      margin-left: 75px;
-      line-height: 300%;
-    }
-
-    li a {
-      color: #555;
-      cursor: pointer;
-    }
-
-    li a:hover {
-      color: #FFF;      
-      text-decoration: none;
-    }
-  }
-
-  nav.hiden {
-    position: fixed;
-    right: -362px;
-    transition: 1s;
-  }
-
   .navbar-btn {
     position: fixed;
     right: 0;
@@ -492,12 +470,82 @@ body {overflow-x: hidden;}
     content: "";
   }
 
+  nav {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 362px;
+    background-color: rgba(50, 50, 50, 0.5);
+    z-index: $nav-layer;
+    transition: 1s;
+
+    ul {
+      list-style-type: none;
+      text-transform: uppercase;
+      margin-top: 25vh;
+      margin-left: 75px;
+      line-height: 300%;
+    }
+
+    li a {
+      color: #555;
+      cursor: pointer;
+    }
+
+    li a:hover {
+      color: #FFF;      
+      text-decoration: none;
+    }
+  }
+
+  nav.hiden {
+    position: fixed;
+    right: -362px;
+    transition: 1s;
+  }
+
+  .arrow-right {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    height: 100vh;
+    width: 130px;
+    z-index: $nav-layer;
+    cursor: pointer;
+    img {
+      animation-name: opacity-pulse;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      opacity: 0;
+      animation-delay: 2s;
+      transition: opacity .3s;
+    }
+  }
+
+  .arrow-right:hover {
+    img {
+      opacity: 1;
+      animation: none;
+      transition: opacity .3s;
+    }
+  }
+
+  @keyframes opacity-pulse {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
   //circular-progress
   .perfect-circle {
     position: fixed;
     z-index: 99;
     right: 50px;
     bottom: 30px;
+    filter: blur(0px);
+    transition: filter 1s;
   }
 
   //other
@@ -536,13 +584,13 @@ body {overflow-x: hidden;}
 
   //blur
   .blur {
-    filter: blur(2px);
-    transition: filter .5s;
+    filter: blur(5px);
+    transition: filter 1s;
   }
 }
 
 //scrollbar
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 0px; }
 ::-webkit-scrollbar-button { background-color: #666; height: 10px; }
 ::-webkit-scrollbar-track { background-color: #646464; }
 ::-webkit-scrollbar-track-piece { background-color: #000; }
