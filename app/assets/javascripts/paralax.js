@@ -9,13 +9,6 @@ jQuery(document).ready(function () {
     SCROLL_SPEED = 1500;
   let screenRatio = 1; //default value
 
-  //initial params
-  if (DEV) {
-    $('.statusbar .paralax').text('paralax %')
-    $('.statusbar .keys').text('key')
-    $('.statusbar .wheel').text('wheel px')
-  }
-
   //listeners
   $('#paralax').ready(function(){
     screenRatio = $(document).height() - $(window).height();
@@ -25,12 +18,14 @@ jQuery(document).ready(function () {
     $('.navbar-btn').removeClass('active');
     $('nav').addClass('hiden');
     $('.contact-us-btn, .perfect-circle').removeClass('blur');
-    $('.arrow-right').removeClass('hide');
-  })
+    $('.arrow-left').removeClass('hide');
+  }) //an-1, an-2
 
-  $('nav a').on('click', function (e) {
+  $('nav li').on('click', function (e) {
+    console.log(this)
     e.preventDefault();
-    let pos = (1 / (NUMBER_OF_PAGES - 1)) * ($($(this).attr('href')).attr('id').substring(3) - 1);
+    let pos = (1 / (NUMBER_OF_PAGES - 1)) * 
+              ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
     console.log(NUMBER_OF_PAGES)
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
   });
@@ -89,7 +84,7 @@ jQuery(document).ready(function () {
     $('.navbar-btn').toggleClass('active');
     $('nav').toggleClass('hiden');
     $('.contact-us-btn, .perfect-circle').toggleClass('blur');
-    $('.arrow-right').toggleClass('hide');
+    $('.arrow-left').toggleClass('hide');
   })
 
   $("#carousel").featureCarousel({    
@@ -107,8 +102,8 @@ jQuery(document).ready(function () {
     // captionBelow: false
   });
 
-  $('.arrow-right').on('click', function(){    
-    scrollPage('>')
+  $('.arrow-left').on('click', function(){    
+    scrollPage('<')
   })
 
   //functions
@@ -132,7 +127,7 @@ jQuery(document).ready(function () {
 
           arrowHide(++i, direction);
 
-          return (direction == '>') ?
+          return (direction == '<') ?
             screenRatio*(curPos+step) + 1:
             screenRatio*(curPos-step) + 1
         }
@@ -144,13 +139,16 @@ jQuery(document).ready(function () {
   }
 
   function arrowHide(curIndex, direction) {
-    let curPage = (direction == '>') ?
+    let curPage = (direction == '<') ?
                     curIndex + 1:
                     curIndex - 1;
 
+    $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
+
+    if (DEV) $('.cur-page').text(`current page: ${curPage}`)
     return (curPage >= (NUMBER_OF_PAGES)) ?
-      $('.arrow-right').addClass('hide') :
-      $('.arrow-right').removeClass('hide')
+      $('.arrow-left').addClass('hide') :
+      $('.arrow-left').removeClass('hide')
   }
 
   if (DEV) {setInterval(function(){

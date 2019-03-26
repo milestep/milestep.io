@@ -5,9 +5,10 @@
     div.keys
     div.wheel
     div.cursor
+    div.cur-page
 
   div.perfect-circle
-  div.arrow-right
+  div.arrow-left
     img alt="arrow" src=image_path("paralax/arrow-right.svg")
   div.navbar-btn
     span
@@ -55,20 +56,20 @@
       img alt="" src=image_path("paralax/sprites/big-rocks-4.png")
 
   div.content-container.scroll
+    div.content-page-7#an-7 name="contact-us"
+      = render 'contact-us'
+    div.content-page-6#an-6 name="approach"
+      div.number 6
+    div.content-page-5#an-5 name="team"
+      = render 'team'
+    div.content-page-4#an-4 name="portfolio"
+      = render 'portfolio'
+    div.content-page-3#an-3 name="services"
+      = render 'services'      
+    div.content-page-2#an-2 name="about-us"
+      div.number 2
     div.content-page-1#an-1 name="home"
       img alt="" src=image_path("paralax/sprites/text.png")
       div.text
         | Software company, provides full-cyrcle development services
       button.lets-chat-btn let's chat
-    div.content-page-2#an-2 name="about-us"
-      div.number 2
-    div.content-page-3#an-3 name="services"
-      = render 'services'
-    div.content-page-4#an-4 name="portfolio"
-      = render 'portfolio'
-    div.content-page-5#an-5 name="team"
-      = render 'team'
-    div.content-page-6#an-6 name="approach"
-      div.number 6
-    div.content-page-7#an-7 name="contact-us"
-      div.number 7
