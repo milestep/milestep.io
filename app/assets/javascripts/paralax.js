@@ -5,14 +5,27 @@ jQuery(document).ready(function () {
     DEV = 1, //false = prod, true = dev
     DISABLE_WEEL = false,
     NUMBER_OF_PAGES = 7,
-    DISPL_WIDTH = $(window).width(),
     SCROLL_SPEED = 1500;
   let screenRatio = 1; //default value
 
   //listeners
+  $(window).scroll(function(){
+    if(currentPage() == 5){
+      $('.content-page-4 .title').removeClass('mini')
+    } else {
+      $('.content-page-4 .title').addClass('mini')
+    }
+  });
+
   $('#paralax').ready(function() {
     screenRatio = $(document).height() - $(window).height();
-  })
+  }).mousemove(function(e) {
+    let x = e.clientX, y = e.clientY;
+
+    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
+
+    $('#backlight').css({top: y, left: x});
+  });
 
   $('#an-1, #an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
     $('.navbar-btn').removeClass('active');
@@ -75,17 +88,10 @@ jQuery(document).ready(function () {
         });
 
         if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
+        currentPage();
       }
     }
   );
-
-  $('#paralax').mousemove(function(e) {
-    let x = e.clientX, y = e.clientY;
-
-    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
-
-    $('#backlight').css({top: y, left: x});
-  });
 
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
@@ -105,7 +111,7 @@ jQuery(document).ready(function () {
     autoPlay: 3000,
     stopOnHover: false,
     sidePadding: $(window).width() / 20,
-    trackerSummation: !!DEV
+    trackerSummation: !!DEV,
     // captionBelow: false
   });
 
@@ -113,7 +119,14 @@ jQuery(document).ready(function () {
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 1,
+    appendArrows: $('.carousel-nav-btns'),
+    appendDots: $('.carousel-nav-btns'),
+    focusOnSelect: true,
+    lazyLoad: 'ondemand', //Accepts 'ondemand' or 'progressive'
+    swipeToSlide: true,
+    zIndex: 99,
+    customPaging: function(_, i) { return ++i },
   });
 
   $('.arrow-left').on('click', function(){    
@@ -121,6 +134,16 @@ jQuery(document).ready(function () {
   })
 
   //functions
+  function currentPage() {
+    let curScroll = $(window).scrollTop() + 1;
+    for (let i = 0; i < NUMBER_OF_PAGES; i++) {
+      if (Math.ceil($(window).width() * i) <= curScroll && curScroll < Math.ceil($(window).width() * (i + 1))) {
+        if (DEV) $('.cur-page').text(`current page: ${++i}`);
+        return ++i;
+      }
+    }
+  }
+
   function onWheel(e) {
     let statusElem = $('.statusbar .wheel')
     e = e || window.event; //IE
@@ -132,35 +155,24 @@ jQuery(document).ready(function () {
 
   function scrollPage(direction) {
     function getPos() {
-      let curScroll = $(window).scrollTop() + 1;
       let step = 1 / (NUMBER_OF_PAGES - 1);
+      let curPos = step * (currentPage() - 2);
 
-      for (let i = 0; i < NUMBER_OF_PAGES; i++) {
-        if (Math.ceil(DISPL_WIDTH * i) <= curScroll && curScroll < Math.ceil(DISPL_WIDTH * (i + 1))) {
-          let curPos = (1 / (NUMBER_OF_PAGES - 1)) * i;
+      arrowHide();
 
-          arrowHide(++i, direction);
-
-          return (direction == '<') ?
-            screenRatio*(curPos+step) + 1:
-            screenRatio*(curPos-step) + 1
-        }
-      }
+      return (direction == '<') ?
+        screenRatio*(curPos+step) + 1:
+        screenRatio*(curPos-step) + 1
     }
+
     $("html:not(:animated),body:not(:animated)").animate({
       scrollTop: getPos()
     }, 500);
   }
 
-  function arrowHide(curIndex, direction) {
-    let curPage = (direction == '<') ?
-                    curIndex + 1:
-                    curIndex - 1;
-
+  function arrowHide() {
     $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
-
-    if (DEV) $('.cur-page').text(`current page: ${curPage}`)
-    return (curPage >= (NUMBER_OF_PAGES)) ?
+    return (currentPage() >= (NUMBER_OF_PAGES)) ?
       $('.arrow-left').addClass('hide') :
       $('.arrow-left').removeClass('hide')
   }
