@@ -19,103 +19,108 @@ body {overflow-x: hidden;}
   }
 
   //layers \ sprites
-  .sprites {
-    position: inherit;
-  }
-
   @for $i from 0 through $number-of-layers {
     .layer-#{$i} {
       z-index: $i;
     }
   }
 
-  .layer-0 {
-    width: ($number-of-pages * 100%) * 0.3;
-    img {
-      position: inherit;
-      height: 100vh;
-      margin-left: 75vw;
-      opacity: .6;
-    }
-  }
+  div.sprites {
+    position: inherit;
 
-  .layer-1 {
-    width: ($number-of-pages * 100%) * 0.8;
-    img {
-      position: inherit;
-      height: 15vh;
-      margin-left: 485.5vw;
-      margin-top: 65vh;
+    .layer-0 {
+      width: ($number-of-pages * 100%) * 0.3;
+      img:first-child {
+        position: inherit;
+        height: 100vh;
+        margin-left: 75vw;
+        opacity: .6;
+      }
+      img:last-child {
+        position: inherit;
+        height: 100vh;
+        opacity: .6;
+      }
     }
-  }
 
-  .layer-2 {
-    width: ($number-of-pages * 100%) * 1.1;
-    img {
-      position: inherit;
-      height: 32vh;
-      margin-left: 666vw;
-      margin-top: 75vh;
+    .layer-1 {
+      width: ($number-of-pages * 100%) * 0.8;
+      img {
+        position: inherit;
+        height: 15vh;
+        margin-left: 485.5vw;
+        margin-top: 65vh;
+      }
     }
-  }
 
-  .layer-3 {
-    width: ($number-of-pages * 100%) * 1;
-    img {
-      position: inherit;
-      height: 31vh;
-      margin-left: 610vw;
-      margin-top: 65vh;
+    .layer-2 {
+      width: ($number-of-pages * 100%) * 1.1;
+      img {
+        position: inherit;
+        height: 32vh;
+        margin-left: 666vw;
+        margin-top: 75vh;
+      }
     }
-  }
 
-  .layer-4 {
-    width: ($number-of-pages * 100%) * 0.9;
-    img {
-      position: inherit;
-      height: 61vh;
-      margin-left: 538vw;
-      margin-top: 21vh;
+    .layer-3 {
+      width: ($number-of-pages * 100%) * 1;
+      img {
+        position: inherit;
+        height: 31vh;
+        margin-left: 610vw;
+        margin-top: 65vh;
+      }
     }
-  }
 
-  .layer-6 {
-    width: ($number-of-pages * 100%) * 2;
-    img {
-      position: inherit;      
-      height: 6vh;
-      margin-left: 1329vw;
-      margin-top: 69vh;
+    .layer-4 {
+      width: ($number-of-pages * 100%) * 0.9;
+      img {
+        position: inherit;
+        height: 61vh;
+        margin-left: 538vw;
+        margin-top: 21vh;
+      }
     }
-  }
 
-  .layer-7 {
-    width: ($number-of-pages * 100%) * 2.3;
-    img {
-      position: inherit;      
-      height: 21vh;
-      margin-left: 1573vw;
-      margin-top: 70vh;
+    .layer-6 {
+      width: ($number-of-pages * 100%) * 2;
+      img {
+        position: inherit;      
+        height: 6vh;
+        margin-left: 1329vw;
+        margin-top: 69vh;
+      }
     }
-  }
 
-  .layer-8 {
-    width: ($number-of-pages * 100%) * 2.6;
-    img {
-      position: inherit;      
-      height: 9vh;
-      margin-left: 1793vw;
-      margin-top: 68vh;
+    .layer-7 {
+      width: ($number-of-pages * 100%) * 2.3;
+      img {
+        position: inherit;      
+        height: 21vh;
+        margin-left: 1573vw;
+        margin-top: 70vh;
+      }
     }
-  }
 
-  .layer-9 {
-    width: ($number-of-pages * 100%) * 2.9;
-    img {
-      position: inherit;      
-      height: 16vh;
-      margin-left: 1952vw;
-      margin-top: 18vh;
+    .layer-8 {
+      width: ($number-of-pages * 100%) * 2.6;
+      img {
+        position: inherit;      
+        height: 9vh;
+        margin-left: 1793vw;
+        margin-top: 68vh;
+      }
+    }
+
+    .layer-9 {
+      width: ($number-of-pages * 100%) * 2.9;
+      img {
+        position: inherit;      
+        height: 16vh;
+        margin-left: 1952vw;
+        margin-top: 18vh;
+      }
     }
   }
 
@@ -176,7 +181,7 @@ body {overflow-x: hidden;}
   }
 
   .content-page-2 {
-    // background-color: purple;
+    background-color: rgba(50,50,50,.3);
   }
 
   .content-page-3 {
@@ -207,10 +212,44 @@ body {overflow-x: hidden;}
     }
   }
 
+  //portfolio
   .content-page-4 {
-    // background-color: purple;
+    background-color: rgba(50,50,50,.3);
+
+    // carousel portfolio
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
   }
 
+  //team
   .content-page-5 {
     display: flex;
     justify-content: center;
@@ -241,6 +280,8 @@ body {overflow-x: hidden;}
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
       }
     }
+
+    // carousel team
     .carousel-container {
       position: relative;
       width: 80vw;
@@ -259,6 +300,7 @@ body {overflow-x: hidden;}
     .carousel-feature {
       position: absolute;
       cursor: pointer;
+      background: #000;
     }
     .carousel-feature .carousel-caption {
       position: inherit;
@@ -267,8 +309,7 @@ body {overflow-x: hidden;}
       width:100%;
       height: 5vh;
       background-color: rgba(0, 0, 0, 0);
-    }
-    .carousel-feature .carousel-caption {
+
       font-family: "Roboto";
       text-align: center;
       text-transform: uppercase;
@@ -348,7 +389,7 @@ body {overflow-x: hidden;}
   }
 
   .content-page-6 {
-    // background-color: purple;
+    background-color: rgba(50,50,50,.3);
   }
 
   .content-page-7 {
@@ -436,6 +477,7 @@ body {overflow-x: hidden;}
           div.include-files {
             width: 100%;
             margin-top: 1vh;
+            cursor: default;
 
             font-family: Roboto;
             font-style: normal;
@@ -449,10 +491,11 @@ body {overflow-x: hidden;}
 
           div.add-file-btn {
             position: absolute;
-            margin-top: -5vh;
+            margin-top: -5.3vh;
             margin-left: 42.5vw;
             cursor: pointer;
             transition: color .3s;
+            padding: 5px;
           }
 
           div.add-file-btn:hover {
@@ -507,7 +550,6 @@ body {overflow-x: hidden;}
             letter-spacing: 0.07em;
 
             color: rgba(255, 255, 255, 0.3);
-
           }
         }
       }

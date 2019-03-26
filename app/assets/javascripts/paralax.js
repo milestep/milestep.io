@@ -10,16 +10,23 @@ jQuery(document).ready(function () {
   let screenRatio = 1; //default value
 
   //listeners
-  $('#paralax').ready(function(){
+  $('#paralax').ready(function() {
     screenRatio = $(document).height() - $(window).height();
   })
 
-  $('.content-container').on('click', function(){
+  $('#an-1, #an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
     $('.navbar-btn').removeClass('active');
     $('nav').addClass('hiden');
     $('.contact-us-btn, .perfect-circle').removeClass('blur');
     $('.arrow-left').removeClass('hide');
-  }) //an-1, an-2
+  })
+
+  $('#an-7').on('click', function() {
+    $('.navbar-btn').removeClass('active');
+    $('nav').addClass('hiden');
+    $('.contact-us-btn, .perfect-circle').removeClass('blur');
+    $('.arrow-left').addClass('hide');
+  })
 
   $('nav li').on('click', function (e) {
     console.log(this)
@@ -102,6 +109,13 @@ jQuery(document).ready(function () {
     // captionBelow: false
   });
 
+  $(".regular").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
   $('.arrow-left').on('click', function(){    
     scrollPage('<')
   })
@@ -165,13 +179,13 @@ jQuery(document).ready(function () {
 
   function keyArrowUp(e){
     e.preventDefault()
-    scrollPage('<')
+    scrollPage('>')
     keysStatus('up')
   }
 
   function keyArrowDown(e){
     e.preventDefault()
-    scrollPage('>')
+    scrollPage('<')
     keysStatus('down')
   }
 
@@ -189,7 +203,7 @@ jQuery(document).ready(function () {
 
   function keySpace(e){
     e.preventDefault()
-    scrollPage('>')
+    scrollPage('<')
     keysStatus('space')
   }
 })
