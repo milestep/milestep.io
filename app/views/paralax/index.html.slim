@@ -8,7 +8,9 @@
     div.cur-page
 
   div.perfect-circle
-  div.arrow-left
+  div.arrow.arrow-left
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
+  div.arrow.arrow-right
     img alt="arrow" src=image_path("paralax/arrow-right.svg")
   div.navbar-btn
     span
@@ -36,39 +38,52 @@
 
   div.sprites
     div#backlight
+
     div.layer-0.scroll
       img alt="" src=image_path("paralax/sprites/bg.png")
       img alt="" src=image_path("paralax/sprites/bg-left.png")
+
     div.layer-1.scroll
       img alt="" src=image_path("paralax/sprites/small-rocks-1.png")
+
     div.layer-2.scroll
-      img alt="" src=image_path("paralax/sprites/small-rocks-2.png")
+      img.limg-1 alt="" src=image_path("paralax/sprites/small-rocks-2.png")
+      img.limg-2 alt="" src=image_path("paralax/sprites/small-rocks-2.png")
+
     div.layer-3.scroll
-      img alt="" src=image_path("paralax/sprites/small-rocks-3.png")
+      img.limg-1 alt="" src=image_path("paralax/sprites/small-rocks-3.png")
+      img.limg-2 alt="" src=image_path("paralax/sprites/small-rocks-3.png")
+
     div.layer-4.scroll
       img alt="" src=image_path("paralax/sprites/cat.png")
+
     div.layer-6.scroll
       img alt="" src=image_path("paralax/sprites/small-rocks-4.png")
+
     div.layer-7.scroll
-      img alt="" src=image_path("paralax/sprites/big-rocks-1.png")
+      img.limg-1 alt="" src=image_path("paralax/sprites/big-rocks-1.png")
+      img.limg-2 alt="" src=image_path("paralax/sprites/big-rocks-2.png")
+
     div.layer-8.scroll
       img alt="" src=image_path("paralax/sprites/big-rocks-3.png")
+
     div.layer-9.scroll
-      img alt="" src=image_path("paralax/sprites/big-rocks-4.png")
+      img.limg-1 alt="" src=image_path("paralax/sprites/big-rocks-4.png")
+      img.limg-2 alt="" src=image_path("paralax/sprites/big-rocks-4.png")
 
   div.content-container.scroll
     div.content-page-7#an-7 name="contact-us"
       = render 'contact-us'
     div.content-page-6#an-6 name="approach"
-      div.number 6
+      = render 'approach'
     div.content-page-5#an-5 name="team"
       = render 'team'
     div.content-page-4#an-4 name="portfolio"
       = render 'portfolio'
     div.content-page-3#an-3 name="services"
-      = render 'services'      
+      = render 'services'
     div.content-page-2#an-2 name="about-us"
-      div.number 2
+      = render 'about-us'
     div.content-page-1#an-1 name="home"
       img alt="" src=image_path("paralax/sprites/text.png")
       div.text

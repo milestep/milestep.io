@@ -6,57 +6,33 @@ jQuery(document).ready(function () {
     DISABLE_WEEL = false,
     NUMBER_OF_PAGES = 7,
     SCROLL_SPEED = 1500;
-  let screenRatio = 1; //default value
+  let screenRatio = 1; //initial value
+  
+  hideArrows();
 
   //listeners
   $(window).scroll(function(){
-    if(currentPage() == 5){
+    if(currentPage() == 2) {
+      $('.sprites .layer-4 img').removeClass('hiden')
+    } else {
+      $('.sprites .layer-4 img').addClass('hiden')
+    }
+    if(currentPage() == 5) {
       $('.content-page-4 .title').removeClass('mini')
     } else {
       $('.content-page-4 .title').addClass('mini')
     }
   });
 
-  $('#paralax').ready(function() {
-    screenRatio = $(document).height() - $(window).height();
-  }).mousemove(function(e) {
-    let x = e.clientX, y = e.clientY;
-
-    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
-
-    $('#backlight').css({top: y, left: x});
-  });
-
-  $('#an-1, #an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
-    $('.navbar-btn').removeClass('active');
-    $('nav').addClass('hiden');
-    $('.contact-us-btn, .perfect-circle').removeClass('blur');
-    $('.arrow-left').removeClass('hide');
-  })
-
-  $('#an-7').on('click', function() {
-    $('.navbar-btn').removeClass('active');
-    $('nav').addClass('hiden');
-    $('.contact-us-btn, .perfect-circle').removeClass('blur');
-    $('.arrow-left').addClass('hide');
-  })
-
-  $('nav li').on('click', function (e) {
-    console.log(this)
-    e.preventDefault();
-    let pos = (1 / (NUMBER_OF_PAGES - 1)) * 
-              ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
-    console.log(NUMBER_OF_PAGES)
-    $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
-  });
-
   document.onkeydown = function(e) {
+    let pressKey = new Keys(e);
+
     switch (e.keyCode) {
-      case 38: keyArrowUp(e); break;
-      case 40: keyArrowDown(e); break;
-      case 37: keyArrowLeft(e); break;
-      case 39: keyArrowRight(e); break;
-      case 32: keySpace(e); break;
+      case 38: pressKey.arrowUp(); break;
+      case 40: pressKey.arrowDown(); break;
+      case 37: pressKey.arrowLeft(); break;
+      case 39: pressKey.arrowRight(); break;
+      case 32: pressKey.space(); break;
       default: keysStatus(e.keyCode)
     }
   }
@@ -71,33 +47,57 @@ jQuery(document).ready(function () {
     document.attachEvent("onmousewheel", onWheel);
   }
 
-  const perfectCircle = $('.perfect-circle')
-  $.jInvertScroll(['.scroll'],
-    {
-      height: $(window).width() * NUMBER_OF_PAGES,
-      onScroll: function(percent) {
-        perfectCircle.circleProgress({
-          value: percent,
-          animation: false,
-          fill: '#ff1e41',
-          emptyFill: 'rgba(0, 0, 0, .8)',
-          startAngle: Math.PI * 1.7,
-          thickness: 2,
-          lineCap: 'round',
-          size: 77
-        });
+  $('#paralax').ready(function() {
+    screenRatio = $(document).height() - $(window).height();
+  }).mousemove(function(e) {
+    let x = e.clientX, y = e.clientY;
+    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
+    $('#backlight').css({top: y, left: x});
+  });
 
-        if (DEV) $('.statusbar .paralax').text(Math.round(percent * 100) + '%')
-        currentPage();
-      }
-    }
-  );
+  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
+    $('.navbar-btn').removeClass('active');
+    $('nav').addClass('hiden');
+    $('.contact-us-btn, .perfect-circle').removeClass('blur');
+    $('.arrow-left').removeClass('hide');
+    $('.arrow-right').removeClass('hide');
+  })
+
+  $('#an-7').on('click', function() {
+    $('.navbar-btn').removeClass('active');
+    $('nav').addClass('hiden');
+    $('.contact-us-btn, .perfect-circle').removeClass('blur');
+    $('.arrow-left').addClass('hide');
+  })
+
+  $('#an-1').on('click', function() {
+    $('.navbar-btn').removeClass('active');
+    $('nav').addClass('hiden');
+    $('.contact-us-btn, .perfect-circle').removeClass('blur');
+    $('.arrow-right').addClass('hide');
+  })
+
+  $('nav li').on('click', function (e) {
+    e.preventDefault();
+    let pos = (1 / (NUMBER_OF_PAGES - 1)) * 
+              ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
+    $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
+  });
 
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
     $('nav').toggleClass('hiden');
     $('.contact-us-btn, .perfect-circle').toggleClass('blur');
+    $('.arrow-right').addClass('hide');
     $('.arrow-left').toggleClass('hide');
+  })
+
+  $('.arrow-left').on('click', function(){    
+    scrollPage('<')
+  })
+
+  $('.arrow-right').on('click', function(){    
+    scrollPage('>')
   })
 
   $("#carousel").featureCarousel({    
@@ -111,8 +111,7 @@ jQuery(document).ready(function () {
     autoPlay: 3000,
     stopOnHover: false,
     sidePadding: $(window).width() / 20,
-    trackerSummation: !!DEV,
-    // captionBelow: false
+    trackerSummation: !!DEV
   });
 
   $(".regular").slick({
@@ -129,9 +128,28 @@ jQuery(document).ready(function () {
     customPaging: function(_, i) { return ++i },
   });
 
-  $('.arrow-left').on('click', function(){    
-    scrollPage('<')
-  })
+  $.jInvertScroll(['.scroll'],
+    {
+      height: $(window).width() * NUMBER_OF_PAGES,
+      onScroll: function(percent) {
+        $('.perfect-circle').circleProgress({
+          value: percent,
+          animation: false,
+          fill: '#ff1e41',
+          emptyFill: 'rgba(0, 0, 0, .8)',
+          startAngle: Math.PI * 1.7,
+          thickness: 2,
+          lineCap: 'round',
+          size: 77
+        });
+
+        if (DEV) { $('.statusbar .paralax').text(Math.round(percent * 100) + '%') }
+
+        currentPage();
+        hideArrows();
+      }
+    }
+  );
 
   //functions
   function currentPage() {
@@ -158,8 +176,6 @@ jQuery(document).ready(function () {
       let step = 1 / (NUMBER_OF_PAGES - 1);
       let curPos = step * (currentPage() - 2);
 
-      arrowHide();
-
       return (direction == '<') ?
         screenRatio*(curPos+step) + 1:
         screenRatio*(curPos-step) + 1
@@ -170,11 +186,21 @@ jQuery(document).ready(function () {
     }, 500);
   }
 
-  function arrowHide() {
+  function hideArrows() {
     $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
-    return (currentPage() >= (NUMBER_OF_PAGES)) ?
-      $('.arrow-left').addClass('hide') :
+    $('.arrow-right').appendTo($('.arrow-right').parent());
+
+    if ((currentPage() - 1) >= (NUMBER_OF_PAGES)) {
+      $('.arrow-left').addClass('hide')
+    } else {
       $('.arrow-left').removeClass('hide')
+    }
+
+    if ((currentPage() - 1) <= 1) {
+      $('.arrow-right').addClass('hide')
+    } else {
+      $('.arrow-right').removeClass('hide')
+    }      
   }
 
   if (DEV) {setInterval(function(){
@@ -189,33 +215,33 @@ jQuery(document).ready(function () {
     if (DEV) $('.statusbar .keys').text(st)
   }
 
-  function keyArrowUp(e){
+  //classes
+  function Keys(e) {
     e.preventDefault()
-    scrollPage('>')
-    keysStatus('up')
-  }
 
-  function keyArrowDown(e){
-    e.preventDefault()
-    scrollPage('<')
-    keysStatus('down')
-  }
-
-  function keyArrowLeft(e){
-    e.preventDefault()
-    scrollPage('<')
-    keysStatus('left')
-  }
-
-  function keyArrowRight(e){
-    e.preventDefault()
-    scrollPage('>')
-    keysStatus('right')
-  }
-
-  function keySpace(e){
-    e.preventDefault()
-    scrollPage('<')
-    keysStatus('space')
+    this.arrowUp = function(e) {
+      scrollPage('>')
+      keysStatus('up')      
+    }
+    
+    this.arrowDown = function(e) {
+      scrollPage('<')
+      keysStatus('down')
+    }
+    
+    this.arrowLeft = function(e) {
+      scrollPage('<')
+      keysStatus('left')
+    }
+    
+    this.arrowRight = function(e) {
+      scrollPage('>')
+      keysStatus('right')
+    }
+    
+    this.space = function(e) {
+      scrollPage('<')
+      keysStatus('space')
+    }    
   }
 })
