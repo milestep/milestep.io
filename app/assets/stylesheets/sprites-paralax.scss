@@ -1,0 +1,232 @@
+@import "styles-config.scss";
+
+#paralax {
+  //layers \ sprites
+  @for $i from 0 through $number-of-layers {
+    .layer-#{$i} {
+      z-index: $i;
+    }
+  }
+
+  div.sprites {
+    position: inherit;
+
+    .layer-0 {
+      width: ($number-of-pages * 100%) * 0.3;
+      will-change: transform;
+
+      img:first-child {
+        position: inherit;
+        height: 100vh;
+        margin-left: 75vw;
+        opacity: .6;
+      }
+      img:last-child {
+        position: inherit;
+        height: 100vh;
+        opacity: .6;
+      }
+    }
+
+    .layer-1 {
+      width: ($number-of-pages * 100%) * 0.8;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 15vh;
+        margin-left: 485.5vw;
+        margin-top: 65vh;
+      }
+      img.limg-2 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 373.5vw;
+        margin-top: 13vh;
+      }
+    }
+
+    //kitten
+    .layer-2 {
+      width: ($number-of-pages * 100%) * 0.9;
+      will-change: transform;
+
+      img {
+        position: inherit;
+        height: 61vh;
+        margin-left: 538vw;
+        margin-top: 21vh;
+        transition: opacity 1s;
+      }
+
+      img.hiden {
+        opacity: 0;
+        transition: opacity 1s;
+      }
+    }
+
+    .layer-3 {
+      width: ($number-of-pages * 100%) * 1;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 31vh;
+        margin-left: 610vw;
+        margin-top: 65vh;
+      }
+
+      img.limg-2 {
+        position: inherit;
+        height: 31vh;
+        margin-left: 507vw;
+        margin-top: 15vh;
+      }
+
+      img.limg-3 {
+        position: inherit;
+        height: 7vh;
+        margin-left: 416.3vw;
+        margin-top: 61vh;
+      }
+    }
+
+    .layer-4 {
+      width: ($number-of-pages * 100%) * 1.1;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 32vh;
+        margin-left: 666vw;
+        margin-top: 75vh;
+      }
+
+      img.limg-2 {
+        position: inherit;
+        height: 20vh;
+        margin-left: 630vw;
+        margin-top: 65vh;
+        transform: rotate(-24deg);
+      }
+
+      img.limg-3 {
+        position: inherit;
+        height: 12vh;
+        margin-left: 531vw;
+        margin-top: 83vh;
+      }
+    }
+
+    .layer-5 {
+      width: ($number-of-pages * 100%) * 1.5;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 12vh;
+        margin-left: 710vw;
+        margin-top: 33vh;
+      }
+    }
+
+    .layer-6 {
+      width: ($number-of-pages * 100%) * 2;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 6vh;
+        margin-left: 1329vw;
+        margin-top: 69vh;
+      }
+
+      img.limg-2 {
+        position: inherit;
+        height: 7vh;
+        margin-left: 890vw;
+        margin-top: 77vh;
+      }
+    }
+
+    .layer-7 {
+      width: ($number-of-pages * 100%) * 2.3;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;
+        height: 21vh;
+        margin-left: 1573vw;
+        margin-top: 70vh;
+      }
+
+      img.limg-2 {
+        position: inherit;
+        height: 21vh;
+        margin-left: 1334vw;
+        margin-top: 70vh;
+      }
+
+      img.limg-3 {
+        position: inherit;
+        height: 5vh;
+        margin-left: 1094vw;
+        margin-top: 73vh;
+      }
+    }
+
+    .layer-8 {
+      width: ($number-of-pages * 100%) * 2.6;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;      
+        height: 9vh;
+        margin-left: 1793vw;
+        margin-top: 68vh;
+      }
+
+      img.limg-2 {
+        position: inherit;      
+        height: 13vh;
+        margin-left: 1154vw;
+        margin-top: 81vh;
+      }
+    }
+
+    .layer-9 {
+      width: ($number-of-pages * 100%) * 2.9;
+      will-change: transform;
+
+      img.limg-1 {
+        position: inherit;      
+        height: 16vh;
+        margin-left: 1952vw;
+        margin-top: 18vh;
+      }
+
+      img.limg-2 {
+        position: inherit;
+        height: 16vh;
+        margin-left: 1614vw;
+        margin-top: 17vh;
+        transform: rotate(139deg);
+      }
+
+      img.limg-3 {
+        position: inherit;      
+        height: 21vh;
+        margin-left: 1292vw;
+        margin-top: 55vh;
+      }
+
+      img.limg-4 {
+        position: inherit;
+        height: 21vh;
+        margin-left: 1366vw;
+        margin-top: 13vh;
+      }
+    }
+  }
+
+}

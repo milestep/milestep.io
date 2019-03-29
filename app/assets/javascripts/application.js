@@ -17,3 +17,9 @@
 //= require ckeditor/init
 //= require_tree .
 //= require serviceworker-companion
+
+//paralax.js use:
+//  jquery.js 3.1.0
+//  jquery.featureCarousel.js
+//  jquery.jInvertScroll.js
+//  jquery.slickCarousel.js

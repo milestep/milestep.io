@@ -1,17 +1,8 @@
 #paralax
-  div.statusbar
-    div.time
-    div.paralax
-    div.keys
-    div.wheel
-    div.cursor
-    div.cur-page
+  header
+    img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
+    button.contact-us-btn contact us
 
-  div.perfect-circle
-  div.arrow.arrow-left
-    img alt="arrow" src=image_path("paralax/arrow-right.svg")
-  div.arrow.arrow-right
-    img alt="arrow" src=image_path("paralax/arrow-right.svg")
   div.navbar-btn
     span
 
@@ -32,44 +23,7 @@
       li
         a href="#an-7" Contact us
 
-  header
-    img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
-    button.contact-us-btn contact us
-
-  div.sprites
-    div#backlight
-
-    div.layer-0.scroll
-      img alt="" src=image_path("paralax/sprites/bg.png")
-      img alt="" src=image_path("paralax/sprites/bg-left.png")
-
-    div.layer-1.scroll
-      img alt="" src=image_path("paralax/sprites/small-rocks-1.png")
-
-    div.layer-2.scroll
-      img.limg-1 alt="" src=image_path("paralax/sprites/small-rocks-2.png")
-      img.limg-2 alt="" src=image_path("paralax/sprites/small-rocks-2.png")
-
-    div.layer-3.scroll
-      img.limg-1 alt="" src=image_path("paralax/sprites/small-rocks-3.png")
-      img.limg-2 alt="" src=image_path("paralax/sprites/small-rocks-3.png")
-
-    div.layer-4.scroll
-      img alt="" src=image_path("paralax/sprites/cat.png")
-
-    div.layer-6.scroll
-      img alt="" src=image_path("paralax/sprites/small-rocks-4.png")
-
-    div.layer-7.scroll
-      img.limg-1 alt="" src=image_path("paralax/sprites/big-rocks-1.png")
-      img.limg-2 alt="" src=image_path("paralax/sprites/big-rocks-2.png")
-
-    div.layer-8.scroll
-      img alt="" src=image_path("paralax/sprites/big-rocks-3.png")
-
-    div.layer-9.scroll
-      img.limg-1 alt="" src=image_path("paralax/sprites/big-rocks-4.png")
-      img.limg-2 alt="" src=image_path("paralax/sprites/big-rocks-4.png")
+  = render 'sprites'
 
   div.content-container.scroll
     div.content-page-7#an-7 name="contact-us"
@@ -85,7 +39,19 @@
     div.content-page-2#an-2 name="about-us"
       = render 'about-us'
     div.content-page-1#an-1 name="home"
-      img alt="" src=image_path("paralax/sprites/text.png")
-      div.text
-        | Software company, provides full-cyrcle development services
-      button.lets-chat-btn let's chat
+      = render 'home'
+
+  div.perfect-circle
+
+  div.arrow.arrow-left
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
+  div.arrow.arrow-right
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
+    
+  div.statusbar
+    div.time
+    div.paralax
+    div.keys
+    div.wheel
+    div.cursor
+    div.cur-page

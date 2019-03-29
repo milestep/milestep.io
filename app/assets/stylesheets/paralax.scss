@@ -1,163 +1,13 @@
 body {overflow-x: hidden;}
+@import "styles-config.scss";
 
-#paralax{
-  //state
-  $number-of-layers: 11;
-  $number-of-pages: 7;
-  $content-layer: 12;
-  $nav-layer: 99;
-  $backlight-radius: 20vw;
-  $backlight-z-index: 10;
-
-  //default
+#paralax {
   color: #FFF;
   background-color: #000;
   height: 100%;
-  // margin-right: 0vw;
+  
   * {
     margin: unset;
-  }
-
-  //layers \ sprites
-  @for $i from 0 through $number-of-layers {
-    .layer-#{$i} {
-      z-index: $i;
-    }
-  }
-
-  div.sprites {
-    position: inherit;
-
-    .layer-0 {
-      width: ($number-of-pages * 100%) * 0.3;
-      img:first-child {
-        position: inherit;
-        height: 100vh;
-        margin-left: 75vw;
-        opacity: .6;
-      }
-      img:last-child {
-        position: inherit;
-        height: 100vh;
-        opacity: .6;
-      }
-    }
-
-    .layer-1 {
-      width: ($number-of-pages * 100%) * 0.8;
-      img {
-        position: inherit;
-        height: 15vh;
-        margin-left: 485.5vw;
-        margin-top: 65vh;
-      }
-    }
-
-    .layer-2 {
-      width: ($number-of-pages * 100%) * 1.1;
-      img.limg-1 {
-        position: inherit;
-        height: 32vh;
-        margin-left: 666vw;
-        margin-top: 75vh;
-      }
-
-      img.limg-2 {
-        position: inherit;
-        height: 20vh;
-        margin-left: 630vw;
-        margin-top: 65vh;
-        transform: rotate(-24deg);
-      }
-    }
-
-    .layer-3 {
-      width: ($number-of-pages * 100%) * 1;
-      img.limg-1 {
-        position: inherit;
-        height: 31vh;
-        margin-left: 610vw;
-        margin-top: 65vh;
-      }
-      img.limg-2 {
-        position: inherit;
-        height: 31vh;
-        margin-left: 507vw;
-        margin-top: 15vh;
-      }
-    }
-
-    //kitten
-    .layer-4 {
-      width: ($number-of-pages * 100%) * 0.9;
-
-      img {
-        position: inherit;
-        height: 61vh;
-        margin-left: 538vw;
-        margin-top: 21vh;
-        transition: opacity 1s;
-      }
-
-      img.hiden {
-        opacity: 0;
-        transition: opacity 1s;
-      }
-    }
-
-    .layer-6 {
-      width: ($number-of-pages * 100%) * 2;
-      img {
-        position: inherit;      
-        height: 6vh;
-        margin-left: 1329vw;
-        margin-top: 69vh;
-      }
-    }
-
-    .layer-7 {
-      width: ($number-of-pages * 100%) * 2.3;      
-      img.limg-1 {
-        position: inherit;      
-        height: 21vh;
-        margin-left: 1573vw;
-        margin-top: 70vh;
-      }
-
-      img.limg-2 {
-        position: inherit;      
-        height: 21vh;
-        margin-left: 1334vw;
-        margin-top: 70vh;
-      }
-    }
-
-    .layer-8 {
-      width: ($number-of-pages * 100%) * 2.6;
-      img {
-        position: inherit;      
-        height: 9vh;
-        margin-left: 1793vw;
-        margin-top: 68vh;
-      }
-    }
-
-    .layer-9 {
-      width: ($number-of-pages * 100%) * 2.9;
-      img.limg-1 {
-        position: inherit;      
-        height: 16vh;
-        margin-left: 1952vw;
-        margin-top: 18vh;
-      }
-      img.limg-2 {
-        position: inherit;      
-        height: 16vh;
-        margin-left: 1614vw;
-        margin-top: 17vh;
-        transform: rotate(139deg);
-      }
-    }
   }
 
   .content-container {
@@ -167,7 +17,7 @@ body {overflow-x: hidden;}
     display: flex;
   }
 
-  //scroll content pages
+  //*scroll content pages
   @for $i from 0 through $number-of-pages {
     .content-page-#{$i} {
       z-index: $content-layer;
@@ -176,6 +26,233 @@ body {overflow-x: hidden;}
     }
   }
 
+  //*header
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: $nav-layer - 1;
+
+    .main-logo {
+      margin: 33px 0 0 68px;
+      height: 7vh;
+    }
+  }
+
+  .contact-us-btn {
+    position: fixed;
+    width: 165px;
+    height: 41px;
+    right: 192px;
+    top: 44px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 35px;
+    text-transform: uppercase;    
+    cursor: pointer;
+    filter: blur(0px);
+    transition: filter 1s;
+    transition: background-color .3s;
+  }
+
+  .contact-us-btn:hover {
+    background-color: rgba(50,50,50,.5);
+    transition: background-color .3s;
+  }
+
+  //*navbar
+  .navbar-btn {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 110px;
+    width: 110px;
+    background-color: #F42B24;
+    z-index: $nav-layer + 1;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 0 0 0 20px;
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .navbar-btn:hover {
+    background-color: #B30C06;
+    transition: .5s;
+  }
+
+  .navbar-btn:active {
+    background-color: #F42B24;
+    transition: .1s;
+  }
+
+  .navbar-btn span {
+    transition: background 0s 0.3s;
+  }
+
+  .navbar-btn span::before,
+  .navbar-btn span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+  }
+
+  .navbar-btn span::before {
+    transition-property: top, transform;    
+    top: -10px;
+  }
+
+  .navbar-btn span::after {
+    transition-property: bottom, transform;
+    bottom: -10px;
+  }
+
+  //*state with opened navbar
+  .navbar-btn.active span {
+    background: none;
+  }
+
+  .navbar-btn.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .navbar-btn.active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .navbar-btn.active span::before,
+  .navbar-btn.active span::after {
+    transition-delay: 0s, 0.3s;
+  }
+
+  .navbar-btn span {
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 40px;
+    right: 40px;
+    height: 3px;
+    background: white;
+  }
+
+  .navbar-btn span::before,
+  .navbar-btn span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    content: "";
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+
+    height: 100vh;
+    width: 362px;
+    background: rgba(1, 0, 0, 0.7);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.25);
+    z-index: $nav-layer;
+    transition: 1s;
+    padding-right: 2vw;
+
+    ul {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 63px;
+      text-align: justify;
+      text-transform: uppercase;
+      list-style-type: none;
+    }
+
+    li {
+      cursor: pointer;
+    }
+
+    li a {      
+      color: #555;
+    }
+
+    li:hover a {
+      color: #FFF;      
+      text-decoration: none;
+    }
+  }
+
+  nav.hiden {
+    position: fixed;
+    right: -362px;
+    transition: 1s;
+  }
+
+  .arrow {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 130px;
+    z-index: $nav-layer;
+    cursor: pointer;
+    img {
+      animation-name: opacity-pulse;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      opacity: 0;
+      animation-delay: 2s;
+      transition: opacity ease-in-out .3s;
+    }
+  }
+
+  .arrow-left {
+    left: 0;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .arrow-right {
+    right: 0;
+    img {      
+      animation-delay: 2.3s;
+    }
+  }
+
+  .arrow:hover {
+    img {
+      opacity: 1;
+      animation: none;
+      transition: opacity .3s;
+    }
+  }
+
+  @keyframes opacity-pulse {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  //*circular-progress
+  .perfect-circle {
+    position: fixed;
+    z-index: 99;
+    right: 50px;
+    bottom: 30px;
+    filter: blur(0px);
+    transition: filter 1s;
+  }
+
+  //*home
   .content-page-1 {
     img {
       margin-left: 25.7vw;
@@ -216,6 +293,7 @@ body {overflow-x: hidden;}
     }
   }
 
+  //*about us
   .content-page-2 {
     display: flex;
     justify-content: center;
@@ -228,22 +306,90 @@ body {overflow-x: hidden;}
 
       height: 80vh;
       width: 80vw;
-      background: rgba(50,50,50,.3);
 
       div:first-child {
-        background: rgba(50,100,50,.3);
         height: 100%;
         width: 50%;
+
+        img {
+          margin-top: 14vh;
+          margin-left: -3vw;
+          height: 56vh;
+        }
       }   
 
       div:last-child {
-        background: rgba(100,50,50,.3);
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+
+        font-family: Roboto;
+        font-style: normal;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        padding: 4vh 3vw;
         height: 100%;
         width: 50%;
+
+        span.t1 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 16px;
+
+        }
+
+        span.t2 {
+          font-weight: 900;
+          font-size: 55px;
+          line-height: 45px;
+
+          color: #F42B24;
+        }
+
+        span.t3 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 16px;
+        }
+
+        span.t4 {
+          position: relative;
+          display: inline-block;
+          font-family: 'fontello';
+          margin-left: 1vw;
+          top: 1vh;
+        }
+
+        span.t5 {
+          font-weight: 900;
+          font-size: 65px;
+          line-height: 53px;
+
+          color: #F42B24;
+        }
+
+        span.t6 {
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 25px;
+        }
+
+        p {
+          margin-top: 7vh;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: normal;
+          text-align: justify;
+          text-transform: none;
+        }
       }      
     }
   }
 
+  //*services
   .content-page-3 {
     display: flex;
     justify-content: center;
@@ -268,6 +414,7 @@ body {overflow-x: hidden;}
           text-transform: uppercase;
           margin-bottom: 2vh;
         }
+
         p {
           font-family: Roboto;
           font-style: normal;
@@ -280,7 +427,7 @@ body {overflow-x: hidden;}
     }
   }
 
-  //portfolio
+  //*portfolio
   .content-page-4 {
     display: flex;
     justify-content: center;
@@ -332,7 +479,7 @@ body {overflow-x: hidden;}
       align-items: center;
       flex-direction: column;
 
-      // carousel portfolio
+      //*carousel portfolio
       .slider {
         width: 73vw;
         height: 48.5vh;
@@ -476,7 +623,7 @@ body {overflow-x: hidden;}
     }
   }
 
-  //team
+  //*team
   .content-page-5 {
     display: flex;
     justify-content: center;
@@ -508,7 +655,7 @@ body {overflow-x: hidden;}
       }
     }
 
-    // carousel team
+    //*carousel team
     .carousel-container {
       position: relative;
       width: 80vw;
@@ -556,7 +703,7 @@ body {overflow-x: hidden;}
         font-weight: bold;
       }
     }
-    //carousel navigation
+    //*carousel navigation
     .tracker-summation-container {
       position: absolute;
       color: white;
@@ -621,6 +768,7 @@ body {overflow-x: hidden;}
     }
   }
 
+  //*approach
   .content-page-6 {
     display: flex;
     justify-content: center;
@@ -629,26 +777,60 @@ body {overflow-x: hidden;}
     div.approach {
       display: flex;
       flex-wrap: wrap;
-      width: 45vw;
-      div {
-        margin: 1.875vw;
-        width: 10vw;
-        h3 {
-          text-transform: uppercase;
-          margin-bottom: 2vh;
+      width: 75vw;
+
+      div.items:nth-child(1),
+      div.items:nth-child(2),
+      div.items:nth-child(3) {
+        margin-bottom: 6vh;
+      }
+
+      div.items {
+        display: flex;
+        margin: 1.125vw;
+        width: 22vw;
+
+        div.icons {
+          min-width: 110px;
+          max-width: 110px;
+          min-height: 100px;
+          max-height: 100px;
+          background: rgba(50,0,0,.5);
         }
-        p {
+
+        div.icon-1 {}
+        div.icon-2 {}
+        div.icon-3 {}
+        div.icon-4 {}
+        div.icon-5 {}
+        div.icon-6 {}
+
+        div.text {
+          margin-left: 1.5vw;
           font-family: Roboto;
           font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
           line-height: normal;
-          color: rgba(255, 255, 255, 0.4);
+          letter-spacing: 0.05em;
+
+          h3 {
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 2vh;
+          }
+
+          p {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: normal;
+            color: rgba(255, 255, 255, 0.5);
+          }
         }
       }
     }
   }
 
+  //*contact us
   .content-page-7 {
     display: flex;
     justify-content: center;
@@ -747,6 +929,7 @@ body {overflow-x: hidden;}
           }
 
           div.add-file-btn {
+            font-family: 'fontello';
             position: absolute;
             margin-top: -5.3vh;
             margin-left: 42.5vw;
@@ -846,7 +1029,7 @@ body {overflow-x: hidden;}
             transition: color .3s;
           }
 
-          //blog
+          //*blog
           div:last-child {            
             display: flex;
             justify-content: center;
@@ -858,7 +1041,9 @@ body {overflow-x: hidden;}
             color: black;
             font-size: 23px;
             height: 36px;
+            min-height: 36px;
             width: 36px;
+            min-width: 36px;
             margin-right: 10px;
             transition: background .3s;
           }
@@ -885,232 +1070,7 @@ body {overflow-x: hidden;}
     }
   }
 
-  //header
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    z-index: $nav-layer - 1;
-
-    .main-logo {
-      margin: 33px 0 0 68px;
-      height: 7vh;
-    }
-  }
-
-  .contact-us-btn {
-    position: fixed;
-    width: 165px;
-    height: 41px;
-    right: 192px;
-    top: 44px;
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 35px;
-    text-transform: uppercase;    
-    cursor: pointer;
-    filter: blur(0px);
-    transition: filter 1s;
-    transition: background-color .3s;
-  }
-
-  .contact-us-btn:hover {
-    background-color: rgba(50,50,50,.5);
-    transition: background-color .3s;
-  }
-
-  //navbar
-  .navbar-btn {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 110px;
-    width: 110px;
-    background-color: #F42B24;
-    z-index: $nav-layer + 1;
-    text-align: center;
-    padding-top: 30px;
-    border-radius: 0 0 0 20px;
-    transition: .5s;
-    cursor: pointer;
-  }
-
-  .navbar-btn:hover {
-    background-color: #B30C06;
-    transition: .5s;
-  }
-
-  .navbar-btn:active {
-    background-color: #F42B24;
-    transition: .1s;
-  }
-
-  .navbar-btn span {
-    transition: background 0s 0.3s;
-  }
-
-  .navbar-btn span::before,
-  .navbar-btn span::after {
-    transition-duration: 0.3s, 0.3s;
-    transition-delay: 0.3s, 0s;
-  }
-
-  .navbar-btn span::before {
-    transition-property: top, transform;    
-    top: -10px;
-  }
-
-  .navbar-btn span::after {
-    transition-property: bottom, transform;
-    bottom: -10px;
-  }
-
-  //состояние при открытом меню
-  .navbar-btn.active span {
-    background: none;
-  }
-
-  .navbar-btn.active span::before {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  .navbar-btn.active span::after {
-    bottom: 0;
-    transform: rotate(-45deg);
-  }
-
-  .navbar-btn.active span::before,
-  .navbar-btn.active span::after {
-    transition-delay: 0s, 0.3s;
-  }
-
-  .navbar-btn span {
-    display: block;
-    position: absolute;
-    top: 52px;
-    left: 40px;
-    right: 40px;
-    height: 3px;
-    background: white;
-  }
-
-  .navbar-btn span::before,
-  .navbar-btn span::after {
-    position: absolute;
-    display: block;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    content: "";
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    width: 362px;
-    background: rgba(1, 0, 0, 0.7);
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.25);
-    z-index: $nav-layer;
-    transition: 1s;
-    padding-right: 2vw;
-
-    ul {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 63px;
-      text-align: justify;
-      text-transform: uppercase;
-      list-style-type: none;
-    }
-
-    li {
-      cursor: pointer;
-    }
-
-    li a {      
-      color: #555;
-    }
-
-    li:hover a {
-      color: #FFF;      
-      text-decoration: none;
-    }
-  }
-
-  nav.hiden {
-    position: fixed;
-    right: -362px;
-    transition: 1s;
-  }
-
-  .arrow {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 130px;
-    z-index: $nav-layer;
-    cursor: pointer;
-    img {
-      animation-name: opacity-pulse;
-      animation-duration: 1s;
-      animation-direction: alternate;
-      animation-iteration-count: infinite;
-      opacity: 0;
-      animation-delay: 2s;
-      transition: opacity ease-in-out .3s;
-    }
-  }
-
-  .arrow-left {
-    left: 0;
-    img {
-      transform: rotate(180deg);
-    }
-  }
-
-  .arrow-right {
-    right: 0;
-    img {      
-      animation-delay: 2.3s;
-    }
-  }
-
-  .arrow:hover {
-    img {
-      opacity: 1;
-      animation: none;
-      transition: opacity .3s;
-    }
-  }
-
-  @keyframes opacity-pulse {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-  //circular-progress
-  .perfect-circle {
-    position: fixed;
-    z-index: 99;
-    right: 50px;
-    bottom: 30px;
-    filter: blur(0px);
-    transition: filter 1s;
-  }
-
-  //other
+  //*other
   .statusbar {
     font-size: 20px;
     position: fixed;
@@ -1132,7 +1092,7 @@ body {overflow-x: hidden;}
     right: 0;
   }
 
-  //backlight
+  //*backlight
   #backlight {
     margin: ($backlight-radius / -2) 0 0 ($backlight-radius / -2);
     position: fixed;
@@ -1144,7 +1104,7 @@ body {overflow-x: hidden;}
     mix-blend-mode: overlay;
   }
 
-  //blur
+  //*blur
   .blur {
     filter: blur(5px);
     transition: filter 1s;

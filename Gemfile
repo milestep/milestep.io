@@ -37,7 +37,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'browser_sync_rails'
 end
 
 group :development do

@@ -1,5 +1,6 @@
 "use strict"
 jQuery(document).ready(function () {
+  if (window.location.pathname != '/paralax') { return }
   //state
   const
     DEV = 1, //false = prod, true = dev
@@ -11,34 +12,30 @@ jQuery(document).ready(function () {
   hideArrows();
 
   //listeners
-  $(window).scroll(function(){
-    if(currentPage() == 2) {
-      $('.sprites .layer-4 img').removeClass('hiden')
-    } else {
-      $('.sprites .layer-4 img').addClass('hiden')
-    }
-    if(currentPage() == 5) {
-      $('.content-page-4 .title').removeClass('mini')
-    } else {
-      $('.content-page-4 .title').addClass('mini')
+  $(window).scroll(function() {
+    switch (currentPage()) {
+      case 2: $('.sprites .layer-2 img').removeClass('hiden'); break;
+      case 5: $('.content-page-4 .title').removeClass('mini'); break;
+      default: $('.sprites .layer-2 img').addClass('hiden');        
+               $('.content-page-4 .title').addClass('mini');
     }
   });
 
   document.onkeydown = function(e) {
-    let pressKey = new Keys(e);
+    let on = new Keys();
 
     switch (e.keyCode) {
-      case 38: pressKey.arrowUp(); break;
-      case 40: pressKey.arrowDown(); break;
-      case 37: pressKey.arrowLeft(); break;
-      case 39: pressKey.arrowRight(); break;
-      case 32: pressKey.space(); break;
+      case 38: on.arrowUp(e); break;
+      case 40: on.arrowDown(e); break;
+      case 37: on.arrowLeft(e); break;
+      case 39: on.arrowRight(e); break;
+      case 32: on.space(e); break;
       default: keysStatus(e.keyCode)
     }
   }
 
   if (document.addEventListener) {
-    document.addEventListener(function(){
+    document.addEventListener(function() {
       if ('onwheel' in document) return "wheel" // IE9+, FF17+, Ch31+
       else if ('onmousewheel' in document) return "mousewheel" // устаревший вариант события
       else return 'MozMousePixelScroll' // Firefox < 17 
@@ -92,11 +89,11 @@ jQuery(document).ready(function () {
     $('.arrow-left').toggleClass('hide');
   })
 
-  $('.arrow-left').on('click', function(){    
+  $('.arrow-left').on('click', function() {    
     scrollPage('<')
   })
 
-  $('.arrow-right').on('click', function(){    
+  $('.arrow-right').on('click', function() {    
     scrollPage('>')
   })
 
@@ -151,7 +148,7 @@ jQuery(document).ready(function () {
     }
   );
 
-  //functions
+  //*functions
   function currentPage() {
     let curScroll = $(window).scrollTop() + 1;
     for (let i = 0; i < NUMBER_OF_PAGES; i++) {
@@ -216,30 +213,33 @@ jQuery(document).ready(function () {
   }
 
   //classes
-  function Keys(e) {
-    e.preventDefault()
-
+  function Keys() {
     this.arrowUp = function(e) {
+      e.preventDefault()
       scrollPage('>')
       keysStatus('up')      
     }
     
     this.arrowDown = function(e) {
+      e.preventDefault()
       scrollPage('<')
       keysStatus('down')
     }
     
     this.arrowLeft = function(e) {
+      e.preventDefault()
       scrollPage('<')
       keysStatus('left')
     }
     
     this.arrowRight = function(e) {
+      e.preventDefault()
       scrollPage('>')
       keysStatus('right')
     }
     
     this.space = function(e) {
+      e.preventDefault()
       scrollPage('<')
       keysStatus('space')
     }    
