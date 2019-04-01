@@ -484,6 +484,59 @@ body {overflow-x: hidden;}
         width: 73vw;
         height: 48.5vh;
         margin-top: 5vh;
+
+        .carousel-feature {
+          position: relative;
+
+          div.placeholder {
+            position: absolute;
+            background: rgba(50,50,50,.9);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity .5s;
+            cursor: default;
+
+            div, img {
+              width: 80%;
+              text-align: center;
+            }
+
+            button {
+              background-color: rgba(50,50,50,1);
+              color: #FFFFFF;
+              border-radius: 35px;
+              border: 1px solid #FFFFFF;
+              box-sizing: border-box;
+              width: 165px;
+              height: 41px;
+              margin-top: 4vh;
+
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: normal;
+              text-align: center;
+              text-transform: uppercase;
+              transition: background-color .3s;
+            }
+
+            button:hover {
+              background-color: rgba(50,50,50,.5);
+              transition: background-color .3s;
+            }
+          }   
+
+          div.placeholder:hover {
+            opacity: 1;
+            transition: opacity .5s;
+          }          
+        }
       }
 
       .slick-slide {
@@ -586,7 +639,6 @@ body {overflow-x: hidden;}
 
       .slick-slide:hover {
         transition: all ease-in-out .3s;
-        opacity: .7;
         cursor: pointer;
       }
 
@@ -793,17 +845,109 @@ body {overflow-x: hidden;}
         div.icons {
           min-width: 110px;
           max-width: 110px;
-          min-height: 100px;
-          max-height: 100px;
-          background: rgba(50,0,0,.5);
+          min-height: 110px;
+          max-height: 110px;
+          // background: rgba(50,0,0,.5);
+
+          img.outside {
+            width: 110px;
+            height: 110px;
+            transition: transform 1s;
+          }
+
+          img.outside-blur {
+            position: absolute;
+            margin-left: -110px;
+            width: 110px;
+            height: 110px;
+            transition: all 1s;
+          }
         }
 
-        div.icon-1 {}
-        div.icon-2 {}
-        div.icon-3 {}
-        div.icon-4 {}
-        div.icon-5 {}
-        div.icon-6 {}
+        div.icon-1 {
+          img.inside {
+            position: absolute;
+            margin-left: 32px;
+            margin-top: 26px;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 50px 50px;
+          }
+        }
+
+        div.icon-2 {
+          img.inside {
+            position: absolute;
+            margin-left: 35px;
+            margin-top: 35px;
+          }
+
+          img.inside-1 {
+            position: absolute;
+            margin-left: 46.2px;
+            margin-top: 46px;
+          }
+
+          img.inside-1-blur {
+            position: absolute;
+            margin-left: 46.2px;
+            margin-top: 46px;
+            transition: all 1s;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 56px 55px;
+          }
+        }
+
+        div.icon-3 {
+          img.inside {
+            position: absolute;
+            margin-left: 33px;
+            margin-top: 39px;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 53px 55px;
+          }
+        }
+
+        div.icon-4 {
+          img.inside {
+            position: absolute;
+            margin-left: 36px;
+            margin-top: 27px;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 58px 54px;
+          }
+        }
+
+        div.icon-5 {          
+          img.inside {
+            position: absolute;
+            margin-left: 36px;
+            margin-top: 39px;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 57px 56px;
+          }
+        }
+
+        div.icon-6 {
+          img.inside {
+            position: absolute;
+            margin-left: 33px;
+            margin-top: 33px;
+          }
+
+          img.outside, img.outside-blur {
+            transform-origin: 54px 54px;
+          }
+        }
 
         div.text {
           margin-left: 1.5vw;
@@ -817,6 +961,7 @@ body {overflow-x: hidden;}
             font-size: 30px;
             text-transform: uppercase;
             margin-bottom: 2vh;
+            transition: color .5s;
           }
 
           p {
@@ -824,7 +969,42 @@ body {overflow-x: hidden;}
             font-size: 16px;
             line-height: normal;
             color: rgba(255, 255, 255, 0.5);
+            transition: color .5s;
           }
+        }
+      }
+
+      div.items:hover {
+        div.icons {
+          img.outside {
+            transform: rotate(90deg);
+            transition: transform 1s;            
+          }
+
+          img.outside-blur {
+            filter: blur(3px);
+            transform: rotate(90deg);
+            transition: all 1s;
+          }
+        }
+
+        div.icon-2 {
+          img.inside-1-blur {
+            filter: blur(3px);
+            transition: all 1s;
+          }
+        }
+
+        div.text {
+          h3 {
+            color: #F42B24;
+            transition: color .5s;
+          }
+
+          p {            
+            color: rgba(255, 255, 255, 1);
+            transition: color .5s;
+          }          
         }
       }
     }
@@ -936,6 +1116,7 @@ body {overflow-x: hidden;}
             cursor: pointer;
             transition: color .3s;
             padding: 5px;
+            color: rgba(255, 255, 255, 0.6);
           }
 
           div.add-file-btn:hover {
@@ -1064,7 +1245,7 @@ body {overflow-x: hidden;}
           font-weight: 500;
           font-size: 15px;
           line-height: 23px;
-          color: #999999;
+          color: rgba(200,200,200,.3);
         }
       }
     }

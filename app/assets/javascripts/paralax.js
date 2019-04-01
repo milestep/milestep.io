@@ -14,8 +14,8 @@ jQuery(document).ready(function () {
   //listeners
   $(window).scroll(function() {
     switch (currentPage()) {
-      case 2: $('.sprites .layer-2 img').removeClass('hiden'); break;
-      case 5: $('.content-page-4 .title').removeClass('mini'); break;
+      case 1: $('.sprites .layer-2 img').removeClass('hiden'); break;
+      case 4: $('.content-page-4 .title').removeClass('mini'); break;
       default: $('.sprites .layer-2 img').addClass('hiden');        
                $('.content-page-4 .title').addClass('mini');
     }
@@ -123,6 +123,7 @@ jQuery(document).ready(function () {
     swipeToSlide: true,
     zIndex: 99,
     customPaging: function(_, i) { return ++i },
+    focusOnSelect: false,
   });
 
   $.jInvertScroll(['.scroll'],
@@ -153,8 +154,8 @@ jQuery(document).ready(function () {
     let curScroll = $(window).scrollTop() + 1;
     for (let i = 0; i < NUMBER_OF_PAGES; i++) {
       if (Math.ceil($(window).width() * i) <= curScroll && curScroll < Math.ceil($(window).width() * (i + 1))) {
-        if (DEV) $('.cur-page').text(`current page: ${++i}`);
-        return ++i;
+        if (DEV) $('.cur-page').text(`current page: ${i + 1}`);
+        return i + 1;
       }
     }
   }
@@ -171,10 +172,10 @@ jQuery(document).ready(function () {
   function scrollPage(direction) {
     function getPos() {
       let step = 1 / (NUMBER_OF_PAGES - 1);
-      let curPos = step * (currentPage() - 2);
+      let curPos = step * (currentPage() - 1);
 
       return (direction == '<') ?
-        screenRatio*(curPos+step) + 1:
+        screenRatio*(curPos+step) + 1 :
         screenRatio*(curPos-step) + 1
     }
 
@@ -187,13 +188,13 @@ jQuery(document).ready(function () {
     $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
     $('.arrow-right').appendTo($('.arrow-right').parent());
 
-    if ((currentPage() - 1) >= (NUMBER_OF_PAGES)) {
+    if ((currentPage()) >= (NUMBER_OF_PAGES)) {
       $('.arrow-left').addClass('hide')
     } else {
       $('.arrow-left').removeClass('hide')
     }
 
-    if ((currentPage() - 1) <= 1) {
+    if ((currentPage()) <= 1) {
       $('.arrow-right').addClass('hide')
     } else {
       $('.arrow-right').removeClass('hide')
