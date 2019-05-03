@@ -300,6 +300,7 @@ body {overflow-x: hidden;}
     align-items: center;
 
     div.about-us {
+      //border: 3px solid white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -308,8 +309,9 @@ body {overflow-x: hidden;}
       width: 80vw;
 
       div:first-child {
+        //border: 3px solid green;
         height: 100%;
-        width: 50%;
+        width: 46%;
 
         img {
           margin-top: 14vh;
@@ -319,40 +321,43 @@ body {overflow-x: hidden;}
       }   
 
       div:last-child {
+        //border: 3px solid red;
         display: flex;
-        justify-content: center;
-        align-items: left;
+        justify-content: flex-end;
+        align-items: center;
         flex-direction: column;
-
         font-family: Roboto;
         font-style: normal;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #FFFFFF;
 
-        padding: 4vh 3vw;
+        padding: 4vh 1vw 20vh;
         height: 100%;
-        width: 50%;
+        width: 40%;
 
         span.t1 {
-          font-weight: 500;
-          font-size: 20px;
-          line-height: 16px;
+          font-weight: 900;
+          font-size: 15px;
+          font-size: 2vh;
+          //line-height: 10px;
+          margin-right: 0.5vw;
 
         }
 
         span.t2 {
           font-weight: 900;
-          font-size: 55px;
-          line-height: 45px;
-
+          //font-size: 33px;
+          font-size: 5.4vh;
+          //line-height: 10px;
+          margin-right: 0.5vw;
           color: #F42B24;
         }
 
         span.t3 {
           font-weight: 500;
-          font-size: 20px;
-          line-height: 16px;
+          font-size: 2vh;
+          //line-height: 10px;
         }
 
         span.t4 {
@@ -360,27 +365,30 @@ body {overflow-x: hidden;}
           display: inline-block;
           font-family: 'fontello';
           margin-left: 1vw;
-          top: 1vh;
+          top: 2vh;
+          font-size: 4vh;
         }
 
         span.t5 {
           font-weight: 900;
-          font-size: 65px;
-          line-height: 53px;
-
+          font-size: 6.7vh;
+          line-height: 5vh;
+          margin-right: 0.5vw;
           color: #F42B24;
+          display: inline-block;
         }
 
         span.t6 {
           font-weight: 500;
-          font-size: 30px;
-          line-height: 25px;
+          font-size: 3vh;
+          //line-height: 25px;
         }
 
         p {
-          margin-top: 7vh;
+          margin-top: 5vh;
+          margin-bottom: 4vh;
           font-weight: normal;
-          font-size: 20px;
+          font-size: 1.8vh;
           line-height: normal;
           text-align: justify;
           text-transform: none;
