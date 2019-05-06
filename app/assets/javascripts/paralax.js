@@ -108,7 +108,9 @@ jQuery(document).ready(function() {
     autoPlay: 3000,
     stopOnHover: false,
     sidePadding: $(window).width() / 20,
-    trackerSummation: !!DEV
+    trackerSummation: !!DEV,
+    leftButtonTag: '#carousel-left, #carousel-tiny-left',
+    rightButtonTag: '#carousel-right, #carousel-tiny-right'
   });
 
   $(".regular").slick({
@@ -185,7 +187,7 @@ jQuery(document).ready(function() {
   }
 
   function hideArrows() {
-    $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
+    $('.arrow-left').appendTo($('.arrow-left').parent()); //reset animation
     $('.arrow-right').appendTo($('.arrow-right').parent());
 
     if ((currentPage()) >= (NUMBER_OF_PAGES)) {
