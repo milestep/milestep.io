@@ -35,21 +35,22 @@ body {overflow-x: hidden;}
     z-index: $nav-layer - 1;
 
     .main-logo {
-      margin: 33px 0 0 68px;
+      margin: 3.89vh 0 0 8vh;
       height: 7vh;
     }
   }
 
   .contact-us-btn {
+    font-size: 1.88vh;
     position: fixed;
-    width: 165px;
-    height: 41px;
-    right: 192px;
-    top: 44px;
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #FFFFFF;
+    width: 19.43vh;
+    height: 4.82vh;
+    right: 22.61vh;
+    top: 5.18vh;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.12vh solid #FFFFFF;
     box-sizing: border-box;
-    border-radius: 35px;
+    border-radius: 4.12vh;
     text-transform: uppercase;
     cursor: pointer;
     filter: blur(0px);
@@ -206,7 +207,7 @@ body {overflow-x: hidden;}
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     width: 130px;
     z-index: $nav-layer;
     cursor: pointer;
@@ -252,8 +253,8 @@ body {overflow-x: hidden;}
   .perfect-circle {
     position: fixed;
     z-index: 99;
-    right: 50px;
-    bottom: 30px;
+    right: 5.89vh;
+    bottom: 3.53vh;
     filter: blur(0px);
     transition: filter 1s;
   }
@@ -263,6 +264,8 @@ body {overflow-x: hidden;}
     img {
       margin-left: 25.7vw;
       margin-top: 39vh;
+      width: 68.43vh;
+      height: 17.43vh;
     }
 
     .text {
@@ -271,21 +274,22 @@ body {overflow-x: hidden;}
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 2.12vh;
       line-height: normal;
       text-transform: uppercase;
       color: #FFFFFF;
-      width: 450px;
+      width: 53vh;
     }
 
     .lets-chat-btn {
+      font-size: 1.88vh;
       margin-left: 26vw;
       margin-top: 4vh;
-      width: 165px;
-      height: 41px;
-      border: 1px solid #FFFFFF;
+      width: 19.43vh;
+      height: 4.83vh;
+      border: 0.12vh solid #FFFFFF;
       box-sizing: border-box;
-      border-radius: 35px;
+      border-radius: 4.12vh;
       background-color: rgba(0,0,0,0);
       text-transform: uppercase;    
       cursor: pointer;
@@ -407,13 +411,14 @@ body {overflow-x: hidden;}
   //*services
   .content-page-3 {
     display: flex;
-    //justify-content: center;
+    justify-content: center;
     align-items: center;
 
     .content {
       display: flex;
       flex-wrap: wrap;
       width: 48vw;
+      min-width: 48vw;
       margin-left: 2vw;
 
       div {        
@@ -423,19 +428,19 @@ body {overflow-x: hidden;}
         flex-direction: column;
 
         margin: 5vh 1.125vw;
-        width: 13vw;
+        width: 11vw;
 
         h3 {
           text-transform: uppercase;
           margin-bottom: 2vh;
-          font-size: 20px;
+          font-size: 2.36vh;
         }
 
         p {
           font-family: Roboto;
           font-style: normal;
           font-weight: 500;
-          font-size: 16px;
+          font-size: 1.88vh;
           line-height: normal;
           color: rgba(255, 255, 255, 0.4);
         }
@@ -700,22 +705,22 @@ body {overflow-x: hidden;}
     .our-team {
       position: absolute;
       top: -10vh;
-      left: 26vw;
+      left: 27vw;
       width: 18vw;
       height: 12vh;
-      border: 20px solid #F42B24;
+      border: 2.36vh solid #F42B24;
       z-index: 5;
       box-sizing: border-box;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
       p {
         position: absolute;
-        margin: -14px 0 0 -14px;
+        margin: -1.95vh 0 0 -1.65vh;
         font-family: "Roboto-bold";
         font-style: normal;
         font-weight: 900;
-        font-size: 50px;
-        line-height: 52px;
+        font-size: 5.89vh;
+        line-height: 6.1vh;
         letter-spacing: 0.07em;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -759,14 +764,14 @@ body {overflow-x: hidden;}
       font-style: normal;
 
       p:first-child {
-        font-size: 14px;
-        line-height: 19px;
+        font-size: 1.65vh;
+        line-height: 2.24vh;
         color: rgba(255, 255, 255, 0.4);
         font-weight: 500;
       }
       p:last-child {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 2.6vh;
+        line-height: 3.53vh;
         color: #FFFFFF;
         font-weight: bold;
       }
@@ -775,8 +780,8 @@ body {overflow-x: hidden;}
     .tracker-summation-container {
       position: absolute;
       color: white;
-      padding: 3px;
-      margin: 3px;
+      padding: 0.35vh;
+      margin: 0.35vh;
       background-color: #000;
     }
 
@@ -792,14 +797,14 @@ body {overflow-x: hidden;}
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 3px;
+      margin: 0 0.35vh;
       color: white;
       text-align: center;
-      width: 34px;
-      height: 34px;
+      width: 4vh;
+      height: 4vh;
       background: #1D1D1D;
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 17px;
+      box-shadow: inset 0px 0.47vh 0.47vh rgba(0, 0, 0, 0.25);
+      border-radius: 2vh;
       transition: background .3s;
     }
 
@@ -819,7 +824,7 @@ body {overflow-x: hidden;}
     }
 
     .carousel-nav {
-      margin-top: 12vh;
+      margin-top: 10vh;
       display: flex;
       justify-content: center;
       align-items: center;      
@@ -846,6 +851,7 @@ body {overflow-x: hidden;}
       display: flex;
       flex-wrap: wrap;
       width: 75vw;
+      margin-top: 11.78vh;
 
       div.items:nth-child(1),
       div.items:nth-child(2),
@@ -856,13 +862,18 @@ body {overflow-x: hidden;}
       div.items {
         display: flex;
         margin: 1.125vw;
-        width: 22vw;
+        //width: 22vw;
+        width: 21vw;
 
         div.icons {
           min-width: 110px;
           max-width: 110px;
           min-height: 110px;
           max-height: 110px;
+          //min-width: 15.55vh;
+          //max-width: 15.55vh;
+          //min-height: 7.72vw;
+          //max-height: 7.72vw;
           // background: rgba(50,0,0,.5);
 
           img.outside {
@@ -883,7 +894,9 @@ body {overflow-x: hidden;}
         div.icon-1 {
           img.inside {
             position: absolute;
-            margin-left: 32px;
+            //margin-left: 32px;
+            //margin-top: 26px;
+            margin-left: 1.76vw;
             margin-top: 26px;
           }
 
@@ -974,7 +987,8 @@ body {overflow-x: hidden;}
 
           h3 {
             font-weight: bold;
-            font-size: 30px;
+            //font-size: 30px;
+            font-size: 1.48vw;
             text-transform: uppercase;
             margin-bottom: 2vh;
             transition: color .5s;
@@ -982,7 +996,8 @@ body {overflow-x: hidden;}
 
           p {
             font-weight: normal;
-            font-size: 16px;
+            //font-size: 14px;
+            font-size: 0.77vw;
             line-height: normal;
             color: rgba(255, 255, 255, 0.5);
             transition: color .5s;
@@ -1268,13 +1283,13 @@ body {overflow-x: hidden;}
   }
 
   //*other
-  .statusbar {
-    font-size: 20px;
-    position: fixed;
-    bottom: 5px;
-    left: 5px;
-    z-index: 99;
-  }
+  //.statusbar {
+  //  font-size: 20px;
+  //  position: fixed;
+  //  bottom: 5px;
+  //  left: 5px;
+  //  z-index: 99;
+  //}
 
   .number {
     position: relative;

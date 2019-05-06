@@ -1,5 +1,5 @@
 "use strict"
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
   if (window.location.pathname != '/paralax') { return }
   //state
   const
