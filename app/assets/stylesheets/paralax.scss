@@ -1139,7 +1139,7 @@ body {overflow-x: hidden;}
           div.add-file-btn {
             font-family: 'fontello';
             position: absolute;
-            margin-top: -5.3vh;
+            margin-top: -6.3vh;
             margin-left: 42.5vw;
             cursor: pointer;
             transition: color .3s;
@@ -1328,3 +1328,17 @@ body {overflow-x: hidden;}
 ::-webkit-scrollbar-thumb { background-color: #666; border-radius: 0.12vh; }
 ::-webkit-scrollbar-corner { background-color: #646464; }
 ::-webkit-resizer { background-color: #666; }
+
+///* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
