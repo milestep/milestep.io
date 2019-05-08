@@ -52,7 +52,7 @@ jQuery(document).ready(function() {
     $('#backlight').css({top: y, left: x});
   });
 
-  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
+  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {     ///УЗНАТЬ ЧТО ДЕЛАЕТ
     $('.navbar-btn').removeClass('active');
     $('nav').addClass('hiden');
     $('.contact-us-btn, .perfect-circle').removeClass('blur');
@@ -80,6 +80,24 @@ jQuery(document).ready(function() {
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
   });
+
+
+  //Ripchanskiy functions
+
+  $('#paralax .contact-us-btn').on('click', function (e) {
+    e.preventDefault();
+    // $('html, body').animate({scrollTop: 8725}, SCROLL_SPEED);
+    scrollPage(7);
+  });
+
+  $('#paralax .content-page-1 #portfolio-btn').on('click', function (e) {
+    e.preventDefault();
+    // $('html, body').animate({scrollTop: 8725}, SCROLL_SPEED);
+    console.log('Portfolio');
+    scrollPage(4);
+  });
+//
+
 
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
@@ -174,11 +192,17 @@ jQuery(document).ready(function() {
   function scrollPage(direction) {
     function getPos() {
       let step = 1 / (NUMBER_OF_PAGES - 1);
-      let curPos = step * (currentPage() - 1);
+      if (direction == 7) {
+        return screenRatio*(direction*step) + 1;
+      } else  if(direction == 4) {
+        return screenRatio*(direction*step) + 1;
+      } else {
+        let curPos = step * (currentPage() - 1);
 
-      return (direction == '<') ?
-        screenRatio*(curPos+step) + 1 :
-        screenRatio*(curPos-step) + 1
+        return (direction == '<') ?
+          screenRatio * (curPos + step) + 1 :
+          screenRatio * (curPos - step) + 1
+      }
     }
 
     $("html:not(:animated),body:not(:animated)").animate({
