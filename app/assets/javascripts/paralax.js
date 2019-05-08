@@ -84,17 +84,12 @@ jQuery(document).ready(function() {
 
   //Ripchanskiy functions
 
-  $('#paralax .contact-us-btn').on('click', function (e) {
-    e.preventDefault();
-    // $('html, body').animate({scrollTop: 8725}, SCROLL_SPEED);
+  $('#paralax .contact-us-btn').on('click', function () {
     scrollPage(7);
   });
 
-  $('#paralax .content-page-1 #portfolio-btn').on('click', function (e) {
-    e.preventDefault();
-    // $('html, body').animate({scrollTop: 8725}, SCROLL_SPEED);
-    console.log('Portfolio');
-    scrollPage(4);
+  $('#paralax .content-page-1 #portfolio-btn').on('click', function () {
+    scrollPage(4)
   });
 //
 
