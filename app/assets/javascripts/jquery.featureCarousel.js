@@ -161,6 +161,7 @@
 
       // fill in the features array
       pluginData.featuresContainer.find(".carousel-feature").each(function (index) {
+
         if (index < pluginData.totalFeatureCount) {
           pluginData.featuresArray[index] = $(this);
         }

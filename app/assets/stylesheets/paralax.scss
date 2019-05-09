@@ -383,13 +383,15 @@ body {overflow-x: hidden;}
         }
 
         p {
+          cursor: default;
           margin-top: 5vh;
           margin-bottom: 4vh;
           font-weight: normal;
           font-size: 1.8vh;
           line-height: normal;
-          text-align: justify;
+          text-align: left;
           text-transform: none;
+          letter-spacing: 0.22vh;
         }
       }      
     }
@@ -532,7 +534,7 @@ body {overflow-x: hidden;}
             }
 
             button:hover {
-              background-color: rgba(50,50,50,.5);
+              background-color: rgba(0, 0, 0, 0.5);
               transition: background-color .3s;
             }
           }   
@@ -850,7 +852,7 @@ body {overflow-x: hidden;}
     div.approach {
       display: flex;
       flex-wrap: wrap;
-      width: 75vw;
+      width: 160vh;
       margin-top: 11.78vh;
 
       div.items:nth-child(1),
@@ -861,15 +863,12 @@ body {overflow-x: hidden;}
 
       div.items {
         display: flex;
-        margin: 1.125vw;
-        //width: 22vw;
-        width: 21vw;
+        margin: 2vh;
+        width: 45vh;
 
         div.icons {
-          min-width: 12.96vh;
-          max-width: 12.96vh;
-          min-height: 12.96vh;
-          max-height: 12.96vh;
+          width: 12.96vh;
+          height: 12.96vh;
 
           img.outside {
             width: 12.96vh;
@@ -884,96 +883,119 @@ body {overflow-x: hidden;}
             height: 12.96vh;
             transition: all 1s;
           }
+
+          object.outside {
+            width: 12.96vh;
+            height: 12.96vh;
+            transition: transform 1s;
+          }
+
+          object.outside-blur {
+            position: absolute;
+            margin-left: -12.96vh;
+            width: 12.96vh;
+            height: 12.96vh;
+            transition: all 1s;
+          }
+
         }
 
         div.icon-1 {
-          img.inside {
+          object.inside {
             position: absolute;
-            margin-left: 1.76vw;
+            margin-left: 3.76vh;
             margin-top: 3.06vh;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 45.5% 46%;
           }
+
         }
 
         div.icon-2 {
-          img.inside {
+          object.inside {
             position: absolute;
-            margin-left: 3.5vh;
-            margin-top: 3.2vh;
+            margin-left: 4.1vh;
+            margin-top: 3.9vh;
           }
 
-          img.inside-1 {
+          object.inside-1 {
             position: absolute;
-            margin-left: 5.2vh;
+            margin-left: 5.25vh;
             margin-top: 5.1vh;
           }
 
-          img.inside-1-blur {
+          object.inside-1-blur {
             position: absolute;
-            margin-left: 5.2vh;
+            margin-left: 5.25vh;
             margin-top: 5.1vh;
             transition: all 5s;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 6.6vh 6.48vh;
           }
+
         }
 
         div.icon-3 {
-          img.inside {
+          object.inside {
             position: absolute;
             margin-left: 3.89vh;
             margin-top: 4.6vh;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 6.24vh 6.48vh;
           }
         }
 
         div.icon-4 {
-          img.inside {
+          object.inside {
             position: absolute;
             margin-left: 4.24vh;
             margin-top: 3.18vh;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 6.83vh 6.36vh;
           }
         }
 
-        div.icon-5 {          
-          img.inside {
+        div.icon-5 {
+          object.inside {
             position: absolute;
             margin-left: 4.24vh;
             margin-top: 4.59vh;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 6.71vh 6.6vh;
           }
         }
 
         div.icon-6 {
-          img.inside {
+          object.inside {
             position: absolute;
-            margin-left: 3.89vh;
-            margin-top: 3.89vh;
+            margin-left: 4.2vh;
+            margin-top: 4.3vh;
           }
 
-          img.outside, img.outside-blur {
+          object.outside, object.outside-blur {
             transform-origin: 6.36vh 6.36vh;
           }
 
-          img.inside-eclipse {
+          object.inside-eclipse {
             position: absolute;
-            margin-left: 5.3vh;
-            margin-top: 5.4vh;
+            margin-left: 5.25vh;
+            margin-top: 5.35vh;
+          }
+
+          object.inside-eclipse-blur {
+            position: absolute;
+            margin-left: 5.25vh;
+            margin-top: 5.35vh;
           }
         }
 
@@ -1014,10 +1036,22 @@ body {overflow-x: hidden;}
             transform: rotate(90deg);
             transition: all 1s;
           }
+
+          object.outside {
+            transform: rotate(90deg);
+            transition: transform 1s;
+          }
+
+          object.outside-blur {
+            filter: blur(0.35vh);
+            transform: rotate(90deg);
+            transition: all 1s;
+          }
+
         }
 
         div.icon-2 {
-          img.inside-1-blur {
+          object.inside-1-blur {
             filter: blur(0.35vh);
             transition: all 1s;
           }
@@ -1342,3 +1376,6 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+
+html {overflow: -moz-scrollbars-none;}
