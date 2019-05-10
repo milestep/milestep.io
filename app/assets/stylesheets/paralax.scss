@@ -252,6 +252,12 @@ body {overflow-x: hidden;}
     bottom: 3.53vh;
     filter: blur(0px);
     transition: filter 1s;
+    canvas {
+      max-width: 9.07vh;
+      max-height: 9.07vh;
+      min-width: 9.07vh;
+      min-height: 9.07vh;
+    }
   }
 
   //*home
@@ -339,9 +345,17 @@ body {overflow-x: hidden;}
         height: 100%;
         width: 40%;
 
+        h1 {
+          font-size: 4.24vh;
+        }
+
+        img {
+          width: 2.36vh;
+          height: 2.6vh;
+        }
+
         span.t1 {
           font-weight: 900;
-          font-size: 1.77vh;
           font-size: 2vh;
           margin-right: 0.5vw;
 
