@@ -905,6 +905,8 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 3.76vh;
             margin-top: 3.06vh;
+            width: 4.36vh;
+            height: 5.3vh;
           }
 
           object.outside, object.outside-blur {
@@ -918,18 +920,24 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 4.1vh;
             margin-top: 3.9vh;
+            width: 4.83vh;
+            height: 4.83vh;
           }
 
           object.inside-1 {
             position: absolute;
             margin-left: 5.25vh;
             margin-top: 5.1vh;
+            width: 2.36vh;
+            height: 2.36vh;
           }
 
           object.inside-1-blur {
             position: absolute;
             margin-left: 5.25vh;
             margin-top: 5.1vh;
+            width: 2.36vh;
+            height: 2.36vh;
             transition: all 5s;
           }
 
@@ -943,7 +951,9 @@ body {overflow-x: hidden;}
           object.inside {
             position: absolute;
             margin-left: 3.89vh;
-            margin-top: 4.6vh;
+            margin-top: 4.3vh;
+            width: 5.89vh;
+            height: 4.95vh;
           }
 
           object.outside, object.outside-blur {
@@ -956,6 +966,8 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 4.24vh;
             margin-top: 3.18vh;
+            width: 4.95vh;
+            height: 5.89vh;
           }
 
           object.outside, object.outside-blur {
@@ -968,6 +980,8 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 4.24vh;
             margin-top: 4.59vh;
+            width: 5.18vh;
+            height: 4.48vh;
           }
 
           object.outside, object.outside-blur {
@@ -980,6 +994,8 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 4.2vh;
             margin-top: 4.3vh;
+            width: 4.71vh;
+            height: 4.71vh;
           }
 
           object.outside, object.outside-blur {
@@ -990,12 +1006,16 @@ body {overflow-x: hidden;}
             position: absolute;
             margin-left: 5.25vh;
             margin-top: 5.35vh;
+            width: 1.65vh;
+            height: 1.65vh;
           }
 
           object.inside-eclipse-blur {
             position: absolute;
             margin-left: 5.25vh;
             margin-top: 5.35vh;
+            width: 1.65vh;
+            height: 1.65vh;
           }
         }
 
@@ -1352,6 +1372,36 @@ body {overflow-x: hidden;}
     filter: blur(0.59vh);
     transition: filter 1s;
   }
+
+  //@media screen and (min-device-width: 360px) {
+  //  .contact-us-btn {
+  //    right: 15.61vh;
+  //  }
+  //
+  //  header .main-logo {
+  //    margin: 3.89vh 0px 0px 2vh;
+  //  }
+  //
+  //  .content-page-1 img {
+  //    margin-left: 8.7vw;
+  //    margin-top: 41vh;
+  //    width: 55.43vh;
+  //    height: 12.43vh;
+  //  }
+  //
+  //  #portfolio-btn {
+  //    margin-left: 10vw;
+  //  }
+  //
+  //  .content-page-1 .text {
+  //    margin-left: 10vw;
+  //  }
+  //}
+
+  //@media screen and (min-device-width: 600px) {
+  //  border: 6px solid green;
+  //}
+
 }
 
 //scrollbar
