@@ -1,5 +1,5 @@
 "use strict"
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
   if (window.location.pathname != '/paralax') { return }
   //state
   const
@@ -52,7 +52,7 @@ jQuery(document).ready(function () {
     $('#backlight').css({top: y, left: x});
   });
 
-  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
+  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {     ///УЗНАТЬ ЧТО ДЕЛАЕТ
     $('.navbar-btn').removeClass('active');
     $('nav').addClass('hiden');
     $('.contact-us-btn, .perfect-circle').removeClass('blur');
@@ -81,6 +81,19 @@ jQuery(document).ready(function () {
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
   });
 
+
+  //Ripchanskiy functions
+
+  $('#paralax .contact-us-btn').on('click', function () {
+    scrollPage(7);
+  });
+
+  $('#paralax .content-page-1 #portfolio-btn').on('click', function () {
+    scrollPage(4)
+  });
+//
+
+
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
     $('nav').toggleClass('hiden');
@@ -108,7 +121,9 @@ jQuery(document).ready(function () {
     autoPlay: 3000,
     stopOnHover: false,
     sidePadding: $(window).width() / 20,
-    trackerSummation: !!DEV
+    trackerSummation: !!DEV,
+    leftButtonTag: '#carousel-left, #carousel-tiny-left',
+    rightButtonTag: '#carousel-right, #carousel-tiny-right'
   });
 
   $(".regular").slick({
@@ -172,11 +187,17 @@ jQuery(document).ready(function () {
   function scrollPage(direction) {
     function getPos() {
       let step = 1 / (NUMBER_OF_PAGES - 1);
-      let curPos = step * (currentPage() - 1);
+      if (direction == 7) {
+        return screenRatio*(direction*step) + 1;
+      } else  if(direction == 4) {
+        return screenRatio*(direction*step) + 1;
+      } else {
+        let curPos = step * (currentPage() - 1);
 
-      return (direction == '<') ?
-        screenRatio*(curPos+step) + 1 :
-        screenRatio*(curPos-step) + 1
+        return (direction == '<') ?
+          screenRatio * (curPos + step) + 1 :
+          screenRatio * (curPos - step) + 1
+      }
     }
 
     $("html:not(:animated),body:not(:animated)").animate({
@@ -185,7 +206,7 @@ jQuery(document).ready(function () {
   }
 
   function hideArrows() {
-    $('.arrow-left').appendTo($('.arrow-left').parent()); //сброс анимаций
+    $('.arrow-left').appendTo($('.arrow-left').parent()); //reset animation
     $('.arrow-right').appendTo($('.arrow-right').parent());
 
     if ((currentPage()) >= (NUMBER_OF_PAGES)) {
