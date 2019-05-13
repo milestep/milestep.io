@@ -17,6 +17,10 @@ body {overflow-x: hidden;}
     display: flex;
   }
 
+  .mobile-content-container {
+    display: none;
+  }
+
   //*scroll content pages
   @for $i from 0 through $number-of-pages {
     .content-page-#{$i} {
@@ -164,6 +168,10 @@ body {overflow-x: hidden;}
     z-index: $nav-layer;
     transition: 1s;
     padding-right: 2vw;
+
+    li.mobile {
+      display: none;
+    }
 
     ul {
       font-family: Roboto;
@@ -1387,34 +1395,93 @@ body {overflow-x: hidden;}
     transition: filter 1s;
   }
 
-  //@media screen and (min-device-width: 360px) {
-  //  .contact-us-btn {
-  //    right: 15.61vh;
-  //  }
-  //
-  //  header .main-logo {
-  //    margin: 3.89vh 0px 0px 2vh;
-  //  }
-  //
-  //  .content-page-1 img {
-  //    margin-left: 8.7vw;
-  //    margin-top: 41vh;
-  //    width: 55.43vh;
-  //    height: 12.43vh;
-  //  }
-  //
-  //  #portfolio-btn {
-  //    margin-left: 10vw;
-  //  }
-  //
-  //  .content-page-1 .text {
-  //    margin-left: 10vw;
-  //  }
-  //}
+  //Ipad Mini 768 * 1024  9/7
+  @media screen and (max-device-width: 768px) {
 
-  //@media screen and (min-device-width: 600px) {
-  //  border: 6px solid green;
-  //}
+    .sprites {
+      display: none;
+    }
+
+    .content-container {
+      display: none;
+    }
+
+    .perfect-circle {
+      display: none;
+    }
+
+    .arrow.arrow-left {
+      display: none;
+    }
+
+    .arrow.arrow-right {
+      display: none;
+    }
+
+    .mobile-content-container {
+      display: flex;
+      height: 1024px;
+
+      img {
+        position: absolute;
+        margin-top: 475px;
+        margin-left: 60px;
+        width: 545px;
+      }
+
+      .text {
+        position: absolute;
+        margin-top: 63.9vh;
+        margin-left: 6.07vh;
+        width: 45.9vh;
+        font-size: 2.35vh;
+        line-height: 1.94vh;
+      }
+
+      #portfolio-btn {
+        position: absolute;
+        margin-top: 740px;
+        width: 157px;
+        margin-left: 8vw;
+      }
+    }
+
+    nav {
+      li.mobile {
+        display: flex;
+      }
+
+      li.desktop {
+        display: none;
+      }
+    }
+
+    .contact-us-btn {
+      right: 15.61vh;
+    }
+
+    #portfolio-btn {
+      margin-left: 10vw;
+    }
+
+    header .main-logo {
+      margin: 3.89vh 0px 0px 2vh;
+    }
+
+    .content-page-1 {
+      img {
+        margin-left: 8.7vw;
+        margin-top: 43vh;
+        width: 65.43vh;
+        height: 17vh;
+      }
+
+      .text {
+        margin-left: 10vw;
+      }
+
+    }
+  }
 
 }
 

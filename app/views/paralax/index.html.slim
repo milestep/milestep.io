@@ -8,50 +8,70 @@
 
   nav.hiden
     ul
-      li
+      li.desktop
         a href="#an-1" Home
-      li
+      li.desktop
         a href="#an-2" About us
-      li
+      li.desktop
         a href="#an-3" Services
-      li 
+      li.desktop
         a href="#an-4" Portfolio
-      li
+      li.desktop
         a href="#an-5" Team
-      li
+      li.desktop
         a href="#an-6" Approach
-      li
+      li.desktop
         a href="#an-7" Contact us
 
-  = render 'sprites'
+      li.mobile
+        a href="paralax/home" Home
+      li.mobile
+        a href="paralax/about" About us
+      li.mobile
+        a href="paralax/services" Services
+      li.mobile
+        a href="paralax/portfolio" Portfolio
+      li.mobile
+        a href="paralax/team" Team
+      li.mobile
+        a href="paralax/approach" Approach
+      li.mobile
+        a href="paralax/contact" Contact us
 
-  div.content-container.scroll
-    div.content-page-7#an-7 name="contact-us"
+  .sprites
+    = render 'sprites'
+
+  .content-container.scroll
+    .content-page-7#an-7 name="contact-us"
       = render 'contact-us'
-    div.content-page-6#an-6 name="approach"
+    .content-page-6#an-6 name="approach"
       = render 'approach'
-    div.content-page-5#an-5 name="team"
+    .content-page-5#an-5 name="team"
       = render 'team'
-    div.content-page-4#an-4 name="portfolio"
+    .content-page-4#an-4 name="portfolio"
       = render 'portfolio'
-    div.content-page-3#an-3 name="services"
+    .content-page-3#an-3 name="services"
       = render 'services'
-    div.content-page-2#an-2 name="about-us"
+    .content-page-2#an-2 name="about-us"
       = render 'about-us'
-    div.content-page-1#an-1 name="home"
+    .content-page-1#an-1 name="home"
       = render 'home'
 
-  div.perfect-circle
+  .mobile-content-container
+    = render 'home'
 
-  div.arrow.arrow-left
+  .perfect-circle
+
+  .arrow.arrow-left
     img alt="arrow" src=image_path("paralax/arrow-right.svg")
-  div.arrow.arrow-right
+  .arrow.arrow-right
     img alt="arrow" src=image_path("paralax/arrow-right.svg")
     
-  div.statusbar
-    div.time
-    div.paralax
-    div.keys
-    div.wheel
-    div.cursor
-    div.cur-page
+  .statusbar
+    .time
+    .paralax
+    .keys
+    .wheel
+    .cursor
+    .cur-page
+
