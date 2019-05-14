@@ -1,12 +1,13 @@
 "use strict"
 jQuery(document).ready(function() {
-  if (window.location.pathname != '/paralax') { return }
+  // if (window.location.pathname != '/paralax') { return }
   //state
   const
     DEV = 1, //false = prod, true = dev
     DISABLE_WEEL = false,
     NUMBER_OF_PAGES = 7,
-    SCROLL_SPEED = 1500;
+    SCROLL_SPEED = 1500,
+    IS_MOBILE = false;
   let screenRatio = 1; //initial value
   
   hideArrows();
@@ -74,9 +75,9 @@ jQuery(document).ready(function() {
     $('.arrow-right').addClass('hide');
   })
 
-  $('nav li').on('click', function (e) {
+  $('nav li.desktop').on('click', function (e) {
     e.preventDefault();
-    let pos = (1 / (NUMBER_OF_PAGES - 1)) * 
+    let pos = (1 / (NUMBER_OF_PAGES - 1)) *
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
   });
