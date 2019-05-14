@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  
+
   constraints subdomain: 'blog' do
     get '/', to: 'blog#index'
     resources :posts, only: [:show]
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'paralax', to: 'paralax#index'
+  get 'about', to: 'paralax#about_us'
 
   get 'welcome/index', to: 'welcome#index'
   post :contact, to: 'requests#create', as: :contact

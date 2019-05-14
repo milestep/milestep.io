@@ -74,9 +74,9 @@ jQuery(document).ready(function() {
     $('.arrow-right').addClass('hide');
   })
 
-  $('nav li').on('click', function (e) {
+  $('nav li.desktop').on('click', function (e) {
     e.preventDefault();
-    let pos = (1 / (NUMBER_OF_PAGES - 1)) * 
+    let pos = (1 / (NUMBER_OF_PAGES - 1)) *
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
   });

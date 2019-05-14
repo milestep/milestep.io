@@ -1418,31 +1418,55 @@ body {overflow-x: hidden;}
       display: none;
     }
 
+    .navbar-btn {
+      left: 635px;
+    }
+
     .mobile-content-container {
       display: flex;
-      height: 1024px;
 
       img {
         position: absolute;
-        margin-top: 475px;
-        margin-left: 60px;
-        width: 545px;
+        margin-top: 460px;
+        margin-left: 56px;
+        width: 515px;
+      }
+
+      img.cat {
+        margin-top: 200px;
+        margin-left: 0px;
+        width: 92%;
       }
 
       .text {
         position: absolute;
-        margin-top: 63.9vh;
+        margin-top: 60vh;
         margin-left: 6.07vh;
         width: 45.9vh;
-        font-size: 2.35vh;
+        font-size: 1.85vh;
         line-height: 1.94vh;
+        text-transform: uppercase;
       }
 
       #portfolio-btn {
+        border-radius: 4.12vh;
         position: absolute;
-        margin-top: 740px;
-        width: 157px;
-        margin-left: 8vw;
+        margin-top: 695px;
+        width: 160px;
+        margin-left: 7vw;
+        background-color: #ffffff00;
+        padding: 1.18vh;
+        text-transform: uppercase;
+        font-size: 1.89vh;
+      }
+
+      .content-page-2 div.about-us  {
+        margin-top: 6vh;
+
+        div:last-child {
+          width: 90%;
+          letter-spacing: 0.5vh;
+        }
       }
     }
 
@@ -1457,11 +1481,7 @@ body {overflow-x: hidden;}
     }
 
     .contact-us-btn {
-      right: 15.61vh;
-    }
-
-    #portfolio-btn {
-      margin-left: 10vw;
+      left: 410px;
     }
 
     header .main-logo {
@@ -1482,8 +1502,14 @@ body {overflow-x: hidden;}
 
     }
   }
-
 }
+
+//mobile
+.mobile-content-container {
+  //background-color: black;
+  height: 100vh;
+}
+
 
 //scrollbar
 ::-webkit-scrollbar { width: 0vh; }
