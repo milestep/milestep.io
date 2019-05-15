@@ -70,14 +70,17 @@ body {overflow-x: hidden;}
   //*navbar
   .navbar-btn {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     right: 0;
     top: 0;
-    height: 12.96vh;
-    width: 12.96vh;
+    padding: 4vh;
+    height: 12vh;
+    width: 12vh;
     background-color: #F42B24;
     z-index: $nav-layer + 1;
-    text-align: center;
-    padding-top: 3.53vh;
     border-radius: 0 0 0 2.36vh;
     transition: .5s;
     cursor: pointer;
@@ -94,23 +97,33 @@ body {overflow-x: hidden;}
   }
 
   .navbar-btn span {
+    display: block;
+    width: 4vh;
+    height: 0.35vh;
+    background: #fff;
     transition: background 0s 0.3s;
   }
 
   .navbar-btn span::before,
   .navbar-btn span::after {
+    display: block;
+    position: absolute;
+    width: 4vh;
+    height: 0.35vh;
+    background-color: #fff;
+    content: "";
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
   }
 
   .navbar-btn span::before {
-    transition-property: top, transform;    
-    top: -1.18vh;
+    transition-property: top, transform;
+    top: 4.5vh;
   }
 
   .navbar-btn span::after {
     transition-property: bottom, transform;
-    bottom: -1.18vh;
+    bottom: 4.5vh;
   }
 
   //*state with opened navbar
@@ -119,39 +132,18 @@ body {overflow-x: hidden;}
   }
 
   .navbar-btn.active span::before {
-    top: 0;
     transform: rotate(45deg);
+    top: 5.825vh;
   }
 
   .navbar-btn.active span::after {
-    bottom: 0;
     transform: rotate(-45deg);
+    bottom: 5.825vh;
   }
 
   .navbar-btn.active span::before,
   .navbar-btn.active span::after {
     transition-delay: 0s, 0.3s;
-  }
-
-  .navbar-btn span {
-    display: block;
-    position: absolute;
-    top: 6.16vh;
-    left: 4.71vh;
-    right: 4.71vh;
-    height: 0.35vh;
-    background: white;
-  }
-
-  .navbar-btn span::before,
-  .navbar-btn span::after {
-    position: absolute;
-    display: block;
-    left: 0;
-    width: 100%;
-    height: 0.35vh;
-    background-color: #fff;
-    content: "";
   }
 
   nav {
@@ -320,28 +312,31 @@ body {overflow-x: hidden;}
 
     div.about-us {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 
       height: 80vh;
       width: 80vw;
 
       div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         height: 100%;
         width: 46%;
 
         img {
-          margin-top: 14vh;
-          margin-left: -3vw;
           height: 56vh;
         }
       }   
 
       div:last-child {
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         flex-direction: column;
+
         font-family: Roboto;
         font-style: normal;
         letter-spacing: 0.08em;
@@ -349,12 +344,12 @@ body {overflow-x: hidden;}
         color: #FFFFFF;
         cursor: default;
 
-        padding: 4vh 1vw 20vh;
         height: 100%;
         width: 40%;
 
         h1 {
           font-size: 4.24vh;
+          white-space: nowrap;
         }
 
         img {
@@ -934,7 +929,6 @@ body {overflow-x: hidden;}
           object.outside, object.outside-blur {
             transform-origin: 45.5% 46%;
           }
-
         }
 
         div.icon-2 {
