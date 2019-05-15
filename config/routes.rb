@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   constraints subdomain: 'mobile' do
     get '/', to: 'mobile_paralax#index'
     get '/about', to: 'mobile_paralax#about_us'
+    get '/services', to: 'mobile_paralax#services'
   end
 
   root 'paralax#index'

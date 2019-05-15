@@ -36,3 +36,4 @@
 !/vendor/.keep
 .env
 .idea/
+/config/database.yml
