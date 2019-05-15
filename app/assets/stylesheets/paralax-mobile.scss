@@ -2,196 +2,216 @@
 
 #paralax{
   //Ipad Mini 768 * 1024  9/7
-  @media screen and (max-device-width: 768px) {
-    .mobile-content-container {
-      display: flex;
+  // @media screen and (max-device-width: 768px) {}
 
-      img {
-        position: absolute;
-        margin-top: 460px;
-        margin-left: 56px;
-        width: 515px;
-      }
+  header {
+    .main-logo {
+      margin: 3.8vh 0 0 3vh !important;
+      height: 7vh;
+    }
+  }
 
-      img.cat {
-        margin-top: 200px;
-        margin-left: 0px;
-        width: 92%;
-      }
+  #mobile-content-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    img {
+      position: absolute;
+      margin-top: 42vh;
+      margin-left: 2vh;
+      height: 12.5vh;
+    }
+
+    img.cat {
+      margin-top: 21vh;
+      margin-left: 0vh;
+      height: 50vh;
+      width: unset;
+      z-index: 0;
+    }
+
+    /* home */
+    .content-page-1 {
+      img { width: unset; }
 
       .text {
         position: absolute;
-        margin-top: 60vh;
-        margin-left: 6.07vh;
-        width: 45.9vh;
+        margin-top: 58vh;
+        margin-left: 2.5vh;
         font-size: 1.85vh;
         line-height: 1.94vh;
         text-transform: uppercase;
       }
 
       #portfolio-btn {
+        margin-left: 3vh;
+        margin-top: 68vh;
+        width: 19.43vh;
+        height: 4.83vh;
+        border: 0.12vh solid #FFFFFF;
         border-radius: 4.12vh;
-        position: absolute;
-        margin-top: 695px;
-        width: 160px;
-        margin-left: 7vw;
-        background-color: #ffffff00;
-        padding: 1.18vh;
-        text-transform: uppercase;
-        font-size: 1.89vh;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color .3s;
+        z-index: 10;
       }
 
-      .content-page-2 div.about-us  {
-        margin-top: 12vh;
-
-        div:first-child img {
-          margin-top: -3.5vh;
-          margin-left: 0vh;
-        }
-        div:last-child {
-          width: 90%;
-          letter-spacing: 0.5vh;
-
-          h1 {
-            line-height: 4vh;
-          }
-
-          p {
-            margin-top: 2.94vh;
-            margin-bottom: 9.42vh;
-            text-align: justify;
-            letter-spacing: 0.1vh;
-            font-size: 2vh;
-          }
-
-          span.t2 {
-            font-size: 4.9vh;
-          }
-        }
+      #portfolio-btn:hover {
+        background-color: rgba(50, 50, 50, 0.3);
+        transition: background-color .3s;
       }
+    }
 
-      .content-page-3 {
+    .content-page-2 div.about-us  {
+      margin-top: 12vh;
 
-        .content div {
-          width: 26vh;
-          margin: 3.8vh 1.45vh;
-          margin-left: 2vh;
-
-          h3 {
-            font-weight: 900;
-          }
-        }
-
-        .content {
-          width: 60vh;
-          min-width: 60vh;
-          margin-left: 5vh;
-        }
-
+      div:first-child img {
+        margin-top: -3.5vh;
+        margin-left: 0vh;
       }
+      div:last-child {
+        width: 90%;
+        letter-spacing: 0.5vh;
 
-      .content-page-6 {
-        .text {
-          position: absolute;
-          margin-top: 0vh;
+        h1 {
+          line-height: 4vh;
         }
 
-         div.approach {
-           justify-content: center;
-           margin-top: 8.78vh;
+        p {
+          margin-top: 2.94vh;
+          margin-bottom: 9.42vh;
+          text-align: justify;
+          letter-spacing: 0.1vh;
+          font-size: 2vh;
+        }
 
-           div.items {
-             width: 27vh;
-             height: 18vh;
-
-             .text {
-               width: 25vh;
-               h3 {
-                 font-size: 2.48vh;
-               }
-
-               p {
-                font-size: 1.5vh;
-                 letter-spacing: 0px;
-                 text-transform: none;
-                 line-height: 1.65vh;
-               }
-             }
-           }
-         }
-      }
-
-      .content-page-7 {
-        align-items: flex-start;
-        margin-top: 15vh;
-
-        .contact-us {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          margin-left: 0;
-          margin-top: 2vh;
-          width: 72vh;
-
-          .form {
-            width: 100%;
-
-            .title h2 {
-              margin-top: -2vh;
-              font-size: 2.12vh;
-              span {
-                font-size: 3.71vh;
-              }
-              span.development {
-                font-size: 1.9vh;
-              }
-            }
-
-            form.message-form div.add-file-btn {
-              margin-left: 58vh;
-              margin-top: -7.3vh;
-              font-size: 2vh;
-            }
-
-          }
-          .info {
-            width: 100%;
-          }
+        span.t2 {
+          font-size: 4.9vh;
         }
       }
     }
 
+    .content-page-3 {
 
-    nav {
-      li.mobile {
-        display: flex;
+      .content div {
+        width: 26vh;
+        margin: 3.8vh 1.45vh;
+        margin-left: 2vh;
+
+        h3 {
+          font-weight: 900;
+        }
       }
 
-      li.desktop {
-        display: none;
-      }
-    }
-
-    .contact-us-btn {
-      left: 410px;
-    }
-
-    header .main-logo {
-      margin: 3.89vh 0px 0px 2vh;
-
-    }
-
-    .content-page-1 {
-      img {
-        margin-left: 8.7vw;
-        margin-top: 43vh;
-        width: 65.43vh;
-        height: 17vh;
+      .content {
+        width: 60vh;
+        min-width: 60vh;
+        margin-left: 5vh;
       }
 
+    }
+
+    .content-page-6 {
       .text {
-        margin-left: 10vw;
+        position: absolute;
+        margin-top: 0vh;
+      }
+
+      div.approach {
+       justify-content: center;
+       margin-top: 8.78vh;
+
+       div.items {
+         width: 27vh;
+         height: 18vh;
+
+         .text {
+           width: 25vh;
+           h3 {
+             font-size: 2.48vh;
+           }
+
+           p {
+            font-size: 1.5vh;
+            letter-spacing: 0px;
+            text-transform: none;
+            line-height: 1.65vh;
+          }
+        }
       }
     }
   }
+
+  .content-page-7 {
+    align-items: flex-start;
+    margin-top: 15vh;
+
+    .contact-us {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-top: 2vh;
+      width: 72vh;
+
+      .form {
+        width: 100%;
+
+        .title h2 {
+          margin-top: -2vh;
+          font-size: 2.12vh;
+          span {
+            font-size: 3.71vh;
+          }
+          span.development {
+            font-size: 1.9vh;
+          }
+        }
+
+        form.message-form div.add-file-btn {
+          margin-left: 58vh;
+          margin-top: -7.3vh;
+          font-size: 2vh;
+        }
+
+      }
+      .info {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+nav {
+  li.mobile {
+    display: flex;
+  }
+
+  li.desktop {
+    display: none;
+  }
+}
+
+.contact-us-btn {
+  left: 410px;
+}
+
+header .main-logo {
+  margin: 3.89vh 0px 0px 2vh;
+
+}
+
+.content-page-1 {
+  img {
+    margin-left: 8.7vw;
+    margin-top: 43vh;
+    width: 65.43vh;
+    height: 17vh;
+  }
+
+  .text {
+    margin-left: 10vw;
+  }
+}
 }
