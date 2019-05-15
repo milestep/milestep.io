@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get '/', to: 'mobile_paralax#index'
     get '/about', to: 'mobile_paralax#about_us'
     get '/services', to: 'mobile_paralax#services'
+    get '/approach', to: 'mobile_paralax#approach'
   end
 
   root 'paralax#index'

@@ -3,7 +3,7 @@ class MobileParalaxController < ApplicationController
 
   def index
     @development = TeamMember.order(order: :desc)
-    @portfolio = PortfolioItem.order(order: :desc).first(6)    
+    @portfolio = PortfolioItem.order(order: :desc).first(6)
     render template: 'paralax/mobile'
   end
 
@@ -13,6 +13,10 @@ class MobileParalaxController < ApplicationController
 
   def services
     render 'paralax/mobile_pages/services/'
+  end
+
+  def approach
+    render 'paralax/mobile_pages/approach/'
   end
 
   private

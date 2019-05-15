@@ -90,6 +90,38 @@
         }
 
       }
+
+      .content-page-6 {
+        .text {
+          position: absolute;
+          margin-top: 0vh;
+        }
+
+         div.approach {
+           justify-content: center;
+           margin-top: 8.78vh;
+
+           div.items {
+             width: 27vh;
+             height: 18vh;
+
+             .text {
+               width: 25vh;
+               h3 {
+                 font-size: 2.48vh;
+               }
+
+               p {
+                font-size: 1.5vh;
+                 letter-spacing: 0px;
+                 text-transform: none;
+                 line-height: 1.65vh;
+               }
+             }
+           }
+         }
+      }
+
     }
 
 
