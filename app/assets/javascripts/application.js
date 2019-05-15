@@ -10,16 +10,19 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require config
 //= require jquery3
 //= require jquery_ujs
 //= require jquery.slick
 //= require activestorage
 //= require ckeditor/init
-//= require_tree .
-//= require serviceworker-companion
 
-//paralax.js use:
-//  jquery.js 3.1.0
-//  jquery.featureCarousel.js
-//  jquery.jInvertScroll.js
-//  jquery.slickCarousel.js
+//= require jquery.featureCarousel
+//= require jquery.jInvertScroll
+//= require jquery.slickCarousel
+//= require circle-progress
+//= require paralax
+
+//  require_tree .
+
+//= require serviceworker-companion

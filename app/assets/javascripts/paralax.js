@@ -1,26 +1,20 @@
 "use strict"
 jQuery(document).ready(function() {
-  // if (window.location.pathname != '/paralax') { return }
-  //state
-  const
-    DEV = 1, //false = prod, true = dev
-    DISABLE_WEEL = false,
-    NUMBER_OF_PAGES = 7,
-    SCROLL_SPEED = 1500,
-    IS_MOBILE = false;
-  let screenRatio = 1; //initial value
-  
-  hideArrows();
+  let screenRatio = 1; // initial value
 
-  //listeners
+  // listeners
+  $(window).resize(function() {
+    document.location.reload()
+  })
+
   $(window).scroll(function() {
     switch (currentPage()) {
       case 1: $('.sprites .layer-2 img').removeClass('hiden'); break;
       case 4: $('.content-page-4 .title').removeClass('mini'); break;
-      default: $('.sprites .layer-2 img').addClass('hiden');        
+      default: $('.sprites .layer-2 img').addClass('hiden');
                $('.content-page-4 .title').addClass('mini');
     }
-  });
+  })
 
   document.onkeydown = function(e) {
     let on = new Keys();
@@ -46,14 +40,15 @@ jQuery(document).ready(function() {
   }
 
   $('#paralax').ready(function() {
-    screenRatio = $(document).height() - $(window).height();
+    setScreenRatio()
+    hideArrows()
   }).mousemove(function(e) {
     let x = e.clientX, y = e.clientY;
-    if (DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
+    if (window.env.DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
     $('#backlight').css({top: y, left: x});
-  });
+  })
 
-  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {     ///УЗНАТЬ ЧТО ДЕЛАЕТ
+  $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
     $('.navbar-btn').removeClass('active');
     $('nav').addClass('hiden');
     $('.contact-us-btn, .perfect-circle').removeClass('blur');
@@ -77,22 +72,23 @@ jQuery(document).ready(function() {
 
   $('nav li.desktop').on('click', function (e) {
     e.preventDefault();
-    let pos = (1 / (NUMBER_OF_PAGES - 1)) *
+    let pos = (1 / (window.env.NUMBER_OF_PAGES - 1)) *
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
-    $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, SCROLL_SPEED);
-  });
+    $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
+  })
 
 
   //Ripchanskiy functions
 
   $('#paralax .contact-us-btn').on('click', function () {
-    scrollPage(7);
-  });
+    scrollPage(7)
+  })
 
   $('#paralax .content-page-1 #portfolio-btn').on('click', function () {
     scrollPage(4)
-  });
-//
+  })
+
+  //
 
 
   $('.navbar-btn, nav').on('click', function() {
@@ -122,10 +118,10 @@ jQuery(document).ready(function() {
     autoPlay: 3000,
     stopOnHover: false,
     sidePadding: $(window).width() / 20,
-    trackerSummation: !!DEV,
+    trackerSummation: !!window.env.DEV,
     leftButtonTag: '#carousel-left, #carousel-tiny-left',
     rightButtonTag: '#carousel-right, #carousel-tiny-right'
-  });
+  })
 
   $(".regular").slick({
     dots: true,
@@ -140,11 +136,11 @@ jQuery(document).ready(function() {
     zIndex: 99,
     customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
-  });
+  })
 
   $.jInvertScroll(['.scroll'],
     {
-      height: $(window).width() * NUMBER_OF_PAGES,
+      height: $(window).width() * window.env.NUMBER_OF_PAGES,
       onScroll: function(percent) {
         $('.perfect-circle').circleProgress({
           value: percent,
@@ -157,20 +153,24 @@ jQuery(document).ready(function() {
           size: 77
         });
 
-        if (DEV) { $('.statusbar .paralax').text(Math.round(percent * 100) + '%') }
+        if (window.env.DEV) { $('.statusbar .paralax').text(Math.round(percent * 100) + '%') }
 
-        currentPage();
-        hideArrows();
+        currentPage()
+        hideArrows()
       }
     }
-  );
+  )
 
-  //*functions
+  // functions
+  function setScreenRatio() {
+    screenRatio = $(document).height() - $(window).height()
+  }
+
   function currentPage() {
     let curScroll = $(window).scrollTop() + 1;
-    for (let i = 0; i < NUMBER_OF_PAGES; i++) {
+    for (let i = 0; i < window.env.NUMBER_OF_PAGES; i++) {
       if (Math.ceil($(window).width() * i) <= curScroll && curScroll < Math.ceil($(window).width() * (i + 1))) {
-        if (DEV) $('.cur-page').text(`current page: ${i + 1}`);
+        if (window.env.DEV) $('.cur-page').text(`current page: ${i + 1}`);
         return i + 1;
       }
     }
@@ -181,13 +181,13 @@ jQuery(document).ready(function() {
     e = e || window.event; //IE
     var delta = e.deltaY || e.detail || e.wheelDelta; //wheelDelta всегда 120/-120
 
-    if (DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
-    if (DISABLE_WEEL) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши
+    if (window.env.DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
+    if (window.env.DISABLE_WEEL) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши
   }
 
   function scrollPage(direction) {
     function getPos() {
-      let step = 1 / (NUMBER_OF_PAGES - 1);
+      let step = 1 / (window.env.NUMBER_OF_PAGES - 1);
       if (direction == 7) {
         return screenRatio*(direction*step) + 1;
       } else  if(direction == 4) {
@@ -203,14 +203,14 @@ jQuery(document).ready(function() {
 
     $("html:not(:animated),body:not(:animated)").animate({
       scrollTop: getPos()
-    }, 500);
+    }, 500)
   }
 
   function hideArrows() {
     $('.arrow-left').appendTo($('.arrow-left').parent()); //reset animation
     $('.arrow-right').appendTo($('.arrow-right').parent());
 
-    if ((currentPage()) >= (NUMBER_OF_PAGES)) {
+    if ((currentPage()) >= (window.env.NUMBER_OF_PAGES)) {
       $('.arrow-left').addClass('hide')
     } else {
       $('.arrow-left').removeClass('hide')
@@ -223,19 +223,19 @@ jQuery(document).ready(function() {
     }      
   }
 
-  if (DEV) {setInterval(function(){
+  if (window.env.DEV) {setInterval(function(){
     let d = new Date();
     let curTime = [cz(d.getHours()), cz(d.getMinutes()), cz(d.getSeconds())].join(':')
 
     function cz(i) {return i < 10 ? '0' + i : i}
     $('.time').text(curTime)
-  }, SCROLL_SPEED)}
+  }, window.env.SCROLL_SPEED)}
 
   function keysStatus(st) {
-    if (DEV) $('.statusbar .keys').text(st)
+    if (window.env.DEV) $('.statusbar .keys').text(st)
   }
 
-  //classes
+  // classes
   function Keys() {
     this.arrowUp = function(e) {
       e.preventDefault()
