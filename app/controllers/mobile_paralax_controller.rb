@@ -1,5 +1,5 @@
 class MobileParalaxController < ApplicationController
-  # before_action :check_device
+  before_action :check_device
 
   def index
     @development = TeamMember.order(order: :desc)
