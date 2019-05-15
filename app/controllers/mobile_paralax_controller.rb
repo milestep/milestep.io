@@ -19,6 +19,10 @@ class MobileParalaxController < ApplicationController
     render 'paralax/mobile_pages/approach/'
   end
 
+  def contact_us
+    render 'paralax/mobile_pages/contact-us/'
+  end
+
   private
 
   def check_device
