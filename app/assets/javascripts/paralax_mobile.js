@@ -1,4 +1,11 @@
 jQuery(document).ready(function() {
+
+  $('.navbar-btn, nav').on('click', function() {
+    $('.navbar-btn').toggleClass('active');
+    $('nav').toggleClass('hiden');
+    $('.contact-us-btn, .perfect-circle').toggleClass('blur');
+  })
+
   $("#carousel").featureCarousel({    
     largeFeatureWidth : $(window).height() / 1.65,
     largeFeatureHeight: $(window).height() / 1.65,
