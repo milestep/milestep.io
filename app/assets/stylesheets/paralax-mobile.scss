@@ -1,39 +1,9 @@
 @import "paralax.scss";
 
 #paralax{
-  //mobile
-  .mobile-content-container {
-    //background-color: black;
-    // height: 100vh;
-  }
 
   //Ipad Mini 768 * 1024  9/7
   @media screen and (max-device-width: 768px) {
-
-    .sprites {
-      display: none;
-    }
-
-    .content-container {
-      display: none;
-    }
-
-    .perfect-circle {
-      display: none;
-    }
-
-    .arrow.arrow-left {
-      display: none;
-    }
-
-    .arrow.arrow-right {
-      display: none;
-    }
-
-    .navbar-btn {
-      left: 635px;
-    }
-
     .mobile-content-container {
       display: flex;
 
@@ -73,14 +43,55 @@
       }
 
       .content-page-2 div.about-us  {
-        margin-top: 6vh;
+        margin-top: 12vh;
 
+        div:first-child img {
+          margin-top: -3.5vh;
+          margin-left: 0vh;
+        }
         div:last-child {
           width: 90%;
           letter-spacing: 0.5vh;
+
+          h1 {
+            line-height: 4vh;
+          }
+
+          p {
+            margin-top: 2.94vh;
+            margin-bottom: 9.42vh;
+            text-align: justify;
+            letter-spacing: 0.1vh;
+            font-size: 2vh;
+          }
+
+          span.t2 {
+            font-size: 4.9vh;
+          }
         }
       }
+
+      .content-page-3 {
+
+        .content div {
+          width: 26vh;
+          margin: 3.8vh 1.45vh;
+          margin-left: 2vh;
+
+          h3 {
+            font-weight: 900;
+          }
+        }
+
+        .content {
+          width: 60vh;
+          min-width: 60vh;
+          margin-left: 5vh;
+        }
+
+      }
     }
+
 
     nav {
       li.mobile {

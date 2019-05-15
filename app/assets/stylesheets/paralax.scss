@@ -17,10 +17,6 @@ body {overflow-x: hidden;}
     display: flex;
   }
 
-  .mobile-content-container {
-    display: none;
-  }
-
   //*scroll content pages
   @for $i from 0 through $number-of-pages {
     .content-page-#{$i} {
@@ -168,10 +164,6 @@ body {overflow-x: hidden;}
     z-index: $nav-layer;
     transition: 1s;
     padding-right: 2vw;
-
-    li.mobile {
-      display: none;
-    }
 
     ul {
       font-family: Roboto;

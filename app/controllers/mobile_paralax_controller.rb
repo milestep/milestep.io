@@ -1,5 +1,5 @@
 class MobileParalaxController < ApplicationController
-  before_action :check_device
+  # before_action :check_device
 
   def index
     @development = TeamMember.order(order: :desc)
@@ -9,6 +9,10 @@ class MobileParalaxController < ApplicationController
 
   def about_us
     render 'paralax/mobile_pages/about-us/'
+  end
+
+  def services
+    render 'paralax/mobile_pages/services/'
   end
 
   private
