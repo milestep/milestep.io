@@ -59,7 +59,11 @@ html lang='en'
     = csp_meta_tag
 
     = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
-    = javascript_include_tag 'application'
+
+    - if params[:controller] != 'mobile_paralax' 
+      = javascript_include_tag 'application'
+    - else
+      = javascript_include_tag 'application_mobile'
 
   body
     /! Google Tag Manager (noscript)
@@ -67,4 +71,3 @@ html lang='en'
       iframe src='https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX' height='0' width='0' style='display:none;visibility:hidden'
 
     = yield
-
