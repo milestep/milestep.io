@@ -1,9 +1,14 @@
 jQuery(document).ready(function() {
+  const LOCATION_PATH = window.location.origin
 
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
     $('nav').toggleClass('hiden');
     $('.contact-us-btn, .perfect-circle').toggleClass('blur');
+  })
+
+  $('button, .contact-us-btn').on('click', function() {
+    $(location).attr('href', LOCATION_PATH + '/contact_us');
   })
 
   $("#carousel").featureCarousel({    

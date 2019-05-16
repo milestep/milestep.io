@@ -23,6 +23,11 @@ class MobileParalaxController < ApplicationController
     render 'paralax/mobile_pages/contact-us/'
   end
 
+  def team
+    @development = TeamMember.order(order: :desc)
+    render 'paralax/mobile_pages/team/'
+  end
+
   private
 
   def check_device

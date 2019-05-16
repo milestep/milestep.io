@@ -130,11 +130,12 @@
           align-items: center;
           flex-wrap: wrap;
           margin-left: 0;
-          margin-top: 2vh;
+          margin-top: 0;
           width: 72vh;
 
           .form {
             width: 100%;
+            height: 43vh;
 
             .title h2 {
               margin-top: -2vh;
@@ -147,15 +148,40 @@
               }
             }
 
-            form.message-form div.add-file-btn {
-              margin-left: 58vh;
-              margin-top: -7.3vh;
-              font-size: 2vh;
+            form.message-form  {
+              div.add-file-btn {
+                margin-left: 58vh;
+                margin-top: -7.3vh;
+                font-size: 2vh;
+              }
+              input.send-massage-btn {
+                margin-top: 1.9vh;
+                width: 19.97vh;
+                font-size: 1.55vh;
+              }
             }
 
           }
           .info {
             width: 100%;
+            text-align: center;
+            padding: 6.5vh 6vh 7vh 6vh;
+            p {
+              font-size: 1.85vh;
+              margin-bottom: 3.5vh;
+            }
+            .social-btns {
+              justify-content: center;
+              margin-bottom: 4vh;
+              font-size: 3.84vh;
+              div:last-child {
+                bottom: -0.64vh;
+                font-size: 2.6vh;
+              }
+            }
+            p.copyright {
+              font-size: 1.37vh;
+            }
           }
         }
       }
