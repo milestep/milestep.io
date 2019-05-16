@@ -110,6 +110,36 @@
       }
     }
 
+    .content-page-5 {
+      .tracker-summation-container { display: none; }
+
+      .carousel-tiny-nav {
+        margin-top: -35vh;
+
+        #carousel-tiny-left {
+          margin-right: 63vh;
+        }
+      }
+      .carousel-container {
+        height: 55vh;
+        .carousel-caption {
+          bottom: -5vh;
+        }
+        .our-team {
+          top: -6.45vh;
+          left: 4.9vw;
+          width: 43.1vw;
+          height: 8vh;
+          border: 1.9vh solid #F42B24;
+
+          p {
+            margin: -0.95vh 0 0 -1.55vh;
+            font-size: 3.75vh;
+          }
+        }
+      }
+    }
+
     /* approach */
     .content-page-6 {
       align-items: stretch; 
@@ -132,7 +162,6 @@
 
           .text {
             text-align: left;
-            // width: 25vh;
 
             h3 { font-size: 2.48vh; }
 
