@@ -2,222 +2,217 @@
 
 #paralax{
   //Ipad Mini 768 * 1024  9/7
-  @media screen and (max-device-width: 768px) {
-    .mobile-content-container {
-      display: flex;
+  header {
+    .main-logo {
+      margin: 3.8vh 0 0 3vh !important;
+      height: 7vh;
+    }
+  }
 
-      img {
-        position: absolute;
-        margin-top: 460px;
-        margin-left: 56px;
-        width: 515px;
-      }
+  #mobile-content-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
 
-      img.cat {
-        margin-top: 200px;
-        margin-left: 0px;
-        width: 92%;
-      }
+    img {
+      position: absolute;
+      margin-top: 42vh;
+      margin-left: 2vh;
+      height: 12.5vh;
+    }
+
+    img.cat {
+      margin-top: 21vh;
+      margin-left: 0vh;
+      height: 50vh;
+      width: unset;
+      z-index: 0;
+    }
+
+    .content-page-1 {
+      img { width: unset; }
 
       .text {
         position: absolute;
-        margin-top: 60vh;
-        margin-left: 6.07vh;
-        width: 45.9vh;
+        margin-top: 58vh;
+        margin-left: 2.5vh;
         font-size: 1.85vh;
         line-height: 1.94vh;
         text-transform: uppercase;
       }
 
       #portfolio-btn {
+        margin-left: 3vh;
+        margin-top: 68vh;
+        width: 19.43vh;
+        height: 4.83vh;
+        border: 0.12vh solid #FFFFFF;
         border-radius: 4.12vh;
-        position: absolute;
-        margin-top: 695px;
-        width: 160px;
-        margin-left: 7vw;
-        background-color: #ffffff00;
-        padding: 1.18vh;
-        text-transform: uppercase;
-        font-size: 1.89vh;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color .3s;
+        z-index: 10;
       }
 
-      .content-page-2 div.about-us  {
-        margin-top: 12vh;
+      #portfolio-btn:hover {
+        background-color: rgba(50, 50, 50, 0.3);
+        transition: background-color .3s;
+      }
+    }
 
-        div:first-child img {
-          margin-top: -3.5vh;
-          margin-left: 0vh;
+    .content-page-2 div.about-us {
+      margin-top: 12vh;
+
+      div:first-child img {
+        margin-top: -3.5vh;
+        margin-left: 0vh;
+      }
+
+      div:last-child {
+        width: 90%;
+        letter-spacing: 0.5vh;
+
+        h1 { line-height: 4vh; }
+
+        p {
+          margin-top: 2.94vh;
+          margin-bottom: 9.42vh;
+          text-align: justify;
+          letter-spacing: 0.1vh;
+          font-size: 2vh;
         }
-        div:last-child {
-          width: 90%;
-          letter-spacing: 0.5vh;
 
-          h1 {
-            line-height: 4vh;
+        span.t2 { font-size: 4.9vh; }
+      }
+    }
+
+    .content-page-3 {
+      .content div {
+        width: 26vh;
+        margin: 3.8vh 1.45vh;
+        margin-left: 2vh;
+
+        h3 { font-weight: 900; }
+      }
+
+      .content {
+        width: 60vh;
+        min-width: 60vh;
+        margin-left: 5vh;
+      }
+    }
+
+    .content-page-6 {
+      .text {
+        position: absolute;
+        margin-top: 0vh;
+      }
+
+      div.approach {
+        justify-content: center;
+        margin-top: 8.78vh;
+
+        div.items {
+          width: 27vh;
+          height: 18vh;
+
+          .text {
+            width: 25vh;
+
+            h3 { font-size: 2.48vh; }
+
+            p {
+              font-size: 1.5vh;
+              letter-spacing: 0px;
+              text-transform: none;
+              line-height: 1.65vh;
+            }
           }
+        }
+      }
+    }
+
+    .content-page-7 {
+      align-items: flex-start;
+      margin-top: 15vh;
+
+      .contact-us {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-top: 0;
+        width: 72vh;
+
+        .form {
+          width: 100%;
+          height: 43vh;
+
+          .title h2 {
+            margin-top: -2vh;
+            font-size: 2.12vh;
+
+            span { font-size: 3.71vh; }
+            span.development { font-size: 1.9vh; }
+          }
+
+          form.message-form  {
+            div.add-file-btn {
+              margin-left: 58vh;
+              margin-top: -7.3vh;
+              font-size: 2vh;
+            }
+
+            input.send-massage-btn {
+              margin-top: 1.9vh;
+              width: 19.97vh;
+              font-size: 1.55vh;
+            }
+          }
+        }
+
+        .info {
+          width: 100%;
+          text-align: center;
+          padding: 6.5vh 6vh 7vh 6vh;
 
           p {
-            margin-top: 2.94vh;
-            margin-bottom: 9.42vh;
-            text-align: justify;
-            letter-spacing: 0.1vh;
-            font-size: 2vh;
+            font-size: 1.85vh;
+            margin-bottom: 3.5vh;
           }
 
-          span.t2 {
-            font-size: 4.9vh;
-          }
-        }
-      }
+          .social-btns {
+            justify-content: center;
+            margin-bottom: 4vh;
+            font-size: 3.84vh;
 
-      .content-page-3 {
-
-        .content div {
-          width: 26vh;
-          margin: 3.8vh 1.45vh;
-          margin-left: 2vh;
-
-          h3 {
-            font-weight: 900;
-          }
-        }
-
-        .content {
-          width: 60vh;
-          min-width: 60vh;
-          margin-left: 5vh;
-        }
-
-      }
-
-      .content-page-6 {
-        .text {
-          position: absolute;
-          margin-top: 0vh;
-        }
-
-         div.approach {
-           justify-content: center;
-           margin-top: 8.78vh;
-
-           div.items {
-             width: 27vh;
-             height: 18vh;
-
-             .text {
-               width: 25vh;
-               h3 {
-                 font-size: 2.48vh;
-               }
-
-               p {
-                font-size: 1.5vh;
-                 letter-spacing: 0px;
-                 text-transform: none;
-                 line-height: 1.65vh;
-               }
-             }
-           }
-         }
-      }
-
-      .content-page-7 {
-        align-items: flex-start;
-        margin-top: 15vh;
-
-        .contact-us {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          margin-left: 0;
-          margin-top: 0;
-          width: 72vh;
-
-          .form {
-            width: 100%;
-            height: 43vh;
-
-            .title h2 {
-              margin-top: -2vh;
-              font-size: 2.12vh;
-              span {
-                font-size: 3.71vh;
-              }
-              span.development {
-                font-size: 1.9vh;
-              }
-            }
-
-            form.message-form  {
-              div.add-file-btn {
-                margin-left: 58vh;
-                margin-top: -7.3vh;
-                font-size: 2vh;
-              }
-              input.send-massage-btn {
-                margin-top: 1.9vh;
-                width: 19.97vh;
-                font-size: 1.55vh;
-              }
-            }
-
-          }
-          .info {
-            width: 100%;
-            text-align: center;
-            padding: 6.5vh 6vh 7vh 6vh;
-            p {
-              font-size: 1.85vh;
-              margin-bottom: 3.5vh;
-            }
-            .social-btns {
-              justify-content: center;
-              margin-bottom: 4vh;
-              font-size: 3.84vh;
-              div:last-child {
-                bottom: -0.64vh;
-                font-size: 2.6vh;
-              }
-            }
-            p.copyright {
-              font-size: 1.37vh;
+            div:last-child {
+              bottom: -0.64vh;
+              font-size: 2.6vh;
             }
           }
+
+          p.copyright { font-size: 1.37vh; }
         }
       }
     }
+  }
 
+  nav {
+    li.mobile { display: flex; }
+    li.desktop { display: none; }
+  }
 
-    nav {
-      li.mobile {
-        display: flex;
-      }
+  .contact-us-btn { left: 410px; }
+  header .main-logo { margin: 3.89vh 0px 0px 2vh; }
 
-      li.desktop {
-        display: none;
-      }
+  .content-page-1 {
+    img {
+      margin-left: 8.7vw;
+      margin-top: 43vh;
+      width: 65.43vh;
+      height: 17vh;
     }
 
-    .contact-us-btn {
-      left: 410px;
-    }
-
-    header .main-logo {
-      margin: 3.89vh 0px 0px 2vh;
-
-    }
-
-    .content-page-1 {
-      img {
-        margin-left: 8.7vw;
-        margin-top: 43vh;
-        width: 65.43vh;
-        height: 17vh;
-      }
-
-      .text {
-        margin-left: 10vw;
-      }
-    }
+    .text { margin-left: 10vw; }
   }
 }
