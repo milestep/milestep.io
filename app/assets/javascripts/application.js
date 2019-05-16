@@ -23,6 +23,4 @@
 //= require circle-progress
 //= require paralax
 
-//  require_tree .
-
 //= require serviceworker-companion

@@ -37,30 +37,30 @@ body {overflow-x: hidden;}
     .main-logo {
       margin: 3.89vh 0 0 8vh;
       height: 7vh;
+    }    
+
+    .contact-us-btn {
+      font-size: 1.88vh;
+      position: fixed;
+      width: 19.43vh;
+      height: 4.82vh;
+      right: 22.61vh;
+      top: 5.18vh;
+      background-color: rgba(0, 0, 0, 0);
+      border: 0.12vh solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 4.12vh;
+      text-transform: uppercase;
+      cursor: pointer;
+      filter: blur(0px);
+      transition: filter 1s;
+      transition: background-color .3s;
     }
-  }
 
-  .contact-us-btn {
-    font-size: 1.88vh;
-    position: fixed;
-    width: 19.43vh;
-    height: 4.82vh;
-    right: 22.61vh;
-    top: 5.18vh;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0.12vh solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 4.12vh;
-    text-transform: uppercase;
-    cursor: pointer;
-    filter: blur(0px);
-    transition: filter 1s;
-    transition: background-color .3s;
-  }
-
-  .contact-us-btn:hover {
-    background-color: rgba(50,50,50,.5);
-    transition: background-color .3s;
+    .contact-us-btn:hover {
+      background-color: rgba(50,50,50,.5);
+      transition: background-color .3s;
+    }
   }
 
   //*navbar
@@ -861,7 +861,7 @@ body {overflow-x: hidden;}
     div.approach {
       display: flex;
       flex-wrap: wrap;
-      width: 160vh;
+      width: 80vw;
       margin-top: 11.78vh;
 
       div.items:nth-child(1),
