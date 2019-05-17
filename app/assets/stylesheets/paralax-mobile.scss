@@ -1,6 +1,4 @@
-@import "paralax.scss";
-
-#paralax{
+#paralax {
   //Ipad Mini 768 * 1024  9/7
   header {
     .main-logo {
@@ -26,11 +24,11 @@
         margin-top: 42vh;
         margin-left: 5.4vw;
         height: 12.5vh;
-        }
+      }
 
       img.cat {
         margin-top: 21vh;
-        margin-left: 0vh;
+        right: 7vh;
         height: 50vh;
         width: unset;
         z-index: 0;
@@ -65,6 +63,38 @@
 
     .content-page-2 {
       padding-top: 7vh;
+
+      .sprites-rocks {
+        position: absolute;
+        width: 100vw;
+        height: 90vh;
+
+        img { position: absolute; }
+
+        img#first {
+          top: 70vh;
+          left: 9vw;
+        }
+
+        img#second {
+          position: absolute;
+          top: 13vh;
+          left: 7vw;
+        }
+
+        img#third {
+          position: absolute;
+          top: 58vh;
+          left: 61vw;
+        }
+
+        img#fourth {
+          position: absolute;
+          top: 7vh;
+          left: 75vw;
+        }
+      }
+
       .about-us {
         div:first-child img {
           margin-top: -3.5vh;
@@ -94,7 +124,79 @@
         }
       }
     }
+
     .content-page-3 {
+      .sprites {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+
+        img { position: absolute; }
+
+        img#first {
+          position: absolute;
+          top: 83vh;
+          left: 32vw;
+          height: 6vh;
+        }
+
+        img#second {
+          position: absolute;
+          top: 14vh;
+          left: 45vw;
+          height: 6vh;
+        }
+
+        img#third {
+          position: absolute;
+          top: 13vh;
+          left: 73vw;
+          height: 12vh;
+        }
+
+        img#fourth {
+          position: absolute;
+          top: 63vh;
+          left: 90vw;
+          height: 4vh;
+        }
+
+        img#fifth {
+          position: absolute;
+          top: 69vh;
+          left: 1vw;
+          height: 12vh;
+        }
+
+        img#sixth {
+          position: absolute;
+          top: 72vh;
+          left: 94vw;
+          height: 7vh;
+        }
+
+        img#seventh {
+          position: absolute;
+          top: 86vh;
+          left: 3vw;
+          height: 10vh;
+        }
+
+        img#eighth {
+          position: absolute;
+          top: 28vh;
+          left: 91vw;
+          height: 9vh;
+        }
+
+        img#ninth {
+          position: absolute;
+          top: 73vh;
+          left: 23vw;
+          height: 5vh;
+        }
+      }
+
       .content div {
         width: 26vh;
         margin: 3.8vh 1.45vh;
@@ -107,6 +209,41 @@
         width: 60vh;
         min-width: 60vh;
         margin-left: 5vh;
+      }
+    }
+
+    /* portfolio */
+    .content-page-4 {
+      padding-top: 12vh;
+
+      .title {
+        margin-right: 40vw;
+        margin-top: unset;
+        width: 110vw;
+        height: 6vh;
+        background-color: #333;
+        justify-content: center;
+
+        .text {
+          margin-right: unset;
+          font-size: 3vh;
+        }
+      }
+
+      .content {
+        .slider {
+          .slick-list {
+            .slick-track {
+              height: 50vh;
+
+              .slick-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -250,14 +387,16 @@
     li.desktop { display: none; }
   }
 
-  .content-page-1 {
-    img {
-      margin-left: 8.7vw;
-      margin-top: 43vh;
-      width: 65.43vh;
-      height: 17vh;
-    }
+  .shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+  }
 
-    .text { margin-left: 10vw; }
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
   }
 }
+

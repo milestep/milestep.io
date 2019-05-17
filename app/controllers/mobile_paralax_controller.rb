@@ -12,7 +12,7 @@ class MobileParalaxController < ApplicationController
   def contact_us ; end
 
   def portfolio
-    @portfolio = PortfolioItem.order(order: :desc).first(6)
+    @portfolio = PortfolioItem.order(order: :desc)
   end
 
   def team

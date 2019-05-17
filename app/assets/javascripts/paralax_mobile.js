@@ -15,6 +15,10 @@ jQuery(document).ready(function() {
     $(location).attr('href', LOCATION_PATH + '/contact_us');
   })
 
+  $('button, #portfolio-btn').on('click', function() {
+    $(location).attr('href', LOCATION_PATH + '/portfolio');
+  })
+
   $("#carousel").featureCarousel({    
     largeFeatureWidth : $(window).height() / 1.72,
     largeFeatureHeight: $(window).height() / 1.72,
@@ -34,7 +38,7 @@ jQuery(document).ready(function() {
   $(".regular").slick({
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     appendArrows: $('.carousel-nav-btns'),
     appendDots: $('.carousel-nav-btns'),
@@ -45,4 +49,6 @@ jQuery(document).ready(function() {
     customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
+
+  $('#mobile-content-container').draggable()
 })

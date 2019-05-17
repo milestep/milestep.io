@@ -21,6 +21,7 @@
         margin-left: 82vw;
         opacity: .6;
       }
+
       img:last-child {
         position: inherit;
         height: 100vh;
@@ -38,11 +39,33 @@
         margin-left: 485.5vw;
         margin-top: 65vh;
       }
+
       img.limg-2 {
         position: inherit;
         height: 10vh;
         margin-left: 373.5vw;
         margin-top: 13vh;
+      }
+
+      img.limg-3 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 300vw;
+        margin-top: 13vh;
+      }
+
+      img.limg-4 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 182vw;
+        margin-top: 13vh;;
+      }
+
+      img.limg-5 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 100vw;
+        margin-top: 13vh;;
       }
     }
 
@@ -128,6 +151,13 @@
         margin-left: 710vw;
         margin-top: 33vh;
       }
+
+      img.limg-2 {
+        position: inherit;
+        height: 12vh;
+        margin-left: 473vw;
+        margin-top: 75vh;
+      }
     }
 
     .layer-6 {
@@ -145,6 +175,13 @@
         position: inherit;
         height: 7vh;
         margin-left: 890vw;
+        margin-top: 77vh;
+      }
+
+      img.limg-3 {
+        position: inherit;
+        height: 7vh;
+        margin-left: 518vw;
         margin-top: 77vh;
       }
     }
@@ -172,6 +209,14 @@
         height: 5vh;
         margin-left: 1094vw;
         margin-top: 73vh;
+      }
+
+      img.limg-4 {
+        position: inherit;
+        height: 5vh;
+        margin-left: 820vw;
+        margin-top: 88vh;        
+        transform: rotate(139deg);
       }
     }
 
@@ -226,7 +271,13 @@
         margin-left: 1366vw;
         margin-top: 13vh;
       }
+
+      img.limg-5 {
+        position: inherit;
+        height: 21vh;
+        margin-left: 648vw;
+        margin-top: 76vh;
+      }
     }
   }
-
 }

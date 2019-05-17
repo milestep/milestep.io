@@ -1,5 +1,5 @@
 window.env = {
-  DEV: 1, // false = prod, true = dev
+  DEV: 0, // false = prod, true = dev
   DISABLE_WEEL: false,
   NUMBER_OF_PAGES: 7,
   SCROLL_SPEED: 1500,
@@ -11,4 +11,5 @@ window.env = {
 //  jquery.featureCarousel
 //  jquery.jInvertScroll
 //  jquery.slickCarousel
+//  jquery.notiny
 //  circle-progress
