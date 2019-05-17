@@ -11,21 +11,20 @@
     .contact-us-btn {
       width: 19.43vh;
       height: 4.82vh;
-      right: 15vh;
+      right: 16vh;
       top: 4vh;
     }
   }
 
   #mobile-content-container {
     display: flex;
-    // min-height: 100vh;
 
     .content-page-1 {
       img {
         width: unset;
         position: absolute;
         margin-top: 42vh;
-        margin-left: 2vh;
+        margin-left: 5.4vw;
         height: 12.5vh;
         }
 
@@ -40,14 +39,14 @@
       .text {
         position: absolute;
         margin-top: 58vh;
-        margin-left: 2.5vh;
+        margin-left: 6vw;
         font-size: 1.85vh;
         line-height: 1.94vh;
         text-transform: uppercase;
       }
 
       #portfolio-btn {
-        margin-left: 3vh;
+        margin-left: 6vw;
         margin-top: 68vh;
         width: 19.43vh;
         height: 4.83vh;
@@ -124,9 +123,10 @@
         margin-top: unset;
         justify-content: center;
         padding: 7vh 0;
+        width: 90vw;
 
         .items {
-          width: 30vh;
+          flex: 1 1 30vh;
           height: 18vh;
           margin: 1vh;
 
