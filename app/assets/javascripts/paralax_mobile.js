@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
   $(".regular").slick({
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     appendArrows: $('.carousel-nav-btns'),
     appendDots: $('.carousel-nav-btns'),
