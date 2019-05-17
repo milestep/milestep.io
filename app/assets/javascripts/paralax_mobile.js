@@ -45,4 +45,6 @@ jQuery(document).ready(function() {
     customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
+
+  $('#mobile-content-container').draggable()
 })
