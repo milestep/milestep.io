@@ -95,6 +95,76 @@
       }
     }
     .content-page-3 {
+      .sprites {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+
+        img { position: absolute; }
+
+        img#first {
+          position: absolute;
+          top: 83vh;
+          left: 32vw;
+          height: 6vh;
+        }
+
+        img#second {
+          position: absolute;
+          top: 14vh;
+          left: 45vw;
+          height: 6vh;
+        }
+
+        img#third {
+          position: absolute;
+          top: 13vh;
+          left: 73vw;
+          height: 12vh;
+        }
+
+        img#fourth {
+          position: absolute;
+          top: 63vh;
+          left: 90vw;
+          height: 4vh;
+        }
+
+        img#fifth {
+          position: absolute;
+          top: 69vh;
+          left: 1vw;
+          height: 12vh;
+        }
+
+        img#sixth {
+          position: absolute;
+          top: 72vh;
+          left: 94vw;
+          height: 7vh;
+        }
+
+        img#seventh {
+          position: absolute;
+          top: 86vh;
+          left: 3vw;
+          height: 10vh;
+        }
+
+        img#eighth {
+          position: absolute;
+          top: 28vh;
+          left: 91vw;
+          height: 9vh;
+        }
+
+        img#ninth {
+          position: absolute;
+          top: 73vh;
+          left: 23vw;
+          height: 5vh;
+        }
+      }
       .content div {
         width: 26vh;
         margin: 3.8vh 1.45vh;
