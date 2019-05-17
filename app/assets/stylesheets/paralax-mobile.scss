@@ -1,6 +1,4 @@
-@import "paralax.scss";
-
-#paralax{
+#paralax {
   //Ipad Mini 768 * 1024  9/7
   header {
     .main-logo {
@@ -26,11 +24,11 @@
         margin-top: 42vh;
         margin-left: 5.4vw;
         height: 12.5vh;
-        }
+      }
 
       img.cat {
         margin-top: 21vh;
-        margin-left: 0vh;
+        right: 7vh;
         height: 50vh;
         width: unset;
         z-index: 0;
@@ -94,11 +92,13 @@
         }
       }
     }
+
     .content-page-3 {
       .sprites {
         position: absolute;
         width: 100vw;
         height: 100vh;
+        z-index: 20;
 
         img { position: absolute; }
 
@@ -165,6 +165,7 @@
           height: 5vh;
         }
       }
+
       .content div {
         width: 26vh;
         margin: 3.8vh 1.45vh;
@@ -177,6 +178,41 @@
         width: 60vh;
         min-width: 60vh;
         margin-left: 5vh;
+      }
+    }
+
+    /* portfolio */
+    .content-page-4 {
+      padding-top: 12vh;
+
+      .title {
+        margin-right: 40vw;
+        margin-top: unset;
+        width: 110vw;
+        height: 6vh;
+        background-color: #333;
+        justify-content: center;
+
+        .text {
+          margin-right: unset;
+          font-size: 3vh;
+        }
+      }
+
+      .content {
+        .slider {
+          .slick-list {
+            .slick-track {
+              height: 50vh;
+
+              .slick-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
       }
     }
 
@@ -320,14 +356,15 @@
     li.desktop { display: none; }
   }
 
-  .content-page-1 {
-    img {
-      margin-left: 8.7vw;
-      margin-top: 43vh;
-      width: 65.43vh;
-      height: 17vh;
-    }
+  .shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+  }
 
-    .text { margin-left: 10vw; }
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
   }
 }
