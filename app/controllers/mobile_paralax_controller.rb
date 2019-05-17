@@ -1,31 +1,22 @@
 class MobileParalaxController < ApplicationController
   before_action :check_device
 
-  def index
-    @development = TeamMember.order(order: :desc)
+  def index ; end
+
+  def about_us ; end
+
+  def services ; end
+
+  def approach ; end
+
+  def contact_us ; end
+
+  def portfolio
     @portfolio = PortfolioItem.order(order: :desc).first(6)
-    render template: 'paralax/mobile'
-  end
-
-  def about_us
-    render 'paralax/mobile_pages/about-us/'
-  end
-
-  def services
-    render 'paralax/mobile_pages/services/'
-  end
-
-  def approach
-    render 'paralax/mobile_pages/approach/'
-  end
-
-  def contact_us
-    render 'paralax/mobile_pages/contact-us/'
   end
 
   def team
     @development = TeamMember.order(order: :desc)
-    render 'paralax/mobile_pages/team/'
   end
 
   private

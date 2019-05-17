@@ -1,0 +1,29 @@
+#paralax
+  = render 'header'
+
+  #mobile-content-container
+    .content-page-4
+      div.title
+        div.text Portfolio
+
+      div.content
+        div.slider.regular
+          - @portfolio.each do |project|
+            .carousel-feature
+              div.placeholder
+                div = project.name
+                / img alt=project.name src=image_path(project.logo)
+                button[class="show-project" id="project-#{project.id}"] Show project
+
+              img.carousel-image alt=project.name src=image_path(project.image_url)
+
+          - (1..10).collect do |i|
+            .carousel-feature
+              div.placeholder
+                div Proj logo
+                button Show project
+
+              img src="http://placehold.it/440x440?text=#{i}"
+
+        div.carousel-nav-btns
+        button.show-all-project-btn Show all projects

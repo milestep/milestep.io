@@ -1,14 +1,11 @@
 #paralax
-  = render 'paralax/mobile_pages/header'
+  = render 'header'
 
   #mobile-content-container
     .content-page-5
       .carousel-container
         div.our-team
-          p
-            | Our
-            br
-            | team
+          p Our team
 
         #carousel
           - @development.each do |developer|
@@ -18,15 +15,6 @@
               .carousel-caption
                 p.name = developer.title
                 p.specialization = developer.name
-
-        .carousel-nav
-          #carousel-left
-            img src=image_path("paralax/carousel-team/arrow-left.png")
-
-          div.tracker-individual-container
-
-          #carousel-right
-            img src=image_path("paralax/carousel-team/arrow-right.png")
 
         .carousel-tiny-nav
           #carousel-tiny-left

@@ -16,8 +16,8 @@ jQuery(document).ready(function() {
   })
 
   $("#carousel").featureCarousel({    
-    largeFeatureWidth : $(window).height() / 1.65,
-    largeFeatureHeight: $(window).height() / 1.65,
+    largeFeatureWidth : $(window).height() / 1.72,
+    largeFeatureHeight: $(window).height() / 1.72,
     smallFeatureWidth: $(window).height() / 3.3,
     smallFeatureHeight: $(window).height() / 3.3,
     topPadding: 0,
