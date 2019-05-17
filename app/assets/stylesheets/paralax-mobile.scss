@@ -63,6 +63,38 @@
 
     .content-page-2 {
       padding-top: 7vh;
+
+      .sprites-rocks {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+
+        img { position: absolute; }
+
+        img#first {
+          top: 70vh;
+          left: 9vw;
+        }
+
+        img#second {
+          position: absolute;
+          top: 19vh;
+          left: 3vw;
+        }
+
+        img#third {
+          position: absolute;
+          top: 68vh;
+          left: 61vw;
+        }
+
+        img#fourth {
+          position: absolute;
+          top: 12vh;
+          left: 75vw;
+        }
+      }
+
       .about-us {
         div:first-child img {
           margin-top: -3.5vh;
