@@ -1,5 +1,3 @@
-@import "paralax.scss";
-
 #paralax{
   //Ipad Mini 768 * 1024  9/7
   header {
@@ -26,11 +24,11 @@
         margin-top: 42vh;
         margin-left: 5.4vw;
         height: 12.5vh;
-        }
+      }
 
       img.cat {
         margin-top: 21vh;
-        margin-left: 0vh;
+        right: 7vh;
         height: 50vh;
         width: unset;
         z-index: 0;
@@ -94,6 +92,7 @@
         }
       }
     }
+
     .content-page-3 {
       .sprites {
         position: absolute;
@@ -165,6 +164,7 @@
           height: 5vh;
         }
       }
+
       .content div {
         width: 26vh;
         margin: 3.8vh 1.45vh;
@@ -177,6 +177,41 @@
         width: 60vh;
         min-width: 60vh;
         margin-left: 5vh;
+      }
+    }
+
+    /* portfolio */
+    .content-page-4 {
+      padding-top: 12vh;
+
+      .title {
+        margin-right: 40vw;
+        margin-top: unset;
+        width: 110vw;
+        height: 6vh;
+        background-color: #333;
+        justify-content: center;
+
+        .text {
+          margin-right: unset;
+          font-size: 3vh;
+        }
+      }
+
+      .content {
+        .slider {
+          .slick-list {
+            .slick-track {
+              height: 50vh;
+
+              .slick-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
       }
     }
 
