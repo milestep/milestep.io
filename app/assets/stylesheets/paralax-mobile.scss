@@ -78,19 +78,19 @@
 
         img#second {
           position: absolute;
-          top: 19vh;
-          left: 3vw;
+          top: 13vh;
+          left: 7vw;
         }
 
         img#third {
           position: absolute;
-          top: 68vh;
+          top: 58vh;
           left: 61vw;
         }
 
         img#fourth {
           position: absolute;
-          top: 12vh;
+          top: 7vh;
           left: 75vw;
         }
       }
@@ -399,3 +399,4 @@
     40%, 60% { transform: translate3d(4px, 0, 0); }
   }
 }
+
