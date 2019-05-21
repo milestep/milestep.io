@@ -1,9 +1,12 @@
 class RequestsController < ApplicationController
   def create
-    # pry
+    Request.notify(attrs).deliver_now
     # respond_to :js
-    # pry
-    Request.notify(attrs).deliver_later
+    # index
+  end
+
+  def index
+    respond_to :js
   end
 
   private

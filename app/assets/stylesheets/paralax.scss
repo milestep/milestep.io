@@ -1135,6 +1135,8 @@ body {overflow-x: hidden;}
 
           color: #FFFFFF;
 
+          h2 { font-size: unset; }
+
           span:first-child, span:nth-child(2) {
             margin: 0 0.59vh 0 0.59vh;
             font-weight: 900;
