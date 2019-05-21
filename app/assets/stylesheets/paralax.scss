@@ -1380,6 +1380,15 @@ body {overflow-x: hidden;}
     filter: blur(0.59vh);
     transition: filter 1s;
   }
+
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    opacity: 0;
+    cursor: inherit;
+  }
 }
 
 //scrollbar
