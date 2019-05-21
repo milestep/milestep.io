@@ -1,7 +1,7 @@
 class RequestsController < ApplicationController
   def create
     Request.notify(attrs).deliver_later
-    head 200
+    respond_to :js
   end
 
   private

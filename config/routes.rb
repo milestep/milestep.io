@@ -22,5 +22,6 @@ Rails.application.routes.draw do
 
   get '/', to: 'paralax#index'
 
-  post :contact, to: 'requests#create', as: :contact
+  # post :contact, to: 'requests#create', as: :contact
+  post '/contact', to: 'requests#create'
 end
