@@ -1,6 +1,12 @@
 function sendMessage() {
-  var formElement = document.querySelector("#message-form");
+  var formElement = document.querySelector(".message-form");
   var form = $(formElement);
+  // console.log($('#attachment').prop('files'))
+  var myFile = $('#attachment').prop('files');
+  console.log($('#attachment').val())
+  var dt = new FormData();
+  dt.append('attach', myFile);
+  // console.log(dt)
   var data = getData();
 
   if (!formElement.checkValidity()) {
@@ -10,8 +16,10 @@ function sendMessage() {
   $.ajax({
     beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
     url: 'contact',
+    processData: false,
+    contentType: 'multipart/form-data',
     type: 'POST',
-    data: { contact: data },
+    data: { contact: dt },
     success: function () {
       toastr({ type: "success", message: 'Message was successfully delivered!' });
       form.trigger("reset");
