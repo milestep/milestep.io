@@ -3,8 +3,7 @@ class Request < ApplicationMailer
     @body = attrs['message']
     mail(
       from: "#{attrs['email']}",
-      # to: ENV["REQUEST_RECIPIENT"] || 'contact@milestep.io',
-      to: ENV["REQUEST_RECIPIENT"] || 'sergeyripchanskiy@gmail.com',
+      to: ENV["REQUEST_RECIPIENT"] || 'contact@milestep.io',
       subject: "Contact Us"
     )
   end

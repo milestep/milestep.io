@@ -1,11 +1,7 @@
 class RequestsController < ApplicationController
   def create
-    # pry
-    # Request.notify(attrs).deliver_later
-    # respond_to do |format|
-    #   format.js
-    # end
-    # head 200
+    Request.notify(attrs).deliver_later
+    head 200
   end
 
   private

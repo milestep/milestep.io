@@ -22,6 +22,5 @@
 //= require jquery.slickCarousel
 //= require circle-progress
 //= require paralax
-//= require send-message
 
 //= require serviceworker-companion

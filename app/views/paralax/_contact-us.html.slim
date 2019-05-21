@@ -8,11 +8,10 @@ div.contact-us
         br
         span development service
 
-    form.message-form enctype="multipart/form-data" onclick='sendMessage()' onsubmit='return false'
+    form.message-form enctype="multipart/form-data" onsubmit='return false'
       input.name name='name' placeholder='Your name' type='text'
       input.email name='email' placeholder='Email' type='email'
       input.message name='message' placeholder='Message' type='text'
-      input.attachment name='attachment' placeholder='Attachment' type='file'
         div.include-files
           | File requirement: pdf, doc, docx, rtf, ppt, pptx
         div.add-file-btn
@@ -49,7 +48,9 @@ div.contact-us
     p.copyright
       | Copyright &#169; 2018 MileStep LLC. Privacy Policy
 
-    = form_tag contact_path, remote: true do
-      = file_field_tag 'contact[avatar]'
+    = form_tag contact_path, multipart: true, remote: true do
+      = file_field_tag 'contact[attachment]'
+      = text_field_tag 'contact[name]'
       = text_field_tag 'contact[email]'
+      = text_field_tag 'contact[message]'
       = submit_tag 'submit', :name => 'commit'

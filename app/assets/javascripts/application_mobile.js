@@ -6,6 +6,5 @@
 //= require jquery.slickCarousel
 //= require circle-progress
 //= require paralax_mobile
-//= require send-message
 
 //= require serviceworker-companion
