@@ -20,6 +20,7 @@
 //= require jquery.featureCarousel
 //= require jquery.jInvertScroll
 //= require jquery.slickCarousel
+//= require jquery.notiny
 //= require circle-progress
 //= require paralax
 
