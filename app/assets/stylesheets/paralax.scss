@@ -453,21 +453,21 @@ body {overflow-x: hidden;}
 
     div.title {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
 
-      width: 70vw;
-      margin-right: 214vh;
+      width: 28vw;
+      // margin-right: 214vh;
       height: 8vh;
-      //background: #1F1F1F;
       border-radius: 23.67vh;
       margin-top: 5vh;
       margin-bottom: 2.36vh;
+      background-color: #333;
 
       transition: .8s;
 
       div.text {
-        margin-right: 11vw;
+        // margin-right: 11vw;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
@@ -480,16 +480,17 @@ body {overflow-x: hidden;}
       }
     }
 
-    div.title.mini {
-      justify-content: center;
-      width: 15vw;
-      margin-right: 0vw;
-      transition: .8s;
+    /* for animated title */
+    // div.title.mini {
+    //   justify-content: center;
+    //   width: 15vw;
+    //   margin-right: 0vw;
+    //   transition: .8s;
 
-      div.text {
-        margin-right: 0vw;
-      }
-    }
+    //   div.text {
+    //     margin-right: 0vw;
+    //   }
+    // }
 
     div.content {
       display: flex;
@@ -517,12 +518,20 @@ body {overflow-x: hidden;}
             transition: opacity .5s;
             cursor: default;
 
+            .project-name {
+              font-size: 4vh;
+            }
+
             div, img {
               width: 80%;
               text-align: center;
             }
 
-            button {
+            button, a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              
               background-color: rgba(50,50,50,1);
               color: #FFFFFF;
               border-radius: 4.12vh;
@@ -530,7 +539,9 @@ body {overflow-x: hidden;}
               box-sizing: border-box;
               width: 19.43vh;
               height: 4.83vh;
-              margin-top: 4vh;
+              margin-top: 1.8vh;
+              text-decoration: none;
+              cursor: pointer;
 
               font-family: Roboto;
               font-style: normal;
@@ -542,7 +553,7 @@ body {overflow-x: hidden;}
               transition: background-color .3s;
             }
 
-            button:hover {
+            button:hover, a:hover {
               background-color: rgba(0, 0, 0, 0.5);
               transition: background-color .3s;
             }
@@ -613,7 +624,6 @@ body {overflow-x: hidden;}
 
           li {
             bottom: unset;
-            width: unset;
             background: white;
             position: relative;
             display: flex;
@@ -624,6 +634,7 @@ body {overflow-x: hidden;}
             text-align: center;
             width: 4vh;
             height: 4vh;
+            font-size: 2vh;
             background: #1D1D1D;
             box-shadow: inset 0vh 2.83vh 2.83vh rgba(0, 0, 0, 0.25);
             border-radius: 2vh;
@@ -864,7 +875,7 @@ body {overflow-x: hidden;}
       display: flex;
       flex-wrap: wrap;
       width: 80vw;
-      margin-top: 11.78vh;
+      margin-top: 6vh;
 
       div.items:nth-child(1),
       div.items:nth-child(2),
@@ -875,7 +886,8 @@ body {overflow-x: hidden;}
       div.items {
         display: flex;
         margin: 2vh;
-        width: 45vh;
+        min-width: 45vh;
+        flex: 1;
 
         div.icons {
           width: 12.96vh;

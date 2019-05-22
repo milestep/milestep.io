@@ -10,9 +10,9 @@ jQuery(document).ready(function() {
   $(window).scroll(function() {
     switch (currentPage()) {
       case 1: $('.sprites .layer-2 img').removeClass('hiden'); break;
-      case 4: $('.content-page-4 .title').removeClass('mini'); break;
+      // case 4: $('.content-page-4 .title').removeClass('mini'); break;
       default: $('.sprites .layer-2 img').addClass('hiden');
-               $('.content-page-4 .title').addClass('mini');
+               // $('.content-page-4 .title').addClass('mini');
     }
   })
 
