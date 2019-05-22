@@ -1,5 +1,5 @@
 function sendMessage() {
-  var formElement = document.querySelector(".message-form");
+  var formElement = document.querySelector("#message-form");
   var form = $(formElement);
   var data = getData();
 
