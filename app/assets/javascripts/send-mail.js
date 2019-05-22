@@ -1,22 +1,21 @@
-function sendMail() {
-  var form = document.querySelector('form.message-form')
-  var formData = new FormData(form);
+function sendMail(e) {
+  e.preventDefault()
+  let formData = new FormData($('.message-form')[0])
 
-  var request = new XMLHttpRequest();
-  request.open('POST', '/contact_us', true);
-  request.onload = function () {
-    console.log("Server responded with %o", request.responseText)
-  };
-  request.send(formData);
+  fetch('/contact_us', { method: 'POST', body: formData })
+    .then(function(response) {clearInputs(response.statusText)})
+    .catch(function(error) {notify(error); console.log(error)})
 
-  $.each($('.content-page-7 input'), function( i, item ) {
-    switch(item.name) {
-      case 'name':
-      case 'email':
-      case 'message': item.value = ''; break
-      default: return
-    }
-  })
+  function clearInputs(text) {
+    $.each($('.content-page-7 input'), function(i, item) {
+      if (item.name == 'name' || item.name == 'email' || item.name == 'message') {
+        item.value = ''
+    }})
 
-  $.notiny({ text: "Mail sent!", position: 'right-top' })
+    notify(text)
+  }
+
+  function notify(text) {
+    $.notiny({ text: text, position: 'right-top' })
+  }
 }
