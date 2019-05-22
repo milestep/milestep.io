@@ -20,7 +20,10 @@
 //= require jquery.featureCarousel
 //= require jquery.jInvertScroll
 //= require jquery.slickCarousel
+//= require jquery.notiny
 //= require circle-progress
 //= require paralax
+//= require send-message
+//= require send-mail
 
 //= require serviceworker-companion
