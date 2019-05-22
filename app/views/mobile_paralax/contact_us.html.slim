@@ -13,16 +13,16 @@
               br
               span.development development service
 
-          = form_tag contact_path, class: 'message-form', onsubmit: 'return false' do
-            = text_field_tag :name, nil, placeholder: 'Your name', class: 'name'
-            = text_field_tag :email, nil, placeholder: 'Email', class: 'email'
-            = text_field_tag :message, nil, placeholder: 'Message', class: 'message'
+          = form_tag contact_path, class: 'message-form' do
+            = text_field_tag :name, nil, placeholder: 'Your name', class: 'name', required: true
+            = text_field_tag :email, nil, placeholder: 'Email', class: 'email', required: true
+            = text_field_tag :message, nil, placeholder: 'Message', class: 'message', required: true
             div.include-files
               | File requirement: pdf, doc, docx, rtf, ppt, pptx
             div.add-file-btn
               | &#xe805;
               = file_field_tag :attachment
-            = submit_tag 'send message', name: 'submit', class: 'send-massage-btn', onclick: 'sendMail()'
+            = submit_tag 'send message', name: 'submit', class: 'send-massage-btn', onclick: 'sendMail(event)'
 
         div.info
           h2
