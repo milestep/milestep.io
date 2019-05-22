@@ -4,7 +4,7 @@ function sendMail(e) {
 
   fetch('/contact_us', { method: 'POST', body: formData })
     .then(function(response) {clearInputs(response.statusText)})
-    .catch(function(error) {notify(error); console.log(error)})
+    .catch(function(error) {notify(error)})
 
   function clearInputs(text) {
     $.each($('.content-page-7 input'), function(i, item) {

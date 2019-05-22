@@ -693,6 +693,8 @@ body {overflow-x: hidden;}
 
   //*team
   .content-page-5 {
+    .tracker-summation-container { display: none; }
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -727,7 +729,7 @@ body {overflow-x: hidden;}
     .carousel-container {
       position: relative;
       width: 80vw;
-      height: 62vh;
+      height: 55vh;
     }
     #carousel {
       height:62vh;
@@ -746,7 +748,7 @@ body {overflow-x: hidden;}
     }
     .carousel-feature .carousel-caption {
       position: inherit;
-      bottom: -8vh;
+      bottom: -7vh;
       left: 0;
       width:100%;
       height: 5vh;
@@ -826,7 +828,7 @@ body {overflow-x: hidden;}
     }
 
     .carousel-tiny-nav {
-      margin-top: -47vh;
+      margin-top: -38vh;
       display: flex;
       justify-content: center;
       align-items: center;

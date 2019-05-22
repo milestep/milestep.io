@@ -15,6 +15,10 @@ jQuery(document).ready(function() {
     $(location).attr('href', LOCATION_PATH + '/contact_us');
   })
 
+  $('button, #portfolio-btn').on('click', function() {
+    $(location).attr('href', LOCATION_PATH + '/portfolio');
+  })
+
   $("#carousel").featureCarousel({    
     largeFeatureWidth : $(window).height() / 1.72,
     largeFeatureHeight: $(window).height() / 1.72,
