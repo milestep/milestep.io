@@ -19,5 +19,4 @@ function sendMail() {
   })
 
   $.notiny({ text: "Mail sent!", position: 'right-top' })
-
 }

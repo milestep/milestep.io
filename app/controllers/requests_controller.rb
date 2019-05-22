@@ -17,6 +17,5 @@ class RequestsController < ApplicationController
 
   def attrs_for_contact_us
     @attrs ||= params.permit!
-    # @attrs ||= params.require(:contact).permit(:email, :message, :attachment)
   end
 end
