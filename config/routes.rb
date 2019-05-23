@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   root 'paralax#index'
+  get '/portfolio', to: 'paralax#portfolio'
 
   get '/', to: 'paralax#index'
 
