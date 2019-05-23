@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
       config.height = longest;
     }
 
-    if (!~window.location.origin.indexOf('blog')) $('body').css('height', config.height+'px');
+    if (!~window.location.origin.indexOf('blog')) $('#paralax').css('height', config.height+'px');
   
     !function(){let n=[38,38,40,40,37,39,37,39,66,65],o=!1,e=0;
     $(document).keydown(function(t){let c=function(){o=!1,e=0},
