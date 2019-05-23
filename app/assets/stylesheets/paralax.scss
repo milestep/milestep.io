@@ -1,4 +1,6 @@
-body {overflow-x: hidden;}
+body {
+  overflow-x: hidden;
+}
 @import "styles-config.scss";
 
 #paralax {
@@ -1407,6 +1409,142 @@ body {overflow-x: hidden;}
     width: 25px;
     opacity: 0;
     cursor: inherit;
+  }
+}
+
+#portfolio_page {
+  color: #FFF;
+
+  .title {
+    font-size: 7vh;
+  }
+
+  .header {
+    background-color: #1F1F1F;
+    padding-top: 10vh;
+  }
+
+  .wrapper {
+    background-color: #1F1F1F;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper-even {
+    background-color: #3E3E3E;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-description {
+    padding-top: 5vh;
+    width: 65vh;
+    font-size: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .arrow_block {
+    background-color: #3E3E3E;
+    display: flex;
+    justify-content: center;
+    height: 4vh;
+  }
+
+  .arrow {
+    background-color: #1F1F1F;
+    padding: 3vh 3vh 2vh 3vh;
+    border-radius: 50%;
+    margin-top: -4vh;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 2vh;
+    }
+  }
+
+  .view-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 1.5vh;
+    padding: 1vh 3vh;
+    width: 25vh;
+    border-radius: 4vh;
+    background: #393939;
+  }
+
+  .technologys {
+    padding-top: 5vh;
+    display: flex;
+
+    .technology {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1.5vh;
+      padding: 1vh 3vh;
+      min-width: 15vh;
+      color: rgba(255, 255, 255, 0.5);
+      border: 0.12vh solid rgba(255, 255, 255, 0.5);
+      border-radius: 4vh;
+    }
+  }
+
+  .content {
+    display: flex;
+
+    img {
+      height: 74vh;
+    }
+
+    .description {
+      margin-left: 6vh;
+      font-size: 2vh;
+      padding-left: 3vh;
+      padding-top: 17vh;
+      width: 42vw;
+
+      .gamger-logo {
+        img {
+          height: 5vh;
+        }
+      }
+    }
+  }
+
+  .content-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .view-project {
+      //background: #3783e5;
+      background: #525252;
+    }
+
+    img {
+      height: 74vh;
+    }
+
+    .description {
+      font-size: 2vh;
+      padding-left: 3vh;
+      padding-top: 17vh;
+      width: 38vw;
+
+      .gamger-logo {
+        img {
+          height: 5vh;
+        }
+      }
+    }
   }
 }
 
