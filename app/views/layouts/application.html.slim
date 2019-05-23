@@ -58,12 +58,17 @@ html lang='en'
     = csrf_meta_tags
     = csp_meta_tag
 
-    - if params[:controller] != 'mobile_paralax'
-      = javascript_include_tag 'application'
-      = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
-    - else
+    - if params[:controller] == 'mobile_paralax'
       = javascript_include_tag 'application_mobile'
       = stylesheet_link_tag 'application_mobile'
+
+    - elsif params[:controller] == 'blog'
+      = javascript_include_tag 'application'
+      = stylesheet_link_tag 'application_blog'
+
+    - else
+      = javascript_include_tag 'application'
+      = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
 
   body
     /! Google Tag Manager (noscript)
