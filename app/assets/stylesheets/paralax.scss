@@ -417,14 +417,15 @@ body {overflow-x: hidden;}
       flex-wrap: wrap;
       width: 48vw;
       min-width: 48vw;
-      margin-left: 2vw;
+      // margin-left: 2vw;
 
       div {        
         display: flex;
         flex-direction: column;
+        flex: 1;
 
         margin: 5vh 1.125vw;
-        width: 11vw;
+        min-width: 11vw;
 
         h3 {
           text-transform: uppercase;
@@ -858,10 +859,12 @@ body {overflow-x: hidden;}
     #carousel-tiny-left {
       margin-right: 67vh;
       z-index: 0;
+      cursor: pointer;
     }
 
     #carousel-tiny-right {
       z-index: 0;
+      cursor: pointer;
     }
   }
 

@@ -11,4 +11,5 @@ window.env = {
 //  jquery.featureCarousel
 //  jquery.jInvertScroll
 //  jquery.slickCarousel
+//  jquery.notiny
 //  circle-progress
