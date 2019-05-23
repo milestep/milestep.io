@@ -1,5 +1,6 @@
 "use strict"
 jQuery(document).ready(function() {
+$('#paralax').ready(function() {
   let screenRatio = 1; // initial value
   const LOCATION_PATH = window.location.origin
 
@@ -10,10 +11,17 @@ jQuery(document).ready(function() {
 
   $(window).scroll(function() {
     switch (currentPage()) {
-      case 1: $('.sprites .layer-2 img').removeClass('hiden'); break;
-      // case 4: $('.content-page-4 .title').removeClass('mini'); break;
-      default: $('.sprites .layer-2 img').addClass('hiden');
-               // $('.content-page-4 .title').addClass('mini');
+      case 1:
+        $('.sprites .layer-2 img').removeClass('hiden')
+
+      case 2:
+      case 3:
+        $('.content-page-2 .lazyload').each(function() {
+          $(this).attr('src', $(this).attr('data-src'))
+        })
+      break
+
+      default: $('.sprites .layer-2 img').addClass('hiden')
     }
   })
 
@@ -71,18 +79,18 @@ jQuery(document).ready(function() {
     $('.arrow-right').addClass('hide');
   })
 
-  $('nav li.desktop').on('click', function (e) {
+  $('nav li.desktop').on('click', function(e) {
     e.preventDefault();
     let pos = (1 / (window.env.NUMBER_OF_PAGES - 1)) *
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
   })
 
-  $('#paralax .contact-us-btn').on('click', function () {
+  $('#paralax .contact-us-btn').on('click', function() {
     scrollPage(7)
   })
 
-  $('#paralax .content-page-1 #portfolio-btn').on('click', function () {
+  $('#paralax .content-page-1 #portfolio-btn').on('click', function() {
     scrollPage(4)
   })
 
@@ -266,4 +274,4 @@ jQuery(document).ready(function() {
       keysStatus('space')
     }    
   }
-})
+})})
