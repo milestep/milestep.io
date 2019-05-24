@@ -10,7 +10,7 @@ div.content
           a[class="show-project" id="project-#{project.id}" href=project.web_address]
             | Show project
 
-        img.carousel-image alt=project.name src=image_path(project.image_url)
+        img.carousel-image alt=project.name data-lazy=image_path(project.image_url)
 
   div.carousel-nav-btns
   button.show-all-project-btn onclick="window.open('/portfolio', '_blank')" Show all projects
