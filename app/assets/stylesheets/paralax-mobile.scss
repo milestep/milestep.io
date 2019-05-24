@@ -44,6 +44,7 @@
       }
 
       #portfolio-btn {
+        position: absolute;
         margin-left: 6vw;
         margin-top: 68vh;
         width: 19.43vh;
@@ -198,7 +199,7 @@
       }
 
       .content div {
-        width: 26vh;
+        min-width: 25vh;
         margin: 3.8vh 1.45vh;
         margin-left: 2vh;
 
@@ -208,7 +209,7 @@
       .content {
         width: 60vh;
         min-width: 60vh;
-        margin-left: 5vh;
+        margin-left: unset;
       }
     }
 
@@ -397,6 +398,27 @@
     20%, 80% { transform: translate3d(2px, 0, 0); }
     30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
     40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+
+  ///media queries
+
+  @media (max-aspect-ratio: 4/8) {
+    .contact-us-btn {
+      display: none;
+    }
+
+    #mobile-content-container {
+      .content-page-1 {
+        img {
+          margin-top: 46vh;
+          height: 10.5vh;
+        }
+      }
+
+      div {
+        //background: lightseagreen;
+      }
+    }
   }
 }
 

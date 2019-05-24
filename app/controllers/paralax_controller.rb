@@ -6,9 +6,7 @@ class ParalaxController < ApplicationController
     @portfolio = PortfolioItem.order(order: :desc)
   end
 
-  def portfolio
-
-  end
+  def portfolio ; end
 
   private
 
