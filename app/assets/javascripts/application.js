@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require config
+//= require preloader
 //= require jquery3
-// require jquery_ujs
+//= require config
 //= require jquery.slick
 //= require activestorage
 //= require ckeditor/init
