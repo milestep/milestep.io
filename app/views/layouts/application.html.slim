@@ -71,6 +71,13 @@ html lang='en'
       = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
 
   body
+    #preloader
+      .loader
+        .sk-cube.sk-cube-1
+        .sk-cube.sk-cube-2
+        .sk-cube.sk-cube-4
+        .sk-cube.sk-cube-3
+
     /! Google Tag Manager (noscript)
     noscript
       iframe src='https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX' height='0' width='0' style='display:none;visibility:hidden'

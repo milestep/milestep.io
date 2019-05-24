@@ -12,13 +12,14 @@
  *
  */
 
+//= require preloader
 //= require_self
 //= require_tree ./blog_page
 //= require_tree ./fonts
 //= require slick
 //= require slick-theme
 //= stub "active_admin"
-//= require abstract_styles
+// require abstract_styles
 //= require background
 //= require font
 //= require paralax

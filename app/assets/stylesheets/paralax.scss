@@ -1533,7 +1533,6 @@ body {
     flex-direction: row-reverse;
 
     .view-project {
-      //background: #3783e5;
       background: #525252;
     }
 
@@ -1556,16 +1555,16 @@ body {
   }
 }
 
-//scrollbar
-::-webkit-scrollbar { width: 0vh; }
-::-webkit-scrollbar-button { background-color: #666; height: 1.18vh; }
+// scrollbar
+::-webkit-scrollbar { width: 0px; }
+::-webkit-scrollbar-button { background-color: #666; height: 10px; }
 ::-webkit-scrollbar-track { background-color: #646464; }
 ::-webkit-scrollbar-track-piece { background-color: #000; }
-::-webkit-scrollbar-thumb { background-color: #666; border-radius: 0.12vh; }
+::-webkit-scrollbar-thumb { background-color: #666; border-radius: 2px; }
 ::-webkit-scrollbar-corner { background-color: #646464; }
 ::-webkit-resizer { background-color: #666; }
 
-///* Change Autocomplete styles in Chrome*/
+/* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
