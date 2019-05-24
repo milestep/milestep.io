@@ -1421,7 +1421,15 @@ body {
 
   .header {
     background-color: #1F1F1F;
-    padding-top: 10vh;
+
+    .main-logo {
+      margin: 3.89vh 0 0 8vh;
+      height: 7vh;
+    }
+
+    .main-logo:hover {
+      cursor: pointer;
+    }
   }
 
   .wrapper {

@@ -1,6 +1,7 @@
 "use strict"
 jQuery(document).ready(function() {
   let screenRatio = 1; // initial value
+  const LOCATION_PATH = window.location.origin
 
   // listeners
   $(window).resize(function() {
@@ -77,9 +78,6 @@ jQuery(document).ready(function() {
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
   })
 
-
-  //Ripchanskiy functions
-
   $('#paralax .contact-us-btn').on('click', function () {
     scrollPage(7)
   })
@@ -88,8 +86,9 @@ jQuery(document).ready(function() {
     scrollPage(4)
   })
 
-  //
-
+  $('#portfolio_page .header .main-logo').on('click', function() {
+    $(location).attr('href', LOCATION_PATH + '/');
+  })
 
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');

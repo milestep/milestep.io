@@ -15,6 +15,8 @@ class MobileParalaxController < ApplicationController
     @portfolio = PortfolioItem.order(order: :desc)
   end
 
+  def our_portfolio ; end
+
   def team
     @development = TeamMember.order(order: :desc)
   end
