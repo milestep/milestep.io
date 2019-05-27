@@ -18,7 +18,8 @@
             .project-description
               = technology.description
             .view-project
-              | VIEW PROJECT
+              = link_to technology.web_address
+                |VIEW PROJECT
       - if index == 0
         .arrow_block
           .arrow
