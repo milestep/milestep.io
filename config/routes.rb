@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  constraints subdomain: 'blog' do
+  namespace :blog do
     get '/', to: 'blog#index'
     resources :posts, only: [:show]
   end
 
-  constraints subdomain: 'mobile' do
+  namespace :mobile do
     get '/', to: 'mobile_paralax#index'
     get '/about', to: 'mobile_paralax#about_us'
     get '/services', to: 'mobile_paralax#services'

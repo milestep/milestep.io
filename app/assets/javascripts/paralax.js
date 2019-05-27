@@ -87,7 +87,7 @@ $('#paralax').ready(function() {
   })
 
   $('#paralax .content-page-1 #portfolio-btn').on('click', function() {
-    scrollPage(4)
+    scrollPage(3)
   })
 
   $('#portfolio_page .header .main-logo').on('click', function() {
@@ -191,13 +191,10 @@ $('#paralax').ready(function() {
   function scrollPage(direction) {
     function getPos() {
       let step = 1 / (window.env.NUMBER_OF_PAGES - 1);
-      if (direction == 7) {
-        return screenRatio*(direction*step) + 1;
-      } else  if(direction == 4) {
+      if (typeof(direction) == "number") {
         return screenRatio*(direction*step) + 1;
       } else {
         let curPos = step * (currentPage() - 1);
-
         return (direction == '<') ?
           screenRatio * (curPos + step) + 1 :
           screenRatio * (curPos - step) + 1
