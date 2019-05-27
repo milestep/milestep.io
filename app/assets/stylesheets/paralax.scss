@@ -736,7 +736,6 @@ body {
       margin-bottom:0.5em;
     }
     .carousel-image {
-      border: 0;
       display: block;
     }
     .carousel-feature {
@@ -843,12 +842,14 @@ body {
     }
 
     #carousel-tiny-left {
+      img { height: 5vh; }
       margin-right: 67vh;
       z-index: 0;
       cursor: pointer;
     }
 
     #carousel-tiny-right {
+      img { height: 5vh; }
       z-index: 0;
       cursor: pointer;
     }
