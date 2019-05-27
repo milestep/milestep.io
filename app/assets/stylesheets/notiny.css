@@ -179,6 +179,21 @@
   color: #202020;
 }
 
+.notiny-theme-warning {
+  background-color: #ffbf00;
+  color: #000;
+}
+
+.notiny-theme-error {
+  background-color: #c00;
+  color: #fff;
+}
+
+.notiny-theme-success {
+  background-color: #275;
+  color: #000;
+}
+
 .notiny-default-vars {
   padding: 3px 3px;
   margin: 2px 0px;

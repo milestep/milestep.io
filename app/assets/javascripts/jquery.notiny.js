@@ -209,4 +209,13 @@ jQuery(document).ready(function($) {
   $.notiny.addTheme('light', {
     notification_class: 'notiny-theme-light notiny-default-vars'
   });
+  $.notiny.addTheme('warning', {
+    notification_class: 'notiny-theme-warning notiny-default-vars'
+  });
+  $.notiny.addTheme('error', {
+    notification_class: 'notiny-theme-error notiny-default-vars'
+  });
+  $.notiny.addTheme('success', {
+    notification_class: 'notiny-theme-success notiny-default-vars'
+  });
 })
