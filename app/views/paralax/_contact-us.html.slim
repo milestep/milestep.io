@@ -20,10 +20,9 @@ div.contact-us
       = submit_tag 'send message', name: 'submit', class: 'send-massage-btn', onclick: 'sendMail(event)'
       div
         p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          | sed do eiusmod
+          | This website uses cookies for analytics, personalization and advertising.
           br
-          | tempor incididunt ut |labore et dolore magna
+          | Click here to learn more or change your coockie settings.
 
   div.info
     h2 
@@ -40,11 +39,11 @@ div.contact-us
       br
       | eugene@milestep.io
     div.social-btns
-      div name="github" &#xe801;
-      div name="instagram" &#xe802;
-      div name="twitter" &#xe803;
-      div name="facebook" &#xf30d;
-      div name="linkedin" &#xf319;
-      div name="blog" onclick="window.location='#{root_url}blog'" &#xe804;
+      div name="github" onclick="window.location='https://github.com/milestep'" &#xe801;
+      div name="instagram" onclick="window.location='https://www.instagram.com/milestep.io'" &#xe802;
+      div name="twitter" onclick="window.location='https://twitter.com/milestepcompany'" &#xe803;
+      div name="facebook" onclick="window.location='https://www.facebook.com/MileStepOutsoucing'" &#xf30d;
+      div name="linkedin" onclick="window.location='https://www.linkedin.com/company/milestep'" &#xf319;
+      div name="blog" onclick="window.location='#{blog_url}'" &#xe804;
     p.copyright
       | Copyright &#169; 2018 MileStep LLC. Privacy Policy
