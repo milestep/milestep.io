@@ -13,9 +13,9 @@
     .blog-post-text-block
       
       .blog-post-title
-        = link_to  cut_text(post.title, 45), post_path(post) 
+        = link_to  cut_text(post.title, 45), blog_post_path(post)
       
       .blog-post-body
         = cut_text(strip_tags(post.body), 140)
 
-      = link_to 'Read More', post_path(post), class: 'blog-post-link'
+      = link_to 'Read More', blog_post_path(post), class: 'blog-post-link'
