@@ -54,9 +54,7 @@ body {
       border-radius: 4.12vh;
       text-transform: uppercase;
       cursor: pointer;
-      filter: blur(0px);
-      transition: filter 1s;
-      transition: background-color .3s;
+      transition: filter 1s, background-color .3s;
     }
 
     .contact-us-btn:hover {

@@ -15,7 +15,13 @@ $('#paralax').ready(function() {
         $('.sprites .layer-2 img').removeClass('hiden')
       break;
 
-      default: $('.sprites .layer-2 img').addClass('hiden')
+      case 7:
+        $('.contact-us-btn').addClass('blur')
+      break;
+
+      default:
+        $('.sprites .layer-2 img').addClass('hiden')
+        $('.contact-us-btn').removeClass('blur')
     }
   })
 
@@ -83,7 +89,7 @@ $('#paralax').ready(function() {
   })
 
   $('#paralax .contact-us-btn').on('click', function() {
-    scrollPage(7)
+    scrollPage(6)
   })
 
   $('#paralax .content-page-1 #portfolio-btn').on('click', function() {
@@ -97,7 +103,11 @@ $('#paralax').ready(function() {
   $('.navbar-btn, nav').on('click', function() {
     $('.navbar-btn').toggleClass('active');
     $('nav').toggleClass('hiden');
-    $('.contact-us-btn, .perfect-circle').toggleClass('blur');
+    if ($('.navbar-btn').hasClass('active')) {
+      $('.contact-us-btn, .perfect-circle').addClass('blur');
+    } else {
+      $('.contact-us-btn, .perfect-circle').removeClass('blur');
+    }
     $('.arrow-right').addClass('hide');
     $('.arrow-left').toggleClass('hide');
   })
