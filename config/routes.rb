@@ -8,7 +8,18 @@ Rails.application.routes.draw do
     resources :posts, only: [:show]
   end
 
-  constraints subdomain: 'mobile' do
+  # constraints subdomain: 'mobile' do
+  #   get '/', to: 'mobile_paralax#index'
+  #   get '/about', to: 'mobile_paralax#about_us'
+  #   get '/services', to: 'mobile_paralax#services'
+  #   get '/approach', to: 'mobile_paralax#approach'
+  #   get '/contact_us', to: 'mobile_paralax#contact_us'
+  #   get '/team', to: 'mobile_paralax#team'
+  #   get '/portfolio', to: 'mobile_paralax#portfolio'
+  #   get '/our_portfolio', to: 'mobile_paralax#our_portfolio'
+  # end
+
+  namespace :mobile do
     get '/', to: 'mobile_paralax#index'
     get '/about', to: 'mobile_paralax#about_us'
     get '/services', to: 'mobile_paralax#services'

@@ -13,6 +13,6 @@ class ParalaxController < ApplicationController
   private
 
   def check_device
-    redirect_to subdomain: 'mobile' if browser.device.mobile? || browser.device.tablet?
+    redirect_to mobile_path if browser.device.mobile? || browser.device.tablet?
   end
 end

@@ -12,11 +12,11 @@ jQuery(document).ready(function() {
   })
 
   $('button, .contact-us-btn').on('click', function() {
-    $(location).attr('href', LOCATION_PATH + '/contact_us');
+    $(location).attr('href', LOCATION_PATH + '/mobile/contact_us');
   })
 
   $('button, #portfolio-btn').on('click', function() {
-    $(location).attr('href', LOCATION_PATH + '/portfolio');
+    $(location).attr('href', LOCATION_PATH + '/mobile/portfolio');
   })
 
   $("#carousel").featureCarousel({    
