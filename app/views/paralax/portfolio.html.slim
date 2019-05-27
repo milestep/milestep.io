@@ -3,27 +3,24 @@
     img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
 
   .portfolio-content-container
-    .wrapper
-      .content
-        = render 'paralax/portfolio_works/ganger'
-    .arrow_block
-      .arrow
-        img alt="vector" src=image_path("paralax/portfolio_page/Vector.png")
-    .wrapper-even
-      .content-reverse
-        = render 'paralax/portfolio_works/brokerkit'
-    .wrapper
-      .content
-        = render 'paralax/portfolio_works/mc-combs'
-    .wrapper-even
-      .content-reverse
-        = render 'paralax/portfolio_works/shift'
-    .wrapper
-      .content
-        = render 'paralax/portfolio_works/libido'
-    .wrapper-even
-      .content-reverse
-        = render 'paralax/portfolio_works/classly'
-    .wrapper
-      .content
-        = render 'paralax/portfolio_works/upstack'
+    - @technologies.each_with_index do |technology, index|
+      div class=(index.even? ? 'wrapper' : 'wrapper-even')
+        div class=(index.even? ? 'content' : 'content-reverse')
+          .image
+            img alt=technology.name src= technology.full_image_url
+          .description
+            .title
+              = technology.name
+            .technologys
+              - technology.technologies_array.each do |item|
+                .technology
+                  = item
+            .project-description
+              = technology.description
+            .view-project
+              = link_to technology.web_address
+                |VIEW PROJECT
+      - if index == 0
+        .arrow_block
+          .arrow
+            img alt="vector" src=image_path("paralax/portfolio_page/Vector.png")
