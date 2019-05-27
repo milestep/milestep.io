@@ -456,21 +456,14 @@ body {
 
     div.title {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-
-      width: 28vw;
-      // margin-right: 214vh;
+      
+      width: 72.5vw;
       height: 8vh;
-      border-radius: 23.67vh;
-      margin-top: 5vh;
       margin-bottom: 2.36vh;
-      background-color: #333;
-
-      transition: .8s;
 
       div.text {
-        // margin-right: 11vw;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
@@ -478,22 +471,98 @@ body {
         line-height: 4.36vh;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+        margin-right: 3vw;
 
         color: #FFFFFF;
       }
     }
 
-    /* for animated title */
-    // div.title.mini {
-    //   justify-content: center;
-    //   width: 15vw;
-    //   margin-right: 0vw;
-    //   transition: .8s;
+    //*carousel portfolio buttons
+    .carousel-nav-btns {
+      height: 4vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #191919;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-sizing: border-box;
+      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+      border-radius: 2.5vh;
 
-    //   div.text {
-    //     margin-right: 0vw;
-    //   }
-    // }
+      .slick-prev:before,
+      .slick-next:before {
+        font-family: "fontello";
+        content: "";
+        color: white;          
+        font-size: 1.77vh;
+      }
+
+      .slick-next {
+        background: #F42B24;
+        border-radius: 2.5vh;
+        transform: rotate(180deg);
+        order: 3;
+      }
+
+      .slick-prev {
+        order: 1;        
+      }
+
+      .slick-prev, .slick-next {
+        padding-top: 0.3vh;
+        top: unset;
+        right: unset;
+        left: unset;
+        position: relative;
+        display: inline;
+        width: 6vh;
+        height: 4vh;
+      }
+
+      .slick-dots {
+        bottom: unset;
+        position: unset;
+        width: unset;
+        display: flex;
+        order: 2;
+
+        li {
+          bottom: unset;
+          background: white;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0.35vh;
+          color: white;
+          text-align: center;
+          width: 4vh;
+          height: 4vh;
+          font-size: 2vh;
+          background: #1D1D1D;
+          box-shadow: inset 0vh 2.83vh 2.83vh rgba(0, 0, 0, 0.25);
+          border-radius: 2vh;
+          transition: background .3s;
+          cursor: pointer;
+        }
+      }
+
+      .slick-dots li:hover {      
+        background: #5F5F5F;
+        transition: background .3s;
+      }
+
+      .slick-dots li.slick-active {
+        color: white;
+        font-weight: bold;
+        background-color: #F42B24;
+        opacity: unset;
+      }
+
+      .slick-dots li.slick-active:hover {
+        background: red;
+      }
+    }
 
     div.content {
       display: flex;
@@ -576,91 +645,6 @@ body {
       .slick-slide img {
         width: 100%;
         //border: 0.12vh solid white;
-      }
-
-      .carousel-nav-btns {
-        width: 100%;
-        height: 5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4vh;
-
-        .slick-prev:before,
-        .slick-next:before {
-          font-family: "fontello";
-          content: "";
-          color: white;          
-          font-size: 1.77vh;
-          color: gray;
-        }
-
-        .slick-next {
-          transform: rotate(180deg);
-        }
-
-        .slick-prev, .slick-next {
-          top: unset;
-          right: unset;
-          left: unset;
-          position: relative;
-          display: inline;
-          width: 2.36vh;
-          height: 2.36vh;
-          margin: 0 2.36vh;
-        }
-        
-        .slick-prev {
-          order: 1;
-        }
-
-        .slick-next {
-          order: 3;
-        }
-
-        .slick-dots {
-          bottom: unset;
-          position: unset;
-          width: unset;
-          display: flex;
-          order: 2;
-
-          li {
-            bottom: unset;
-            background: white;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 0.35vh;
-            color: white;
-            text-align: center;
-            width: 4vh;
-            height: 4vh;
-            font-size: 2vh;
-            background: #1D1D1D;
-            box-shadow: inset 0vh 2.83vh 2.83vh rgba(0, 0, 0, 0.25);
-            border-radius: 2vh;
-            transition: background .3s;
-            cursor: pointer;
-          }
-        }
-
-        .slick-dots li:hover {      
-          background: #5F5F5F;
-          transition: background .3s;
-        }
-
-        .slick-dots li.slick-active {
-          color: white;
-          font-weight: bold;
-          background-color: #F42B24;
-          opacity: unset;
-        }
-
-        .slick-dots li.slick-active:hover {
-          background: red;
-        }
       }
 
       .slick-slide {

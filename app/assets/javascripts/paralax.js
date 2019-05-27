@@ -127,7 +127,7 @@ $('#paralax').ready(function() {
   })
 
   $(".regular").slick({
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -137,7 +137,7 @@ $('#paralax').ready(function() {
     lazyLoad: 'ondemand', //Accepts 'ondemand' or 'progressive'
     swipeToSlide: true,
     zIndex: 99,
-    customPaging: function(_, i) { return ++i },
+    // customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
 
