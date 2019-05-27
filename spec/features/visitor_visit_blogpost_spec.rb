@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Blogpost feature' do
   it 'displays blogpost and post pages' do
     create(:post, title: 'Post', body: 'SUPER BODY')
-    visit root_url(subdomain: 'blog')
+    visit blog_url
     expect(page).to have_content('Post')
     click_on('Read More');
     expect(page).to have_content('SUPER BODY')
@@ -13,7 +13,7 @@ RSpec.describe 'Blogpost feature' do
     7.times do
       create(:post)
     end
-    visit root_url(subdomain: 'blog')
+    visit blog_url
     expect(page).to have_selector('.blog-post', count: 6)
   end
 
@@ -21,7 +21,7 @@ RSpec.describe 'Blogpost feature' do
     10.times do
       create(:post)
     end
-    visit root_url(subdomain: 'blog')
+    visit blog_url
     expect(page).to have_selector('.blog-posts-pagination')
     find('.next').click
     expect(page).to have_selector('.blog-post', count: 4)

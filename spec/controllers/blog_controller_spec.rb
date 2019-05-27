@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BlogController, type: :controller do
+RSpec.describe Blog::BlogController, type: :controller do
   before(:each) do
     10.times do
       create(:post)
