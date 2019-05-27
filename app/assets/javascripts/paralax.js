@@ -13,13 +13,7 @@ $('#paralax').ready(function() {
     switch (currentPage()) {
       case 1:
         $('.sprites .layer-2 img').removeClass('hiden')
-
-      case 2:
-      case 3:
-        $('.content-page-2 .lazyload').each(function() {
-          $(this).attr('src', $(this).attr('data-src'))
-        })
-      break
+      break;
 
       default: $('.sprites .layer-2 img').addClass('hiden')
     }
@@ -33,7 +27,9 @@ $('#paralax').ready(function() {
       case 40: on.arrowDown(e); break;
       case 37: on.arrowLeft(e); break;
       case 39: on.arrowRight(e); break;
-      case 32: on.space(e); break;
+      case 32:
+        if (currentPage() != window.env.NUMBER_OF_PAGES) on.space(e);
+      break;
       default: keysStatus(e.keyCode)
     }
   }
@@ -54,7 +50,7 @@ $('#paralax').ready(function() {
   }).mousemove(function(e) {
     let x = e.clientX, y = e.clientY;
     if (window.env.DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
-    $('#backlight').css({top: y, left: x});
+    if (!window.env.DEV) $('#backlight').css({top: y, left: x})
   })
 
   $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
@@ -106,11 +102,11 @@ $('#paralax').ready(function() {
     $('.arrow-left').toggleClass('hide');
   })
 
-  $('.arrow-left').on('click', function() {    
+  $('.arrow-left').on('click', function() {
     scrollPage('<')
   })
 
-  $('.arrow-right').on('click', function() {    
+  $('.arrow-right').on('click', function() {
     scrollPage('>')
   })
 
@@ -227,7 +223,7 @@ $('#paralax').ready(function() {
       $('.arrow-right').addClass('hide')
     } else {
       $('.arrow-right').removeClass('hide')
-    }      
+    }
   }
 
   if (window.env.DEV) {setInterval(function(){
@@ -272,6 +268,6 @@ $('#paralax').ready(function() {
       e.preventDefault()
       scrollPage('<')
       keysStatus('space')
-    }    
+    }
   }
 })})
