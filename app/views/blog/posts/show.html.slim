@@ -1,5 +1,5 @@
 .blog-header
-  = render 'welcome/header'
+  = render 'blog/welcome/header'
 
 .blog-post-image-container
   = render 'shared/blog_header'
@@ -10,12 +10,12 @@
         = @post.formatted_created_date
       h1.title
         = @post.title
-    
+
     .row.post-body
       = raw(@post.body)
-    
+
     #disqus_thread
-  
+
   javascript:
     clearDisqusDiv();
     function clearDisqusDiv(){
@@ -36,10 +36,10 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-  
-  noscript 
-    | Please enable JavaScript to view the 
+
+  noscript
+    | Please enable JavaScript to view the
     a href='https://disqus.com/?ref_noscript'
       | comments powered by Disqus.
 
-= render 'welcome/footer'
+= render 'blog/welcome/footer'
