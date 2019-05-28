@@ -11,6 +11,7 @@
       height: 4.82vh;
       right: 16vh;
       top: 4vh;
+      border: 1px solid white;
     }
   }
 
@@ -73,21 +74,23 @@
         img { position: absolute; }
 
         img#first {
-          top: 70vh;
+          top: 65vh;
           left: 9vw;
+          height: 15vh;
         }
 
         img#second {
           position: absolute;
           top: 13vh;
           left: 7vw;
+          height: 12vh;
         }
 
         img#third {
           position: absolute;
-          top: 58vh;
-          left: 55vw;
-          height: 32vh;
+          top: 63vh;
+          left: 54vw;
+          height: 27vh;
         }
 
         img#fourth {
@@ -402,129 +405,14 @@
     40%, 60% { transform: translate3d(4px, 0, 0); }
   }
 
-  @media (max-aspect-ratio: 5/8) {
-    .contact-us-btn {
-      display: none;
-    }
+  //@media (max-aspect-ratio: 10/16) {
+  //  background: blue;
+  //}
+  //
 
-    #mobile-content-container {
-      .content-page-1 {
-        img {
-          margin-top: 46vh;
-          height: 10.5vh;
-        }
-      }
+  @media (min-aspect-ratio: 16/15) {
+    //background: turquoise;
 
-      .content-page-2 {
-        span.t5 {
-          line-height: 5vh;
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 7/9) {
-    background: green;
-    #mobile-content-container {
-
-        .content-page-2 {
-
-          .about-us {
-            div:first-child img {
-              margin-top: unset;
-              margin-left: 0vh;
-            }
-          }
-
-          .sprites-rocks {
-            img#first {
-              top: 65vh;
-              height: 13vw;
-            }
-
-            img#second {
-              top: 10vh;
-              height: 15vw;
-            }
-
-            img#third {
-              top: 62vh;
-              left: 55vw;
-              height: 25vw;
-            }
-
-            img#fourth {
-              top: 13vh;
-              height: 21vw;
-              left: 78vw;
-            }
-          }
-
-        .about-us div:last-child {
-
-          span.t1 {
-            font-size: 2vw;
-          }
-
-          span.t2 {
-            font-size: 7.2vw;
-          }
-
-          span.t3 {
-            margin-left: unset;
-            top: 3.5vw;
-            font-size: 2vw;
-          }
-
-          span.t4 {
-            margin-left: 1vw;
-            top: 4.2vw;
-          }
-
-          span.t5 {
-            line-height: 6vw;
-            font-size: 9.2vw;
-          }
-
-          span.t6 {
-            font-size: 4vw;
-          }
-
-          p {
-            font-size: 3.2vw;
-          }
-
-          h1 {
-            line-height: 3vh;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 5/8) {
-    .contact-us-btn {
-      display: none;
-    }
-
-    #mobile-content-container {
-      .content-page-1 {
-        img {
-          margin-top: 46vh;
-          height: 10.5vh;
-        }
-      }
-
-      .content-page-2 {
-        span.t5 {
-          line-height: 5vh;
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 7/9) {
-    background: green;
     #mobile-content-container {
 
       .content-page-2 {
@@ -533,57 +421,163 @@
           div:first-child img {
             margin-top: unset;
             margin-left: 0vh;
+            height: 8vw;
           }
         }
 
         .sprites-rocks {
           img#first {
             top: 65vh;
-            height: 13vw;
-          }
-
-          img#second {
-            top: 10vh;
-            height: 15vw;
+            left: 2vw;
+            height: 8vw;
           }
 
           img#third {
-            top: 62vh;
+            top: 70vh;
             left: 55vw;
-            height: 25vw;
+            height: 10vw;
           }
 
           img#fourth {
-            top: 13vh;
+            top: 7vh;
             height: 21vw;
-            left: 78vw;
+            left: 75vw;
           }
         }
 
         .about-us div:last-child {
+          width: 80%;
+
+          img {
+            width: 1.66vw;
+          }
 
           span.t1 {
-            font-size: 2vw;
+            font-size: 1.5vw;
           }
 
           span.t2 {
-            font-size: 7.2vw;
+            font-size: 7vw;
+          }
+
+          span.t3 {
+            margin-left: unset;
+            font-size: 1.5vw;
+          }
+
+          span.t4 {
+            margin-left: 1vw;
+            top: 3.2vw;
+            font-size: 7vw;
+          }
+
+          span.t5 {
+            line-height: 6vw;
+            font-size: 8vw;
+          }
+
+          span.t6 {
+            font-size: 3vw;
+          }
+
+          p {
+            font-size: 1.5vw;
+            width: 60vw;
+          }
+
+          h1 {
+            line-height: 3vw;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (max-aspect-ratio: 5/8) {
+    .contact-us-btn {
+      display: none;
+    }
+
+    #mobile-content-container {
+      .content-page-1 {
+        img {
+          margin-top: 46vh;
+          height: 10.5vh;
+        }
+      }
+
+      .content-page-2 {
+        span.t5 {
+          line-height: 5vh;
+        }
+      }
+    }
+  }
+
+  @media (max-aspect-ratio: 7/9) {
+    #mobile-content-container {
+
+        .content-page-2 {
+
+          .about-us {
+            width: 90vw;
+            div:first-child img {
+              margin-top: unset;
+              margin-left: 0vh;
+              height: 3vw;
+            }
+          }
+
+          .sprites-rocks {
+            img#first {
+              top: 70vh;
+              height: 13vw;
+            }
+
+            img#second {
+              top: 8vh;
+              height: 10vw;
+            }
+
+            img#third {
+              top: 70vh;
+              left: 56vw;
+              height: 22vw;
+            }
+
+            img#fourth {
+              top: 5vh;
+              height: 17vw;
+              left: 82vw;
+            }
+          }
+
+        .about-us div:last-child {
+
+          span.t1 {
+            font-size: 2.5vw;
+          }
+
+          span.t2 {
+            font-size: 8vw;
           }
 
           span.t3 {
             margin-left: unset;
             top: 3.5vw;
-            font-size: 2vw;
+            font-size: 2.5vw;
           }
 
           span.t4 {
             margin-left: 1vw;
-            top: 4.2vw;
+            top: 3.2vw;
+            font-size: 7vw;
           }
 
           span.t5 {
             line-height: 6vw;
-            font-size: 9.2vw;
+            font-size: 10.2vw;
           }
 
           span.t6 {
@@ -591,17 +585,17 @@
           }
 
           p {
-            font-size: 3.2vw;
+            font-size: 4.2vw;
+            letter-spacing: 0.02vw;
           }
 
           h1 {
-            line-height: 3vh;
+            line-height: 8vw;
           }
         }
       }
     }
   }
-
 }
 
 
