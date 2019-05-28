@@ -1188,6 +1188,32 @@ body {
             width: 47%;
           }
 
+          input.message {
+            margin-top: 6.5vh;
+            width: 95%;
+          }
+
+          input.add-file {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-left: -25px;
+            margin-top: -4px;
+            opacity: 0;
+          }
+
+          div.add-file-img {
+            margin-top: 6.5vh;
+            padding: 0.59vh;
+            width: 5%;
+            display: inline-block;
+            font-family: 'fontello';
+            transition: color .3s;
+            color: rgba(255, 255, 255, 0.6);
+            border-bottom: 0.24vh solid rgba(255, 255, 255, 0.15);
+          }
+
           div.include-files {
             width: 100%;
             margin-top: 1vh;
@@ -1199,29 +1225,12 @@ body {
             font-size: 1.65vh;
             line-height: 1.3vh;
             letter-spacing: 0.04em;
-
             color: rgba(255, 255, 255, 0.2);
           }
 
-          div.add-file-btn {
-            font-family: 'fontello';
-            position: absolute;
-            margin-top: -6.3vh;
-            margin-left: 42.5vw;
-            cursor: pointer;
-            transition: color .3s;
-            padding: 0.59vh;
-            color: rgba(255, 255, 255, 0.6);
-          }
-
-          div.add-file-btn:hover {
+          div.add-file:hover, .add-file-btn-img:hover {
             color: rgba(255, 255, 255, 0.4);
             transition: color .3s;
-          }
-
-          input.message {
-            margin-top: 6.5vh;
-            width: 100%;
           }
 
           input.send-massage-btn {
@@ -1384,15 +1393,6 @@ body {
   .blur {
     filter: blur(0.59vh);
     transition: filter 1s;
-  }
-
-  input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    opacity: 0;
-    cursor: inherit;
   }
 }
 
