@@ -62,7 +62,7 @@ html lang='en'
       = javascript_include_tag 'application_mobile'
       = stylesheet_link_tag 'application_mobile'
 
-    - elsif params[:controller] == 'blog/blog'
+    - elsif params[:controller] == 'blog/blog' || params[:controller] == 'blog/posts'
       = javascript_include_tag 'application'
       = stylesheet_link_tag 'application_blog'
 

@@ -13,7 +13,6 @@
 //= require preloader
 //= require jquery3
 //= require config
-//= require jquery.slick
 //= require activestorage
 //= require ckeditor/init
 
@@ -23,7 +22,6 @@
 //= require jquery.notiny
 //= require circle-progress
 //= require paralax
-//= require send-message
 //= require send-mail
 
 //= require serviceworker-companion

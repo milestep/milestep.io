@@ -1,24 +1,25 @@
 //= require_self
+//= require preloader
 //= require_tree ./blog_page
 //= require_tree ./fonts
 //= require slick
 //= require slick-theme
 //= stub "active_admin"
-//= require abstract_styles
+//= require paralax
 //= require background
 //= require font
 //= require footer
-//= require how-we-work
-//= require paralax
-//= require portfolio
+//= require abstract_styles
 //= require query-table-global
-//= require scrolling
-//= require services
-//= require sprites-paralax
-//= require styles-config
-//= require team
-//= require why-us
 //= require notiny
+// require how-we-work
+// require portfolio
+// require scrolling
+// require services
+// require sprites-paralax
+// require styles-config
+// require team
+// require why-us
 
 @import "font-awesome-sprockets";
 @import "font-awesome";

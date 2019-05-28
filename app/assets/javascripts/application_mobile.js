@@ -1,3 +1,4 @@
+//= require preloader
 //= require config
 //= require jquery3
 
