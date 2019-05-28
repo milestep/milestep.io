@@ -11,11 +11,11 @@ jQuery(document).ready(function() {
     $('.contact-us-btn, .perfect-circle').toggleClass('blur');
   })
 
-  $('button, .contact-us-btn').on('click', function() {
+  $('button.contact-us-btn').on('click', function() {
     $(location).attr('href', LOCATION_PATH + '/mobile/contact_us');
   })
 
-  $('button, #portfolio-btn').on('click', function() {
+  $('#portfolio-btn').on('click', function() {
     $(location).attr('href', LOCATION_PATH + '/mobile/portfolio');
   })
 

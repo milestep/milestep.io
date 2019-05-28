@@ -11,6 +11,7 @@
       height: 4.82vh;
       right: 16vh;
       top: 4vh;
+      border: 1px solid white;
     }
   }
 
@@ -73,20 +74,23 @@
         img { position: absolute; }
 
         img#first {
-          top: 70vh;
+          top: 65vh;
           left: 9vw;
+          height: 15vh;
         }
 
         img#second {
           position: absolute;
           top: 13vh;
           left: 7vw;
+          height: 12vh;
         }
 
         img#third {
           position: absolute;
-          top: 58vh;
-          left: 61vw;
+          top: 63vh;
+          left: 54vw;
+          height: 27vh;
         }
 
         img#fourth {
@@ -401,7 +405,94 @@
     40%, 60% { transform: translate3d(4px, 0, 0); }
   }
 
-  ///media queries
+  //@media (max-aspect-ratio: 10/16) {
+  //  background: blue;
+  //}
+  //
+
+  @media (min-aspect-ratio: 16/15) {
+    //background: turquoise;
+
+    #mobile-content-container {
+
+      .content-page-2 {
+
+        .about-us {
+          div:first-child img {
+            margin-top: unset;
+            margin-left: 0vh;
+            height: 8vw;
+          }
+        }
+
+        .sprites-rocks {
+          img#first {
+            top: 65vh;
+            left: 2vw;
+            height: 8vw;
+          }
+
+          img#third {
+            top: 70vh;
+            left: 55vw;
+            height: 10vw;
+          }
+
+          img#fourth {
+            top: 7vh;
+            height: 21vw;
+            left: 75vw;
+          }
+        }
+
+        .about-us div:last-child {
+          width: 80%;
+
+          img {
+            width: 1.66vw;
+          }
+
+          span.t1 {
+            font-size: 1.5vw;
+          }
+
+          span.t2 {
+            font-size: 7vw;
+          }
+
+          span.t3 {
+            margin-left: unset;
+            font-size: 1.5vw;
+          }
+
+          span.t4 {
+            margin-left: 1vw;
+            top: 3.2vw;
+            font-size: 7vw;
+          }
+
+          span.t5 {
+            line-height: 6vw;
+            font-size: 8vw;
+          }
+
+          span.t6 {
+            font-size: 3vw;
+          }
+
+          p {
+            font-size: 1.5vw;
+            width: 60vw;
+          }
+
+          h1 {
+            line-height: 3vw;
+          }
+        }
+      }
+    }
+
+  }
 
   @media (max-aspect-ratio: 5/8) {
     .contact-us-btn {
@@ -424,188 +515,82 @@
     }
   }
 
-  @media (min-aspect-ratio: 8/5) {
-    #mobile-content-container {
-      .content-page-2 {
-        .about-us div:last-child {
-          width: 55vw;
-
-          span.t1 {
-            font-size: 3vh;
-          }
-
-          span.t2 {
-            font-size: 7.9vh;
-          }
-
-          span.t3 {
-            font-size: 3vh;
-          }
-
-          span.t5 {
-            line-height: 11vh;
-            font-size: 10.7vh;
-          }
-
-          span.t6 {
-            font-size: 4vh;
-          }
-
-          p {
-            font-size: 2.5vh;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 5/7) {
-    #mobile-content-container {
-      .content-page-2 {
-        .about-us {
-          width: 100vw;
-        }
-        .sprites-rocks {
-          img#second {
-            top: 4vh;
-          }
-
-          img#fourth {
-            top: 1vh;
-            left: 81vw;
-            height: 17vh;
-          }
-
-          img#third {
-            top: 33vh;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 4/7) {
-    #mobile-content-container {
-      .content-page-2 {
-        .sprites-rocks {
-          img#third {
-            top: 40vh;
-          }
-
-        }
-      }
-    }
-  }
-
-  @media (max-aspect-ratio: 1/2) {
-    #mobile-content-container {
-      .content-page-2 {
-        .about-us div:last-child {
-          span.t1 {
-            font-size: 1.5vh;
-          }
-
-          span.t2 {
-            font-size: 3.9vh;
-          }
-
-          span.t3 {
-            font-size: 1.5vh;
-          }
-
-          span.t4 {
-            margin-left: unset;
-            top: 2.5vh;
-            font-size: 2vh;
-          }
-
-          span.t5 {
-            font-size: 5.4vh;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-aspect-ratio: 9/7) {
+  @media (max-aspect-ratio: 7/9) {
     #mobile-content-container {
 
-      .content-page-2 {
+        .content-page-2 {
+
+          .about-us {
+            width: 90vw;
+            div:first-child img {
+              margin-top: unset;
+              margin-left: 0vh;
+              height: 3vw;
+            }
+          }
+
           .sprites-rocks {
-
             img#first {
-              top: 65vh;
+              top: 70vh;
+              height: 13vw;
+            }
+
+            img#second {
+              top: 8vh;
+              height: 10vw;
             }
 
             img#third {
-              top: 62vh;
-              width: 37vh;
-              left: 62vw;
+              top: 70vh;
+              left: 56vw;
+              height: 22vw;
+            }
+
+            img#fourth {
+              top: 5vh;
+              height: 17vw;
+              left: 82vw;
             }
           }
 
         .about-us div:last-child {
-          width: 55vw;
 
           span.t1 {
-            font-size: 4vh;
+            font-size: 2.5vw;
           }
 
           span.t2 {
-            font-size: 8.9vh;
+            font-size: 8vw;
           }
 
           span.t3 {
-            font-size: 4vh;
+            margin-left: unset;
+            top: 3.5vw;
+            font-size: 2.5vw;
+          }
+
+          span.t4 {
+            margin-left: 1vw;
+            top: 3.2vw;
+            font-size: 7vw;
           }
 
           span.t5 {
-            line-height: 13vh;
-            font-size: 12.7vh;
+            line-height: 6vw;
+            font-size: 10.2vw;
           }
 
           span.t6 {
-            font-size: 5vh;
+            font-size: 4vw;
           }
 
           p {
-            font-size: 2.5vh;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-aspect-ratio: 7/9) {
-    #mobile-content-container {
-
-      .content-page-2 {
-        .about-us div:last-child {
-          width: 55vw;
-
-          span.t1 {
-            font-size: 2vh;
+            font-size: 4.2vw;
+            letter-spacing: 0.02vw;
           }
 
-          span.t2 {
-            font-size: 7.9vh;
-          }
-
-          span.t3 {
-            font-size: 2vh;
-          }
-
-          span.t5 {
-            line-height: 11vh;
-            font-size: 10.7vh;
-          }
-
-          span.t6 {
-            font-size: 4vh;
-          }
-
-          p {
-            font-size: 2.2vh;
+          h1 {
+            line-height: 8vw;
           }
         }
       }
