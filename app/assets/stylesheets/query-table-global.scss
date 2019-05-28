@@ -1,150 +1,150 @@
-  @media screen and (min-device-width: 320px) {
-    :root {
-      --origin-width: 320;
-      --font-size-offset: 1;
-      --statc-font-size-offset: 0.15;
+@media screen and (min-device-width: 320px) {
+  :root {
+    --origin-width: 320;
+    --font-size-offset: 1;
+    --statc-font-size-offset: 0.15;
+  }
+  body {
+    .content {
+      width: 100%;
+      max-width: 100%;
     }
-    body {
-      .content {
-        width: 100%;
-        max-width: 100%;
-      }
-      .tablet-style-center {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .center-block {
-        padding: 0;
-      }
-      .content-right {
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0px;
-        display: flex;
-        justify-content: flex-end;
-      }
+    .tablet-style-center {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .center-block {
+      padding: 0;
+    }
+    .content-right {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-      .left-content-block {
-        width: 42%;
-        max-width: 100%;
-      }
+    .left-content-block {
+      width: 42%;
+      max-width: 100%;
+    }
 
-      .right-content-block {
-        padding: 0;
-        width: 48%;
-        max-width: 100%;
-      }
-      .draggable {
-        width: 100%;
-      }
-      #team {
-        .team {
-          .faces {
-            .img-face {
-            }
-            .flex-item {
-              .text {
-                position: relative;
-                top: 25%;
-              }
-            }
+    .right-content-block {
+      padding: 0;
+      width: 48%;
+      max-width: 100%;
+    }
+    .draggable {
+      width: 100%;
+    }
+    #team {
+      .team {
+        .faces {
+          .img-face {
           }
-        }
-      }
-      #why-us {
-        .advantages-header{
-          h2{
-            margin-bottom:  0px;
-          }
-        }
-        .advantages-body {
-          .advantage-item {
+          .flex-item {
             .text {
-              margin-top: 5%;
+              position: relative;
+              top: 25%;
             }
           }
         }
-        .right-vertical-line { display: none; }
-        .tech {
-          button { display: none !important; }
-          .advantages-line { display: none; }
-          .advantages-line-right { display: none; }
+      }
+    }
+    #why-us {
+      .advantages-header{
+        h2{
+          margin-bottom:  0px;
         }
-        .technologies {
-          img {
-            width: 20vw;
-            height: auto;
+      }
+      .advantages-body {
+        .advantage-item {
+          .text {
+            margin-top: 5%;
           }
         }
       }
-      .portfolio {
-        .wrapper--galleria-rectangle .rectangle-portfolio {
-          display: none;
+      .right-vertical-line { display: none; }
+      .tech {
+        button { display: none !important; }
+        .advantages-line { display: none; }
+        .advantages-line-right { display: none; }
+      }
+      .technologies {
+        img {
+          width: 20vw;
+          height: auto;
         }
       }
     }
-  }
-  @media screen and (min-device-width: 360px) {
-    :root {
-      --origin-width: 360;
-      --statc-font-size-offset: 0.17;
+    .portfolio {
+      .wrapper--galleria-rectangle .rectangle-portfolio {
+        display: none;
+      }
     }
   }
-  @media screen and (min-device-width: 375px) {
-    :root {
-      --origin-width: 375;
-      --static-font-size-offset: 0.185;
-    }
+}
+@media screen and (min-device-width: 360px) {
+  :root {
+    --origin-width: 360;
+    --statc-font-size-offset: 0.17;
   }
-  @media screen and (min-device-width: 411px) {
-    :root {
-      --origin-width: 411;
-      --statc-font-size-offset: 0.19;
-    }
+}
+@media screen and (min-device-width: 375px) {
+  :root {
+    --origin-width: 375;
+    --static-font-size-offset: 0.185;
   }
-  @media screen and (min-device-width: 480px) {
-    :root {
-      --origin-width: 480;
-      --statc-font-size-offset: 0.25;
-    }
+}
+@media screen and (min-device-width: 411px) {
+  :root {
+    --origin-width: 411;
+    --statc-font-size-offset: 0.19;
   }
-  @media screen and (min-device-width: 540px) {
-    :root {
-      --origin-width: 540;
-      --statc-font-size-offset: 0.28;
-    }
+}
+@media screen and (min-device-width: 480px) {
+  :root {
+    --origin-width: 480;
+    --statc-font-size-offset: 0.25;
   }
-  @media screen and (min-device-width: 600px) {
-    :root {
-      --origin-width: 600;
-      --statc-font-size-offset: 0.3;
-    }
+}
+@media screen and (min-device-width: 540px) {
+  :root {
+    --origin-width: 540;
+    --statc-font-size-offset: 0.28;
   }
-  @media screen and (min-device-width: 640px) {
-    :root {
-      --origin-width: 640;
-      --statc-font-size-offset: 0.33;
-    }
+}
+@media screen and (min-device-width: 600px) {
+  :root {
+    --origin-width: 600;
+    --statc-font-size-offset: 0.3;
   }
-  @media screen and (min-device-width: 720px) {
-    :root {
-      --origin-width: 720;
-      --statc-font-size-offset: 0.375;
-    }
+}
+@media screen and (min-device-width: 640px) {
+  :root {
+    --origin-width: 640;
+    --statc-font-size-offset: 0.33;
   }
-  @media screen and (min-device-width: 768px) {
-    :root {
-      --origin-width: 768;
-      --statc-font-size-offset: 0.395;
-    }
+}
+@media screen and (min-device-width: 720px) {
+  :root {
+    --origin-width: 720;
+    --statc-font-size-offset: 0.375;
   }
-  @media screen and (min-device-width: 800px) {
-    :root {
-      --origin-width: 800;
-      --statc-font-size-offset: 0.41;
-    }
+}
+@media screen and (min-device-width: 768px) {
+  :root {
+    --origin-width: 768;
+    --statc-font-size-offset: 0.395;
   }
+}
+@media screen and (min-device-width: 800px) {
+  :root {
+    --origin-width: 800;
+    --statc-font-size-offset: 0.41;
+  }
+}
 //desktop section
 @media screen and (min-device-width: 960px) {
   :root {
