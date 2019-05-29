@@ -15,6 +15,40 @@
     }
   }
 
+  /* navbar button btn */
+  .navbar-btn {
+    padding: 3.3vh;
+    height: 10vh;
+    width: 10vh;
+  }
+
+  .navbar-btn span {
+    width: 3.3vh;
+    height: 0.35vh;
+  }
+
+  .navbar-btn span::before,
+  .navbar-btn span::after {
+    width: 3.3vh;
+    height: 0.3vh;
+  }
+
+  .navbar-btn span::before {
+    top: 3.75vh;
+  }
+
+  .navbar-btn span::after {
+    bottom: 3.75vh;
+  }
+
+  .navbar-btn.active span::before {
+    top: 4.85vh;
+  }
+
+  .navbar-btn.active span::after {
+    bottom: 4.85vh;
+  }
+
   #mobile-content-container {
     display: flex;
 
@@ -321,7 +355,7 @@
     /* contact us */
     .content-page-7 {
       align-items: flex-start;
-      padding-top: 15vh;
+      padding-top: 13vh;
 
       .contact-us {
         display: flex;
@@ -343,18 +377,8 @@
             span.development { font-size: 1.9vh; }
           }
 
-          form.message-form  {
-            div.add-file-btn {
-              margin-left: 58vh;
-              margin-top: -7.3vh;
-              font-size: 2vh;
-            }
-
-            input.send-massage-btn {
-              margin-top: 1.9vh;
-              width: 19.97vh;
-              font-size: 1.55vh;
-            }
+          .message-form {
+            margin-top: 2vh;
           }
         }
 
@@ -363,9 +387,13 @@
           text-align: center;
           padding: 3vh 6vh 0vh 6vh;
 
+          h2 {
+            margin-bottom: 2vh;
+          }
+
           p {
             font-size: 1.85vh;
-            margin-bottom: 3.5vh;
+            margin-bottom: 2vh;
           }
 
           .social-btns {
@@ -430,11 +458,42 @@
 
   @media (min-aspect-ratio: 16/15) {
     //background: turquoise;
+    /* navbar button btn */
+    .navbar-btn {
+      padding: 4vh;
+      height: 12vh;
+      width: 12vh;
+    }
+
+    .navbar-btn span {
+      width: 4vh;
+      height: 0.35vh;
+    }
+
+    .navbar-btn span::before,
+    .navbar-btn span::after {
+      width: 4vh;
+      height: 0.35vh;
+    }
+
+    .navbar-btn span::before {
+      top: 4.5vh;
+    }
+
+    .navbar-btn span::after {
+      bottom: 4.5vh;
+    }
+
+    .navbar-btn.active span::before {
+      top: 5.825vh;
+    }
+
+    .navbar-btn.active span::after {
+      bottom: 5.825vh;
+    }
 
     #mobile-content-container {
-
       .content-page-2 {
-
         .about-us {
           div:first-child img {
             margin-top: unset;
@@ -508,6 +567,51 @@
           }
         }
       }
+
+      /* contact us */
+      .content-page-7 {
+        align-items: center;
+        padding-left: 5vw;
+        padding-top: unset;
+
+        .contact-us {
+          height: unset;
+          flex-wrap: unset;
+          align-items: center;
+          width: 90vw;
+
+          .form {
+            height: unset;
+
+            .message-form {
+              .include-files {
+                font-size: 2.5vh;
+              }
+
+              .send-massage-btn {
+                margin-bottom: 4vh;
+              }              
+            }
+          }
+
+          .info {
+            text-align: unset;
+            width: 50%;
+
+            p {
+              font-size: 2.5vh;
+            }
+
+            .social-btns {
+              justify-content: unset;
+            }
+
+            .copyright {
+              font-size: 2.5vh !important;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -549,50 +653,46 @@
           }
         }
       }
-
     }
   }
 
   @media (max-aspect-ratio: 7/9) {
     #mobile-content-container {
+      .content-page-2 {
+        .about-us {
+          width: 90vw;
+          div:first-child img {
+            margin-top: unset;
+            margin-left: 0vh;
+            height: 3vw;
+          }
+        }
 
-        .content-page-2 {
-
-          .about-us {
-            width: 90vw;
-            div:first-child img {
-              margin-top: unset;
-              margin-left: 0vh;
-              height: 3vw;
-            }
+        .sprites-rocks {
+          img#first {
+            top: 70vh;
+            height: 13vw;
           }
 
-          .sprites-rocks {
-            img#first {
-              top: 70vh;
-              height: 13vw;
-            }
-
-            img#second {
-              top: 8vh;
-              height: 10vw;
-            }
-
-            img#third {
-              top: 70vh;
-              left: 56vw;
-              height: 22vw;
-            }
-
-            img#fourth {
-              top: 5vh;
-              height: 17vw;
-              left: 82vw;
-            }
+          img#second {
+            top: 8vh;
+            height: 10vw;
           }
+
+          img#third {
+            top: 70vh;
+            left: 56vw;
+            height: 22vw;
+          }
+
+          img#fourth {
+            top: 5vh;
+            height: 17vw;
+            left: 82vw;
+          }
+        }
 
         .about-us div:last-child {
-
           span.t1 {
             font-size: 2.5vw;
           }
@@ -635,5 +735,3 @@
     }
   }
 }
-
-
