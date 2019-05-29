@@ -1,6 +1,8 @@
 "use strict"
 jQuery(document).ready(function() {
 $('#paralax').ready(function() {
+  if (~window.location.pathname.indexOf('/portfolio')) return
+  
   let screenRatio = 1; // initial value
   const LOCATION_PATH = window.location.origin
 
