@@ -1454,15 +1454,18 @@ body {
   }
 
   .arrow {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 5vh;
+    margin-top: -5vh;
     background-color: #1F1F1F;
-    padding: 3vh 3vh 2vh 3vh;
-    border-radius: 50%;
-    margin-top: -4vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     img {
       height: 2vh;
+      margin-bottom: -2vh;
     }
   }
 
@@ -1481,6 +1484,7 @@ body {
   .technologys {
     padding-top: 5vh;
     display: flex;
+    flex-wrap: wrap;
 
     .technology {
       display: flex;
@@ -1492,6 +1496,7 @@ body {
       color: rgba(255, 255, 255, 0.5);
       border: 0.12vh solid rgba(255, 255, 255, 0.5);
       border-radius: 4vh;
+      margin-bottom: 2vh;
     }
   }
 
