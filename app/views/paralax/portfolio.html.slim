@@ -11,18 +11,19 @@
         div class=(index.even? ? 'content' : 'content-reverse')
           .image
             img alt=technology.name src= technology.full_image_url
-          .description
-            .title
-              = technology.name
-            .technologys
-              - technology.technologies_array.each do |item|
-                .technology
-                  = item
-            .project-description
-              = technology.description
-            .view-project
-              = link_to technology.web_address
-                |VIEW PROJECT
+          .wrap
+            .description
+              .title
+                = technology.name
+              .technologys
+                - technology.technologies_array.each do |item|
+                  .technology
+                    = item
+              .project-description
+                = technology.description
+              .view-project
+                = link_to technology.web_address
+                  |VIEW PROJECT
       - if index == 0
         .arrow_block
           .arrow
