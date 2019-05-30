@@ -18,12 +18,12 @@ $('#paralax').ready(function() {
       break;
 
       case 7:
-        $('.contact-us-btn').addClass('blur')
+        $('.contact-us-btn').addClass('dissolve')
       break;
 
       default:
         $('.sprites .layer-2 img').addClass('hiden')
-        $('.contact-us-btn').removeClass('blur')
+        $('.contact-us-btn').removeClass('dissolve')
     }
   })
 
