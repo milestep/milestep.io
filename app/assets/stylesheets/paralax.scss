@@ -8,9 +8,19 @@ body {
   color: #FFF;
   background-color: #000;
   height: 100%;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   
   * {
     margin: unset;
+  }
+
+  button, 
+  button:active, 
+  button:focus {
+    outline: none;
   }
 
   .content-container {
@@ -55,7 +65,7 @@ body {
       border-radius: 4.12vh;
       text-transform: uppercase;
       cursor: pointer;
-      transition: filter 1s, background-color .3s;
+      transition: filter 1s, background-color .3s, opacity .5s;
     }
 
     .contact-us-btn:hover {
@@ -1356,6 +1366,11 @@ body {
   }
 
   //*other
+  .dissolve {
+    opacity: 0;
+    transition: .5s;
+  }
+
   .statusbar {
     font-size: 20px;
     position: fixed;

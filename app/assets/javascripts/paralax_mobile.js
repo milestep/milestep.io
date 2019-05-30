@@ -1,14 +1,14 @@
 jQuery(document).ready(function() {
   const LOCATION_PATH = window.location.origin
 
-  $(window).resize(function() {
-    document.location.reload()
-  })
-
   $('.navbar-btn, nav').on('click', function() {
-    $('.navbar-btn').toggleClass('active');
-    $('nav').toggleClass('hiden');
-    $('.contact-us-btn, .perfect-circle').toggleClass('blur');
+    if ($('nav').hasClass('hiden')) {
+      $('.navbar-btn').addClass('active');
+      $('nav').removeClass('hiden');
+    } else {
+      $('.navbar-btn').removeClass('active');
+      $('nav').addClass('hiden');
+    }
   })
 
   $('button.contact-us-btn').on('click', function() {
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
     $(location).attr('href', LOCATION_PATH + '/mobile/portfolio');
   })
 
-  $("#carousel").featureCarousel({    
+  $('#carousel').featureCarousel({
     largeFeatureWidth : $(window).height() / 1.72,
     largeFeatureHeight: $(window).height() / 1.72,
     smallFeatureWidth: $(window).height() / 3.3,
@@ -35,7 +35,7 @@ jQuery(document).ready(function() {
     rightButtonTag: '#carousel-right, #carousel-tiny-right'
   })
 
-  $(".regular").slick({
+  $('.regular').slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
@@ -43,12 +43,34 @@ jQuery(document).ready(function() {
     appendArrows: $('.carousel-nav-btns'),
     appendDots: $('.carousel-nav-btns'),
     focusOnSelect: true,
-    lazyLoad: 'ondemand', //Accepts 'ondemand' or 'progressive'
+    lazyLoad: 'ondemand',
     swipeToSlide: true,
     zIndex: 99,
     customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
 
-  $('#mobile-content-container').draggable()
+  $('#mobile-content-container').on('touchstart', function(event){
+    let xClick = event.originalEvent.touches[0].pageX
+    $(this).one('touchmove', function(event){
+      let xMove = event.originalEvent.touches[0].pageX
+      if( xClick > (innerWidth - 20) && Math.floor(xClick - xMove) > 5 ) {
+        $('.navbar-btn').addClass('active');
+        $('nav').removeClass('hiden');
+      } 
+    })
+  })
+
+  $('.carousel-feature .carousel-image').on('touchstart', function(event){
+    let xClick = event.originalEvent.touches[0].pageX
+    $(this).one('touchmove', function(event){
+      let xMove = event.originalEvent.touches[0].pageX
+
+      if (Math.floor(xClick - xMove) > 5) {
+        $('#carousel-tiny-right').click()
+      } else {
+        $('#carousel-tiny-left').click()
+      }
+    })
+  })
 })
