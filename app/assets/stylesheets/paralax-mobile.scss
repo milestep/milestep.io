@@ -332,24 +332,26 @@
       .approach {
         margin-top: unset;
         justify-content: center;
-        padding: 7vh 0;
+        padding: 2vh 0;
         width: 90vw;
 
         .items {
           flex: 1 1 30vh;
-          height: 18vh;
-          margin: 1vh;
+          height: unset;
+          margin: 1vh 1vh 4vh 1vh;
 
           .text {
             text-align: left;
 
-            h3 { font-size: 2.48vh; }
+            h3 {
+              font-size: 2.48vh;
+            }
 
             p {
-              font-size: 1.5vh;
-              letter-spacing: 0px;
+              font-size: 1.9vh;
+              letter-spacing: 0.12vh;
               text-transform: none;
-              line-height: 1.65vh;
+              line-height: 2.1vh;
             }
           }
         }
@@ -569,6 +571,14 @@
           h1 {
             line-height: 3vw;
           }
+        }
+      }
+
+      /* approach */
+      .content-page-6 {
+        .approach {
+          align-items: center;
+          padding: 7vh 0;
         }
       }
 

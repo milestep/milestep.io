@@ -1,6 +1,10 @@
 jQuery(document).ready(function() {
   const LOCATION_PATH = window.location.origin
 
+  $(window).resize(function() {
+    document.location.reload()
+  })
+
   $('.navbar-btn, nav').on('click', function() {
     if ($('nav').hasClass('hiden')) {
       $('.navbar-btn').addClass('active');
