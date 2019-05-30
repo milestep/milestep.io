@@ -84,7 +84,7 @@
         margin-top: 68vh;
         width: 19.43vh;
         height: 4.83vh;
-        border: 0.12vh solid #FFFFFF;
+        border: 1px solid #FFFFFF;
         border-radius: 4.12vh;
         background-color: rgba(0, 0, 0, 0);
         transition: background-color .3s;
@@ -475,8 +475,6 @@
   }
 
   @media (min-aspect-ratio: 16/15) {
-    //background: turquoise;
-    /* navbar button btn */
     .navbar-btn {
       padding: 4vh;
       height: 12vh;

@@ -16,7 +16,9 @@ module Mobile
       @portfolio = PortfolioItem.order(order: :desc)
     end
 
-    def our_portfolio ; end
+    def our_portfolio
+      @technologies = PortfolioItem.order(order: :desc)
+    end
 
     def team
       @development = TeamMember.order(order: :desc)
