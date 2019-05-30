@@ -8,22 +8,25 @@
   .portfolio-content-container
     - @technologies.each_with_index do |technology, index|
       div class=(index.even? ? 'wrapper' : 'wrapper-even')
-        div class=(index.even? ? 'content' : 'content-reverse')
+        .content
           .image
             img alt=technology.name src= technology.full_image_url
-          .wrap
-            .description
-              .title
-                = technology.name
-              .technologys
-                - technology.technologies_array.each do |item|
-                  .technology
-                    = item
-              .project-description
-                = technology.description
-              .view-project
-                = link_to technology.web_address
-                  |VIEW PROJECT
+
+          .description-1
+            .title
+              = technology.name
+            .technologys
+              - technology.technologies_array.each do |item|
+                .technology
+                  = item
+
+          .description-2
+            .project-description
+              = technology.description
+            .view-project-button
+              = link_to technology.web_address
+                |VIEW PROJECT
+
       - if index == 0
         .arrow_block
           .arrow

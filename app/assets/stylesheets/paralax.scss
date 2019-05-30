@@ -1445,17 +1445,9 @@ body {
   }
 }
 
+/////////////////////////
 #portfolio_page {
   color: #FFF;
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .title {
-    font-size: 7vh;
-  }
 
   .header {
     background-color: #1F1F1F;
@@ -1466,142 +1458,142 @@ body {
       position: absolute;
     }
 
-    .main-logo:hover {
-      cursor: pointer;
-    }
+    .main-logo:hover { cursor: pointer; }
   }
 
-  .wrapper {
-    background-color: #1F1F1F;
-    width: 100vw;
-    height: 94vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .wrapper-even {
-    background-color: #3E3E3E;
-    width: 100vw;
-    height: 94vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .project-description {
-    padding-top: 5vh;
-    width: 65vh;
-    font-size: 2vh;
-    margin-bottom: 5vh;
-  }
-
-  .arrow_block {
-    background-color: #3E3E3E;
-    display: flex;
-    justify-content: center;
-    height: 4vh;
-  }
-
-  .arrow {
-    height: 10vh;
-    width: 10vh;
-    border-radius: 5vh;
-    margin-top: -5vh;
-    background-color: #1F1F1F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      height: 2vh;
-      margin-bottom: -2vh;
-    }
-  }
-
-  .view-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-right: 1.5vh;
-    padding: 1vh 3vh;
-    width: 25vh;
-    border-radius: 4vh;
-    background: #393939;
-  }
-
-  .technologys {
-    padding-top: 5vh;
-    display: flex;
-    flex-wrap: wrap;
-
-    .technology {
+  .portfolio-content-container {
+    .wrapper, .wrapper-even {
+      width: 100vw;
+      height: 94vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 1.5vh;
-      padding: 1vh 3vh;
-      min-width: 15vh;
-      color: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 4vh;
-      margin-bottom: 1.5vh;
-    }
-  }
 
-  .content {
-    display: flex;
+      .description-1, .description-2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2vh;
+        padding: 5vh 5vh 0vh 5vh;
+        height: 35vh;
 
-    .wrap {
-      display: flex;
-      align-items: center;
-    }
-
-
-    img {
-      height: 74vh;
-    }
-
-    .description {
-      margin-left: 6vh;
-      font-size: 2vh;
-      padding-left: 3vh;
-      width: 42vw;
-
-      .gamger-logo {
-        img {
+        .view-project-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25vh;
           height: 5vh;
+          border-radius: 4vh;
+          background: #393939;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+
+        .technologys {
+          display: flex;
+          flex-wrap: wrap;
+
+          .technology {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5vh;
+            padding: 1vh 3vh;
+            min-width: 15vh;
+            color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4vh;
+            margin-bottom: 1.5vh;
+          }
+        }
+      }
+
+      .description-1 {
+        justify-content: flex-end;
+
+        .title {
+          font-size: 7vh;
+          margin-bottom: 5vh;
+        }
+      }
+
+      .description-2 {
+        .project-description {
+          margin-bottom: 5vh;
         }
       }
     }
-  }
 
-  .content-reverse {
-    display: flex;
-    flex-direction: row-reverse;
-
-    .wrap {
+    .content {
       display: flex;
-      align-items: center;
-    }
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 90%;
+      height: 70vh;
 
-    .view-project {
-      background: #525252;
-    }
+      .image, .description-1, .description-2 {
+        width: 50%;
+      }
 
-    img {
-      height: 74vh;
-    }
+      .image {
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .description {
-      font-size: 2vh;
-      padding-left: 3vh;
-      width: 38vw;
-
-      .gamger-logo {
         img {
-          height: 5vh;
+          max-height: 70vh;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .wrapper {
+      background-color: #1F1F1F;
+
+      .content {
+        .image { order: 1; }
+        .description-1 { order: 2; }
+        .description-2 { order: 3; }
+      }
+    }
+
+    .wrapper-even {
+      background-color: #3E3E3E;
+
+      .content {        
+        .image { order: 3; }
+        .description-1 { order: 1; }
+        .description-2 { order: 2; }
+
+        .view-project {
+          background: #525252;
+        }
+      }
+    }
+
+    .arrow_block {
+      background-color: #3E3E3E;
+      display: flex;
+      justify-content: center;
+      height: 4vh;
+
+      .arrow {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 5vh;
+        margin-top: -5vh;
+        background-color: #1F1F1F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 2vh;
+          margin-bottom: -2vh;
         }
       }
     }
