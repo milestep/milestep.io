@@ -49,10 +49,6 @@
     bottom: 4.85vh;
   }
 
-  nav {    
-    background: rgba(1, 0, 0, 0.95);
-  }
-
   #mobile-content-container {
     display: flex;
 
@@ -426,6 +422,7 @@
   nav {
     li.mobile { display: flex; }
     li.desktop { display: none; }
+    background: rgba(1, 0, 0, 0.95);
   }
 
   .shake {
@@ -457,6 +454,14 @@
               font-size: 2.88vh;
             }
             //margin: 1.6vh 1.45vh;
+          }
+        }
+      }
+
+      .content-page-4 {
+        div.content {
+          .slider {
+            margin-bottom: 2vh;
           }
         }
       }
@@ -580,6 +585,14 @@
         .approach {
           align-items: center;
           padding: 7vh 0;
+        }
+      }
+
+      .content-page-4 {
+        div.content {
+          .slider {
+            margin-bottom: 2vh;
+          }
         }
       }
 
