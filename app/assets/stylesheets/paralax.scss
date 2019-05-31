@@ -1432,7 +1432,6 @@ body { overflow-x: hidden; }
   }
 }
 
-/////////////////////////
 #portfolio_page {
   color: #FFF;
 
@@ -1586,7 +1585,48 @@ body { overflow-x: hidden; }
     }
   }
 
-  // @media 
+  @media (max-aspect-ratio: 16/15) {
+    .header {
+      height: 5vh;
+    } 
+
+    .portfolio-content-container {
+      .wrapper, .wrapper-even {
+        .content {
+          height: 95%;
+          justify-content: center;
+          flex-wrap: nowrap;
+
+          .image, .description-1, .description-2 {
+            width: 100%;
+            padding: unset;
+            height: unset;
+
+            img {
+              max-height: 100%;
+              max-width: 100%;
+            }
+          }
+
+          .image {
+            order: 2;
+            height: 40%;
+            margin-bottom: 4vh;
+          }
+
+          .description-1 {
+            height: unset;
+            order: 1;
+            margin-bottom: 2vh;
+          }
+
+          .description-2 {
+            order: 3;
+          }
+        }
+      }
+    }
+  }
 }
 
 // scrollbar
