@@ -1,8 +1,6 @@
 @import "styles-config.scss";
 
-body {
-  overflow-x: hidden;
-}
+body { overflow-x: hidden; }
 
 #paralax {
   color: #FFF;
@@ -13,15 +11,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   
-  * {
-    margin: unset;
-  }
+  * { margin: unset; }
 
   button, 
   button:active, 
-  button:focus {
-    outline: none;
-  }
+  button:focus { outline: none; }
 
   .content-container {
     height: 100vh;
@@ -134,9 +128,7 @@ body {
   }
 
   //*state with opened navbar
-  .navbar-btn.active span {
-    background: none;
-  }
+  .navbar-btn.active span { background: none; }
 
   .navbar-btn.active span::before {
     transform: rotate(45deg);
@@ -179,13 +171,9 @@ body {
       list-style-type: none;
     }
 
-    li {
-      cursor: pointer;
-    }
+    li { cursor: pointer; }
 
-    li a {      
-      color: #555;
-    }
+    li a { color: #555; }
 
     li:hover a {
       color: #FFF;      
@@ -582,7 +570,6 @@ body {
       //*carousel portfolio
       .slider {
         width: 73vw;
-        height: 50vh;
 
         .carousel-feature {
           position: relative;
@@ -1598,6 +1585,8 @@ body {
       }
     }
   }
+
+  // @media 
 }
 
 // scrollbar
