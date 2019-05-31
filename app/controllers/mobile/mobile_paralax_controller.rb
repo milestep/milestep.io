@@ -18,6 +18,7 @@ module Mobile
 
     def our_portfolio
       @technologies = PortfolioItem.order(order: :desc)
+      render 'paralax/portfolio'
     end
 
     def team
