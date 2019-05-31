@@ -90,6 +90,13 @@ const LOCATION_PATH = window.location.origin
               $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
             })
 
+
+    $('.blog-header .navigation-panel .contact-us-button').on('click', function() {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(document).height()
+      }, 1000);
+    })
+
   $('#paralax .contact-us-btn').on('click', function() {
     scrollPage(6)
   })
