@@ -698,6 +698,10 @@
   }
 
   @media (max-aspect-ratio: 7/9) {
+    .contact-us-btn {
+      display: none;
+    }
+
     #mobile-content-container {
       .content-page-2 {
         .about-us {
