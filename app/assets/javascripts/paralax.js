@@ -1,17 +1,17 @@
 "use strict"
 jQuery(document).ready(function() {
   $('#paralax').ready(function() {
-    if (~window.location.pathname.indexOf('/portfolio')) return
+  if (~window.location.pathname.indexOf('/portfolio')) return
 
   let screenRatio = 1; // initial value
-const LOCATION_PATH = window.location.origin
+  const LOCATION_PATH = window.location.origin
 
   // listeners
-  $(window).resize(function() {
-    document.location.reload()
-  })
+  $(window).resize(function() { document.location.reload() })
 
   $(window).scroll(function() {
+    currentPage() == 5 ? featureCarousel.start() : featureCarousel.pause()
+
     switch (currentPage()) {
       case 1:
       $('.sprites .layer-2 img').removeClass('hiden')
@@ -58,8 +58,8 @@ const LOCATION_PATH = window.location.origin
   }).mousemove(function(e) {
     let x = e.clientX, y = e.clientY;
     if (window.env.DEV) $('.statusbar .cursor').text(`x: ${x} y: ${y}`)
-      if (!window.env.DEV) $('#backlight').css({top: y, left: x})
-    })
+    if (!window.env.DEV) $('#backlight').css({top: y, left: x})
+  })
 
   $('#an-2, #an-3, #an-4, #an-5, #an-6').on('click', function() {
     $('.navbar-btn').removeClass('active');
@@ -87,23 +87,18 @@ const LOCATION_PATH = window.location.origin
     e.preventDefault();
     let pos = (1 / (window.env.NUMBER_OF_PAGES - 1)) *
               ($($(this).find('a').attr('href')).attr('id').substring(3) - 1); //#an-1, #an-2
-              $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
-            })
-
-
-    $('.blog-header .navigation-panel .contact-us-button').on('click', function() {
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $(document).height()
-      }, 1000);
-    })
-
-  $('#paralax .contact-us-btn').on('click', function() {
-    scrollPage(6)
+    $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
   })
 
-  $('#paralax .content-page-1 #portfolio-btn').on('click', function() {
-    scrollPage(3)
+  $('.blog-header .navigation-panel .contact-us-button').on('click', function() {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(document).height()
+    }, 1000);
   })
+
+  $('#paralax .contact-us-btn').on('click', function() { scrollPage(6) })
+
+  $('#paralax .content-page-1 #portfolio-btn').on('click', function() { scrollPage(3) })
 
   $('#portfolio_page .header .main-logo').on('click', function() {
     $(location).attr('href', LOCATION_PATH + '/');
@@ -121,22 +116,18 @@ const LOCATION_PATH = window.location.origin
     $('.arrow-left').toggleClass('hide');
   })
 
-  $('.arrow-left').on('click', function() {
-    scrollPage('<')
-  })
+  $('.arrow-left').on('click', function() { scrollPage('<') })
 
-  $('.arrow-right').on('click', function() {
-    scrollPage('>')
-  })
+  $('.arrow-right').on('click', function() { scrollPage('>') })
 
   $('#help').on('click',function(event){if(this.innerHTML=='/_ ')
-  {let styles='background: #000; color: #c00; line-height: 30px; text-align: center';
-  console.log("%c  Wait here  ",styles);this.remove();setTimeout(function(){console.clear();
-  console.log("%c  Follow me http://pornhub.com ",styles)},10000)}
-  if(this.innerHTML=='?  '){this.innerHTML='/_';this.style.color='#f00'}
+    {let styles='background: #000; color: #c00; line-height: 30px; text-align: center';
+    console.log("%c  Wait here  ",styles);this.remove();setTimeout(function(){console.clear();
+      console.log("%c  Follow me http://pornhub.com ",styles)},10000)}
+    if(this.innerHTML=='?  '){this.innerHTML='/_';this.style.color='#f00'}
   this.innerHTML+=' '})
 
-  $("#carousel").featureCarousel({    
+  let featureCarousel = $("#carousel").featureCarousel({
     largeFeatureWidth : $(window).height() / 1.65,
     largeFeatureHeight: $(window).height() / 1.65,
     smallFeatureWidth: $(window).height() / 3.3,
@@ -151,6 +142,14 @@ const LOCATION_PATH = window.location.origin
     leftButtonTag: '#carousel-left, #carousel-tiny-left',
     rightButtonTag: '#carousel-right, #carousel-tiny-right'
   })
+
+  setTimeout(function() {
+    let i = 0;
+    let timer = setInterval(function() {
+      featureCarousel.pause(); ++i
+      if (i == 10) {clearInterval(timer)}
+    }, 50)
+  }, 500)
 
   $(".regular").slick({
     dots: false,
@@ -167,8 +166,7 @@ const LOCATION_PATH = window.location.origin
     focusOnSelect: false,
   })
 
-  $.jInvertScroll(['.scroll'],
-  {
+  $.jInvertScroll(['.scroll'], {
     height: $(window).width() * window.env.NUMBER_OF_PAGES,
     onScroll: function(percent) {
       $('.perfect-circle').circleProgress({
@@ -184,11 +182,10 @@ const LOCATION_PATH = window.location.origin
 
       if (window.env.DEV) { $('.statusbar .paralax').text(Math.round(percent * 100) + '%') }
 
-        currentPage()
+      currentPage()
       hideArrows()
     }
-  }
-  )
+  })
 
   // functions
   function setScreenRatio() {
@@ -212,27 +209,27 @@ const LOCATION_PATH = window.location.origin
 
     if (window.env.DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
     if (window.env.DISABLE_WEEL) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши
-}
-
-function scrollPage(direction) {
-  function getPos() {
-    let step = 1 / (window.env.NUMBER_OF_PAGES - 1);
-    if (typeof(direction) == "number") {
-      return screenRatio*(direction*step) + 1;
-    } else {
-      let curPos = step * (currentPage() - 1);
-      return (direction == '<') ?
-      screenRatio * (curPos + step) + 1 :
-      screenRatio * (curPos - step) + 1
-    }
   }
 
-  $("html:not(:animated),body:not(:animated)").animate({
-    scrollTop: getPos()
-  }, 500)
-}
+  function scrollPage(direction) {
+    function getPos() {
+      let step = 1 / (window.env.NUMBER_OF_PAGES - 1);
+      if (typeof(direction) == "number") {
+        return screenRatio*(direction*step) + 1;
+      } else {
+        let curPos = step * (currentPage() - 1);
+        return (direction == '<') ?
+        screenRatio * (curPos + step) + 1 :
+        screenRatio * (curPos - step) + 1
+      }
+    }
 
-function hideArrows() {
+    $("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: getPos()
+    }, 500)
+  }
+
+  function hideArrows() {
     $('.arrow-left').appendTo($('.arrow-left').parent()); //reset animation
     $('.arrow-right').appendTo($('.arrow-right').parent());
 
@@ -257,16 +254,16 @@ function hideArrows() {
     $('.time').text(curTime)
   }, window.env.SCROLL_SPEED)}
 
-    function keysStatus(st) {
-      if (window.env.DEV) $('.statusbar .keys').text(st)
-    }
+  function keysStatus(st) {
+    if (window.env.DEV) $('.statusbar .keys').text(st)
+  }
 
   // classes
   function Keys() {
     this.arrowUp = function(e) {
       e.preventDefault()
       scrollPage('>')
-      keysStatus('up')      
+      keysStatus('up')
     }
     
     this.arrowDown = function(e) {

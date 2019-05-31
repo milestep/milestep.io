@@ -8,8 +8,8 @@
  *
  * http://www.gnu.org/licenses/gpl.txt
  */
- jQuery(document).ready(function () {
-  $.fn.featureCarousel = function (options) {
+ jQuery(document).ready(function() {
+  $.fn.featureCarousel = function(options) {
     // Adds support for multiple carousels on one page
     if (this.length > 1) {
       this.each(function() {
@@ -602,7 +602,7 @@
         if (options.pauseOnHover) {
           setTimer(false);
         }
-      });
+      })
 
     // Add event listener to all clicks within the features container
     // This is done to disable any links that aren't within the center feature
@@ -677,13 +677,13 @@
     this.next = function() {
       initiateMove(true, 1);
     }
-    this.prev = function () {
+    this.prev = function() {
       initiateMove(false, 1);
     }
-    this.pause = function () {
+    this.pause = function() {
       setTimer(true);
     }
-    this.start = function () {
+    this.start = function() {
       setTimer(false);
     }
 
@@ -746,4 +746,4 @@
     // callback function for when center feature was clicked
     clickedCenter:        $.noop
   };
-});
+})

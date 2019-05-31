@@ -1,8 +1,6 @@
 @import "styles-config.scss";
 
-body {
-  overflow-x: hidden;
-}
+body { overflow-x: hidden; }
 
 #paralax {
   color: #FFF;
@@ -13,15 +11,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   
-  * {
-    margin: unset;
-  }
+  * { margin: unset; }
 
   button, 
   button:active, 
-  button:focus {
-    outline: none;
-  }
+  button:focus { outline: none; }
 
   .content-container {
     height: 100vh;
@@ -134,9 +128,7 @@ body {
   }
 
   //*state with opened navbar
-  .navbar-btn.active span {
-    background: none;
-  }
+  .navbar-btn.active span { background: none; }
 
   .navbar-btn.active span::before {
     transform: rotate(45deg);
@@ -179,13 +171,9 @@ body {
       list-style-type: none;
     }
 
-    li {
-      cursor: pointer;
-    }
+    li { cursor: pointer; }
 
-    li a {      
-      color: #555;
-    }
+    li a { color: #555; }
 
     li:hover a {
       color: #FFF;      
@@ -582,7 +570,6 @@ body {
       //*carousel portfolio
       .slider {
         width: 73vw;
-        height: 50vh;
 
         .carousel-feature {
           position: relative;
@@ -1594,6 +1581,55 @@ body {
         img {
           height: 2vh;
           margin-bottom: -2vh;
+        }
+      }
+    }
+  }
+
+  @media (max-aspect-ratio: 16/15) {
+    .header {
+      height: 7vh;
+    }
+
+    .portfolio-content-container {
+      .wrapper, .wrapper-even {
+        min-height: 95%;
+        height: unset;
+        padding: 3vh 0;
+
+        .content {
+          min-height: 95%;
+          justify-content: center;
+          flex-wrap: nowrap;
+          height: unset;
+
+          .image, .description-1, .description-2 {
+            width: 100%;
+            padding: unset;
+            height: unset;
+
+            img {
+              max-height: 100%;
+              max-width: 100%;
+            }
+          }
+
+          .image {
+            order: 2;
+            height: 40%;
+            min-height: 35vh;
+            margin-bottom: 4vh;
+          }
+
+          .description-1 {
+            height: unset;
+            order: 1;
+            margin-bottom: 2vh;
+          }
+
+          .description-2 {
+            order: 3;
+          }
         }
       }
     }
