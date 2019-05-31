@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+  $('#mobile-content-container').ready(function() {
   const LOCATION_PATH = window.location.origin
 
   $(window).resize(function() {
@@ -77,4 +78,4 @@ jQuery(document).ready(function() {
       }
     })
   })
-})
+})})
