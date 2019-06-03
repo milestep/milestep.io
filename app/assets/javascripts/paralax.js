@@ -120,12 +120,12 @@ jQuery(document).ready(function() {
 
   $('.arrow-right').on('click', function() { scrollPage('>') })
 
-  $('#help').on('click',function(event){if(this.innerHTML=='/_ ')
-    {let styles='background: #000; color: #c00; line-height: 30px; text-align: center';
-    console.log("%c  Wait here  ",styles);this.remove();setTimeout(function(){console.clear();
-      console.log("%c  Follow me http://pornhub.com ",styles)},10000)}
-    if(this.innerHTML=='?  '){this.innerHTML='/_';this.style.color='#f00'}
-  this.innerHTML+=' '})
+  // $('#help').on('click',function(event){if(this.innerHTML=='/_ ')
+  //   {let styles='background: #000; color: #c00; line-height: 30px; text-align: center';
+  //   console.log("%c  Wait here  ",styles);this.remove();setTimeout(function(){console.clear();
+  //     console.log("%c  Follow me http://pornhub.com ",styles)},10000)}
+  //   if(this.innerHTML=='?  '){this.innerHTML='/_';this.style.color='#f00'}
+  // this.innerHTML+=' '})
 
   let featureCarousel = $("#carousel").featureCarousel({
     largeFeatureWidth : $(window).height() / 1.65,

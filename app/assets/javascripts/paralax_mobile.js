@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
     lazyLoad: 'ondemand',
     swipeToSlide: true,
     zIndex: 99,
-    customPaging: function(_, i) { return ++i },
+    // customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
 

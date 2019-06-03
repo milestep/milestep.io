@@ -253,20 +253,30 @@
 
     /* portfolio */
     .content-page-4 {
+      .slick-dots {
+        li {
+          display: none;
+        }
+      }
+
+      .carousel-nav-btns {
+        margin-left: 3vw;
+      }
+
       padding-top: 12vh;
 
       .title {
-        margin-right: 40vw;
+        margin-right: 12vw;
         margin-top: unset;
         width: 110vw;
         height: 6vh;
-        background-color: #333;
+        //background-color: #333;
         justify-content: center;
         border-radius: 5vh;
 
         .text {
           margin-right: unset;
-          font-size: 3vh;
+          font-size: 3.5vh;
         }
       }
 

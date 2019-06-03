@@ -39,6 +39,7 @@ body { overflow-x: hidden; }
     top: 0;
     width: 100%;
     height: 11.78vh;
+    background-color: black;
     z-index: $nav-layer - 1;
 
     .main-logo {
@@ -512,7 +513,7 @@ body { overflow-x: hidden; }
         left: unset;
         position: relative;
         display: inline;
-        width: 6vh;
+        width: 8vh;
         height: 4vh;
       }
 
@@ -661,7 +662,7 @@ body { overflow-x: hidden; }
       width: 27.91vh;
       height: 4.83vh;
       background: transparent;
-      margin-top: 2vh;
+      margin-top: 4vh;
 
       border: 1px solid #FFFFFF;
       box-sizing: border-box;
@@ -1469,6 +1470,7 @@ body { overflow-x: hidden; }
           align-items: center;
           width: 25vh;
           height: 5vh;
+          min-height: 5vh;
           border-radius: 4vh;
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
           z-index: 1;
