@@ -1470,7 +1470,7 @@ body { overflow-x: hidden; }
           width: 25vh;
           height: 5vh;
           border-radius: 4vh;
-          background: #393939;
+          background: #2b2a2a;
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
           z-index: 1;
 
@@ -1478,6 +1478,11 @@ body { overflow-x: hidden; }
             color: white;
             text-decoration: none;
           }
+        }
+
+        .view-project-button:hover {
+          cursor: pointer;
+          border: 1px solid gray;
         }
 
         .technologys {
