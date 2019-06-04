@@ -1,6 +1,7 @@
 #paralax {
   //Ipad Mini 768 * 1024  9/7
   header {
+    background-color: black;
     .main-logo {
       margin: 3.8vh 0 0 3vh !important;
       height: 7vh;
@@ -204,7 +205,7 @@
           position: absolute;
           top: 69vh;
           left: 1vw;
-          height: 12vh;
+          height: 9vh;
         }
 
         img#sixth {
@@ -253,20 +254,30 @@
 
     /* portfolio */
     .content-page-4 {
+      .slick-dots {
+        li {
+          display: none;
+        }
+      }
+
+      .carousel-nav-btns {
+        margin-left: 3vw;
+      }
+
       padding-top: 12vh;
 
       .title {
-        margin-right: 40vw;
+        margin-right: 12vw;
         margin-top: unset;
         width: 110vw;
         height: 6vh;
-        background-color: #333;
+        //background-color: #333;
         justify-content: center;
         border-radius: 5vh;
 
         .text {
           margin-right: unset;
-          font-size: 3vh;
+          font-size: 3.5vh;
         }
       }
 

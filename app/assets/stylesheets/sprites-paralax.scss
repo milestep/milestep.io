@@ -65,7 +65,14 @@
         position: inherit;
         height: 10vh;
         margin-left: 100vw;
-        margin-top: 13vh;;
+        margin-top: 13vh;
+      }
+
+      img.limg-6 {
+        position: inherit;
+        height: 9vh;
+        margin-left: 530vw;
+        margin-top: 62vh;
       }
     }
 
@@ -139,6 +146,13 @@
         margin-left: 531vw;
         margin-top: 83vh;
       }
+
+      img.limg-4 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 692vw;
+        margin-top: 18vh;
+      }
     }
 
     .layer-5 {
@@ -147,9 +161,9 @@
 
       img.limg-1 {
         position: inherit;
-        height: 12vh;
-        margin-left: 710vw;
-        margin-top: 33vh;
+        height: 8vh;
+        margin-left: 1373vw;
+        margin-top: 67vh;
       }
 
       img.limg-2 {
@@ -164,12 +178,12 @@
       width: ($number-of-pages * 100%) * 2;
       will-change: transform;
 
-      img.limg-1 {
-        position: inherit;
-        height: 6vh;
-        margin-left: 1329vw;
-        margin-top: 69vh;
-      }
+      //img.limg-1 {
+      //  position: inherit;
+      //  height: 10vh;
+      //  margin-left: 1322vw;
+      //  margin-top: 18vh;
+      //}
 
       img.limg-2 {
         position: inherit;
@@ -245,7 +259,7 @@
 
       img.limg-1 {
         position: inherit;      
-        height: 16vh;
+        height: 10vh;
         margin-left: 1952vw;
         margin-top: 18vh;
       }

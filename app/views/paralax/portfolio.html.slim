@@ -23,7 +23,7 @@
           .description-2
             .project-description
               = technology.description
-            .view-project-button
+            div class=(index.even? ? 'view-project-button' : 'view-project-even-button')
               = link_to technology.web_address
                 |VIEW PROJECT
 

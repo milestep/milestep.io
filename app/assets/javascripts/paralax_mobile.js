@@ -2,9 +2,9 @@ jQuery(document).ready(function() {
   $('#mobile-content-container').ready(function() {
   const LOCATION_PATH = window.location.origin
 
-  $(window).resize(function() {
-    document.location.reload()
-  })
+  // $(window).resize(function() {
+  //   document.location.reload()
+  // })
 
   $('.navbar-btn, nav').on('click', function() {
     if ($('nav').hasClass('hiden')) {
@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
     lazyLoad: 'ondemand',
     swipeToSlide: true,
     zIndex: 99,
-    customPaging: function(_, i) { return ++i },
+    // customPaging: function(_, i) { return ++i },
     focusOnSelect: false,
   })
 
