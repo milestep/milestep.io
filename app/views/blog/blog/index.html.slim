@@ -7,7 +7,7 @@
     .container
       - if @posts.any?
         .blog-posts-container.row
-          = render partial: 'post', collection: @posts, as: :post
+          = render @posts
         = will_paginate @posts, custom_pagination_options()
       - else
         .no-posts-text There are no posts here.

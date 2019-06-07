@@ -6,6 +6,11 @@ module Blog
         @posts = Post.where('lower(title) LIKE lower(?)', "%#{params[:query]}%").order('created_at DESC').paginate(paginate_options)
       else
         @posts = Post.order('created_at DESC').paginate(paginate_options)
+
+        respond_to do |format|
+          format.js
+          format.html
+        end
       end
     end
   end
