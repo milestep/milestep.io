@@ -6,10 +6,13 @@
 //= require ckeditor/init
 
 //= require jquery.notiny
-//= require paralax
 //= require send-message
 //= require pictureChanger
 //= require scroller
 //= require pagination
+//= require blog
+
+//= require pagination
+//= require bindWithDelay
 
 //= require serviceworker-companion

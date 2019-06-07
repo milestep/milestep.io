@@ -90,12 +90,6 @@ jQuery(document).ready(function() {
     $('html, body').animate({scrollTop: Math.ceil(screenRatio*pos) + 'px'}, window.env.SCROLL_SPEED);
   })
 
-  $('.blog-header .navigation-panel .contact-us-button').on('click', function() {
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $(document).height()
-    }, 1000);
-  })
-
   $('#paralax .contact-us-btn').on('click', function() { scrollPage(6) })
 
   $('#paralax .content-page-1 #portfolio-btn').on('click', function() { scrollPage(3) })
