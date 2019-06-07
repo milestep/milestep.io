@@ -23,5 +23,7 @@
 //= require circle-progress
 //= require paralax
 //= require send-mail
+//= require pagination
+//= require bindWithDelay
 
 //= require serviceworker-companion

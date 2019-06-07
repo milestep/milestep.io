@@ -10,5 +10,6 @@
 //= require send-message
 //= require pictureChanger
 //= require scroller
+//= require pagination
 
 //= require serviceworker-companion
