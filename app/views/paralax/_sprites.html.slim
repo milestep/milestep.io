@@ -3,8 +3,12 @@ div.sprites
 
   //speed 0.3
   div.layer-0.scroll
-    img alt="" src=image_path("paralax/bg.webp")
-    img alt="" src=image_path("paralax/bg-left.webp")
+    picture
+      source srcset="/assets/paralax/bg.webp" type="image/webp"
+      img alt="" src=image_path("paralax/bg.png")
+    picture
+      source srcset="/assets/paralax/bg-left.webp" type="image/webp"
+      img alt="" src=image_path("paralax/bg-left.png")
 
 
   /speed 0.8
@@ -31,7 +35,9 @@ div.sprites
   //speed 0.9
   div.layer-2.scroll
     //page 1
-    img alt="" src=image_path("paralax/sprites/home/cat.webp")
+    picture
+      source srcset="/assets/paralax/sprites/home/cat.webp" type="image/webp"
+      img alt="" src=image_path("paralax/sprites/home/cat.png")
 
 
   //speed 1
