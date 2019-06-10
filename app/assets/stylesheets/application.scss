@@ -1,5 +1,4 @@
 //= require preloader
-//= require_self
 //= require_tree ./fonts
 //= require slick
 //= require slick-theme
@@ -9,7 +8,6 @@
 //= require sprites-paralax
 //= require styles-config
 //= require notiny
-
 @import "bootstrap";
 
 //#paralax use:
