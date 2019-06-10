@@ -1,35 +1,13 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS  SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file  they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
-
 //= require preloader
-//= require_self
-//= require_tree ./blog_page
 //= require_tree ./fonts
 //= require slick
 //= require slick-theme
 //= stub "active_admin"
-// require abstract_styles
-//= require background
 //= require font
 //= require paralax
 //= require sprites-paralax
 //= require styles-config
 //= require notiny
-
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 //#paralax use:

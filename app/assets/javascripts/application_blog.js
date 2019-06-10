@@ -8,8 +8,6 @@
 //= require pictureChanger
 //= require pagination
 //= require blog
-
-//= require pagination
 //= require bindWithDelay
 
 //= require serviceworker-companion
