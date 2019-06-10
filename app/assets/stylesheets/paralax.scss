@@ -1397,39 +1397,6 @@ body { overflow-x: hidden; }
     filter: blur(0.59vh);
     transition: filter 1s;
   }
-
-  #help {
-    position: fixed;
-    bottom: 0;
-    left: calc(50vw - 1.5vh);
-    width: 4vh;
-    height: 4vh;
-    z-index: 20;
-    border-radius: 0.5vh 0.5vh 0 0;
-    filter: blur(2px);
-    color: #141;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    opacity: 0;
-    animation: pulse;
-    animation-name: opacity-pulse;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-delay: 10s;
-    transition: 1s;
-  }
-
-  #help:hover {
-    filter: blur(0px);
-    opacity: 1;
-    animation: none;
-    transition: 1s;
-    color: #011235;
-    font-weight: 900;
-  }
 }
 
 /////////////////////////
