@@ -1,5 +1,19 @@
-section#header
-  .navigation-panel
-    .header
-      button.contact-us-button.burger-hidable.container CONTACT US
+/ section#header
+/   .navigation-panel
+/     .header
+/       img alt="logo" class="main-logo" src="/assets/paralax/main-logo.svg"
+/       .container
+/         div
+/           = form_tag(blog_url, method: :get, class: 'blog-search-container') do
+/             = submit_tag '', name: nil, class: 'blog-search-icon-image'
+/             = text_field_tag :query, params[:query], class: 'blog-search', placeholder: 'SEARCH'
+/       button.contact-us-button.burger-hidable.container CONTACT US
+.logo
+  img alt="logo" class="main-logo" src="/assets/paralax/main-logo.svg"
+.search
+  = form_tag(blog_url, method: :get, class: 'search-container') do
+    = text_field_tag :query, params[:query], class: 'search-input', placeholder: 'Search'
+    = submit_tag '', name: nil, class: 'search-icon-image'
+.contact-us
+  button.contact-us-button CONTACT US
 

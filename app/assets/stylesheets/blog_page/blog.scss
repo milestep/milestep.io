@@ -1,18 +1,87 @@
-// Place all the styles related to the Blog controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.blog-header .navigation-panel {
-  .burger-button {
-    display: none;
+.blog-header {
+  position: fixed;
+  width: 100%;
+  height: 9vh;
+  z-index: 99;
+  opacity: .97;
+  background: #1F1F1F;
+  display: flex;
+
+  .logo {
+    width: 30vw;
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+    img {
+      height: 75%;
+      margin-left: 10%;
+    }
   }
-  .contact-us-button {
-    top: 87px;
+
+  .contact-us {
+    width: 20vw;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button.contact-us-button {
+      color: white;
+      font-size: 1.88vh;
+      width: 55%;
+      height: 60%;
+      background-color: rgba(0, 0, 0, 0);
+      border: 0.12vh solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: filter 1s, background-color .3s, opacity .5s;
+    }
+  }
+
+  .search {
+    width: 50vw;
+    height: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .search-container {
+      width: 35%;
+      height: 60%;
+
+      background: #1F1F1F;
+      box-shadow: inset 0px 5px 20px #000000;
+      border-radius: 5px;
+      display: flex;
+
+      .search-input {
+        height: 100%;
+        width: 90%;
+        padding-left: 5%;
+        background: #1F1F1F;
+        box-shadow: inset 0px 5px 20px #000000;
+        border-radius: 5px;
+        border: unset;
+        color: white;
+      }
+
+      input.search-icon-image {
+        width: 10%;
+        background: image_url("blog/srch") no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 40%;
+        border: unset;
+      }
+    }
   }
 }
 
 .blog {
   &-image-container {
-    background: image_url('blog/background_image');
+    background: #1F1F1F;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;

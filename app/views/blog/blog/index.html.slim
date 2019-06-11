@@ -1,9 +1,10 @@
 #blog
   .blog-header
     = render 'blog/welcome/header'
+  .blur
 
   .blog-image-container
-    = render 'shared/blog_header'
+    / = render 'shared/blog_header'
     .container
       - if @posts.any?
         .blog-posts-container.row
