@@ -9,7 +9,7 @@ function sendMail(e) {
 }
 
 function clearInputs(text) {
-  $.each($('.content-page-7 input'), function(i, item) {
+  $.each($('.message-form input'), function(i, item) {
     if (item.name == 'name' || item.name == 'email' || item.name == 'message') {
       item.value = ''
   }})

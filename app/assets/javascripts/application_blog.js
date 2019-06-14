@@ -4,10 +4,10 @@
 //= require ckeditor/init
 
 //= require jquery.notiny
-//= require send-message
 //= require pictureChanger
 //= require pagination
 //= require blog
+//= require send-mail
 //= require bindWithDelay
 
 //= require serviceworker-companion

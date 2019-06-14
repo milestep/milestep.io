@@ -1,71 +1,49 @@
-.container-fluid.toastr
-footer.with-background.with-scrolling
-  - unless request.subdomain.eql?('blog')
-    .section-background-container.prefooter-bg-container
-      .background-element
-        = render 'shared/background', template: :footer
-    = scrolling_button background: '#2d2d2d', border_color: '#606060' do
-      span 07
+.contact-us
+  .form
+    .title
+      h2
+        span Web
+        | and
+        span app
+        br
+        span development service
 
-  section#contact
-    .container.content
-      .row.tablet-flex
-        .col-md-5.col-xs-12.width-tablet
-          .text-striped
-            .first-text GET TO KNOW
-            .second-text US BETTER
-          .credentials
-            br
-            br
-            .group 
-              | 42/1, Priportova St., Cherkasy, Ukraine
-              br
-              | 62, European St., Uman, Ukraine
-            .group +38 (097) 753 57 31
-            .group
-              a href='mailto:contact@milestep.io' contact@milestep.io
-          .social-network
-            a href='https://www.facebook.com/MileStepOutsoucing' rel='noopener' target='_blank' 
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-facebook-f.fa-stack-1x.inside-icon
-            a href='https://github.com/milestep' rel='noopener' target='_blank' 
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-github.fa-stack-1x.inside-icon
-            a href='https://www.linkedin.com/company/milestep' rel='noopener' target='_blank' 
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-linkedin-in.fa-stack-1x.inside-icon
-            a href='https://www.instagram.com/milestep.io' rel='noopener' target='_blank' 
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-instagram.fa-stack-1x.inside-icon
-            a href='https://twitter.com/milestepcompany' rel='noopener' target='_blank' 
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-twitter.fa-stack-1x.inside-icon
-            a href="#{root_url(subdomain: 'blog')}"
-              span.fa-stack.fa-2x
-                i.fa.fa-circle.fa-stack-2x
-                i.fab.fa-blogger.fa-stack-1x.inside-icon
-        .col-md-4.col-xs-8.col-md-offset-3.col-xs-offset-2.footer-block
-          .right-block
-            span.big-blue Web&nbsp;
-            span.normal and
-            span.big-red &nbsp;App
-            br
-            .normal Development Services
-          .form
-            form#message-form onsubmit='return false' 
-              .form-group
-                input.form-control{ aria-label='Your Email' name='email' placeholder='Your Email' 
-                  required='' type='email'}
-              .form-group
-                input.form-control{ aria-label='Your Message' name='message' placeholder='Your message'
-                  required='' type='text' } 
-              .form-group
-                input#send-massage.btn-contact onclick='sendMessage()' type='submit' value='SEND MESSAGE'
+    = form_tag contact_path, class: 'message-form' do
+      = text_field_tag :name, nil, placeholder: 'Your name', class: 'name'
+      = text_field_tag :email, nil, placeholder: 'Email', class: 'email'
+      = text_field_tag :message, nil, placeholder: 'Message', class: 'message'
+      .add-file-img
+        | &#xe805;
+        = file_field_tag :attachment, class: 'add-file'
+      .include-files
+        | File requirement: pdf, doc, docx, rtf, ppt, pptx
+      = submit_tag 'send message', name: 'submit', class: 'send-massage-btn', onclick: 'sendMail(event)'
       div
-        .col-xs-12
-          p.copyright Copyright © 2018 MileStep LLC. Privacy Policy
+        p
+          | This website uses cookies for analytics, personalization and advertising.
+          br
+          | Click here to learn more or change your coockie settings.
+
+  .info
+    h2
+      | Get to know
+      br us better
+    p
+      | 42/1, Priportova St., Cherkasy,
+      br
+      | 11, Nebesnoi Sotnі St., Uman,
+      br
+      | Cherkasy Region, Ukraine
+      br
+      | +38 (097) 753 57 31
+      br
+      | eugene@milestep.io
+    .social-btns
+      div name="github" onclick="window.location='https://github.com/milestep'" &#xe801;
+      div name="instagram" onclick="window.location='https://www.instagram.com/milestep.io'" &#xe802;
+      div name="twitter" onclick="window.location='https://twitter.com/milestepcompany'" &#xe803;
+      div name="facebook" onclick="window.location='https://www.facebook.com/MileStepOutsoucing'" &#xf30d;
+      div name="linkedin" onclick="window.location='https://www.linkedin.com/company/milestep'" &#xf319;
+      div name="blog" onclick="window.location='#{blog_url}'" &#xe804;
+    p.copyright
+      | Copyright &#169; 2018 MileStep LLC. Privacy Policy

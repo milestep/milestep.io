@@ -1,21 +1,17 @@
-.col-md-4.col-sm-6.col-xs-12
-  .blog-post
-    
-    span.blog-post-created-text
-      = post.formatted_created_date
-      br 
-      | by 
-      = post.author.name
-      
-    .image-wrapper
-      = image_tag post.thumbnail_image.url
-    
-    .blog-post-text-block
-      
-      .blog-post-title
-        = link_to  cut_text(post.title, 45), blog_post_path(post)
-      
-      .blog-post-body
-        = cut_text(strip_tags(post.body), 140)
+.blog-post
+  .image-wrapper
+    = image_tag post.thumbnail_image.url
 
-      = link_to 'Read More', blog_post_path(post), class: 'blog-post-link'
+  .blog-post-text-block
+
+    .blog-post-title
+      = link_to  cut_text(post.title, 45), blog_post_path(post)
+
+    .blog-post-body
+      = cut_text(strip_tags(post.body), 140)
+
+  .blog-post-icons
+    img alt="comments" class="comments" src="/assets/blog/comments.png"
+    span#comments 24
+    img alt="hurt" class="hurt" src="/assets/blog/heart.png"
+    span#heart 38

@@ -1,16 +1,14 @@
 #blog
   .blog-header
     = render 'blog/welcome/header'
-  .blur
 
-  .blog-image-container
-    / = render 'shared/blog_header'
-    .container
-      - if @posts.any?
-        .blog-posts-container.row
-          = render @posts
-        = will_paginate @posts, custom_pagination_options()
-      - else
-        .no-posts-text There are no posts here.
+  .blog-posts-container
+    - if @posts.any?
+      .posts
+        = render @posts
+      = will_paginate @posts, custom_pagination_options()
+    - else
+      .no-posts-text There are no posts here.
 
-  = render 'blog/welcome/footer'
+  .blog-footer
+    = render 'blog/welcome/footer'
