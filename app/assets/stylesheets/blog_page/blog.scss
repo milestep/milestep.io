@@ -47,9 +47,9 @@ body {
       width: 55%;
       height: 60%;
       background-color: rgba(0, 0, 0, 0);
-      border: 0.12vh solid #FFFFFF;
+      border: 1px solid #FFFFFF;
       box-sizing: border-box;
-      border-radius: 20px;
+      border-radius: 1.2em;
       text-transform: uppercase;
       cursor: pointer;
       transition: filter 1s, background-color .3s, opacity .5s;
@@ -100,13 +100,13 @@ body {
   }
 
   width: 100vw;
-  height: 67vh;
+  height: 60vh;
   padding-bottom: 10vh;
   display: flex;
   justify-content: center;
 
   .contact-us {
-    width: 80vw;
+    width: 70vw;
     display: flex;
 
     .form {
@@ -115,7 +115,7 @@ body {
       background: rgba(24, 24, 24, 0.8);
 
       .title {
-        margin-top: 4%;
+        margin-top: 3%;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
@@ -265,7 +265,7 @@ body {
 
     .info {
       width: 30%;
-      padding: 2% 0 0 2%;
+      padding-left: 2%;
       font-family: Roboto;
       font-style: normal;
       letter-spacing: 0.05em;
@@ -276,7 +276,7 @@ body {
         line-height: normal;
         text-transform: uppercase;
         color: #FFFFFF;
-        margin-bottom: 5vh;
+        margin-bottom: 10%;
       }
 
       p {
@@ -284,13 +284,13 @@ body {
         font-size: 1.65vh;
         line-height: 2.94vh;
         color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 5vh;
+        margin-bottom: 10%;
       }
 
       .social-btns{
         font-family: 'fontello';
         font-size: 4.24vh;
-        margin-bottom: 5vh;
+        margin-bottom: 10%;
         color: white;
         cursor: pointer;
         display: flex;
@@ -342,7 +342,7 @@ body {
   }
 }
 .blog-posts-container {
-  padding-top: 12vh;
+  padding: 12vh 8vw 0 8vw;
   width: 100vw;
 
   .posts {
@@ -353,6 +353,11 @@ body {
     .blog-post {
       width: 19%;
       margin-right: 2%;
+      margin-bottom: 1vh;
+
+      &:hover {
+        border: 1px solid #414141;
+      }
 
       .image-wrapper {
         height: 45%;
@@ -377,8 +382,8 @@ body {
           color: rgba(255, 255, 255, 0.3);
           margin: 7% 0 0 0;
           height: 75%;
-          font-size: 2.3vh;
-          text-align: justify;
+          font-size: 2vh;
+          text-align: start;
         }
       }
       .blog-post-icons {
@@ -403,7 +408,6 @@ body {
   }
 
   .blog-posts-pagination {
-    width: 100vw;
     margin-top: 1vh;
     margin-bottom: 15vh;
     text-align: center;
@@ -446,5 +450,258 @@ body {
     text-align: center;
     font-size: 10vh;
     padding-bottom: 5vh;
+  }
+}
+
+/// < 2100x1000
+@media (max-aspect-ratio: 11/5) {
+  .blog-footer {
+    height: 65vh;
+  }
+}
+
+/// < 1800x1000
+@media (max-aspect-ratio: 9/5) {
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        width: 26%;
+      }
+    }
+  }
+
+  .blog-footer {
+    height: 66vh;
+  }
+}
+
+/// < 1500x1000
+@media (max-aspect-ratio: 3/2) {
+  .blog-header {
+    .contact-us {
+      width: 30vw;
+    }
+
+    .search {
+      .search-container {
+        width: 45%;
+      }
+    }
+  }
+
+  .blog-posts-container {
+    .no-posts-text {
+      font-size: 5vw;
+    }
+
+    .blog-posts-pagination {
+      margin-bottom: 10vh;
+    }
+  }
+
+  .blog-footer {
+    height: 58vh;
+    .contact-us {
+      flex-wrap: wrap;
+
+      .form {
+        width: 100%;
+
+        .message-form p {
+          padding-top: unset;
+        }
+      }
+
+      .info {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+          width: 100%;
+          margin-bottom: unset;
+        }
+
+        p {
+          width: 100%;
+          margin-bottom: 2%;
+        }
+
+        .social-btns {
+          margin: unset;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        p.copyright {
+          margin-bottom: 2vh;
+        }
+      }
+    }
+  }
+}
+
+/// < 1250x1000
+@media (max-aspect-ratio: 5/4) {
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        width: 45%;
+
+        .image-wrapper {
+          height: 60%;
+        }
+
+        .blog-post-text-block {
+          padding: 3.9% 5% 0;
+
+          .blog-post-body {
+            margin: 3% 0 0 0;
+          }
+        }
+      }
+    }
+
+    .blog-posts-pagination {
+      .page {
+        width: 6vw;
+        height: 6vw;
+        line-height: 6vw;
+      }
+    }
+
+    .no-posts-text {
+      font-size: 7vh;
+    }
+  }
+  .blog-footer {
+    height: 57vh;
+    .contact-us .form form.message-form div:last-child {
+      font-size: 1.55vh;
+    }
+  }
+}
+
+/// < 1100x1000
+@media (max-aspect-ratio: 11/10) {
+  .blog-footer {
+    height: 54vh;
+  }
+}
+
+/// < 1000x1000
+@media (max-aspect-ratio: 1/1) {
+  .blog-header {
+    .contact-us {
+      display: none;
+    }
+
+    .search {
+      width: 65vw;
+      .search-container {
+        width: 75%;
+      }
+    }
+  }
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        width: 86%;
+        .image-wrapper {
+          height: 60%;
+        }
+      }
+    }
+    .no-posts-text {
+      font-size: 7vw;
+    }
+  }
+  .blog-footer {
+    height: 53vh;
+    .contact-us .form form.message-form div:last-child {
+      font-size: 1.55vw;
+    }
+  }
+}
+
+/// < 900x1000
+@media (max-aspect-ratio: 9/10) {
+  .blog-footer {
+    height: 52vh
+  }
+}
+
+/// < 700x1000
+@media (max-aspect-ratio: 7/10) {
+  .blog-footer {
+    height: 51vh;
+    .contact-us .form form.message-form div.include-files {
+      font-size: 1.55vh;
+    }
+  }
+  .blog-posts-container {
+    .posts .blog-post {
+      margin-bottom: -3vh;
+    }
+    .blog-posts-pagination {
+      font-size: 2.4vh;
+    }
+  }
+}
+
+@media (max-aspect-ratio: 4/5) {
+  .blog-footer {
+    height: 50vh;
+  }
+}
+
+/// < 600x1000
+@media (max-aspect-ratio: 3/5) {
+  .blog-footer {
+    height: 54vh;
+    .contact-us .form form.message-form div.include-files {
+      font-size: 1.37vh;
+    }
+  }
+}
+
+/// < Samsung S-5
+@media (max-aspect-ratio: 9/16) {
+  .blog-footer {
+    height: 52vh;
+  }
+}
+
+/// < 500x1000
+@media (max-aspect-ratio: 1/2) {
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        margin-bottom: 2vh;
+      }
+    }
+    .blog-posts-pagination {
+      .page {
+        width: 8vw;
+        height: 8vw;
+        line-height: 8vw;
+      }
+    }
+  }
+  .blog-footer {
+    height: 49vh;
+    .contact-us {
+      .form form.message-form div.include-files {
+        font-size: 1.1vh;
+      }
+
+      .form .title span:last-child {
+        font-size: 2vh;
+      }
+
+      .info p.copyright {
+        font-size: 1.45vh;
+      }
+    }
   }
 }
