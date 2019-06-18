@@ -10,6 +10,7 @@
 
       img {
         height: 100%;
+        width: 100vw;
       }
     }
 
@@ -19,7 +20,7 @@
 
       .title {
         color: #FFFFFF;
-        font-size: 7vh;
+        font-size: 46px;
         padding-bottom: 5vh;
       }
 
@@ -30,6 +31,94 @@
 
       #disqus_thread {
         padding-bottom: 10vh;
+      }
+    }
+  }
+
+  /// <3000x1000
+  @media (max-aspect-ratio: 12/4) {
+    .blog-post-container {
+      .post-body {
+        .title {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  /// <2000x1000
+  @media (max-aspect-ratio: 8/4) {
+    .blog-post-container {
+      .post-photo {
+        height: 76vh;
+      }
+    }
+  }
+
+  /// < 1750x1000
+  @media (max-aspect-ratio: 7/4) {
+    .blog-post-container .post-photo {
+      height: 68vh;
+    }
+  }
+
+  /// < 1500x1000
+  @media (max-aspect-ratio: 6/4) {
+    .blog-post-container .post-photo {
+      height: 60vh;
+    }
+  }
+
+  /// < 1250x1000
+  @media (max-aspect-ratio: 5/4) {
+    .blog-post-container {
+      .post-photo {
+        height: 52vh;
+      }
+
+      //.post-body {
+      //  .title {
+      //    font-size: 28px;
+      //  }
+      //}
+    }
+  }
+
+  /// < 1000x1000
+  @media (max-aspect-ratio: 4/4) {
+    .blog-post-container {
+      .post-photo {
+        height: 44vh;
+      }
+
+      .post-body {
+        .title {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+
+  /// < 750x1000
+  @media (max-aspect-ratio: 3/4) {
+    .blog-post-container {
+      .post-photo {
+        height: 36vh;
+      }
+
+      .post-body {
+        .title {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  /// < 500x1000
+  @media (max-aspect-ratio: 2/4) {
+    .blog-post-container {
+      .post-photo {
+        height: 26vh;
       }
     }
   }
