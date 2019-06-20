@@ -4,6 +4,19 @@
 
   .blog-posts-container
     - if @posts.any?
+      .main_post
+        .text_column
+          .title
+            = cut_text(@posts.first.title, 35)
+          .text_body
+            = cut_text(strip_tags(@posts.first.body), 260)
+            .link
+              = link_to  blog_post_path(@posts.first)
+                | READ MORE
+          .additional_photo
+            img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
+        .photo_column
+          img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.main_image.url}"
       .posts
         = render @posts
       = will_paginate @posts, custom_pagination_options()

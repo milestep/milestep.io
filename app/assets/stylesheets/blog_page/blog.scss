@@ -49,7 +49,7 @@ body {
       background-color: rgba(0, 0, 0, 0);
       border: 1px solid #FFFFFF;
       box-sizing: border-box;
-      border-radius: 1.2em;
+      border-radius: 20px;
       text-transform: uppercase;
       cursor: pointer;
       transition: filter 1s, background-color .3s, opacity .5s;
@@ -345,6 +345,64 @@ body {
   padding: 12vh 8vw 0 8vw;
   width: 100vw;
 
+  .main_post {
+    width: 100%;
+    //height: 82vh;
+    height: 75vh;
+    margin-bottom: 10vh;
+    margin-top: 2.5vh;
+    margin-left: 8%;
+    display: flex;
+
+    .text_column {
+      width: 19.6%;
+
+      .title {
+        height: 23%;
+        width: 80%;
+        //font-size: 3.5vh;
+        font-size: 1.5vw;
+        color: #fff;
+        padding-top: 5%;
+        text-transform: uppercase;
+        line-height: 3.8vh;
+      }
+
+      .additional_photo {
+        height: 37%;
+        img {
+          position: relative;
+          width: 110%;
+          height: 100%;
+          object-fit: cover
+        }
+      }
+    }
+
+    .text_body {
+      height: 40%;
+      color: rgba(255, 255, 255, 0.3);
+      width: 90%;
+      font-size: 1.8vh;
+    }
+
+    .link {
+      height: 10%;
+      padding-top: 3%;
+      a {
+        font-size: 1.8vh;
+      }
+    }
+
+  .photo_column {
+    width: 80.4%;
+    img {
+      height: 100%;
+      width: 102%;
+      object-fit: cover;
+      }
+    }
+  }
   .posts {
     display: flex;
     flex-wrap: wrap;
@@ -361,7 +419,7 @@ body {
       }
 
       .image-wrapper {
-        height: 45%;
+        height: 50%;
         img {
           height: 100%;
           width: 100%;
@@ -371,18 +429,18 @@ body {
 
       .blog-post-text-block {
         height: 40%;
-        padding: 8.9% 5% 0;
+        padding: 8.9% 0 0;
         background-color: #1F1F1F;
         line-height: unset;
 
         .blog-post-title {
           font-size: 2.6vh;
+          text-transform: uppercase;
         }
 
         .blog-post-body {
           color: rgba(255, 255, 255, 0.3);
           margin: 7% 0 0 0;
-          height: 75%;
           font-size: 2vh;
           text-align: start;
         }
@@ -464,6 +522,18 @@ body {
 /// < 1800x1000
 @media (max-aspect-ratio: 9/5) {
   .blog-posts-container {
+    .main_post {
+      height: 53vh;
+      .text_column {
+        .title {
+          line-height: 2.8vh;
+        }
+      }
+      .text_body {
+        font-size: 0.8vw;
+        padding-top: 1vh;
+      }
+    }
     .posts {
       .blog-post {
         width: 26%;
@@ -478,6 +548,13 @@ body {
 
 /// < 1500x1000
 @media (max-aspect-ratio: 3/2) {
+  .blog-posts-container {
+    .main_post {
+      .text_body {
+        font-size: 0.9vw;
+      }
+    }
+  }
   .blog-header {
     .contact-us {
       width: 30vw;
@@ -545,6 +622,9 @@ body {
 /// < 1250x1000
 @media (max-aspect-ratio: 5/4) {
   .blog-posts-container {
+    .main_post {
+      display: none;
+    }
     .posts {
       .blog-post {
         width: 45%;
@@ -557,7 +637,7 @@ body {
           padding: 3.9% 5% 0;
 
           .blog-post-body {
-            margin: 3% 0 0 0;
+            margin: 3% 0 5% 0;
           }
         }
       }
@@ -607,9 +687,9 @@ body {
   .blog-posts-container {
     .posts {
       .blog-post {
-        width: 86%;
+        width: 100%;
         .image-wrapper {
-          height: 60%;
+          height: 55%;
         }
       }
     }
@@ -629,6 +709,19 @@ body {
 @media (max-aspect-ratio: 9/10) {
   .blog-footer {
     height: 52vh
+  }
+
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        .image-wrapper {
+          height: 60%;
+        }
+      }
+    }
+    .no-posts-text {
+      font-size: 7vw;
+    }
   }
 }
 
@@ -679,6 +772,9 @@ body {
     .posts {
       .blog-post {
         margin-bottom: 2vh;
+        .image-wrapper {
+          height: 54%;
+        }
       }
     }
     .blog-posts-pagination {

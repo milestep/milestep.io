@@ -9,7 +9,7 @@
         = link_to  cut_text(post.title, 45), blog_post_path(post)
 
       .blog-post-body
-        = cut_text(strip_tags(post.body), 140)
+        = cut_text(strip_tags(post.body), 100)
 
     / .blog-post-icons
     /   img alt="comments" class="comments" src="/assets/blog/comments.png"
