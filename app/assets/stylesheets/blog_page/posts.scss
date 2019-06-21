@@ -28,6 +28,9 @@
       .body {
         color: rgba(255, 255, 255, 0.3);
         padding-bottom: 15vh;
+        img {
+          max-width: 70vw;
+        }
       }
 
       #disqus_thread {
