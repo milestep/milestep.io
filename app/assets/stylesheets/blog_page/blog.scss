@@ -638,10 +638,6 @@ body {
 
         .blog-post-text-block {
           padding: 3.9% 5% 0;
-
-          .blog-post-body {
-            margin: 3% 0 5% 0;
-          }
         }
       }
     }
@@ -737,8 +733,10 @@ body {
     }
   }
   .blog-posts-container {
-    .posts .blog-post {
-      margin-bottom: -3vh;
+    .posts {
+      .blog-post {
+        margin-bottom: 5vh;
+      }
     }
     .blog-posts-pagination {
       font-size: 2.4vh;
