@@ -1,7 +1,7 @@
 module Blog
   class BlogController < ApplicationController
     def index
-      paginate_options = {page: params[:page], per_page: 6}
+      paginate_options = {page: params[:page], per_page: 8}
       if params[:query]
         @posts = Post.where('lower(title) LIKE lower(?)', "%#{params[:query]}%").order('created_at DESC').paginate(paginate_options)
       else

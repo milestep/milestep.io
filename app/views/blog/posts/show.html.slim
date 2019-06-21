@@ -2,20 +2,17 @@
   .blog-header
     = render 'blog/welcome/header'
 
-  .blog-post-image-container
-    = render 'shared/blog_header'
-    .post-photo style="background-image: url(#{ image_url @post.main_image.url})"
-    .container.post-main-container
-      .row.blog-mobile
-        .created-date
-          = @post.formatted_created_date
-        h1.title
-          = @post.title
+  .blog-post-container
+    .post-photo
+      img alt="logo" class="main-logo" src="#{@post.main_image.url}"
+    .post-body
+      .title
+        = @post.title
 
-      .row.post-body
+      .body
         = raw(@post.body)
 
-      #disqus_thread
+      #disqus_thread.myclass
 
     javascript:
       clearDisqusDiv();
@@ -43,5 +40,5 @@
       a href='https://disqus.com/?ref_noscript'
         | comments powered by Disqus.
 
-  = render 'blog/welcome/footer'
-  
+  .blog-footer
+    = render 'blog/welcome/footer'
