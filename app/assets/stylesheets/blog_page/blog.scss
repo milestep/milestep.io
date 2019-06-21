@@ -410,7 +410,7 @@ body {
       width: 19%;
       margin-right: 2%;
       margin-bottom: 1vh;
-
+      height: 55vh;
       &:hover {
         border: 1px solid #414141;
         border-radius: 5px;
@@ -422,27 +422,30 @@ body {
           height: 100%;
           width: 100%;
           border-radius: 5px 5px 0 0;
+          object-fit: cover;
         }
       }
 
       .blog-post-text-block {
         height: 40%;
-        padding: 8.9% 0 0;
+        //padding: 8.9% 0 0;
+        margin-top: 5px;
         background-color: #1F1F1F;
         line-height: unset;
 
         .blog-post-title {
           font-size: 2.6vh;
           text-transform: uppercase;
-          padding-left: 1%;
+          padding-left: 2%;
         }
 
         .blog-post-body {
           color: rgba(255, 255, 255, 0.3);
-          margin: 7% 0 0 0;
+          //margin: 7% 0 0 0;
+          margin-top: 5px;
           font-size: 2vh;
           text-align: start;
-          padding-left: 1%;
+          padding-left: 2%;
         }
       }
       .blog-post-icons {
