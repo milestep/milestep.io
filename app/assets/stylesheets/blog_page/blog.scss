@@ -409,7 +409,7 @@ body {
     .blog-post {
       width: 19%;
       margin-right: 2%;
-      margin-bottom: 1vh;
+      margin-bottom: 25px;
       height: 55vh;
       &:hover {
         border: 1px solid #414141;
@@ -427,25 +427,31 @@ body {
       }
 
       .blog-post-text-block {
-        height: 40%;
-        //padding: 8.9% 0 0;
-        margin-top: 5px;
+        //height: 40%;
+        height: 49%;
+        //margin-top: 5px;
         background-color: #1F1F1F;
         line-height: unset;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 0 2%;
 
         .blog-post-title {
           font-size: 2.6vh;
           text-transform: uppercase;
-          padding-left: 2%;
+          //padding: 0 2%;
+          //padding-top: 5%;
+          width: 100%;
         }
 
         .blog-post-body {
           color: rgba(255, 255, 255, 0.3);
-          //margin: 7% 0 0 0;
-          margin-top: 5px;
+          margin-top: 10px;
           font-size: 2vh;
           text-align: start;
-          padding-left: 2%;
+          //padding: 0 2%;
+          width: 100%;
         }
       }
       .blog-post-icons {
@@ -520,6 +526,18 @@ body {
   .blog-footer {
     height: 65vh;
   }
+
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        .blog-post-text-block {
+          .blog-post-title {
+            font-size: 2.2vh;
+          }
+        }
+      }
+    }
+  }
 }
 
 /// < 1800x1000
@@ -534,12 +552,22 @@ body {
       }
       .text_body {
         font-size: 0.8vw;
-        padding-top: 1vh;
+        //padding-top: 1vh;
       }
     }
     .posts {
       .blog-post {
+        height: 53vh;
         width: 26%;
+        .image-wrapper {
+          height: 55%;
+        }
+        .blog-post-text-block {
+          height: 44%;
+          //.blog-post-title {
+          //  padding-top: 8%;
+          //}
+        }
       }
     }
   }
@@ -571,6 +599,22 @@ body {
   }
 
   .blog-posts-container {
+    .posts {
+      .blog-post {
+        height: 52vh;
+        .image-wrapper {
+          height: 46%;
+        }
+        .blog-post-text-block {
+          height: 53%;
+
+          .blog-post-title {
+            font-size: 2.2vh;
+          }
+        }
+      }
+    }
+
     .no-posts-text {
       font-size: 5vw;
     }
@@ -633,11 +677,14 @@ body {
         width: 45%;
 
         .image-wrapper {
-          height: 60%;
+          height: 55%;
         }
 
         .blog-post-text-block {
-          padding: 3.9% 5% 0;
+          height: 44%;
+          .blog-post-title {
+            font-size: 2.6vh;
+          }
         }
       }
     }
@@ -687,8 +734,12 @@ body {
     .posts {
       .blog-post {
         width: 100%;
+        height: 70vh;
         .image-wrapper {
-          height: 55%;
+          height: 75%;
+        }
+        .blog-post-text-block {
+          height: 24%;
         }
       }
     }
@@ -714,7 +765,10 @@ body {
     .posts {
       .blog-post {
         .image-wrapper {
-          height: 60%;
+          height: 70%;
+        }
+        .blog-post-text-block {
+          height: 29%;
         }
       }
     }
@@ -736,6 +790,13 @@ body {
     .posts {
       .blog-post {
         margin-bottom: 5vh;
+        height: 60vh;
+        .image-wrapper {
+          height: 65%;
+        }
+        .blog-post-text-block {
+          height: 34%;
+        }
       }
     }
     .blog-posts-pagination {
@@ -758,6 +819,19 @@ body {
       font-size: 1.37vh;
     }
   }
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        .image-wrapper {
+          height: 60%;
+        }
+
+        .blog-post-text-block {
+          height: 39%;
+        }
+      }
+    }
+  }
 }
 
 /// < Samsung S-5
@@ -772,9 +846,12 @@ body {
   .blog-posts-container {
     .posts {
       .blog-post {
-        margin-bottom: 2vh;
+        height: 50vh;
         .image-wrapper {
-          height: 54%;
+          height: 50%;
+        }
+        .blog-post-text-block {
+          height: 49%;
         }
       }
     }
@@ -799,6 +876,46 @@ body {
 
       .info p.copyright {
         font-size: 1.45vh;
+      }
+    }
+  }
+}
+
+/// < 450x1000
+@media (max-aspect-ratio: 9/20) {
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        height: 50vh;
+        .image-wrapper {
+          height: 45%;
+        }
+        .blog-post-text-block {
+          height: 54%;
+        }
+      }
+    }
+  }
+}
+
+/// < 400x1000
+@media (max-aspect-ratio: 8/20) {
+  .blog-posts-container {
+    .posts {
+      .blog-post {
+        height: 45vh;
+        .image-wrapper {
+          height: 45%;
+        }
+        .blog-post-text-block {
+          height: 54%;
+          .blog-post-title {
+            font-size: 2.2vh;
+          }
+          .blog-post-body {
+            font-size: 1.8vh;
+          }
+        }
       }
     }
   }
