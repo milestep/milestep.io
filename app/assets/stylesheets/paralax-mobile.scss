@@ -73,9 +73,12 @@
         position: absolute;
         margin-top: 58vh;
         margin-left: 6vw;
-        font-size: 1.85vh;
-        line-height: 1.94vh;
-        text-transform: uppercase;
+        h1, h2, span {
+          display: inline;
+          font-size: 1.85vh;
+          line-height: 1.94vh;
+          text-transform: uppercase;
+        }
       }
 
       #portfolio-btn {
