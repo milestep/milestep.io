@@ -12,6 +12,10 @@ module Mobile
 
     def contact_us ; end
 
+    def cookie_policy
+      render 'paralax/cookie_policy'
+    end
+
     def portfolio
       @portfolio = PortfolioItem.order(order: :desc)
     end
