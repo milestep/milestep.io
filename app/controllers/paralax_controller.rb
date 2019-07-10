@@ -10,6 +10,8 @@ class ParalaxController < ApplicationController
     @technologies = PortfolioItem.order(order: :desc)
   end
 
+  def cookie_policy ; end
+
   private
 
   def check_device
