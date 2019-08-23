@@ -1,0 +1,33 @@
+#portfolio_page
+  style
+    | ::-webkit-scrollbar { width: 6px; }
+
+  .header
+    img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
+
+  .portfolio-content-container
+    - @technologies.each_with_index do |technology, index|
+      div class=(index.even? ? 'wrapper' : 'wrapper-even')
+        .content
+          .image
+            img alt=technology.name src= technology.full_image_url
+
+          .description-1
+            .title
+              = technology.name
+            .technologys
+              - technology.technologies_array.each do |item|
+                .technology
+                  = item
+
+          .description-2
+            .project-description
+              = technology.description
+            div class=(index.even? ? 'view-project-button' : 'view-project-even-button')
+              = link_to technology.web_address
+                |VIEW PROJECT
+
+      - if index == 0
+        .arrow_block
+          .arrow
+            img alt="vector" src=image_path("paralax/portfolio_page/Vector.png")

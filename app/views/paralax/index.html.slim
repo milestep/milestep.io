@@ -1,0 +1,59 @@
+#paralax
+  header
+    img.main-logo alt="logo" src=image_path("paralax/main-logo.svg")
+    button.contact-us-btn Contact us
+
+  div.navbar-btn
+    span
+
+  nav.hiden
+    ul
+      li.desktop
+        a href="#an-1" Home
+      li.desktop
+        a href="#an-2" About us
+      li.desktop
+        a href="#an-3" Services
+      li.desktop
+        a href="#an-4" Portfolio
+      li.desktop
+        a href="#an-5" Team
+      li.desktop
+        a href="#an-6" Approach
+      li.desktop
+        a href="#an-7" Contact us
+
+  .sprites
+    = render 'sprites'
+
+  .content-container.scroll
+    .content-page-7#an-7 name="contact-us"
+      = render 'contact-us'
+    .content-page-6#an-6 name="approach"
+      = render 'approach'
+    .content-page-5#an-5 name="team"
+      = render 'team'
+    .content-page-4#an-4 name="portfolio"
+      = render 'portfolio'
+    .content-page-3#an-3 name="services"
+      = render 'services'
+    .content-page-2#an-2 name="about-us"
+      = render 'about-us'
+    .content-page-1#an-1 name="home"
+      = render 'home'
+
+  .perfect-circle
+
+  .arrow.arrow-left
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
+  .arrow.arrow-right
+    img alt="arrow" src=image_path("paralax/arrow-right.svg")
+
+  .statusbar
+    .time
+    .paralax
+    .keys
+    .wheel
+    .cursor
+    .cur-page
+

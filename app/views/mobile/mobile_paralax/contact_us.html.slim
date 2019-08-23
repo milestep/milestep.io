@@ -1,0 +1,46 @@
+#paralax
+  = render 'header'
+
+  #mobile-content-container
+    .content-page-7
+      div.contact-us
+        div.form
+          div.title
+            h2
+              span Web
+              | and
+              span app
+              br
+              span.development development service
+
+          = form_tag contact_path, class: 'message-form' do
+            = text_field_tag :name, nil, placeholder: 'Your name', class: 'name', required: true
+            = text_field_tag :email, nil, placeholder: 'Email', class: 'email', required: true
+            = text_field_tag :message, nil, placeholder: 'Message', class: 'message', required: true
+            .add-file-img
+              | &#xe805;
+              = file_field_tag :attachment, class: 'add-file'
+            div.include-files
+              | File requirement: pdf, doc, docx, rtf, ppt, pptx
+            = submit_tag 'send message', name: 'submit', class: 'send-massage-btn', onclick: 'sendMail(event)'
+
+        div.info
+          p
+            | 42/1, Priportova St., Cherkasy,
+            br
+            | 11, Nebesnoi Sotnі St., Uman,
+            br
+            | Cherkasy Region, Ukraine
+            br
+            | +38 (097) 753 57 31
+            br
+            | eugene@milestep.io
+          div.social-btns
+            div name="github" onclick="window.location='https://github.com/milestep'" &#xe801;
+            div name="instagram" onclick="window.location='https://www.instagram.com/milestep.io'" &#xe802;
+            div name="twitter" onclick="window.location='https://twitter.com/milestepcompany'" &#xe803;
+            div name="facebook" onclick="window.location='https://www.facebook.com/MileStepOutsoucing'" &#xf30d;
+            div name="linkedin" onclick="window.location='https://www.linkedin.com/company/milestep'" &#xf319;
+            div name="blog" onclick="window.location='#{blog_url}'" &#xe804;
+          p.copyright
+            | Copyright &#169; 2018 MileStep LLC. Privacy Policy

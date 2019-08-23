@@ -1,0 +1,22 @@
+#paralax
+  = render 'header'
+
+  #mobile-content-container
+    .content-page-4
+      div.title
+        div.text Portfolio
+        div.carousel-nav-btns
+
+      div.content
+        div.slider.regular
+          - @portfolio.each do |project|
+            .carousel-feature
+              div.placeholder
+                div = project.name
+                / img alt=project.name src=image_path(project.logo)
+                button[class="show-project" id="project-#{project.id}"] Show project
+
+              img.carousel-image alt=project.name src=image_path(project.image_url)
+
+        / div.carousel-nav-btns
+        button.show-all-project-btn onclick="location.href='#{root_url}mobile/our_portfolio'" Show all projects

@@ -1,9 +1,9 @@
 doctype html
 html lang='en'
   head
-    meta content='width=device-width, initial-scale=1, maximum-scale=5' name='viewport'
+    meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
     title MileStep | Web & Mobile App Development Company
-    meta name="theme-color" content="#000000"
+    meta name='theme-color' content='#000000'
     meta name='description' content='MileStep is an outsourcing company that provides software development services, ranging from technical IT consultancy to extension your in-house staff using dedicated team, creating solutions for custom software and offering support & maintenance to achieve your business goals'
     meta name='google-site-verification' content='E1FhQ3UjOG3S-GkITf7a5hbPYt0j7q0wfurFIfVVqhQ'
 
@@ -58,14 +58,28 @@ html lang='en'
     = csrf_meta_tags
     = csp_meta_tag
 
-    = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
-    = javascript_include_tag 'application'
+    - if params[:controller] == 'mobile/mobile_paralax'
+      = javascript_include_tag 'application_mobile'
+      = stylesheet_link_tag 'application_mobile'
+
+    - elsif params[:controller] == 'blog/blog' || params[:controller] == 'blog/posts'
+      = javascript_include_tag 'application_blog'
+      = stylesheet_link_tag 'application_blog'
+
+    - else
+      = javascript_include_tag 'application'
+      = stylesheet_link_tag 'application', media: 'all', async: Rails.env.production?
 
   body
+    #preloader
+      .loader
+        .sk-cube.sk-cube-1
+        .sk-cube.sk-cube-2
+        .sk-cube.sk-cube-4
+        .sk-cube.sk-cube-3
+
     /! Google Tag Manager (noscript)
     noscript
       iframe src='https://www.googletagmanager.com/ns.html?id=GTM-KDZM8HX' height='0' width='0' style='display:none;visibility:hidden'
 
     = yield
-    script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
-    script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"

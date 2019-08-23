@@ -23,6 +23,8 @@ default: &default
   pool: 5
   username: postgres
   password: password
+  # username: postgres
+  # password: password
 
 development:
   <<: *default
@@ -88,3 +90,4 @@ production:
 staging:
   <<: *default
   database: milestep_staging
+  

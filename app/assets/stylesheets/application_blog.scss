@@ -1,0 +1,20 @@
+//= require_self
+//= require preloader
+//= require_tree ./blog_page
+//= require_tree ./fonts
+//= require slick
+//= require slick-theme
+//= stub "active_admin"
+//= require paralax
+//= require background
+//= require font
+//= require footer
+//= require abstract_styles
+//= require notiny
+
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+

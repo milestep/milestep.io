@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BlogController, type: :controller do
+RSpec.describe Blog::BlogController, type: :controller do
   before(:each) do
     10.times do
       create(:post)
@@ -13,9 +13,9 @@ RSpec.describe BlogController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    it "returns 6 posts" do
+    it "returns 8 posts" do
       get :index
-      expect(assigns(:posts).length).to eq(6)
+      expect(assigns(:posts).length).to eq(8)
     end
 
     describe "filter posts" do

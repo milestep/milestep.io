@@ -1,0 +1,22 @@
+.carousel-container
+  div.our-team
+    p 
+      | Our 
+      br
+      | team
+
+  #carousel
+    - @development.each do |developer|
+      .carousel-feature
+        img.carousel-image alt=developer.name src=image_path(developer.image_url)
+        
+        .carousel-caption
+          p.name = developer.title
+          p.specialization = developer.name
+
+  .carousel-tiny-nav
+    #carousel-tiny-left
+      img src=image_path("paralax/carousel-team/Vector-left.png")
+
+    #carousel-tiny-right
+      img src=image_path("paralax/carousel-team/Vector-right.png")

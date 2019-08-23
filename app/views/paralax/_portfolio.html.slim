@@ -1,0 +1,17 @@
+div.title
+  div.text Portfolio
+  div.carousel-nav-btns
+  
+div.content
+
+  div.slider.regular
+    - @portfolio.each do |project|
+      .carousel-feature
+        div.placeholder
+          .project-name =project.name
+          a[class="show-project" id="project-#{project.id}" href=project.web_address]
+            | Show project
+
+        img.carousel-image alt=project.name data-lazy=image_path(project.image_url)
+
+  button.show-all-project-btn onclick="window.open('/portfolio', '_blank')" Show all projects

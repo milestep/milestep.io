@@ -1,0 +1,7 @@
+$('.posts').append('<%= j render @posts %>');
+<% if @posts.next_page %>
+$('.blog-posts-pagination').replaceWith('<%= j will_paginate @posts, custom_pagination_options() %>');
+<% else @posts.total_pages == @posts.current_page %>
+$('.blog-posts-pagination').replaceWith('<%= j will_paginate @posts, custom_pagination_options() %>');
+$(window).off('scroll');
+<% end %>

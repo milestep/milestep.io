@@ -1,6 +1,7 @@
 require 'rails_helper'
+require 'pry'
 
-RSpec.describe PostsController, type: :controller do
+RSpec.describe Blog::PostsController, type: :controller do
 
   before(:each) do
     @post = create(:post)
@@ -29,7 +30,7 @@ RSpec.describe PostsController, type: :controller do
 
   describe "generate_meta_tag_from_post" do
     it "should return right tags" do
-      new_post_hash = { 
+      new_post_hash = {
         title: "title1", 
         body: "body2", 
       }
@@ -40,7 +41,7 @@ RSpec.describe PostsController, type: :controller do
         og_site_name: "MileStep | Web &amp; Mobile App Development Company",
         og_title: "title1",
         og_type: "article",
-        og_url: "http://blog.test.host/posts/title1",
+        og_url: "http://test.host/blog/posts/title1",
         twitter_card: "summary",
         twitter_description: "body2",
         twitter_title: "title1"
