@@ -200,6 +200,7 @@ jQuery(document).ready(function() {
     let statusElem = $('.statusbar .wheel')
     e = e || window.event; //IE
     var delta = e.deltaY || e.detail || e.wheelDelta; //wheelDelta всегда 120/-120
+    delta < 0 ? scrollPage('>') : scrollPage('<')
 
     if (window.env.DEV) statusElem.text(Math.round(delta + +statusElem.text() || 0))
     if (window.env.DISABLE_WEEL) e.preventDefault ? e.preventDefault() : (e.returnValue = false); //отменяет прокрутку колесиком мыши

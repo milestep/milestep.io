@@ -5,40 +5,46 @@
   .blog-post-container
     .post-photo
       img alt="logo" class="main-logo" src="#{@post.main_image.url}"
+      #accept_cookies_block.text_column_end
+        | This website uses cookies for analytics, personalization and advertising. Click
+        = link_to '&nbsp;HERE&nbsp;'.html_safe , cookie_policy_path
+        | to learn more or change your coockie settings.
+        .cookies_button
+          button#accept_cookies_button.close-button onclick="acceptCookies()" ACCEPT
     .post-body
       .title
         = @post.title
-
       .body
         = raw(@post.body)
-
       #disqus_thread.myclass
-
-    javascript:
-      clearDisqusDiv();
-      function clearDisqusDiv(){
-        const div = document.querySelector("#disqus_thread");
-        div.innerHTML = "";
-      }
-
-      var disqus_config = function () {
-        let PAGE_URL = "#{request.base_url}#{request.original_fullpath}"
-        let PAGE_IDENTIFIER = "#{@post.id}"
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-milestep-io.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-
-    noscript
-      | Please enable JavaScript to view the
-      a href='https://disqus.com/?ref_noscript'
-        | comments powered by Disqus.
-
+.footer-container
+  img.rock-1 alt="" src=image_path("paralax/blog-footer/left-paralax-1.png")
+  img.rock-2 alt="" src=image_path("paralax/blog-footer/left-paralax-2.png")
+  img.rock-3 alt="" src=image_path("paralax/blog-footer/left-paralax-3.png")
+  img.rock-4 alt="" src=image_path("paralax/blog-footer/right-paralax-1")
+  img.rock-5 alt="" src=image_path("paralax/blog-footer/right-paralax-2")
   .blog-footer
     = render 'blog/welcome/footer'
+// javascript --- - -- -- ----  -
+javascript:
+  function hideCookiesBlock(args = {force: false}){
+    if(document.cookie.includes("accepted=true")){
+      const element =  document.getElementById("accept_cookies_block")
+      if(args.force)
+        element.style.display = "none"
+      else {
+        element.classList.add("hint");
+        setTimeout(() => {
+          element.style.display = "none"
+        },2000)
+      }
+    }
+
+  }
+  function acceptCookies(){
+    var date = new Date()
+    date.setFullYear(date.getFullYear() + 1);
+    document.cookie = "accepted=true; expires=" + date.toUTCString();
+    hideCookiesBlock()
+  }
+  hideCookiesBlock({force: true})

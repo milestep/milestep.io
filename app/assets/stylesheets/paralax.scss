@@ -154,7 +154,7 @@ body { overflow-x: hidden; }
 
     height: 100vh;
     width: 42.64vh;
-    background: rgba(1, 0, 0, 0.7);
+    background: rgb(1, 0, 0);
     box-shadow: 0vh -0.24vh 1.18vh rgba(0, 0, 0, 0.25);
     z-index: $nav-layer;
     transition: 1s;
@@ -1203,11 +1203,11 @@ body { overflow-x: hidden; }
             width: 30px;
             height: 30px;
             display: inline-block;
-            margin-left: -25px;
-            margin-top: -4px;
+            margin-left: -20px;
+            margin-top: -25px;
             opacity: 0;
           }
-
+          
           div.add-file-img {
             margin-top: 6.5vh;
             padding: 0.59vh;
@@ -1217,6 +1217,7 @@ body { overflow-x: hidden; }
             transition: color .3s;
             color: rgba(255, 255, 255, 0.6);
             border-bottom: 0.24vh solid rgba(255, 255, 255, 0.15);
+            cursor: pointer;
           }
 
           div.include-files {
@@ -1236,6 +1237,7 @@ body { overflow-x: hidden; }
           div.add-file:hover, .add-file-btn-img:hover {
             color: rgba(255, 255, 255, 0.4);
             transition: color .3s;
+            cursor: pointer;
           }
 
           input.send-massage-btn {
