@@ -1,39 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+.rails-default-error-page {
+    background: url(404.png) no-repeat;
+    background-size: 100%;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+.dialog {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 35%;
     
-    .rails-default-error-page {
-        background: url(404.png) no-repeat;
-        background-size: 100%;
-    }
-    
-    .dialog {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        margin-top: 35%;
-        
-        /* text-decoration: none; */
+    /* text-decoration: none; */
 
-        font-style: normal;
-    
-        font-size: 30px;
-        line-height: 35px;
-        letter-spacing: 0.05em;
-    
-        color: rgba(0, 0, 0, 0.9);
-    }
-    
-    a {
-        text-decoration: none;
-        color: white;
-        border: solid 1px red;
-        font-family: 'Arial';
-        padding-left: 25px;
-        padding-right: 25px;
-        border-radius: 30px; 
-        background-color: red;
-        } 
+    font-style: normal;
+
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+
+    color: rgba(0, 0, 0, 0.9);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    border: solid 1px red;
+    font-family: 'Arial';
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 30px; 
+    background-color: red;
+    } 
