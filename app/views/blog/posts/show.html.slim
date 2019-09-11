@@ -6,11 +6,7 @@
     .post-photo
       img alt="logo" class="main-logo" src="#{@post.main_image.url}"
       #accept_cookies_block.text_column_end
-        | This website uses cookies for analytics, personalization and advertising. Click
-        = link_to '&nbsp;HERE&nbsp;'.html_safe , cookie_policy_path
-        | to learn more or change your coockie settings.
-        .cookies_button
-          button#accept_cookies_button.close-button onclick="acceptCookies()" ACCEPT
+        = render 'shared/cookies_block'
     .post-body
       .title
         = @post.title
@@ -18,10 +14,5 @@
         = raw(@post.body)
       #disqus_thread.myclass
 .footer-container
-  img.rock-1 alt="" src=image_path("paralax/blog-footer/left-paralax-1.png")
-  img.rock-2 alt="" src=image_path("paralax/blog-footer/left-paralax-2.png")
-  img.rock-3 alt="" src=image_path("paralax/blog-footer/left-paralax-3.png")
-  img.rock-4 alt="" src=image_path("paralax/blog-footer/right-paralax-1")
-  img.rock-5 alt="" src=image_path("paralax/blog-footer/right-paralax-2")
-  .blog-footer
-    = render 'blog/welcome/footer'
+  img alt="" src=image_path("paralax/bg-left.png")
+  = render 'paralax/contact-us'

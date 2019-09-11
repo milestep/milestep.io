@@ -9,9 +9,9 @@ div.content
       .carousel-feature
         div.placeholder
           .project-name =project.name
-          a[class="show-project" id="project-#{project.id}" href=project.web_address rel="nofollow"]
+          a[class="show-project" id="project-#{project.id}" href=project.web_address blog rel="ugc"]
             | Show project
 
         img.carousel-image alt=project.name data-lazy=image_path(project.image_url)
 
-  button.show-all-project-btn onclick="window.open('/portfolio', '_blank')" Show all projects
+  button.show-all-project-btn onclick="window.location.href='/portfolio'" Show all projects

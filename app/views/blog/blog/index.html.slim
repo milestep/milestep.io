@@ -7,63 +7,57 @@
       .main_post
         .text_column
           .photo_column
+            = link_to blog_post_path(@posts.first)
               img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.main_image.url}"
-              .text_block
+            .text_block
+              = link_to blog_post_path(@posts.first)
                 .title
-                  = link_to  blog_post_path(@posts.first)
-                     = cut_text(@posts.first.title, 45)
+                  = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 80)
           .additional_photo_1
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
-              .text_block_photo_1
+            = link_to blog_post_path(@posts[1])
+              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[1].thumbnail_image.url}"
+            .text_block_photo_1
+              = link_to blog_post_path(@posts[1])
                 .title
-                  = link_to  blog_post_path(@posts.first)
-                     = cut_text(@posts.first.title, 45)
+                  = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 60)
           .additional_photo_2
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
-              .text_block_photo_2
+            = link_to blog_post_path(@posts[2])
+              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[2].thumbnail_image.url}"
+            .text_block_photo_2
+              = link_to blog_post_path(@posts[2])
                 .title
-                  = link_to  blog_post_path(@posts.first)
-                     = cut_text(@posts.first.title, 45)
+                  = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 60)
           .additional_photo_3
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
-              .text_block_photo_3
+            = link_to blog_post_path(@posts[3])
+              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[3].thumbnail_image.url}"
+            .text_block_photo_3
+              = link_to blog_post_path(@posts[3])
                 .title
-                  = link_to  blog_post_path(@posts.first)
-                     = cut_text(@posts.first.title, 45)
+                  = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 60)
           .additional_photo_4
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
-              .text_block_photo_4
+            = link_to blog_post_path(@posts[4])
+              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[4].thumbnail_image.url}"
+            .text_block_photo_4
+              = link_to blog_post_path(@posts[4])
                 .title
-                  = link_to  blog_post_path(@posts.first)
-                     = cut_text(@posts.first.title, 45)
+                  = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 60)
           #accept_cookies_block.text_column_end
-            | This website uses cookies for analytics, personalization and advertising. Click
-            = link_to '&nbsp;HERE&nbsp;'.html_safe , cookie_policy_path
-            | to learn more or change your coockie settings.
-            .cookies_button
-              button#accept_cookies_button.close-button onclick="acceptCookies()" ACCEPT
+            = render 'shared/cookies_block'
       .posts
         = render @posts
       = will_paginate @posts, custom_pagination_options()
     - else
       .no-posts-text There are no posts here.
 .footer-container
-  img.rock-1 alt="" src=image_path("paralax/blog-footer/left-paralax-1.png")
-  img.rock-2 alt="" src=image_path("paralax/blog-footer/left-paralax-2.png")
-  img.rock-3 alt="" src=image_path("paralax/blog-footer/left-paralax-3.png")
-  img.rock-4 alt="" src=image_path("paralax/blog-footer/right-paralax-1")
-  img.rock-5 alt="" src=image_path("paralax/blog-footer/right-paralax-2")
-
-  .blog-footer
-    = render 'blog/welcome/footer'
-.footer-container
+  img alt="" src=image_path("paralax/bg-left.png")
+  = render 'paralax/contact-us'

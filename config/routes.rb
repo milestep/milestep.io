@@ -17,12 +17,12 @@ Rails.application.routes.draw do
     get '/team', to: 'mobile_paralax#team'
     get '/portfolio', to: 'mobile_paralax#portfolio'
     get '/our_portfolio', to: 'mobile_paralax#our_portfolio'
-    get '/cookie_policy', to: 'mobile_paralax#cookie_policy'
+    get '/privacy_policy', to: 'mobile_paralax#privacy_policy'
   end
 
   root 'paralax#index'
   get '/portfolio', to: 'paralax#portfolio'
-  get '/cookie_policy', to: 'paralax#cookie_policy'
+  get '/privacy_policy', to: 'paralax#privacy_policy'
 
   get '/', to: 'paralax#index'
 
