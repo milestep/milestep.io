@@ -15,42 +15,16 @@
                   = cut_text(@posts.first.title, 45)
                 .text_body
                   = cut_text(strip_tags(@posts.first.body), 80)
-          .additional_photo_1
-            = link_to blog_post_path(@posts[1])
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[1].thumbnail_image.url}"
-            .text_block_photo_1
-              = link_to blog_post_path(@posts[1])
-                .title
-                  = cut_text(@posts.first.title, 45)
-                .text_body
-                  = cut_text(strip_tags(@posts.first.body), 60)
-          .additional_photo_2
-            = link_to blog_post_path(@posts[2])
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[2].thumbnail_image.url}"
-            .text_block_photo_2
-              = link_to blog_post_path(@posts[2])
-                .title
-                  = cut_text(@posts.first.title, 45)
-                .text_body
-                  = cut_text(strip_tags(@posts.first.body), 60)
-          .additional_photo_3
-            = link_to blog_post_path(@posts[3])
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[3].thumbnail_image.url}"
-            .text_block_photo_3
-              = link_to blog_post_path(@posts[3])
-                .title
-                  = cut_text(@posts.first.title, 45)
-                .text_body
-                  = cut_text(strip_tags(@posts.first.body), 60)
-          .additional_photo_4
-            = link_to blog_post_path(@posts[4])
-              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts[4].thumbnail_image.url}"
-            .text_block_photo_4
-              = link_to blog_post_path(@posts[4])
-                .title
-                  = cut_text(@posts.first.title, 45)
-                .text_body
-                  = cut_text(strip_tags(@posts.first.body), 60)
+          - @posts[1..4].each_with_index do |post, index| 
+            div class="additional_photo_#{index + 1}"
+              = link_to blog_post_path(post)
+                img alt="posts_main_photo" class="posts_main_photo" src="#{post.thumbnail_image.url}"
+              div class="text_block_photo_#{index + 1}"
+                = link_to blog_post_path(post)
+                  .title
+                    = cut_text(post.title, 45)
+                  .text_body
+                    = cut_text(strip_tags(post.body), 60)
           #accept_cookies_block.text_column_end
             = render 'shared/cookies_block'
       .posts
