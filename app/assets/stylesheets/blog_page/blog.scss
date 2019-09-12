@@ -387,7 +387,7 @@ body {
     .text_block {
       position: absolute;
       left: 4%;
-      top: 65%;
+      top: 50%;
       width: 55%;
       color: #ffffff;
 
@@ -408,14 +408,13 @@ body {
         font-weight: normal;
         font-size: 2.8vh;
         line-height: 3.2vh;
-        padding-top: 1vh;
+        padding-top: 0.2vh;
         letter-spacing: 0.05em;
         color: rgba(255, 255, 255, 0.8);
       }
     }
 
     .photo_column {
-      display: grid;
       grid-template-columns: 100%;
     }
 
@@ -434,7 +433,7 @@ body {
       .text_block_photo_1 {
         position: absolute;
         left: 4%;
-        top: 60%;
+        top: 50%;
         width: 90%;
         color: #ffffff;
 
@@ -455,7 +454,7 @@ body {
           font-weight: normal;
           font-size: 2vh;
           line-height: 2.2vh;
-          padding-top: 1vh;
+          padding-top: 0.2vh;
           letter-spacing: 0.05em;
           color: rgba(255, 255, 255, 0.8);
         }
@@ -482,7 +481,7 @@ body {
       .text_block_photo_2 {
         position: absolute;
         left: 4%;
-        top: 60%;
+        top: 50%;
         width: 90%;
         color: #ffffff;
 
@@ -503,7 +502,7 @@ body {
           font-weight: normal;
           font-size: 2vh;
           line-height: 2.2vh;
-          padding-top: 1vh;
+          padding-top: 0.2vh;
           letter-spacing: 0.05em;
           color: rgba(255, 255, 255, 0.8);
         }
@@ -530,7 +529,7 @@ body {
       .text_block_photo_3 {
         position: absolute;
         left: 4%;
-        top: 60%;
+        top: 50%;
         width: 90%;
         color: #ffffff;
 
@@ -551,7 +550,7 @@ body {
           font-weight: normal;
           font-size: 2vh;
           line-height: 2.2vh;
-          padding-top: 1vh;
+          padding-top: 0.2vh;
           letter-spacing: 0.05em;
 
           color: rgba(255, 255, 255, 0.8);
@@ -579,7 +578,7 @@ body {
       .text_block_photo_4 {
         position: absolute;
         left: 4%;
-        top: 60%;
+        top: 50%;
         width: 90%;
         color: #ffffff;
 
@@ -600,7 +599,7 @@ body {
           font-weight: normal;
           font-size: 2vh;
           line-height: 2.2vh;
-          padding-top: 1vh;
+          padding-top: 0.2vh;
           letter-spacing: 0.05em;
           color: rgba(255, 255, 255, 0.8);
         }

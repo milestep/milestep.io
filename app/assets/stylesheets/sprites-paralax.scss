@@ -64,8 +64,9 @@
       img.limg-5 {
         position: inherit;
         height: 10vh;
-        margin-left: 100vw;
+        margin-left: 130vw;
         margin-top: 13vh;
+        transform: rotate(-40deg);
       }
 
       img.limg-6 {
@@ -73,6 +74,13 @@
         height: 9vh;
         margin-left: 530vw;
         margin-top: 62vh;
+      }
+
+      img.limg-7 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 110vw;
+        margin-top: 83vh;
       }
     }
 

@@ -9,7 +9,7 @@ div.content
       .carousel-feature
         div.placeholder
           .project-name =project.name
-          a[class="show-project" id="project-#{project.id}" href=project.web_address blog rel="ugc"]
+          a[class="show-project" id="project-#{project.id}" href=project.web_address rel="ugc"]
             | Show project
 
         img.carousel-image alt=project.name data-lazy=image_path(project.image_url)
