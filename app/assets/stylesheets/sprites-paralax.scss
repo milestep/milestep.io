@@ -212,7 +212,7 @@
     .layer-7 {
       width: ($number-of-pages * 100%) * 2.3;
       will-change: transform;
-      z-index: 100;
+      z-index: 99;
 
       img.limg-1 {
         position: inherit;

@@ -24,7 +24,7 @@
             .project-description
               = technology.description
             div class=(index.even? ? 'view-project-button' : 'view-project-even-button')
-              = link_to technology.web_address rel="ugc"
+             = link_to(technology.web_address, :rel => "ugc")
                 |VIEW PROJECT
 
       - if index == 0

@@ -358,6 +358,7 @@ body {
   .main_post {
     .text_column {
       display: grid;
+      margin-bottom: 2%;
       grid-template-columns: 50% 25% 25%;
       grid-template-rows: 38% 38%;
       grid-template-areas:

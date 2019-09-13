@@ -4,7 +4,7 @@
 }
 
 .rails-default-error-page {
-  background: url(404png) no-repeat;
+  background: url(./404.png) no-repeat;
   background-position: 50% 30%;
 }
 

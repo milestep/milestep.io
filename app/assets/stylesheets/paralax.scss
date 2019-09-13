@@ -85,7 +85,7 @@ body {
     height: 12vh;
     width: 12vh;
     background-color: #f42b24;
-    z-index: $nav-layer + 1;
+    z-index: $nav-layer + 2;
     border-radius: 0 0 0 2.36vh;
     transition: 0.5s;
     cursor: pointer;
@@ -161,7 +161,7 @@ body {
     width: 42.64vh;
     background: rgb(1, 0, 0);
     box-shadow: 0vh -0.24vh 1.18vh rgba(0, 0, 0, 0.25);
-    z-index: $nav-layer;
+    z-index: $nav-layer + 1;
     transition: 1s;
     padding-right: 2vw;
 
@@ -194,6 +194,10 @@ body {
     position: fixed;
     right: -42.64vh;
     transition: 1s;
+  }
+
+  .blog-link {
+    padding: 20px 45px 20px 0;
   }
 
   .arrow {
