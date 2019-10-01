@@ -12,8 +12,8 @@ module Mobile
 
     def contact_us ; end
 
-    def cookie_policy
-      render 'paralax/cookie_policy'
+    def privacy_policy
+      render 'paralax/privacy_policy'
     end
 
     def portfolio

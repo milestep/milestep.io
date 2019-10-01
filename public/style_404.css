@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rails-default-error-page {
+  background: url(./404.png) no-repeat;
+  background-position: 50% 30%;
+}
+
+.dialog {
+  width: 100%;
+  text-align: center;
+  margin-top: 500px;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Arial";
+  display: inline-block;
+  background: #f42b24;
+  border-radius: 4.12vh;
+  width: 22.97vh;
+  height: 4.83vh;
+  transition: background 0.3s;
+  font-size: 3.99vh;
+  line-height: normal;
+  color: #ffffff;
+}
+
+a:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+@media (max-aspect-ratio: 1/1) {
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .rails-default-error-page {
+    background-size: cover;
+    background-position-x: center;
+    height: 85vw;
+  }
+  .dialog a {
+    margin-top: 55%;
+  }
+}

@@ -19,13 +19,13 @@
         position: inherit;
         height: 100vh;
         margin-left: 82vw;
-        opacity: .6;
+        opacity: 0.6;
       }
 
       img:last-child {
         position: inherit;
         height: 100vh;
-        opacity: .6;
+        opacity: 0.6;
       }
     }
 
@@ -58,14 +58,15 @@
         position: inherit;
         height: 10vh;
         margin-left: 182vw;
-        margin-top: 13vh;;
+        margin-top: 13vh;
       }
 
       img.limg-5 {
         position: inherit;
         height: 10vh;
-        margin-left: 100vw;
+        margin-left: 130vw;
         margin-top: 13vh;
+        transform: rotate(-40deg);
       }
 
       img.limg-6 {
@@ -73,6 +74,13 @@
         height: 9vh;
         margin-left: 530vw;
         margin-top: 62vh;
+      }
+
+      img.limg-7 {
+        position: inherit;
+        height: 10vh;
+        margin-left: 110vw;
+        margin-top: 83vh;
       }
     }
 
@@ -127,9 +135,9 @@
 
       img.limg-1 {
         position: inherit;
-        height: 32vh;
-        margin-left: 666vw;
-        margin-top: 75vh;
+        height: 7vh;
+        margin-left: 670vw;
+        margin-top: 89vh;
       }
 
       img.limg-2 {
@@ -152,6 +160,14 @@
         height: 10vh;
         margin-left: 692vw;
         margin-top: 18vh;
+      }
+
+      img.limg-5 {
+        position: inherit;
+        height: 18vh;
+        margin-left: 668vw;
+        margin-top: 58vh;
+        transform: rotate(78deg);
       }
     }
 
@@ -178,13 +194,6 @@
       width: ($number-of-pages * 100%) * 2;
       will-change: transform;
 
-      //img.limg-1 {
-      //  position: inherit;
-      //  height: 10vh;
-      //  margin-left: 1322vw;
-      //  margin-top: 18vh;
-      //}
-
       img.limg-2 {
         position: inherit;
         height: 7vh;
@@ -203,6 +212,7 @@
     .layer-7 {
       width: ($number-of-pages * 100%) * 2.3;
       will-change: transform;
+      z-index: 99;
 
       img.limg-1 {
         position: inherit;
@@ -229,7 +239,7 @@
         position: inherit;
         height: 5vh;
         margin-left: 820vw;
-        margin-top: 88vh;        
+        margin-top: 88vh;
         transform: rotate(139deg);
       }
     }
@@ -239,14 +249,14 @@
       will-change: transform;
 
       img.limg-1 {
-        position: inherit;      
+        position: inherit;
         height: 9vh;
         margin-left: 1793vw;
         margin-top: 68vh;
       }
 
       img.limg-2 {
-        position: inherit;      
+        position: inherit;
         height: 13vh;
         margin-left: 1154vw;
         margin-top: 81vh;
@@ -256,9 +266,10 @@
     .layer-9 {
       width: ($number-of-pages * 100%) * 2.9;
       will-change: transform;
+      z-index: 100;
 
       img.limg-1 {
-        position: inherit;      
+        position: inherit;
         height: 10vh;
         margin-left: 1952vw;
         margin-top: 18vh;
@@ -273,7 +284,7 @@
       }
 
       img.limg-3 {
-        position: inherit;      
+        position: inherit;
         height: 21vh;
         margin-left: 1292vw;
         margin-top: 55vh;

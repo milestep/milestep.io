@@ -6,22 +6,32 @@
     - if @posts.any?
       .main_post
         .text_column
-          .title
-            = cut_text(@posts.first.title, 35)
-          .text_body
-            = cut_text(strip_tags(@posts.first.body), 260)
-            .link
-              = link_to  blog_post_path(@posts.first)
-                | READ MORE
-          .additional_photo
-            img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.thumbnail_image.url}"
-        .photo_column
-          img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.main_image.url}"
+          .photo_column
+            = link_to blog_post_path(@posts.first)
+              img alt="posts_main_photo" class="posts_main_photo" src="#{@posts.first.main_image.url}"
+            .text_block
+              = link_to blog_post_path(@posts.first)
+                .title
+                  = cut_text(@posts.first.title, 45)
+                .text_body
+                  = cut_text(strip_tags(@posts.first.body), 80)
+          - @posts[1..4].each_with_index do |post, index| 
+            div class="additional_photo_#{index + 1}"
+              = link_to blog_post_path(post)
+                img alt="posts_main_photo" class="posts_main_photo" src="#{post.thumbnail_image.url}"
+              div class="text_block_photo_#{index + 1}"
+                = link_to blog_post_path(post)
+                  .title
+                    = cut_text(post.title, 45)
+                  .text_body
+                    = cut_text(strip_tags(post.body), 60)
+          #accept_cookies_block.text_column_end
+            = render 'shared/cookies_block'
       .posts
         = render @posts
       = will_paginate @posts, custom_pagination_options()
     - else
       .no-posts-text There are no posts here.
-
-  .blog-footer
-    = render 'blog/welcome/footer'
+.footer-container
+  img alt="" src=image_path("paralax/bg-left.png")
+  = render 'paralax/contact-us'
