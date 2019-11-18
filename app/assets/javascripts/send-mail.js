@@ -4,16 +4,16 @@ function sendMail(e) {
   if (!data) return
 
   fetch('/contact_us', { method: 'POST', body: new FormData(data) })
-    .then(function(response) {clearInputs(response.statusText)})
-    .catch(function(e) {notify('Error sending message', 'error')})
+    .then(function(response) {clearInputs('Message was successfully delivered!')})
+    .catch(function(e) {notify('Unable to deliver your message!', 'error')})
 }
 
 function clearInputs(text) {
   $.each($('.message-form input'), function(i, item) {
     if (item.name == 'name' || item.name == 'email' || item.name == 'message') {
       item.value = ''
-  }})
-
+    }
+  })
   notify(text, 'success')
 }
 
@@ -22,21 +22,40 @@ function notify(text, type) {
   $.notiny({ text: text, ...params })
 }
 
+const validEmailRegex = RegExp(
+  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
+);
+
 function validation(obj) {
   let inputs = obj.getElementsByTagName('input')
 
-  if (!(/[a-zA-Zа-яА-ЯёЁ]{3,25}/).test(inputs.name.value)) {
-   notify('Name is incorect!', 'warning')
+  if (!inputs.name.value) {
+    notify('Name is required!', 'warning')
     return null
   }
 
-  if (!(/^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,10}/).test(inputs.email.value)) {
-    notify('Email is incorect!', 'warning')
+  if (!inputs.email.value) {
+    notify('Email is required!', 'warning')
     return null
   }
 
-  if (!(/^[а-яА-ЯёЁa-zA-Z0-9]{3,255}/).test(inputs.message.value)) {
-    notify('Message is incorect!', 'warning')
+  if (!validEmailRegex.test(inputs.email.value)) {
+    notify('Email is incorrect!', 'warning')
+    return null
+  }
+
+  if (!inputs.message.value) {
+    notify('Message is required!', 'warning')
+    return null
+  }
+
+  if (inputs.message.value.length < 10) {
+    notify('Message must be 10 characters long!', 'warning')
+    return null
+  }
+
+  if (inputs.message.value.length > 255) {
+    notify('Message is too long!', 'warning')
     return null
   }
 
